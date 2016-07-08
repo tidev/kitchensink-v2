@@ -1,0 +1,12 @@
+<Alloy>
+    <Tab title="Mashups">
+        <Window title="Mashups">
+            <ListView id="listView" onItemclick="openComponent">
+                <ListSection>
+                    <ListItem title="Twitter" itemId="twitter" />
+                </ListSection>
+            </ListView>
+
+        </Window>
+    </Tab>
+</Alloy>

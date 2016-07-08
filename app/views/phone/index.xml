@@ -1,0 +1,12 @@
+<Alloy>
+    <Tab title="Phone">
+        <Window title="Phone">
+            <ListView id="listView" onItemclick="openComponent">
+                <ListSection>
+                    <ListItem title="Sound" itemId="sound" />
+                </ListSection>
+            </ListView>
+
+        </Window>
+    </Tab>
+</Alloy>

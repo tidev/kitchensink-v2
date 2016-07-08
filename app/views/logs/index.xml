@@ -1,0 +1,10 @@
+<Alloy>
+    <Tab title="Logs">
+        <Window title="Logs" onOpen="showLogs">
+            <RightNavButton platform="ios" systemButton="TRASH" onClick="clearLogs" />
+            <ScrollView id="scrollView">
+                <Label id="log" />
+            </ScrollView>
+        </Window>
+    </Tab>
+</Alloy>

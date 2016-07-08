@@ -1,0 +1,17 @@
+'ScrollView': {
+	contentWidth: Ti.UI.FILL,
+	contentHeight: Ti.UI.SIZE
+}
+
+'Label': {
+	top: 10,
+	right: 10,
+	left: 10,
+
+	width: Ti.UI.FILL,
+	height: Ti.UI.SIZE,
+
+	font: {
+		fontFamily: 'Courier New'
+	}
+}

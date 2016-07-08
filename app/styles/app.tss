@@ -1,0 +1,29 @@
+"Window": {
+	backgroundColor: "white"
+}
+
+"Window[platform=ios]": {
+	barColor: Alloy.CFG.styles.tintColor,
+	navTintColor: "white",
+	translucent: false,
+	backButtonTitle: "",
+	titleAttributes: {
+		color: "white"
+	}
+}
+
+"Window[platform=android]": {
+	softKeyboardOnFocus: Ti.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
+}
+
+"TabGroup[platform=ios]": {
+	activeTabIconTint: Alloy.CFG.styles.tintColor
+}
+
+"Tab": {
+	icon: "images/icons/tab.png"
+}
+
+"ListItem": {
+	accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
+}
