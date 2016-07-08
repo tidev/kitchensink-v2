@@ -1,0 +1,2 @@
+
+Alloy.CFG.tabGroup = {};

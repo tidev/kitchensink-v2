@@ -1,0 +1,9 @@
+<Alloy>
+	<TabGroup onOpen="validateDocsInfo">
+		<Require src="controls/index" />
+		<Require src="phone/index" />
+		<Require src="platform/index" />
+		<Require src="mashups/index" />
+		<Require src="logs/index" />
+	</TabGroup>
+</Alloy>
