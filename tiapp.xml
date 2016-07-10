@@ -15,6 +15,7 @@
 	<property name="ti.ui.defaultunit" type="string">dp</property>
 	<ios>
 		<enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
+		<default-background-color>#c91326</default-background-color>
 		<plist>
 			<dict>
 				<key>UIStatusBarStyle</key>

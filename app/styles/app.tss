@@ -17,7 +17,9 @@
 }
 
 "TabGroup[platform=ios]": {
-	activeTabIconTint: Alloy.CFG.styles.tintColor
+	activeTabIconTint: Alloy.CFG.styles.tintColor,
+	translucent: false,
+	backgroundColor: "white"
 }
 
 "Tab": {
