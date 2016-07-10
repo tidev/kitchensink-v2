@@ -15,3 +15,7 @@
 		fontFamily: 'Courier New'
 	}
 }
+
+'Tab': {
+	icon: 'images/icons/console.png'
+}

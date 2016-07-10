@@ -4,6 +4,6 @@
 		<Require src="phone/index" />
 		<Require src="platform/index" />
 		<Require src="mashups/index" />
-		<Require src="logs/index" />
+		<Require src="console/index" />
 	</TabGroup>
 </Alloy>

@@ -1,6 +1,6 @@
 <Alloy>
-    <Tab title="Logs">
-        <Window title="Logs" onOpen="showLogs">
+    <Tab title="Console">
+        <Window title="Console" onOpen="showLogs">
             <RightNavButton platform="ios" systemButton="TRASH" onClick="clearLogs" />
             <ScrollView id="scrollView">
                 <Label id="log" />
