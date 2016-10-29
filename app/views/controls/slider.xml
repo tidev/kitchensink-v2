@@ -1,5 +1,6 @@
 <Alloy>
     <Window title="Slider">
-        
+        <Label id="stateLabel" />
+        <Slider class="slider" onChange="sliderValueChanged" />
     </Window>
 </Alloy>

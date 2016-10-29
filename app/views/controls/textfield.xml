@@ -1,5 +1,5 @@
 <Alloy>
     <Window title="Text Field">
-        
+        <TextField class="textfield" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred" />
     </Window>
 </Alloy>

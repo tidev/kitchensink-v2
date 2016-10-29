@@ -1,5 +1,20 @@
 <Alloy>
     <Window title="Picker">
-        
+        <Picker class="picker" selectionIndicator="true" useSpinner="true" onChange="pickerValueChanged">
+            <PickerColumn>
+                <PickerRow title="Bananas"/>
+                <PickerRow title="Strawberries"/>
+                <PickerRow title="Mangos"/>
+                <PickerRow title="Grapes"/>
+            </PickerColumn>
+           
+            <!-- Picker shorthand notation -->
+            <Column id="column2">
+                <Row title="Red"/>
+                <Row title="Green"/>
+                <Row title="Blue"/>
+                <Row title="Orange"/>
+            </Column>
+        </Picker>
     </Window>
 </Alloy>

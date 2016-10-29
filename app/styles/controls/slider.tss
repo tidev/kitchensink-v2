@@ -1,0 +1,14 @@
+
+".slider": {
+	tintColor: "green",
+	min: 0,
+	max: 1,
+	width: 200,
+	value: 0.75
+}
+
+"#stateLabel": {
+	top: 100,
+	width: Ti.UI.FILL,
+	textAlign: "center"
+}

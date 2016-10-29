@@ -1,5 +1,12 @@
 <Alloy>
     <Window title="Option Dialog">
-        
+        <Button title="Show Option Dialog" onClick="showOptionDialog" />
+        <OptionDialog id="dialog" title="Available Options" onClick="optionDialogClicked">
+            <Options>
+                <Option>Confirm</Option>
+                <Option>Delete</Option>
+                <Option>Cancel</Option>
+            </Options>
+        </OptionDialog>
     </Window>
 </Alloy>
