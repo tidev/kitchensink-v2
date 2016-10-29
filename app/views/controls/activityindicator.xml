@@ -1,5 +1,10 @@
 <Alloy>
     <Window title="Activity Indicator" onOpen="showIndicator">
-        <ActivityIndicator id="indicator" />
+        <View class="container">
+            <ActivityIndicator id="indicatorLight" />
+            <ActivityIndicator id="indicatorDark" />
+            <ActivityIndicator id="indicatorBig" />
+            <ActivityIndicator id="indicatorMessage" />
+        </View>
     </Window>
 </Alloy>

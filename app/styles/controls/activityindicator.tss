@@ -1,3 +1,29 @@
-"#indicator": {
+"ActivityIndicator": {
+	bottom: 20,
+	height: Ti.UI.SIZE,
+}
+
+"#indicatorLight": {
+	top: 20,
+	style: Ti.UI.ActivityIndicatorStyle.PLAIN
+}
+
+"#indicatorDark": {
 	style: Ti.UI.ActivityIndicatorStyle.DARK
+}
+
+"#indicatorBig": {
+	style: Ti.UI.ActivityIndicatorStyle.BIG
+}
+
+"#indicatorMessage": {
+	style: Ti.UI.ActivityIndicatorStyle.DARK,
+	message: "Loading ..."
+}
+
+".container": {
+	width: 300,
+	height: Ti.UI.SIZE,
+	backgroundColor: "#aaaaaa",
+	layout: "vertical"
 }
