@@ -6,3 +6,7 @@
 (function constructor(args) {
     
 })(arguments[0] || {});
+
+function showIndicator() {
+    $.indicator.show();
+}

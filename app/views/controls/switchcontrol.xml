@@ -1,5 +1,5 @@
 <Alloy>
     <Window title="Switch">
-        
+        <Switch class="switchControl" onChange="switchChanged" />
     </Window>
 </Alloy>

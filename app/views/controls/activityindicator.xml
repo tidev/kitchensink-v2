@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Activity Indicator">
-        
+    <Window title="Activity Indicator" onOpen="showIndicator">
+        <ActivityIndicator id="indicator" />
     </Window>
 </Alloy>

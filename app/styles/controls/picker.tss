@@ -1,0 +1,5 @@
+
+".picker": {
+	height: 300,
+	width: Ti.UI.FILL
+}

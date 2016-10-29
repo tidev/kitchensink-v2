@@ -1,0 +1,6 @@
+
+"#dialog[platform=ios]": {
+	cancel: 0,
+	destructive: 1,
+	preferred: 2
+}

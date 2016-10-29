@@ -1,0 +1,3 @@
+"#indicator": {
+	style: Ti.UI.ActivityIndicatorStyle.DARK
+}

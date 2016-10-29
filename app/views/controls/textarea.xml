@@ -1,5 +1,7 @@
 <Alloy>
     <Window title="Text Area">
-        
+        <TextArea class="textarea" onChange="textAreaValueChanged" onFocus="textAreaFocussed" onBlur="textAreaBlurred">
+            My Text Area
+        </TextArea>
     </Window>
 </Alloy>
