@@ -8,5 +8,8 @@
 })(arguments[0] || {});
 
 function showIndicator() {
-    $.indicator.show();
+    $.indicatorLight.show();
+    $.indicatorDark.show();
+    $.indicatorBig.show();
+    $.indicatorMessage.show();
 }
