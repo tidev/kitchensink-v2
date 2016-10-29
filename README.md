@@ -1,4 +1,4 @@
-## KitchenSink
+## Kitchen Sink 2.0
 
 This project gives an overview of native components available 
 in Titanium. The components are grouped into multiple groups
