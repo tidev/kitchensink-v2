@@ -1,5 +1,13 @@
 <Alloy>
     <Window title="Label">
-        <Label text="Hello World" />
+        <Label id="myLabel">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
+        </Label>
+        <View class="container">
+            <Button title="Change text align to center" onClick="changeToCenterAlignment" />
+            <Button title="Change text align to right" onClick="changeToRightAlignment" />
+            <Button title="Change text align to justify" onClick="changeToJustifyAlignment" platform="ios" />
+            <Button title="Change color to red" onClick="changeColor" />
+        </View>
     </Window>
 </Alloy>
