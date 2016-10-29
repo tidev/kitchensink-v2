@@ -5,6 +5,7 @@
                 <ListSection>
                     <ListItem title="Views" subtitle="'Ti.UI.View, Ti.UI.ImageView, ...'" itemId="views/index" />
                     <ListItem title="Label" subtitle="'Ti.UI.Label'" itemId="label" />
+                    <ListItem title="Tabbed Bar" subtitle="'Ti.UI.iOS.TabbedBar'" itemId="tabbedbar" platform="ios" />
                     <ListItem title="Switch" subtitle="'Ti.UI.Switch'" itemId="switchcontrol" />
                     <ListItem title="Stepper" subtitle="'Ti.UI.Stepper'" itemId="stepper" />
                     <ListItem title="Slider" subtitle="'Ti.UI.Slider'" itemId="slider" />

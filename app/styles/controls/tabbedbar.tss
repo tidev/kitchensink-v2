@@ -1,0 +1,6 @@
+
+".bar": {
+	tintColor: Alloy.CFG.styles.tintColor,
+	width: 200,
+	index: 1
+}
