@@ -1,0 +1,11 @@
+<Alloy>
+    <Window title="Tabbed Bar">
+        <TabbedBar onClick="tabbedBarSelectedIndex" class="bar">
+            <Labels>
+                <Label>One</Label>
+                <Label>Two</Label>
+                <Label>Three</Label>
+            </Labels>
+        </TabbedBar>
+    </Window>
+</Alloy>
