@@ -27,5 +27,6 @@
 }
 
 "ListItem": {
-	accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
+	accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE,
+	subtitleColor: "#777" // Titanium 6.1.0 and later
 }
