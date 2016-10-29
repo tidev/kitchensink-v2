@@ -9,7 +9,7 @@ var log = require("log");
 })(arguments[0] || {});
 
 function openComponent(e) {
-    var identifier = "controls/" + e.section.getItemAt(e.itemIndex).properties.itemId;
+    var identifier = "controls/views/" + e.section.getItemAt(e.itemIndex).properties.itemId;
     var component = Alloy.createController(identifier).getView();
     
     Alloy.CFG.tabGroup.getActiveTab().open(component);
