@@ -1,5 +1,5 @@
 <Alloy>
     <Window title="Web View">
-        <WebView url="https://appcelerator.com"></WebView>
+        <WebView url="https://appcelerator.com" onBeforeload="onBeforeLoad" onLoad="onLoad" />
     </Window>
 </Alloy>
