@@ -1,5 +1,8 @@
 <Alloy>
     <Window title="Blur View">
-        
+        <BlurView id="blurView" ns="Ti.UI.iOS">
+            <ImageView class="myImage" />
+        </BlurView>
+        <Button top="50" title="Blur Image" onClick="applyBlur" />
     </Window>
 </Alloy>
