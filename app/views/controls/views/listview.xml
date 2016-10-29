@@ -1,5 +1,36 @@
 <Alloy>
     <Window title="List View">
-        <ListView></ListView>
+        <ListView onItemclick="handleListViewClick">
+            
+            <!-- Enable Pull-to-Refresh -->
+            <RefreshControl id="refresh" onRefreshStart="fetchData" />
+            
+            <!-- Add custom item templates -->
+            <Templates>
+                <ItemTemplate name="MyCustomTemplate">
+                    <Label bindId="title" class="titleLabel" />
+                    <Label bindId="detail" class="detailLabel" />
+                </ItemTemplate>
+            </Templates>
+            
+            <ListSection headerTitle="System Item Templates">
+                <ListItem title="Bananas" image="/images/icons/tab.png" />
+                <ListItem title="Apples" subtitle="Oranges" template="Ti.UI.LIST_ITEM_TEMPLATE_SUBTITLE" />
+                <ListItem title="Mangos" subtitle="Strawberries" template="Ti.UI.LIST_ITEM_TEMPLATE_SETTINGS" />
+                <ListItem title="Lemon" subtitle="Melone" template="Ti.UI.LIST_ITEM_TEMPLATE_CONTACTS" />
+            </ListSection>
+            
+            <ListSection headerTitle="Custom Item Templates">
+                <ListItem template="MyCustomTemplate" title:text="Nectarine" detail:text="3" />
+                <ListItem template="MyCustomTemplate" title:text="Pear" detail:text="7" detail:color="blue" />
+            </ListSection>
+            
+            <ListSection headerTitle="Accessory Types">
+                <ListItem title="No Accessory" accessoryType="Ti.UI.LIST_ACCESSORY_TYPE_NONE" />
+                <ListItem title="Detail Accessory" accessoryType="Ti.UI.LIST_ACCESSORY_TYPE_DETAIL" />
+                <ListItem title="Disclosure Accessory" accessoryType="Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE" />
+                <ListItem title="Checkmark Accessory" accessoryType="Ti.UI.LIST_ACCESSORY_TYPE_CHECKMARK" />
+            </ListSection>
+        </ListView>
     </Window>
 </Alloy>

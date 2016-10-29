@@ -1,0 +1,10 @@
+
+".titleLabel": {
+	left: 15,
+	color: "red"
+}
+
+".detailLabel": {
+	right: 15,
+	color: "green"
+}
