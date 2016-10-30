@@ -1,5 +1,6 @@
 <Alloy>
     <Window title="Switch">
+        <Label id="state" class="stateLabel" />
         <Switch class="switchControl" onChange="switchChanged" />
     </Window>
 </Alloy>

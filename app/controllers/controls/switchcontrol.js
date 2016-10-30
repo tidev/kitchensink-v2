@@ -9,6 +9,6 @@ var log = require("log");
 })(arguments[0] || {});
 
 function switchChanged(e) {
-    alert('The switch value changed to ' + e.value);
+    $.state.setText('The switch value changed to ' + e.value);
     log.args('Ti.UI.Switch value changed to ' + e.value)
 }

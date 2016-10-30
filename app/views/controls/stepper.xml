@@ -1,5 +1,6 @@
 <Alloy>
     <Window title="Stepper">
-        <Stepper ns="Ti.UI.iOS" class="stepper" onChange="stepperValueChanged" />
+        <Label id="state" class="stateLabel" />
+       <Stepper ns="Ti.UI.iOS" class="stepper" onChange="stepperValueChanged" />
     </Window>
 </Alloy>
