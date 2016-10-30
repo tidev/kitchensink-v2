@@ -4,7 +4,7 @@ This project gives an overview of native components available
 in Titanium. The components are grouped into multiple groups
 and can be logged in the "Logs" tab.
 
-<img width="976" src="https://abload.de/img/kitchensink-overviews0uct.png">
+<img width="976" src="https://abload.de/img/kitchensink-overview1duxu.png">
 
 ### Fetaures
 - [x] API Logging
