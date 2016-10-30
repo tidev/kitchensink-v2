@@ -12,7 +12,8 @@ function fetchData() {
     // You would usually fetch your remote data here
     setTimeout(function() {
         $.refresh.endRefreshing();
-    }, 2000);
+        log.args('Ti.UI.RefreshControl finished refreshing');
+    }, 1000);
 }
 
 function handleListViewClick(e) {
