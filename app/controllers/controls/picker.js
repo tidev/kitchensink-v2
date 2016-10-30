@@ -9,6 +9,6 @@ var log = require("log");
 })(arguments[0] || {});
 
 function pickerValueChanged(e) {
-    alert('Picker value changed to ' + e.selectedValue);
+    $.state.setText('Picker value changed to ' + e.selectedValue);
     log.args('Ti.UI.Picker changed value to: ' + e.selectedValue);
 }

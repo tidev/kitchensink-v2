@@ -30,3 +30,14 @@
 	accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE,
 	subtitleColor: "#777" // Titanium 6.1.0 and later
 }
+
+".stateLabel": {
+	top: 100,
+	left: 20,
+	right: 20,
+	width: Ti.UI.FILL,
+	textAlign: "center",
+	font: {
+		fontSize: 15
+	}
+}

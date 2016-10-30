@@ -9,6 +9,6 @@ var log = require("log");
 })(arguments[0] || {});
 
 function stepperValueChanged(e) {
-    alert('The stepper value changed to ' + e.value);
+    $.state.setText('The stepper value changed to ' + e.value);
     log.args('Ti.UI.Stepper value changed to ' + e.value)
 }
