@@ -1,0 +1,11 @@
+
+"#scrollable": {
+	top: 40,
+	showPagingControl: true,
+	pagingControlColor: Alloy.CFG.styles.tintColor
+}
+
+".toolbar": {
+	top: 0,
+	height: 40
+}

@@ -5,6 +5,9 @@
 }
 
 ".detailLabel": {
-	right: 15,
-	color: "green"
+	right: 5,
+	color: "green",
+	font: {
+		fontWeight: "bold"	
+	}
 }

@@ -1,5 +1,24 @@
 <Alloy>
     <Window title="Scrollable View">
-        <ScrollableView></ScrollableView>
+        <Toolbar class="toolbar">
+            <Items>
+                <Button id="scrollTo" title="Scroll to View 2" onClick="scrollToView"  />
+                <FlexSpace/>
+                <Button id="add" title="Add new View" onClick="addNewView" />
+                <FlexSpace/>
+                <Button id="remove" title="Remove last View" onClick="removeLastView" />
+            </Items>
+        </Toolbar>
+        <ScrollableView id="scrollable" onScrollend="scrollableViewDidScroll">
+            <View id="view1" backgroundColor="#836">
+                <Label>View 1</Label>
+            </View>
+            <View id="view2" backgroundColor="#246">
+                <Label>View 2</Label>
+            </View>
+            <View id="view3" backgroundColor="#48b">
+                <Label>View 3</Label>
+            </View>
+        </ScrollableView>
     </Window>
 </Alloy>

@@ -11,7 +11,7 @@
 	<fullscreen>false</fullscreen>
 	<navbar-hidden>false</navbar-hidden>
 	<analytics>true</analytics>
-	<guid>7b5dd68c-f90e-4029-9d68-1ffe175bd2b6</guid>
+	<guid>11111111-1111-1111-1111-111111111111</guid>
 	<property name="ti.ui.defaultunit" type="string">dp</property>
 	<ios>
 		<enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
