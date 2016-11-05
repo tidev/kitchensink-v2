@@ -1,6 +1,6 @@
 <Alloy>
     <Window title="Alert Dialog">
-        <Button title="Show Alert Dialog" onClick="showAlertDialog" />
+        <Button class="actionButton" title="Show Alert Dialog" onClick="showAlertDialog" />
         <AlertDialog id="alert" title="Logout" message="Do you really want to log-out?" onClick="alertDialogClicked">
             <ButtonNames>
                 <ButtonName>Confirm</ButtonName>

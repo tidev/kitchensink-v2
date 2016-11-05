@@ -1,10 +1,14 @@
 <Alloy>
     <Window title="Activity Indicator" onOpen="showIndicator">
+        <RightNavButton>
+            <ActivityIndicator id="indicatorNavBar" />
+        </RightNavButton>
         <View class="container">
             <ActivityIndicator id="indicatorLight" />
             <ActivityIndicator id="indicatorDark" />
             <ActivityIndicator id="indicatorBig" />
             <ActivityIndicator id="indicatorMessage" />
         </View>
+        <Button class="changeTintColorButton actionButton" platform="ios" onClick="changeTintColor" title="Change spinner to random color" />
     </Window>
 </Alloy>

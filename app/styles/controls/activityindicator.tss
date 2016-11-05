@@ -27,3 +27,7 @@
 	backgroundColor: "#aaaaaa",
 	layout: "vertical"
 }
+
+".changeTintColorButton": {
+	top: 40
+}
