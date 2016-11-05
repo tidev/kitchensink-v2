@@ -31,6 +31,14 @@
 	subtitleColor: "#777" // Titanium 6.1.0 and later
 }
 
+".actionButton": {
+	width: 300,
+	height: 40,
+	tintColor: "white",
+	borderRadius: 4,
+	backgroundColor: Alloy.CFG.styles.tintColor
+}
+
 ".stateLabel": {
 	top: 100,
 	left: 20,
