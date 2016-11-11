@@ -18,6 +18,32 @@ and can be logged in the "Logs" tab.
 The initial version of this example application is scheduled for 6.0.0.GA with more
 iterations coming over the following releaes-cycles.
 
+
+### Running the KitchenSink App
+
+#### Via Appcelerator Studio
+
+1. Import it via *Dashboard* if available.
+2. Or import it via *File > Import... > Git > Git Repository as New Project* with *URI*:
+
+		https://github.com/appcelerator/kitchensink-v2
+
+3. Select a Simulator or Device to build to via *Run > Run As*.
+
+#### Via CLI
+
+1. Clone the repository:
+
+		git clone https://github.com/appcelerator/kitchensink-v2
+
+2. To run it with `appc run` first import it to the platform:
+
+		appc new --import --no-services
+
+3. Build to Simulator or Device:
+
+		[appc run | ti build] -p ios [-T device]
+
 ### Contribution
 
 Code contributions are greatly appreciated, please submit a new [pull request](https://github.com/appcelerator/kitchensink-v2/pull/new/master)!
