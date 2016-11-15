@@ -16,7 +16,7 @@ and can be logged in the "Logs" tab.
 ### Roadmap
 
 The initial version of this example application is scheduled for 6.0.0.GA with more
-iterations coming over the following releaes-cycles.
+iterations coming over the following release-cycles.
 
 
 ### Running the KitchenSink App
