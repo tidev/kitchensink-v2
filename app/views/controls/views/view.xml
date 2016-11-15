@@ -1,5 +1,7 @@
 <Alloy>
     <Window title="View">
-        <View></View>
+        <View id="view1"></View>
+        <View id="view2"></View>
+        <View id="view3"></View>
     </Window>
 </Alloy>
