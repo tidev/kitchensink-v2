@@ -49,15 +49,21 @@
 		fontSize: 15
 	}
 }
+
 "ListItem[platform=android]": {
-	color:"#000"
+	color:"#000",
+	height: 43,
+	left: 15
 }
+
 "Label[platform=android]": {
 	color:"#000"
 }
+
 "TextField[platform=android]": {
 	color:"#000"
 }
+
 "TextArea[platform=android]": {
 	color:"#000"
 }
