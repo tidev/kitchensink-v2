@@ -24,10 +24,10 @@
 		</plist>
 	</ios>
 	<android xmlns:android="http://schemas.android.com/apk/res/android">
-        <manifest android:versionCode="1" android:versionName="1.1.0">
-            <application android:theme="@style/kitchensink" android:hardwareAccelerated="true" android:largeHeap="true"/>
-        </manifest>
-    </android>
+		<manifest android:versionCode="1" android:versionName="1.1.0">
+			<application android:theme="@style/kitchensink" android:hardwareAccelerated="true" android:largeHeap="true"/>
+		</manifest>
+	</android>
 	<deployment-targets>
 		<target device="android">true</target>
 		<target device="ipad">true</target>
