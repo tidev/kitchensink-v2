@@ -1,5 +1,7 @@
 <Alloy>
     <Window title="Scroll View">
-        <ScrollView></ScrollView>
+        <ScrollView>
+            <Label text="S\nC\nR\nO\nL\nL\nS\n\nC\nR\nO\nL\nL\n\nS\nC\nR\nO\nL\nL\n\nS\nC\nR\nO\nL\nL\n\nS\nC\nR\nO\nL\nL\n\nS\nC\nR\nO\nL\nL\n\nS\nC\nR\nO\nL\nL\n\nS\nC\nR\nO\nL\nL\n\nS\nC\nR\nO\nL\nL\n\nS\nC\nR\nO\nL\nL\n\nS\nC\nR\nO\nL\nL\n\nS\nC\nR\nO\nL\nL\n\nS\nC\nR\nO\nL\nL\n\nS\nC\nR\nO\nL\nL\n\n"/>
+        </ScrollView>
     </Window>
 </Alloy>

@@ -1,6 +1,6 @@
 <Alloy>
     <Window title="Scrollable View">
-        <Toolbar class="toolbar">
+        <Toolbar class="toolbar" platform="ios">
             <Items>
                 <Button id="scrollTo" title="Scroll to View 2" onClick="scrollToView"  />
                 <FlexSpace/>

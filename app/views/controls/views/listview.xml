@@ -3,7 +3,7 @@
         <ListView onItemclick="handleListViewClick">
             
             <!-- Enable Pull-to-Refresh -->
-            <RefreshControl id="refresh" onRefreshstart="fetchData" />
+            <RefreshControl id="refresh" onRefreshstart="fetchData" platform="ios" />
             
             <!-- Add custom item templates -->
             <Templates>

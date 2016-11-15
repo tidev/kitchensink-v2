@@ -6,7 +6,7 @@
                 <ListItem title="Scroll View" subtitle="'Ti.UI.ScrollView'" itemId="scrollview" />
                 <ListItem title="Scrollable View" subtitle="'Ti.UI.ScrollableView'" itemId="scrollableview" />
                 <ListItem title="List View" subtitle="'Ti.UI.ListView'" itemId="listview" />
-                <ListItem title="Blur View" subtitle="'Ti.UI.BlurView'" itemId="blurview" />
+                <ListItem title="Blur View" subtitle="'Ti.UI.BlurView'" itemId="blurview" platform="ios"/>
                 <ListItem title="Image View" subtitle="'Ti.UI.ImageView'" itemId="imageview" />
                 <ListItem title="Web View" subtitle="'Ti.UI.WebView'" itemId="webview" />
             </ListSection>
