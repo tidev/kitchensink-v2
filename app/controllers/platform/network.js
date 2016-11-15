@@ -1,8 +1,11 @@
 
 /**
  * The scoped constructor of the controller.
- * @param args {Object} The arguments passed to initialize the controller.
  **/
-(function constructor(args) {
+(function constructor() {
+	$.statusLabel.setText('Network type: ' + Ti.Network.networkType + ', online: ' + Ti.Network.online + ', name: ' + Ti.Network.networkTypeName);
 
-})(arguments[0] || {});
+	Ti.Network.addEventListener('change', function(e) {
+		$.eventLabel.setText('Change fired! Network type: ' + e.networkType + ', online: ' + e.online + ', name: ' + e.networkTypeName);
+	});
+})();
