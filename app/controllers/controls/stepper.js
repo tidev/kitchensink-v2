@@ -2,11 +2,10 @@ var log = require("log");
 
 /**
  * The scoped constructor of the controller.
- * @param args {Object} The arguments passed to initialize the controller.
  **/
-(function constructor(args) {
+(function constructor() {
     
-})(arguments[0] || {});
+})();
 
 function stepperValueChanged(e) {
     $.state.setText('The stepper value changed to ' + e.value);

@@ -2,11 +2,10 @@ var log = require("log");
 
 /**
  * The scoped constructor of the controller.
- * @param args {Object} The arguments passed to initialize the controller.
  **/
-(function constructor(args) {
+(function constructor() {
     
-})(arguments[0] || {});
+})();
 
 function textAreaValueChanged(e) {
     log.args('Ti.UI.TextArea changed value to ' + e.value);
