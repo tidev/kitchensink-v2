@@ -2,11 +2,10 @@ var log = require('log');
 
 /**
  * The scoped constructor of the controller.
- * @param args {Object} The arguments passed to initialize the controller.
  **/
-(function constructor(args) {
+(function constructor() {
 	log.on('change', showLogs);
-})(arguments[0] || {});
+})();
 
 function showLogs() {
 	$.log.setText(log.history);

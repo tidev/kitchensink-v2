@@ -1,12 +1,11 @@
 
 /**
  * The scoped constructor of the controller.
- * @param args {Object} The arguments passed to initialize the controller.
  **/
-(function constructor(args) {
+(function constructor() {
     $.index.open();    
     Alloy.CFG.tabGroup = $.index;    
-})(arguments[0] || {});
+})();
 
 function validateDocsInfo() {
     if (Ti.App.Properties.getBool('showNotice', true) === true) {
