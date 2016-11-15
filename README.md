@@ -15,9 +15,12 @@ and can be logged in the "Logs" tab.
 
 ### Roadmap
 
-The initial version of this example application is scheduled for 6.0.0.GA with more
-iterations coming over the following release-cycles.
-
+|Release Date|Milestone|
+|---|---|
+|November 14, 2016|Initial Release (Basic support)|
+|December 01, 2016|Support for 3D-Touch API’s (Peek and Pop / Shortcut Items)|
+|January 01, 2017|Support for platform API examples|
+|Q1, 2017|Support for platform services examples|
 
 ### Running the KitchenSink App
 
