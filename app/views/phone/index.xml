@@ -3,6 +3,8 @@
         <Window title="Phone">
             <ListView id="listView" onItemclick="openComponent">
                 <ListSection>
+                    <ListItem title="3D-Touch: Shortcut Items" itemId="shortcutItems" />
+                    <ListItem title="3D-Touch: Peek and Pop" itemId="peekAndPop" />
                     <ListItem title="Sound" itemId="sound" />
                 </ListSection>
             </ListView>
