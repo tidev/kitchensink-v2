@@ -20,6 +20,37 @@
 			<dict>
 				<key>UIStatusBarStyle</key>
 				<string>UIStatusBarStyleLightContent</string>
+				
+				<!-- Define static shortcuts here -->
+                <key>UIApplicationShortcutItems</key>
+                <array>
+					<!-- Each <dict> represents one shortcut item -->
+                    <dict>
+
+                        <!-- System-provided icon -->
+                        <key>UIApplicationShortcutItemIconType</key>
+                        <string>UIApplicationShortcutIconTypeAdd</string>
+                        
+                        <!-- Title - Can be a name in an i18n/<lang>/app.xml file -->
+                        <key>UIApplicationShortcutItemTitle</key>
+                        <string>add_title</string>
+
+						<!-- Subtitle - Can be a name in an i18n/<lang>/app.xml file -->
+                        <key>UIApplicationShortcutItemSubtitle</key>
+                        <string>add_subtitle</string>
+                        
+                        <!-- Type used to identify the action in the event listener -->
+                        <key>UIApplicationShortcutItemType</key>
+                        <string>add</string>
+                        
+                        <!-- Custom dictionary (object) to receive in the event -->
+                        <key>UIApplicationShortcutItemUserInfo</key>
+                        <dict>
+                            <key>myCustomKey</key>
+                            <string>myCustomValue</string>
+                        </dict>        
+                    </dict>
+                </array>
 			</dict>
 		</plist>
 	</ios>

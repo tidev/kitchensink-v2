@@ -1,10 +1,13 @@
+var log = require("log");
 
 /**
  * The scoped constructor of the controller.
  **/
 (function constructor() {
-    $.index.open();    
+    Ti.App.iOS.addEventListener('shortcutitemclick', handleShortcutItem);
+    
     Alloy.CFG.tabGroup = $.index;    
+    $.index.open();    
 })();
 
 function validateDocsInfo() {
@@ -26,4 +29,9 @@ function validateDocsInfo() {
 
         alertNotice.show();
     }
+}
+
+function handleShortcutItem(e) {
+    log.args('Ti.App.iOS.shortcutitemclick', e);
+
 }

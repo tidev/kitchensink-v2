@@ -1,0 +1,5 @@
+<Alloy>
+    <Window title="Peek and Pop">
+        <Label class="placeholderLabel" text="To be added ⚒" />
+    </Window>
+</Alloy>
