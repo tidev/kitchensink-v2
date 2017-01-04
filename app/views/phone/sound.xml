@@ -1,5 +1,11 @@
 <Alloy>
     <Window title="Sound">
-        
+        <ListView id="listView" onItemclick="openSoundComponent">
+            <ListSection>
+                <ListItem title="Local Sound" itemId="soundLocal" />
+                <ListItem title="Remote Sound" itemId="soundRemote" />
+                <ListItem title="Remote Streaming" itemId="soundRemoteStreaming" />
+            </ListSection>
+        </ListView>
     </Window>
 </Alloy>
