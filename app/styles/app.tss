@@ -50,6 +50,15 @@
 	}
 }
 
+".placeholderLabel": {
+	width: 250,
+	height: 125,
+	color: "#333",
+	backgroundColor: "#eee",
+	borderRadius: 4,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+
 "ListItem[platform=android]": {
 	color:"#000",
 	height: 43,
