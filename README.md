@@ -15,12 +15,12 @@ and can be logged in the "Logs" tab.
 
 ### Roadmap
 
-| Release Date | Milestone |
-|--------------|-----------|
-| November 14, 2016 |Initial Release (Basic support) |
-| January 05, 2016 |Support for 3D-Touch API’s (Peek and Pop / Shortcut Items) |
-| Q1, 2017 | Support for platform API examples |
-| Q2, 2017 | Support for platform services examples |
+| Release Date | Milestone | Done |
+|--------------|-----------| ----|
+| November 14, 2016 | Initial Release (Basic support) | ✅ |
+| January 05, 2016 | Support for 3D-Touch API’s (Peek and Pop / Shortcut Items) | ✅ |
+| Q1, 2017 | Support for platform API examples | 🛠 |
+| Q2, 2017 | Support for platform services examples | 🛠 |
 
 ### Running the KitchenSink App
 
