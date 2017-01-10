@@ -2,6 +2,10 @@
 	backgroundColor: "white"
 }
 
+"Window[platform=windows]": {
+	backgroundColor: "black"
+}
+
 "Window[platform=ios]": {
 	barColor: Alloy.CFG.styles.tintColor,
 	navTintColor: "white",
