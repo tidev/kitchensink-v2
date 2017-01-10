@@ -5,3 +5,7 @@
 "#listView": {
     defaultItemTemplate: Ti.UI.LIST_ITEM_TEMPLATE_SUBTITLE
 }
+
+"#listView[platform=windows]": {
+    defaultItemTemplate: Ti.UI.LIST_ITEM_TEMPLATE_DEFAULT
+}
