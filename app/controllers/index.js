@@ -4,9 +4,9 @@ var log = require("log");
  * The scoped constructor of the controller.
  **/
 (function constructor() {
-	if(OS_IOS) {
-    	Ti.App.iOS.addEventListener('shortcutitemclick', handleShortcutItem);
-	}
+    if (OS_IOS) {
+        Ti.App.iOS.addEventListener('shortcutitemclick', handleShortcutItem);
+    }
 
     Alloy.CFG.tabGroup = $.index;
     $.index.open();
