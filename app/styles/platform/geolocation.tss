@@ -1,0 +1,17 @@
+".geolocationTextArea": {
+	width: 380,
+	height: 110,
+	backgroundColor: "#f0f0f0",
+	color: "#000000"
+}
+
+".mapElmSeparation" : {
+	top : 10
+}
+
+"TextArea" :{
+	"font" :{
+		"fontSize" : 12
+	}
+	
+}
