@@ -1,0 +1,12 @@
+<Alloy>
+    <Window title="Photo Gallery" layout="vertical">
+        <Button onClick="openPhotoGallery" class="actionButton" title="Open Gallery" top="20" />
+        <View id="viewControls" visible="false" layout="vertical" height="150">
+            <Label top="20">Change image size</Label>
+            <Slider onChange="sizeChanged" id="sizeSlider" value="1" width="50%"/>
+            <Label top="10">Change image opacity</Label>
+            <Slider onChange="setOpacity" id="opacitySlider" value="1" width="50%"/>
+        </View>
+        <ImageView id="choosenImage" width="370"/>
+    </Window>
+</Alloy>

@@ -5,6 +5,7 @@
                 <ListSection>
                     <ListItem title="Network" itemId="network" />
                     <ListItem title="Geolocation" itemId="geolocation" />
+                    <ListItem title="Photo Gallery" itemId="photogallery" />
                 </ListSection>
             </ListView>
         </Window>

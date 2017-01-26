@@ -22,6 +22,8 @@
 		<default-background-color>#c91326</default-background-color>
 		<plist>
 			<dict>
+			    <key>NSPhotoLibraryUsageDescription</key>
+                <string>We need permission to look at your photo library.</string>
 			    <key>NSLocationAlwaysUsageDescription</key>
                 <string>
                     We need your location so we can cross check where you are so we can find you!
