@@ -4,6 +4,7 @@
             <ListView id="listView" onItemclick="openComponent">
                 <ListSection>
                     <ListItem title="Network" itemId="network" />
+                    <ListItem title="Geolocation" itemId="geolocation" />
                 </ListSection>
             </ListView>
         </Window>
