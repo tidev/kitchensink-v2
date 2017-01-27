@@ -11,6 +11,7 @@ function openPhotoGallery() {
     
     Titanium.Media.openPhotoGallery({
         success : function(event) {
+            log.args('Titanium.Media.openPhotoGallery', Ti.Media.MEDIA_TYPE_PHOTO);
             // called when media returned from the camera
             Ti.API.debug('Our type was: ' + event.mediaType);
             if (event.mediaType == Ti.Media.MEDIA_TYPE_PHOTO) {
@@ -23,10 +24,12 @@ function openPhotoGallery() {
             }
         },
         cancel : function() {
-            // called when user cancels 
+            // Called when user cancels 
+            log.args('Titanium.Media.openPhotoGallery', 'Canceled');
         },
         error : function(error) {
-            // called when there's an error
+            log.args('Titanium.Media.openPhotoGallery', 'Error' + error.code);
+            // Called when there's an error
             var a = Titanium.UI.createAlertDialog({
                 title : 'Gallery'
             });

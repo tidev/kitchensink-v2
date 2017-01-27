@@ -1,16 +1,16 @@
 var log = require("log");
+var Map = require('ti.map');
 
 /**
  * The scoped constructor of the controller.
  **/
 (function constructor() {
-    var Map = require('ti.map');
 
     Titanium.Geolocation.preferredProvider = Titanium.Geolocation.PROVIDER_GPS;
     Titanium.Geolocation.accuracy = Titanium.Geolocation.ACCURACY_BEST;
     Titanium.Geolocation.distanceFilter = 10;
 
-    //Check for Google Play Services. In order to view maps, Google Play services needs to be installed on the device
+    // Check for Google Play Services. In order to view maps, Google Play services needs to be installed on the device
     if (OS_ANDROID) {
         var rc = Map.isGooglePlayServicesAvailable();
         switch (rc) {
@@ -34,10 +34,10 @@ var log = require("log");
         }
     }
 
-    //checks for location service available
+    // Checks for location service available
     if (Titanium.Geolocation.locationServicesEnabled) {
 
-        //adds listener to app and pops alert when location found
+        // Adds listener to app and pops alert when location found
         Ti.App.addEventListener("app:got.location", function(d) {
 
             var geoPackage = JSON.stringify(d),
@@ -52,7 +52,6 @@ var log = require("log");
         });
 
         function updatePosition(e) {
-
             if (!e.success || e.error) {
                 Ti.API.debug(JSON.stringify(e));
                 Ti.API.debug(e);
@@ -64,11 +63,8 @@ var log = require("log");
             });
         }
 
-
         Titanium.Geolocation.getCurrentPosition(function(e) {
-
             if (Ti.Network.online) {
-
                 var geoPackage = JSON.stringify(e),
                     latitude = e.coords.latitude,
                     longitude = e.coords.longitude;
@@ -90,11 +86,10 @@ var log = require("log");
 
                 $.map.add(mapview);
 
-                //Handle click events on any annotations on this map.
+                // Handle click events on any annotations on this map.
                 mapview.addEventListener('click', function(evt) {
                     Ti.API.info("Clicked " + evt.clicksource + " on " + evt.latitude + "," + evt.longitude);
                 });
-
             }
         });
 
@@ -102,6 +97,4 @@ var log = require("log");
     } else {
         Ti.API.debug('Your device has GPS turned off. Please turn it on.');
     }
-
-})();
-
+})(); 
