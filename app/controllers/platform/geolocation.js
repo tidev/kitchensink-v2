@@ -37,20 +37,6 @@ var Map = require('ti.map');
     // Checks for location service available
     if (Titanium.Geolocation.locationServicesEnabled) {
 
-        // Adds listener to app and pops alert when location found
-        Ti.App.addEventListener("app:got.location", function(d) {
-
-            var geoPackage = JSON.stringify(d),
-                latitude = d.coords.latitude,
-                longitude = d.coords.longitude;
-
-            $.geoloc.value = geoPackage;
-            $.geo_lat.text = "Latitude: " + latitude;
-            $.geo_long.text = "Longitude: " + longitude;
-
-            log.args('Titanium.Geolocation', 'location: ' + geoPackage);
-        });
-
         function updatePosition(e) {
             if (!e.success || e.error) {
                 Ti.API.debug(JSON.stringify(e));
@@ -58,9 +44,15 @@ var Map = require('ti.map');
                 return;
             }
 
-            Ti.App.fireEvent("app:got.location", {
-                "coords" : e.coords
-            });
+            var geoPackage = JSON.stringify(e),
+                latitude = e.coords.latitude,
+                longitude = e.coords.longitude;
+
+            $.geoloc.value = geoPackage;
+            $.geo_lat.text = "Latitude: " + latitude;
+            $.geo_long.text = "Longitude: " + longitude;
+
+            log.args('Titanium.Geolocation', 'location: ' + geoPackage);
         }
 
         Titanium.Geolocation.getCurrentPosition(function(e) {
