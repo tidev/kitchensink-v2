@@ -1,9 +1,9 @@
 <Alloy>
     <Window title="Geolocation" layout="vertical">
-        <Label id="geo_lat" class="mapElmSeparation"></Label>
-        <Label id="geo_long" class="mapElmSeparation"></Label>
-        <Label class="mapElmSeparation">Package</Label>
-        <TextArea id="geoloc" class="mapElmSeparation geolocationTextArea"></TextArea>
-        <View id="map" class="mapElmSeparation"/>
+        <Label id="geo_lat" class="mapElmSeparation" />
+        <Label id="geo_long" class="mapElmSeparation" />
+        <Label class="mapElmSeparation" text="Package" />
+        <TextArea id="geoloc" class="mapElmSeparation geolocationTextArea" />
+        <View id="map" class="mapElmSeparation" />
     </Window>
 </Alloy>
