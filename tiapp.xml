@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
+    <modules>
+        <module platform="iphone">ti.map</module>
+        <module platform="android">ti.map</module>
+    </modules>
 	<id>com.appcelerator.kitchensink</id>
 	<name>KitchenSink</name>
 	<version>2.1.1</version>
@@ -18,6 +22,12 @@
 		<default-background-color>#c91326</default-background-color>
 		<plist>
 			<dict>
+			    <key>NSPhotoLibraryUsageDescription</key>
+                <string>We need permission to look at your photo library.</string>
+			    <key>NSLocationAlwaysUsageDescription</key>
+                <string>
+                    We need your location so we can cross check where you are so we can find you!
+                </string>
 				<key>UIStatusBarStyle</key>
 				<string>UIStatusBarStyleLightContent</string>
 				
@@ -56,6 +66,12 @@
 	<android xmlns:android="http://schemas.android.com/apk/res/android">
 		<manifest android:versionCode="2" android:versionName="2.1.0">
 			<application android:theme="@style/kitchensink" android:hardwareAccelerated="true" android:largeHeap="true"/>
+			<uses-library android:name="com.google.android.maps"/>
+            <uses-sdk android:minSdkVersion="18"/>
+            <application android:debuggable="true">
+                <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="[YOUR API KEY HERE]"/>
+                <!--http://docs.appcelerator.com/platform/latest/#!/guide/Google_Maps_v2_for_Android-->
+            </application>
 		</manifest>
 	</android>
 	<deployment-targets>
