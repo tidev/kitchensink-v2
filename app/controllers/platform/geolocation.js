@@ -5,7 +5,6 @@ var Map = require('ti.map');
  * The scoped constructor of the controller.
  **/
 (function constructor() {
-
     Titanium.Geolocation.preferredProvider = Titanium.Geolocation.PROVIDER_GPS;
     Titanium.Geolocation.accuracy = Titanium.Geolocation.ACCURACY_BEST;
     Titanium.Geolocation.distanceFilter = 10;
@@ -35,8 +34,7 @@ var Map = require('ti.map');
     }
 
     // Checks for location service available
-    if (Titanium.Geolocation.locationServicesEnabled) {
-
+    if (Ti.Geolocation.locationServicesEnabled) {
         function updatePosition(e) {
             if (!e.success || e.error) {
                 Ti.API.debug(JSON.stringify(e));
@@ -55,7 +53,7 @@ var Map = require('ti.map');
             log.args('Titanium.Geolocation', 'location: ' + geoPackage);
         }
 
-        Titanium.Geolocation.getCurrentPosition(function(e) {
+        Ti.Geolocation.getCurrentPosition(function(e) {
             if (Ti.Network.online) {
                 var geoPackage = JSON.stringify(e),
                     latitude = e.coords.latitude,
@@ -85,7 +83,7 @@ var Map = require('ti.map');
             }
         });
 
-        Titanium.Geolocation.addEventListener('location', updatePosition);
+        Ti.Geolocation.addEventListener('location', updatePosition);
     } else {
         Ti.API.debug('Your device has GPS turned off. Please turn it on.');
     }
