@@ -1,0 +1,10 @@
+<Alloy>
+    <Window title="Facebook" id="fbWin">
+        <Button onClick="login" id="fbLogin" visible="none" class="actionButton" title="Login" top="20"/>
+        <Button onClick="logout" id="fbLogout" visible="none" class="actionButton" title="Logout" top="20"/>
+        <Button onClick="share" id="fbShare" visible="none" class="actionButton" title="Share" top="80"/>
+        <ImageView id="fbUserImage" width="50" height="50" top="140"></ImageView>
+        <Label id="fbUserName" top="200"></Label>
+        <Label id="fbFriends" top="220"></Label>
+    </Window>
+</Alloy>
