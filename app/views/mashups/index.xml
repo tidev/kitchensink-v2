@@ -4,9 +4,9 @@
             <ListView id="listView" onItemclick="openComponent">
                 <ListSection>
                     <ListItem title="Twitter" itemId="twitter" />
+                    <ListItem title="Facebook" itemId="facebook" />
                 </ListSection>
             </ListView>
-
         </Window>
     </Tab>
 </Alloy>
