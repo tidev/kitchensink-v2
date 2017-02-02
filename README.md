@@ -10,8 +10,9 @@ and can be logged in the "Logs" tab.
 - [x] API Logging
 - [x] Controls (Switch, Slider, Tabbed Bar, Text Field, Alerts, Dialogs, ...)
 - [x] Views (Scroll View, List View, Image View, Blur View, Web View, ...)
-- [ ] TODO: Platform API's (HTTP-Requests, Contacts, Camera, Gallery, Geolocation, ...)
-- [ ] TODO: Services (Hyperloop, Unit-Testing, Facebook, Maps, OAuth, ...)
+- [x] Services (Twitter, Facebook)
+- [ ] TODO: More Platform API's (HTTP-Requests, Contacts, Camera, Gallery, Geolocation, ...)
+- [ ] TODO: More Services (Hyperloop, Unit-Testing, Maps, OAuth, ...)
 
 ### Roadmap
 
@@ -19,6 +20,7 @@ and can be logged in the "Logs" tab.
 |--------------|-----------| ----|
 | November 14, 2016 | Initial Release (Basic support) | ✅ |
 | January 05, 2016 | Support for 3D-Touch API’s (Peek and Pop / Shortcut Items) | ✅ |
+| February 02, 2016 | Support for an Facebook SDK example | ✅ |
 | Q1, 2017 | Support for platform API examples | 🛠 |
 | Q2, 2017 | Support for platform services examples | 🛠 |
 
