@@ -1,0 +1,12 @@
+<Alloy>
+    <Window title="Clipboard" layout="vertical">
+		<View class="block">
+			<TextField id="copyField" class="field" />
+			<Button onClick="copyText" class="button">Copy Text</Button>
+		</View>
+		<View class="block">
+			<TextField id="pasteField" class="field" />
+			<Button onClick="pasteText" class="button">Paste Text</Button>
+		</View>
+    </Window>
+</Alloy>

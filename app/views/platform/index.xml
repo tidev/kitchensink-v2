@@ -6,6 +6,8 @@
                     <ListItem title="Network" itemId="network" />
                     <ListItem title="Geolocation" itemId="geolocation" />
                     <ListItem title="Photo Gallery" itemId="photogallery" />
+                    <ListItem title="Clipboard" itemId="clipboard" />
+                    <ListItem title="Database" itemId="database" />
                 </ListSection>
             </ListView>
         </Window>

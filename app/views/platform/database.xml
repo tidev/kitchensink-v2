@@ -1,0 +1,5 @@
+<Alloy>
+    <Window title="Database" onOpen="intitializeDatabase">
+        <Label>Check out the Console!</Label>
+    </Window>
+</Alloy>
