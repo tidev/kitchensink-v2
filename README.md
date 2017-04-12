@@ -11,17 +11,18 @@ and can be logged in the "Logs" tab.
 - [x] Controls (Switch, Slider, Tabbed Bar, Text Field, Alerts, Dialogs, ...)
 - [x] Views (Scroll View, List View, Image View, Blur View, Web View, ...)
 - [x] Services (Twitter, Facebook)
-- [ ] TODO: More Platform API's (HTTP-Requests, Contacts, Camera, Gallery, Geolocation, ...)
-- [ ] TODO: More Services (Hyperloop, Unit-Testing, Maps, OAuth, ...)
+- [x] Platform (Clipboard, URL-Schemes, Hyperloop, Databases, Geolocation, Gallery, ...)
+- [ ] TODO: More Platform API's (HTTP-Requests, Contacts, Camera, ...)
+- [ ] TODO: More Services (Unit-Testing, Maps, OAuth, ...)
 
 ### Roadmap
 
 | Release Date | Milestone | Done |
 |--------------|-----------| ----|
 | November 14, 2016 | Initial Release (Basic support) | ✅ |
-| January 05, 2016 | Support for 3D-Touch API’s (Peek and Pop / Shortcut Items) | ✅ |
-| February 02, 2016 | Support for an Facebook SDK example | ✅ |
-| April 12 | Support for platform API examples | ✅ |
+| January 05, 2017 | Support for 3D-Touch API’s (Peek and Pop / Shortcut Items) | ✅ |
+| February 02, 2017 | Support for an Facebook SDK example | ✅ |
+| April 12, 2017 | Support for platform API examples | ✅ |
 | Q2, 2017 | Support for platform services examples | 🛠 |
 
 ### Running the KitchenSink App
