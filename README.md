@@ -19,7 +19,7 @@ and can be logged in the "Logs" tab.
 |--------------|-----------| ----|
 | November 14, 2016 | Initial Release (Basic support) | ✅ |
 | January 05, 2016 | Support for 3D-Touch API’s (Peek and Pop / Shortcut Items) | ✅ |
-| Q1, 2017 | Support for platform API examples | 🛠 |
+| April 12 | Support for platform API examples | ✅ |
 | Q2, 2017 | Support for platform services examples | 🛠 |
 
 ### Running the KitchenSink App
