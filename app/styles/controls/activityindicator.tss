@@ -1,33 +1,33 @@
-"ActivityIndicator": {
+'ActivityIndicator': {
 	bottom: 20,
 	height: Ti.UI.SIZE,
 }
 
-"#indicatorLight": {
+'#indicatorLight': {
 	top: 20,
 	style: Ti.UI.ActivityIndicatorStyle.PLAIN
 }
 
-"#indicatorDark": {
+'#indicatorDark': {
 	style: Ti.UI.ActivityIndicatorStyle.DARK
 }
 
-"#indicatorBig": {
+'#indicatorBig': {
 	style: Ti.UI.ActivityIndicatorStyle.BIG
 }
 
-"#indicatorMessage": {
+'#indicatorMessage': {
 	style: Ti.UI.ActivityIndicatorStyle.DARK,
-	message: "Loading ..."
+	message: 'Loading ...'
 }
 
-".container": {
+'.container': {
 	width: 300,
 	height: Ti.UI.SIZE,
-	backgroundColor: "#aaaaaa",
-	layout: "vertical"
+	backgroundColor: '#aaaaaa',
+	layout: 'vertical'
 }
 
-".changeTintColorButton": {
+'.changeTintColorButton': {
 	top: 40
 }

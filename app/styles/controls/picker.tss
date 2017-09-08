@@ -1,5 +1,5 @@
 
-".picker": {
+'.picker': {
 	height: 300,
 	bottom: 0,
 	width: Ti.UI.FILL

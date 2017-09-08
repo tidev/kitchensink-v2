@@ -1,4 +1,4 @@
-var log = require("log");
+var log = require('log');
 var Map = require('ti.map');
 
 /**
@@ -47,8 +47,8 @@ var Map = require('ti.map');
                 longitude = e.coords.longitude;
 
             $.geoloc.value = geoPackage;
-            $.geo_lat.text = "Latitude: " + latitude;
-            $.geo_long.text = "Longitude: " + longitude;
+            $.geo_lat.text = 'Latitude: ' + latitude;
+            $.geo_long.text = 'Longitude: ' + longitude;
 
             log.args('Titanium.Geolocation', 'location: ' + geoPackage);
         }
@@ -78,7 +78,7 @@ var Map = require('ti.map');
 
                 // Handle click events on any annotations on this map.
                 mapview.addEventListener('click', function(evt) {
-                    Ti.API.info("Clicked " + evt.clicksource + " on " + evt.latitude + "," + evt.longitude);
+                    Ti.API.info('Clicked ' + evt.clicksource + ' on ' + evt.latitude + ',' + evt.longitude);
                 });
             }
         });

@@ -1,0 +1,12 @@
+<Alloy>
+    <Window title="Toolbar">
+        <Button platform="android" onClick="showWindowWithToolbar" title="Use Toolbar as ActionBar" />
+        <Toolbar class="toolbar">
+            <Items>
+                <Button onClick="sayHello">Action 1</Button>
+                <Button onClick="sayHello">Action 2</Button>
+                <Button onClick="sayHello">Action 3</Button>
+            </Items>
+        </Toolbar>
+    </Window>
+</Alloy>

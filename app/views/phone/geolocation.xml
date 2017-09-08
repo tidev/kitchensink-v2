@@ -3,7 +3,7 @@
         <Label id="geo_lat" class="mapElmSeparation" />
         <Label id="geo_long" class="mapElmSeparation" />
         <Label class="mapElmSeparation" text="Package" />
-        <TextArea id="geoloc" class="mapElmSeparation geolocationTextArea" />
+        <TextArea editable="false" id="geoloc" class="mapElmSeparation geolocationTextArea" />
         <View id="map" class="mapElmSeparation" />
     </Window>
 </Alloy>

@@ -1,4 +1,4 @@
-var log = require("log");
+var log = require('log');
 
 /**
  * The scoped constructor of the controller.
@@ -35,9 +35,9 @@ function intitializeDatabase(e) {
 	 *	Update the previously inserted data.
 	 **/
 	db.execute('UPDATE DATABASETEST SET NAME = ? WHERE ID = ?', updateName, updateId);
-	db.execute('UPDATE DATABASETEST SET NAME = "I was updated too" WHERE ID = 2');
+	db.execute('UPDATE DATABASETEST SET NAME = "I was updated, too!" WHERE ID = 2');
 	
-	log.args('Ti.Database', 'UPDATED NAME TO "I was updated too"');
+	log.args('Ti.Database', 'UPDATED NAME TO "I was updated, too!"');
 	
 	/**
 	 *	Delete data from the database.

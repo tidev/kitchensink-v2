@@ -1,13 +1,13 @@
-".verticalContainer": {
-	layout: "vertical",
+'.verticalContainer': {
+	layout: 'vertical',
 	width: 300
 }
 
-".actionButton": {
+'.actionButton': {
 	top: 20
 }
 
-"#playbackProgress": {
+'#playbackProgress': {
 	bottom: 30,
 	width: 200,
 	min: 0,
@@ -15,30 +15,30 @@
 	tintColor: Alloy.CFG.styles.tintColor
 }
 
-"#playbackProgress[platform=ios]": {
+'#playbackProgress[platform=ios]': {
 	height: Ti.UI.FILL
 }
 
-".horizontalContainer": {
+'.horizontalContainer': {
 	height: Ti.UI.SIZE,
 }
 
-".buttonVolume": {
+'.buttonVolume': {
 	width: 140
 }
 
-"#buttonVolumeUp": {
+'#buttonVolumeUp': {
 	left: 0
 }
 
-"#buttonVolumeDown": {
+'#buttonVolumeDown': {
 	right: 0
 }
 
-".playbackProgressToolbar[platform=ios]": {
+'.playbackProgressToolbar[platform=ios]': {
 	bottom: 0
 }
 
-".playbackProgressToolbar[platform=android]": {
+'.playbackProgressToolbar[platform=android]': {
 	bottom: 30
 }
