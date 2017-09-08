@@ -12,8 +12,8 @@ and can be logged in the "Logs" tab.
 - [x] Views (Scroll View, List View, Image View, Blur View, Web View, ...)
 - [x] Services (Twitter, Facebook)
 - [x] Platform (Clipboard, URL-Schemes, Hyperloop, Databases, Geolocation, Gallery, ...)
-- [  ] TODO: More Platform API's (HTTP-Requests, Contacts, Camera, ...)
-- [  ] TODO: More Services (Unit-Testing, Maps, OAuth, ...)
+- [ ] TODO: More Platform API's (HTTP-Requests, Contacts, Camera, ...)
+- [ ] TODO: More Services (Unit-Testing, Maps, OAuth, ...)
 
 ### Running the KitchenSink App
 
