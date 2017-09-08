@@ -25,33 +25,6 @@
                     <string>fbauth2</string>
                     <string>fbshareextension</string>
                 </array>
-                <key>NSAppTransportSecurity</key>
-                <dict>
-                    <key>NSExceptionDomains</key>
-                    <dict>
-                        <key>facebook.com</key>
-                        <dict>
-                            <key>NSIncludesSubdomains</key>
-                            <true/>
-                            <key>NSExceptionRequiresForwardSecrecy</key>
-                            <false/>
-                        </dict>
-                        <key>fbcdn.net</key>
-                        <dict>
-                            <key>NSIncludesSubdomains</key>
-                            <true/>
-                            <key>NSExceptionRequiresForwardSecrecy</key>
-                            <false/>
-                        </dict>
-                        <key>akamaihd.net</key>
-                        <dict>
-                            <key>NSIncludesSubdomains</key>
-                            <true/>
-                            <key>NSExceptionRequiresForwardSecrecy</key>
-                            <false/>
-                        </dict>
-                    </dict>
-                </dict>
                 <key>CFBundleURLTypes</key>
                 <array>
                     <dict>
@@ -71,7 +44,7 @@
                 <string>[YOUR FACEBOOK ID]</string>
                 <key>FacebookDisplayName</key>
                 <!-- Facebook App Name from developer.facebook.com -->
-                <string>[YOUR APP NAME]</string>
+                <string>KitchenSink</string>
                 <key>NSPhotoLibraryUsageDescription</key>
                 <string>We need permission to look at your photo library.</string>
                 <key>NSLocationAlwaysUsageDescription</key>
@@ -110,6 +83,7 @@
         <manifest android:versionCode="2" android:versionName="2.1.0">
             <uses-library android:name="com.google.android.maps"/>
             <uses-sdk android:minSdkVersion="18"/>
+            <uses-permission android:name="android.permission.RECORD_AUDIO" />
             <application android:debuggable="true" 
                          android:hardwareAccelerated="true"
                          android:largeHeap="true" 
@@ -120,7 +94,7 @@
                 
                 <activity android:name="com.facebook.FacebookActivity" 
                           android:theme="@android:style/Theme.Translucent.NoTitleBar" 
-                          android:label="[YOUR APP NAME]" 
+                          android:label="KitchenSink" 
                           android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
                 <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
             </application>
