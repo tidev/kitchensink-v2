@@ -2,6 +2,8 @@
 Alloy.CFG.tabGroup = {};
 
 Alloy.Globals.setAndroidBackButton = function(_window) {
+	if (!OS_ANDROID) { return; }
+	
 	_window.addEventListener('open', function() {
 		var ABH = require('actionbar').actionBarHelper;
 		var actionBarHelper = new ABH(_window);
