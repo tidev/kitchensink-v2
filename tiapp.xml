@@ -108,12 +108,14 @@
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
         <manifest android:versionCode="2" android:versionName="2.1.0">
-            <application android:hardwareAccelerated="true"
-            android:largeHeap="true" android:theme="@style/kitchensink"/>
             <uses-library android:name="com.google.android.maps"/>
             <uses-sdk android:minSdkVersion="18"/>
-            <application android:debuggable="true">
-                <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="[YOUR API KEY HERE]"/>
+            <application android:debuggable="true" 
+                         android:hardwareAccelerated="true"
+                         android:largeHeap="true" 
+                         android:theme="@style/kitchensink">
+                <meta-data android:name="com.google.android.maps.v2.API_KEY" 
+                           android:value="[YOUR API KEY HERE]"/>
                 <!--http://docs.appcelerator.com/platform/latest/#!/guide/Google_Maps_v2_for_Android-->
                 
                 <activity android:name="com.facebook.FacebookActivity" 
@@ -121,7 +123,6 @@
                           android:label="[YOUR APP NAME]" 
                           android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
                 <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
-            
             </application>
         </manifest>
     </android>
