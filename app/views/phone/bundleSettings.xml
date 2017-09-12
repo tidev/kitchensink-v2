@@ -1,0 +1,5 @@
+<Alloy>
+    <Window title="Bundle Settings">
+        <Label class="placeholderLabel" text="Go to your iOS Settings > KitchenSink for app-specific bundle-settings." />
+    </Window>
+</Alloy>
