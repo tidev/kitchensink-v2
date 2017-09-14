@@ -1,0 +1,23 @@
+<Alloy>
+	<Window title="Drawer">
+		<DrawerLayout id="drawerLayout">
+			<LeftView>
+				<View class="views">
+					<Label text="Left"/>
+				</View>
+			</LeftView>
+			<CenterView>
+				<View>
+					<Button id="btn_left" title="Toggle left"/>
+					<Button id="close" title="Close window"/>
+					<Button id="btn_right" title="Toggle right"/>
+				</View>
+			</CenterView>
+			<RightView>
+				<View class="views">
+					<Label text="Right"/>
+				</View>
+			</RightView>
+		</DrawerLayout>
+	</Window>
+</Alloy>
