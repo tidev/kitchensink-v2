@@ -1,0 +1,9 @@
+'.toolbar': {
+	title: 'MyMenu',
+	subtitle: 'Subtitle',
+	width: Ti.UI.FILL,
+	top: 0,
+	barColor: 'green',
+	displayHomeAsUp: true,
+	homeButtonEnabled: true
+}

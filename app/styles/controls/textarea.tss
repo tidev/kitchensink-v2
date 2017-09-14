@@ -1,7 +1,7 @@
 
-".textarea": {
+'.textarea': {
 	width: 300,
 	height: 100,
-	backgroundColor: "#f0f0f0",
+	backgroundColor: '#f0f0f0',
 	borderRadius: 4
 }

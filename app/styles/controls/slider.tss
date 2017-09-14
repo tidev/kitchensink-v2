@@ -1,6 +1,6 @@
 
-".slider": {
-	tintColor: "green",
+'.slider': {
+	tintColor: 'green',
 	min: 0,
 	max: 1,
 	width: 200,
