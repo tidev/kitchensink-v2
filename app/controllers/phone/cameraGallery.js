@@ -24,23 +24,27 @@ function openComponent(e) {
     default: log.args('Ti.Media', 'Unknown action selected: ' + action);
   }
   
-  e.source.deselectItem(e.sectionIndex, e.itemIndex);
+  if (OS_IOS) {
+      e.source.deselectItem(e.sectionIndex, e.itemIndex);
+  }
 }
 
 function showCamera(mediaTypes) {
-  Ti.Media.showCamera({
-    mediaTypes: mediaTypes,
-    success: function(e) {
-      log.args('Ti.Media', 'Image taken successfully!');
-      processImage(e.media)
-    },
-    error: function(e) {
-      log.args('Ti.Media', 'Error showing camera: ' + e.error);
-    },
-    cancel: function(e) {
-      log.args('Ti.Media', 'Camera was cancelled');
-    }
-  })
+  require("/permissions").checkCameraPermission(function() {
+      Ti.Media.showCamera({
+        mediaTypes: mediaTypes,
+        success: function(e) {
+          log.args('Ti.Media', 'Image taken successfully!');
+          processImage(e.media)
+        },
+        error: function(e) {
+          log.args('Ti.Media', 'Error showing camera: ' + e.error);
+        },
+        cancel: function(e) {
+          log.args('Ti.Media', 'Camera was cancelled');
+        }
+    });
+  });
 }
 
 function processImage(image) {
@@ -61,7 +65,9 @@ function processImage(image) {
     })
   });
   
-  image.add(label);
+  if (OS_IOS) {
+      image.add(label);
+  }
   $.window.add(image);
   
   image.animate({
@@ -90,16 +96,18 @@ function saveToGallery() {
 }
 
 function openFromGallery() {
-  Ti.Media.openPhotoGallery({
-    success: function(e) {
-      log.args('Ti.Media', 'Image open successfully!');
-      processImage(e.media)
-    },
-    error: function(e) {
-      log.args('Ti.Media', 'Error opening image: ' + e.error);
-    },
-    cancel: function(e) {
-      log.args('Ti.Media', 'Opening photo-gallery was cancelled');
-    }
+  require("/permissions").checkCameraPermission(function() {
+      Ti.Media.openPhotoGallery({
+        success: function(e) {
+          log.args('Ti.Media', 'Image open successfully!');
+          processImage(e.media)
+        },
+        error: function(e) {
+          log.args('Ti.Media', 'Error opening image: ' + e.error);
+        },
+        cancel: function(e) {
+          log.args('Ti.Media', 'Opening photo-gallery was cancelled');
+        }
+      });
   });
 }

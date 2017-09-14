@@ -40,7 +40,8 @@
 	height: 40,
 	tintColor: 'white',
 	borderRadius: 4,
-	backgroundColor: Alloy.CFG.styles.tintColor
+	backgroundColor: Alloy.CFG.styles.tintColor,
+	color: 'white'
 }
 
 '.stateLabel': {
