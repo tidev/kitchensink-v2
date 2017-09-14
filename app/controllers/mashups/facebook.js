@@ -1,5 +1,5 @@
 var fb = require('facebook');
-var log = require("log");
+var log = require('log');
 
 /**
  * The scoped constructor of the controller.

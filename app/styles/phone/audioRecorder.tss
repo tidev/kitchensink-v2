@@ -1,0 +1,8 @@
+'.actionButton': {
+	visible: false,
+	top: 30
+}
+
+'#playRecordingButton': {
+	top: 60
+}

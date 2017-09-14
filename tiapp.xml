@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <modules>
-        <module platform="iphone">ti.map</module>
-        <module platform="android">ti.map</module>
-        <module platform="android">facebook</module>
-        <module platform="iphone">facebook</module>
-    </modules>
     <id>com.appcelerator.kitchensink</id>
     <name>KitchenSink</name>
-    <version>2.1.1</version>
+    <version>2.2.0</version>
     <publisher>Appcelerator, Inc.</publisher>
     <url>https://appcelerator.com</url>
     <description/>
@@ -31,33 +25,6 @@
                     <string>fbauth2</string>
                     <string>fbshareextension</string>
                 </array>
-                <key>NSAppTransportSecurity</key>
-                <dict>
-                    <key>NSExceptionDomains</key>
-                    <dict>
-                        <key>facebook.com</key>
-                        <dict>
-                            <key>NSIncludesSubdomains</key>
-                            <true/>
-                            <key>NSExceptionRequiresForwardSecrecy</key>
-                            <false/>
-                        </dict>
-                        <key>fbcdn.net</key>
-                        <dict>
-                            <key>NSIncludesSubdomains</key>
-                            <true/>
-                            <key>NSExceptionRequiresForwardSecrecy</key>
-                            <false/>
-                        </dict>
-                        <key>akamaihd.net</key>
-                        <dict>
-                            <key>NSIncludesSubdomains</key>
-                            <true/>
-                            <key>NSExceptionRequiresForwardSecrecy</key>
-                            <false/>
-                        </dict>
-                    </dict>
-                </dict>
                 <key>CFBundleURLTypes</key>
                 <array>
                     <dict>
@@ -77,7 +44,7 @@
                 <string>[YOUR FACEBOOK ID]</string>
                 <key>FacebookDisplayName</key>
                 <!-- Facebook App Name from developer.facebook.com -->
-                <string>[YOUR APP NAME]</string>
+                <string>KitchenSink</string>
                 <key>NSPhotoLibraryUsageDescription</key>
                 <string>We need permission to look at your photo library.</string>
                 <key>NSLocationAlwaysUsageDescription</key>
@@ -114,20 +81,22 @@
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
         <manifest android:versionCode="2" android:versionName="2.1.0">
-            <application android:hardwareAccelerated="true"
-            android:largeHeap="true" android:theme="@style/kitchensink"/>
             <uses-library android:name="com.google.android.maps"/>
             <uses-sdk android:minSdkVersion="18"/>
-            <application android:debuggable="true">
-                <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="[YOUR API KEY HERE]"/>
+            <uses-permission android:name="android.permission.RECORD_AUDIO" />
+            <application android:debuggable="true" 
+                         android:hardwareAccelerated="true"
+                         android:largeHeap="true" 
+                         android:theme="@style/kitchensink">
+                <meta-data android:name="com.google.android.maps.v2.API_KEY" 
+                           android:value="[YOUR API KEY HERE]"/>
                 <!--http://docs.appcelerator.com/platform/latest/#!/guide/Google_Maps_v2_for_Android-->
                 
                 <activity android:name="com.facebook.FacebookActivity" 
                           android:theme="@android:style/Theme.Translucent.NoTitleBar" 
-                          android:label="[YOUR APP NAME]" 
+                          android:label="KitchenSink" 
                           android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
                 <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
-            
             </application>
         </manifest>
     </android>
@@ -138,8 +107,14 @@
         <target device="mobileweb">false</target>
         <target device="windows">false</target>
     </deployment-targets>
-    <sdk-version>6.0.3.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
+    <modules>
+        <module platform="iphone">ti.map</module>
+        <module platform="android">ti.map</module>
+        <module platform="android">facebook</module>
+        <module platform="iphone">facebook</module>
+    </modules>
+    <sdk-version>6.2.0.v20170906064110</sdk-version>
 </ti:app>

@@ -1,5 +1,5 @@
 
-"#myImage": {
-	image: "/images/titanium-logo.png",
+'#myImage': {
+	image: '/images/titanium-logo.png',
 	width: 300 // Will adjust the height to fit proportions
 }

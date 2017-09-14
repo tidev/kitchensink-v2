@@ -1,23 +1,23 @@
 
-".titleLabel": {
+'.titleLabel': {
 	left: 15,
-	color: "red"
+	color: 'red'
 }
 
-".detailLabel": {
+'.detailLabel': {
 	right: 5,
-	color: "green",
+	color: 'green',
 	font: {
-		fontWeight: "bold"	
+		fontWeight: 'bold'	
 	}
 }
 
 // Apply custom margins for Android since the ListItem
 // behaves different natively
-".titleLabel[platform=android]": {
+'.titleLabel[platform=android]': {
 	left: 0
 }
 
-".detailLabel[platform=android]": {
+'.detailLabel[platform=android]': {
 	right: 25
 }

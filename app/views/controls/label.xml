@@ -5,6 +5,7 @@
         </Label>
         <View class="container">
             <Button title="Change text align to center" onClick="changeToCenterAlignment" />
+            <Button title="Change text align to left" onClick="changeToLeftAlignment" />
             <Button title="Change text align to right" onClick="changeToRightAlignment" />
             <Button title="Change text align to justify" onClick="changeToJustifyAlignment" platform="ios" />
             <Button title="Change color to red" onClick="changeColor" />

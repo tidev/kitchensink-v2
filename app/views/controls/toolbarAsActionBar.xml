@@ -1,0 +1,17 @@
+<Alloy>
+		<Window customToolbar="toolbar" theme="Theme.Titanium">
+				<Toolbar class="toolbar">
+						<!-- The Items tag sets the Toolbar.items property. -->
+						<Items>
+								<Button id="ok" title="OK" />
+								<Button id="cancel" title="Cancel" />
+						</Items>
+				</Toolbar>
+				
+				<!-- The MenuItem's to be mapped to the toolbar -->
+				<Menu>
+						<MenuItem id="item1" title="Settings" showAsAction="Ti.Android.SHOW_AS_ACTION_NEVER" />
+						<MenuItem id="item2" title="Search" showAsAction="Ti.Android.SHOW_AS_ACTION_NEVER" />
+				</Menu> 
+		</Window>
+</Alloy>

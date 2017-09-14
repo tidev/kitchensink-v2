@@ -1,7 +1,7 @@
 
-".textfield": {
+'.textfield': {
 	width: 300,
 	height: 40,
-	backgroundColor: "#f0f0f0",
+	backgroundColor: '#f0f0f0',
 	borderRadius: 4
 }

@@ -3,18 +3,19 @@
         <Window title="Controls">
             <ListView id="listView" onItemclick="openComponent">
                 <ListSection>
-                    <ListItem title="Views" subtitle="'Ti.UI.View, Ti.UI.ImageView, ...'" itemId="views/index" />
-                    <ListItem title="Label" subtitle="'Ti.UI.Label'" itemId="label" />
-                    <ListItem title="Tabbed Bar" subtitle="'Ti.UI.iOS.TabbedBar'" itemId="tabbedbar" platform="ios" />
-                    <ListItem title="Switch" subtitle="'Ti.UI.Switch'" itemId="switchcontrol" />
-                    <ListItem title="Stepper" subtitle="'Ti.UI.Stepper'" itemId="stepper" platform="ios"/>
-                    <ListItem title="Slider" subtitle="'Ti.UI.Slider'" itemId="slider" />
-                    <ListItem title="Activity Indicator" subtitle="'Ti.UI.ActivityIndicator'" itemId="activityindicator" />
-                    <ListItem title="Picker" subtitle="'Ti.UI.Picker'" itemId="picker" />
-                    <ListItem title="Alert Dialog" subtitle="'Ti.UI.AlertDialog'" itemId="alertdialog" />
-                    <ListItem title="Option Dialog" subtitle="'Ti.UI.OptionDialog'" itemId="optiondialog" />
-                    <ListItem title="Text Field" subtitle="'Ti.UI.TextField'" itemId="textfield" />
-                    <ListItem title="Text Area" subtitle="'Ti.UI.TextArea'" itemId="textarea" />
+                    <ListItem title="Views" itemId="views/index" />
+                    <ListItem title="Label" itemId="label" />
+                    <ListItem title="Tabbed Bar" itemId="tabbedbar" platform="ios" />
+                    <ListItem title="Toolbar" itemId="toolbar" />
+                    <ListItem title="Switch" itemId="switchcontrol" />
+                    <ListItem title="Stepper" itemId="stepper" platform="ios"/>
+                    <ListItem title="Slider" itemId="slider" />
+                    <ListItem title="Activity Indicator" itemId="activityindicator" />
+                    <ListItem title="Picker" itemId="picker" />
+                    <ListItem title="Alert Dialog" itemId="alertdialog" />
+                    <ListItem title="Option Dialog" itemId="optiondialog" />
+                    <ListItem title="Text Field" itemId="textfield" />
+                    <ListItem title="Text Area" itemId="textarea" />
                 </ListSection>
             </ListView>
         </Window>

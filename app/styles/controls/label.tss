@@ -1,12 +1,12 @@
 
-"#myLabel": {
+'#myLabel': {
 	top: 50,
-	textAlign: "left",
+	textAlign: 'left',
 	left: 50,
 	right: 50
 }
 
-".container": {
+'.container': {
 	top: 200,
-	layout: "vertical"
+	layout: 'vertical'
 }
