@@ -1,0 +1,10 @@
+<Alloy>
+    <Window title="Command Bar">
+        <CommandBar platform="windows">
+            <Items>
+                <AppBarButton icon="DELETE" onClick="sayDelete"></AppBarButton>
+                <AppBarToggleButton icon="LIKE" onClick="sayThanks"></AppBarToggleButton>
+            </Items>
+        </CommandBar>
+    </Window>
+</Alloy>
