@@ -4,12 +4,12 @@ var log = require('log');
  * The scoped constructor of the controller.
  **/
 (function constructor() {
-    
+
 })();
 
 function openComponent(e) {
   var action = e.itemId
-  
+
   switch (action) {
     case 'showCameraPhoto': showCamera([Ti.Media.MEDIA_TYPE_PHOTO]);
     break
@@ -23,7 +23,7 @@ function openComponent(e) {
     break
     default: log.args('Ti.Media', 'Unknown action selected: ' + action);
   }
-  
+
   if (OS_IOS) {
       e.source.deselectItem(e.sectionIndex, e.itemIndex);
   }
@@ -52,25 +52,25 @@ function processImage(image) {
     image: image,
     opacity: 0
   });
-  
+
   var label = Ti.UI.createLabel({
     text: 'Tap to close'
   });
-  
-  image.addEventListener('click', function(e) {
-    image.animate({
+
+  imageView.addEventListener('click', function(e) {
+    imageView.animate({
       opacity: 0
     }, function() {
-      $.window.remove(image);
+      $.window.remove(imageView);
     })
   });
-  
+
   if (OS_IOS) {
-      image.add(label);
+      imageView.add(label);
   }
-  $.window.add(image);
-  
-  image.animate({
+  $.window.add(imageView);
+
+  imageView.animate({
     opacity: 1
   });
 }
@@ -83,7 +83,7 @@ function saveToGallery() {
     height: 400,
     borderRadius: 200
   });
-  
+
   // Convert the view to an image-blog and save it to your Gallery
   Ti.Media.saveToPhotoGallery(view.toImage(), {
     success: function(e) {
