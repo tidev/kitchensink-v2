@@ -6,6 +6,7 @@
                     <ListItem title="3D-Touch: Shortcut Items" itemId="shortcutItems" platform="ios" />
                     <ListItem title="3D-Touch: Peek and Pop" itemId="peekAndPop" platform="ios" />
                     <ListItem title="Bundle Settings" itemId="bundleSettings" platform="ios" />
+                    <ListItem title="Drawer" itemId="drawer" platform="android" />
                     <ListItem title="Clipboard" itemId="clipboard" />
                     <ListItem title="Database" itemId="database" />
                     <ListItem title="Geolocation" itemId="geolocation" />
