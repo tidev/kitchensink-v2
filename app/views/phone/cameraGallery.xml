@@ -5,7 +5,6 @@
                   <ListItem title="Show Camera (Photo)" itemId="showCameraPhoto" />
                   <ListItem title="Show Camera (Video)" itemId="showCameraVideo" />
                   <ListItem title="Show Camera (Photo + Video)" itemId="showCameraPhotoVideo" />
-                  <ListItem title="Show Camera (Photo + Video)" itemId="showCameraPhotoVideo" />
               </ListSection>
               <ListSection headerTitle="Gallery">
                   <ListItem title="Save to Gallery" itemId="saveToGallery" />

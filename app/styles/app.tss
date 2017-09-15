@@ -2,10 +2,6 @@
 	backgroundColor: 'white'
 }
 
-'Window[platform=windows]': {
-	backgroundColor: 'black'
-}
-
 'Window[platform=ios]': {
 	barColor: Alloy.CFG.styles.tintColor,
 	navTintColor: 'white',
@@ -76,6 +72,10 @@
 
 'TextField[platform=android]': {
 	color:'#000'
+}
+
+'ListItem[platform=windows]': {
+	color: '#000'
 }
 
 'TextArea[platform=android]': {
