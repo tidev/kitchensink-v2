@@ -1,14 +1,17 @@
 var args = $.args;
 
-$.btn_left.addEventListener('click', function(e) {
+function onClickLeft(e) {
 	$.drawerLayout.toggleLeft();
-});
-$.btn_right.addEventListener('click', function(e) {
+}
+
+function onClickRight(e) {
 	$.drawerLayout.toggleRight();
-});
-$.close.addEventListener("click", function(e) {
+}
+
+function onClickClose(e) {
 	$.drawer.close();
-})
+}
+
 $.drawer.addEventListener('open', function() {
 	var activity = $.drawer.getActivity();
 	var actionbar = activity.getActionBar();

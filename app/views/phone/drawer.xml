@@ -8,9 +8,9 @@
 			</LeftView>
 			<CenterView>
 				<View>
-					<Button id="btn_left" title="Toggle left"/>
-					<Button id="close" title="Close window"/>
-					<Button id="btn_right" title="Toggle right"/>
+					<Button id="btn_left" title="Toggle left" onClick="onClickLeft"/>
+					<Button id="close" title="Close window" onClick="onClickClose"/>
+					<Button id="btn_right" title="Toggle right" onClick="onClickRight"/>
 				</View>
 			</CenterView>
 			<RightView>
