@@ -48,7 +48,7 @@ function startRecording() {
 function pauseRecording() {
     if (audioRecorder.getPaused()) {
         $.pauseRecordingButton.setTitle('Pause');
-        audioRecorder.resume()
+        audioRecorder.resume();
     } else {
         $.pauseRecordingButton.setTitle('Resume');
         audioRecorder.pause();
