@@ -20,7 +20,7 @@ var log,
 
 function onOpen() {
     if (!Ti.Media.hasAudioRecorderPermissions()) {
-        Ti.Media.requestAudioRecorderPermissions(function (e) {
+        Ti.Media.requestAudioRecorderPermissions(function(e) {
             if (e.success) {
 							$.startRecordingButton.setVisible(true);
             } else {
