@@ -10,8 +10,8 @@ function copyText() {
 	if ($.copyField.getValue().length > 0) {
 		Ti.UI.Clipboard.setText($.copyField.getValue());
 		alert('Copied!');
-	} else {
-		alert('Enter some text before :-)')
+	} else {
+		alert('Enter some text before :-)');
 	}
 }
 

@@ -31,4 +31,4 @@ exports.checkCameraPermission = function(clb) {
 			return;
 		}
 	});
-}
+};

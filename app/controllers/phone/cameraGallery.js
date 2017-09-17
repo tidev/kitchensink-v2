@@ -8,19 +8,19 @@ var log = require('log');
 })();
 
 function openComponent(e) {
-  var action = e.itemId
+  var action = e.itemId;
 
   switch (action) {
     case 'showCameraPhoto': showCamera([Ti.Media.MEDIA_TYPE_PHOTO]);
-    break
+    break;
     case 'showCameraVideo': showCamera([Ti.Media.MEDIA_TYPE_VIDEO]);
-    break
+    break;
     case 'showCameraPhotoVideo': showCamera([Ti.Media.MEDIA_TYPE_PHOTO, Ti.Media.MEDIA_TYPE_VIDEO]);
-    break
+    break;
     case 'saveToGallery': saveToGallery();
-    break
+    break;
     case 'openFromGallery': openFromGallery();
-    break
+    break;
     default: log.args('Ti.Media', 'Unknown action selected: ' + action);
   }
 
@@ -35,7 +35,7 @@ function showCamera(mediaTypes) {
         mediaTypes: mediaTypes,
         success: function(e) {
           log.args('Ti.Media', 'Image taken successfully!');
-          processImage(e.media)
+          processImage(e.media);
         },
         error: function(e) {
           log.args('Ti.Media', 'Error showing camera: ' + e.error);
@@ -62,7 +62,6 @@ function processImage(image) {
       opacity: 0
     }, function() {
       $.window.remove(imageView);
-    })
   });
 
   if (OS_IOS) {
@@ -92,7 +91,7 @@ function saveToGallery() {
     error: function(e) {
       log.args('Ti.Media', 'Error saving image to photo-gallery: ' + e.error);
     }
-  })
+  });
 }
 
 function openFromGallery() {
@@ -100,7 +99,7 @@ function openFromGallery() {
       Ti.Media.openPhotoGallery({
         success: function(e) {
           log.args('Ti.Media', 'Image open successfully!');
-          processImage(e.media)
+          processImage(e.media);
         },
         error: function(e) {
           log.args('Ti.Media', 'Error opening image: ' + e.error);

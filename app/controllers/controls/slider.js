@@ -9,5 +9,5 @@ var log = require('log');
 
 function sliderValueChanged(e) {
     $.state.setText('Current value: ' + e.value.toFixed(2) + ' / ' + e.source.max);
-    log.args('Ti.UI.Slider value changed to ' + e.value)
+    log.args('Ti.UI.Slider value changed to ' + e.value);
 }

@@ -1,9 +1,9 @@
 <Alloy>
     <Window title="Local Sound" onOpen="startInterval" onClose="stopInterval">
         <View class="verticalContainer">
-            <Button onClick="startPlayback" class="actionButton buttonPlay" title="Start" />
-            <Button onClick="pausePlayback" class="actionButton buttonPause" title="Stop" />
-            <Button onClick="resetPlayback" class="actionButton buttonReset" title="Reset" />
+            <Button onClick="startPlayback" class="actionButton" title="Start" />
+            <Button onClick="pausePlayback" class="actionButton" title="Stop" />
+            <Button onClick="resetPlayback" class="actionButton" title="Reset" />
             <View class="horizontalContainer">
                 <Button onClick="setVolumeUp" class="actionButton buttonVolume" id="buttonVolumeUp" title="Volume++" />
                 <Button onClick="setVolumeDown" class="actionButton buttonVolume" id="buttonVolumeDown" title="Volume--" />

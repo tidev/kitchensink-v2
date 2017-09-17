@@ -13,6 +13,7 @@
     <analytics>true</analytics>
     <guid>11111111-1111-1111-1111-111111111111</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
+    <property name="run-on-main-thread" type="bool">true</property>
     <ios>
         <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
         <default-background-color>#c91326</default-background-color>
@@ -96,7 +97,7 @@
                           android:theme="@android:style/Theme.Translucent.NoTitleBar" 
                           android:label="KitchenSink" 
                           android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
-                <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"  f/>
+                <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
             </application>
         </manifest>
     </android>
