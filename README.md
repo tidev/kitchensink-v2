@@ -12,7 +12,7 @@ It also includes full support for iOS, Android & Windows.
 - [x] Views (Scroll View, List View, Image View, Blur View, Web View, ...)
 - [x] Services (Twitter, Facebook)
 - [x] Platform (Clipboard, URL-Schemes, Hyperloop, Databases, Geolocation, Camera, Gallery, ...)
-- [ ] TODO: More Platform API's (HTTP-Requests, Contacts, ...)
+- [ ] TODO: More Platform APIs (HTTP-Requests, Contacts, ...)
 - [ ] TODO: More Services (Unit-Testing, Maps, OAuth, ...)
 
 ### Running the KitchenSink App
