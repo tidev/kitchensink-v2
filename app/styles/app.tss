@@ -2,6 +2,11 @@
 	backgroundColor: 'white'
 }
 
+// Workaround before https://jira.appcelerator.org/browse/ALOY-1582 is merged/published
+'Window[platform=windows formFactor=handheld]': {
+	backgroundColor: 'black'
+}
+
 'Window[platform=ios]': {
 	barColor: Alloy.CFG.styles.tintColor,
 	navTintColor: 'white',
@@ -74,7 +79,8 @@
 	color:'#000'
 }
 
-'ListItem[platform=windows]': {
+// Workaround before https://jira.appcelerator.org/browse/ALOY-1582 is merged/published
+'ListItem[platform=windows formFactor=tablet]': {
 	color: '#000'
 }
 
