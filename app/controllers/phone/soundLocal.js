@@ -57,7 +57,7 @@ function setVolumeDown() {
 }
 
 function toggleLooping() {
-    soundPlayer.setLooping(!soundPlayer.getLooping());
+    soundPlayer.setLooping(!soundPlayer.looping);
     $.buttonLooping.setTitle('Looping (' + soundPlayer.isLooping() + ')');
 }
 
