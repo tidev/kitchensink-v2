@@ -2,7 +2,8 @@
 	backgroundColor: 'white'
 }
 
-'Window[platform=windows]': {
+// Workaround before https://jira.appcelerator.org/browse/ALOY-1582 is merged/published
+'Window[platform=windows formFactor=handheld]': {
 	backgroundColor: 'black'
 }
 
@@ -76,6 +77,11 @@
 
 'TextField[platform=android]': {
 	color:'#000'
+}
+
+// Workaround before https://jira.appcelerator.org/browse/ALOY-1582 is merged/published
+'ListItem[platform=windows formFactor=tablet]': {
+	color: '#000'
 }
 
 'TextArea[platform=android]': {
