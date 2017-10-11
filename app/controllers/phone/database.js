@@ -8,17 +8,22 @@ var log = require('log');
 })(arguments[0] || {});
 
 function intitializeDatabase(e) {
-	var db = Ti.Database.install('/databases/kitchensink.db','kitchensink');
+	console.log(Ti.Platform.osname)
+	if (Ti.Platform.osname === 'windows') {
+		var db = Ti.Database.install(Ti.Filesystem.resourcesDirectory,'databases/kitchensink.db','kitchensink');
+	} else {
+		var db = Ti.Database.install('/databases/kitchensink.db','kitchensink');
+	}
 	var db = Ti.Database.open('kitchensink');
 	var updateName = 'I was updated';
 	var updateId = 4;
-	
+
 	/**
 	 *	Create new table and flush contents for a fresh start.
 	 **/
 	db.execute('CREATE TABLE IF NOT EXISTS DATABASETEST  (ID INTEGER, NAME TEXT)');
 	db.execute('DELETE FROM DATABASETEST');
-	
+
 	/**
 	 *	Insert new data to the database
 	 **/
@@ -36,27 +41,27 @@ function intitializeDatabase(e) {
 	 **/
 	db.execute('UPDATE DATABASETEST SET NAME = ? WHERE ID = ?', updateName, updateId);
 	db.execute('UPDATE DATABASETEST SET NAME = "I was updated, too!" WHERE ID = 2');
-	
+
 	log.args('Ti.Database', 'UPDATED NAME TO "I was updated, too!"');
-	
+
 	/**
 	 *	Delete data from the database.
 	 **/
 	db.execute('DELETE FROM DATABASETEST WHERE ID = ?', 1);
-	
+
 	log.args('Ti.Database', 'DELETED FROM DATABASE (WHERE ID = 1)');
-	
+
 	/**
 	 *	Select (query) data from the database.
 	 **/
 	var rows = db.execute('SELECT * FROM DATABASETEST');
-	log.args('Ti.Database', 'ROW COUNT = ' + rows.getRowCount());
-	
+	log.args('Ti.Database', 'ROW COUNT = ' + rows.rowCount);
+
 	while (rows.isValidRow()) {
-		log.args('Ti.Database', ' - ID: ' + rows.field(0) + ' NAME: ' + rows.fieldByName('name') + ' COLUMN NAME ' + rows.fieldName(0));	
+		log.args('Ti.Database', ' - ID: ' + rows.field(0) + ' NAME: ' + rows.fieldByName('name') + ' COLUMN NAME ' + rows.fieldName(0));
 		rows.next();
 	}
-	
+
 	rows.close();
 	db.close(); // close db when you're done to save resources
 

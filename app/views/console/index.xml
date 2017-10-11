@@ -5,6 +5,11 @@
             <ScrollView id="scrollView">
                 <Label id="log" />
             </ScrollView>
+            <CommandBar platform="windows">
+                <Items>
+                    <AppBarButton icon="DELETE" onClick="clearLogs"></AppBarButton>
+                </Items>
+            </CommandBar>
         </Window>
     </Tab>
 </Alloy>

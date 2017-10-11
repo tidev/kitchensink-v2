@@ -6,8 +6,8 @@
             <Button onClick="resetPlayback" class="actionButton" title="Reset" />
             <View class="horizontalContainer">
                 <Button onClick="setVolumeUp" class="actionButton buttonVolume" id="buttonVolumeUp" title="Volume++" />
-                <Button onClick="setVolumeDown" class="actionButton buttonVolume" id="buttonVolumeDown" title="Volume--" />                
-            </View>            
+                <Button onClick="setVolumeDown" class="actionButton buttonVolume" id="buttonVolumeDown" title="Volume--" />
+            </View>
             <Button onClick="toggleLooping" class="actionButton" id="buttonLooping" title="Looping (false)" />
         </View>
         <Toolbar platform="ios" class="playbackProgressToolbar">
@@ -17,6 +17,6 @@
                 <FlexSpace/>
             </Items>
         </Toolbar>
-        <ProgressBar platform="android" id="playbackProgress" />
+        <ProgressBar platform="android,windows" id="playbackProgress" />
     </Window>
 </Alloy>

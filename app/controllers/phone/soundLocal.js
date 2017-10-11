@@ -6,12 +6,14 @@ var log = require('log'),
  * The scoped constructor of the controller.
  **/
 (function constructor() {
-    Ti.Media.setAudioSessionCategory(Ti.Media.AUDIO_SESSION_CATEGORY_AMBIENT);
+    if (!OS_ANDROID) {
+        Ti.Media.setAudioSessionCategory(Ti.Media.AUDIO_SESSION_CATEGORY_AMBIENT);
+    }
 
     soundPlayer = Titanium.Media.createSound({
         url: 'sounds/cricket.wav'
     });
-    
+
     soundPlayer.addEventListener('complete', onPlaybackComplete);
     soundPlayer.addEventListener('resume', onPlaybackResume);
 })();
@@ -48,14 +50,14 @@ function setVolumeDown() {
     if (soundPlayer.getVolume() > 0.0) {
          // TODO: Too complicated for 1 line? :-)
         soundPlayer.setVolume(soundPlayer.getVolume() < 0.1 ? 0 : (soundPlayer.volume -= 0.1));
-        
+
         $.buttonVolumeDown.setTitle('Volume-- (' + Math.round(soundPlayer.getVolume() * 1000) / 1000 + ')');
         $.buttonVolumeUp.setTitle('Volume++');
     }
 }
 
 function toggleLooping() {
-    soundPlayer.setLooping(!soundPlayer.getLooping());
+    soundPlayer.setLooping(!soundPlayer.looping);
     $.buttonLooping.setTitle('Looping (' + soundPlayer.isLooping() + ')');
 }
 
@@ -63,14 +65,14 @@ function onPlaybackComplete() {
     $.playbackProgress.setValue(0);
 }
 
-function onPlaybackResume() {    
+function onPlaybackResume() {
     log.args('Ti.Media.Sound', 'The sound player was resumed!');
 }
 
 function startInterval() {
     playbackInterval = setInterval(function() {
 		if (soundPlayer.isPlaying()) {
-			$.playbackProgress.setValue(soundPlayer.getTime());
+			$.playbackProgress.setValue(soundPlayer.getTime() * 1000);
             log.args('Ti.Media.Sound', 'Time: ' + soundPlayer.getTime());
 		}
 	}, 500);

@@ -5,7 +5,8 @@
             <ButtonNames>
                 <ButtonName>Confirm</ButtonName>
                 <ButtonName>Delete</ButtonName>
-                <ButtonName>Cancel</ButtonName>
+                <!--More than two buttons on an dialog causes an error on Windows Mobile-->
+                <ButtonName platform="!windows">Cancel</ButtonName>
             </ButtonNames>
         </AlertDialog>
     </Window>
