@@ -12,13 +12,13 @@ if (Ti.Platform.model === 'Simulator' || Ti.Platform.model.indexOf('sdk') !== -1
 } else {
 	Ti.Accelerometer.addEventListener('update', accelerometerCallback);
 	if (Ti.Platform.name === 'android') {
-		$.accelerometer.addEventListener("open", function(e) {
-			$.accelerometer.activity.addEventListener("pause", function() {
-				Ti.API.info("removing accelerometer callback on pause");
+		$.accelerometer.addEventListener('open', function(e) {
+			$.accelerometer.activity.addEventListener('pause', function() {
+				Ti.API.info('removing accelerometer callback on pause');
 				Ti.Accelerometer.removeEventListener('update', accelerometerCallback);
 			});
-			$.accelerometer.activity.addEventListener("resume", function() {
-				Ti.API.info("adding accelerometer callback on resume");
+			$.accelerometer.activity.addEventListener('resume', function() {
+				Ti.API.info('adding accelerometer callback on resume');
 				Ti.Accelerometer.addEventListener('update', accelerometerCallback);
 			});
 		});
