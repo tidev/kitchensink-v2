@@ -14,6 +14,7 @@
                     <ListItem title="Sound" itemId="sound" />
                     <ListItem title="Audio Recorder" itemId="audioRecorder" />
                     <ListItem title="Camera + Gallery" itemId="cameraGallery" />
+                    <ListItem title="Accelerometer" itemId="accelerometer" />
                     <ListItem title="TODO: Video Player" itemId="videoPlayer" />
                     <ListItem title="TODO: Audio Player" itemId="audioPlayer" />
                 </ListSection>

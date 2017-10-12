@@ -1,0 +1,8 @@
+"#view" : {
+	layout: "vertical",
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE
+}
+"Window" : {
+	orientationModes: [Ti.UI.PORTRAIT]
+}
