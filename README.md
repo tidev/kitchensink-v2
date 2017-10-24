@@ -6,7 +6,7 @@ It also includes full support for iOS, Android & Windows.
 
 <img width="976" src="https://abload.de/img/kitchensink-overview1duxu.png">
 
-### Fetaures
+### Features
 - [x] API Logging
 - [x] Controls (Switch, Slider, Tabbed Bar, Text Field, Alerts, Dialogs, ...)
 - [x] Views (Scroll View, List View, Image View, Blur View, Web View, ...)
