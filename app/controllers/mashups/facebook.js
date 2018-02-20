@@ -45,7 +45,7 @@ var log = require('log');
         $.fbLogin.setVisible(!fb.loggedIn);
         $.fbShare.setVisible(fb.loggedIn);
         $.fbLogout.setVisible(fb.loggedIn);
-        
+
         if (fb.loggedIn) {
             getGraphPath();
             log.args('Login', 'Logged in');
@@ -65,7 +65,7 @@ var log = require('log');
             if (e.success) {
                 var respObj = JSON.parse(e.result);
                 log.args('Modules.Facebook.requestWithGraphPath', respObj);
-                
+
                 $.fbUserImage.image = respObj.picture.data.url;
                 $.fbUserName.text = 'Welcome ' + respObj.name;
                 $.fbFriends.text = 'Total Friends ' + respObj.friends.summary.total_count;
@@ -93,13 +93,12 @@ function login() {
     }
 }
 
-// Shares a post 
+// Shares a post
 function share() {
 
     fb.presentShareDialog({
         link : 'https://appcelerator.com/',
         title : 'Titanoum rocks!',
-        description : 'Check it out today!',
         picture : 'http://www.appcelerator.com/wp-content/uploads/scale_triangle1.png'
     });
 }
