@@ -50,6 +50,8 @@
                 <string>We need permission to look at your photo library.</string>
                 <key>NSLocationAlwaysUsageDescription</key>
                 <string>We need your location so we can cross check where you are so we can find you!</string>
+                <key>NSMicrophoneUsageDescription</key>
+                <string>We need permission to access the microphone on your device for audio input or recording.</string>
                 <key>UIStatusBarStyle</key>
                 <string>UIStatusBarStyleLightContent</string>
                 <!-- Define static shortcuts here -->
