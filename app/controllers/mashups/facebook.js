@@ -97,7 +97,6 @@ function login() {
 function share() {
 
     fb.presentShareDialog({
-        link : 'https://appcelerator.com/',
-        picture : 'http://www.appcelerator.com/wp-content/uploads/scale_triangle1.png'
+        link : 'https://appcelerator.com/'
     });
 }
