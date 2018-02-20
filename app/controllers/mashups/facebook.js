@@ -98,7 +98,6 @@ function share() {
 
     fb.presentShareDialog({
         link : 'https://appcelerator.com/',
-        title : 'Titanoum rocks!',
         picture : 'http://www.appcelerator.com/wp-content/uploads/scale_triangle1.png'
     });
 }
