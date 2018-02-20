@@ -1,7 +1,7 @@
 var log,
 		audioRecorder,
 		record,
-		currentSessionMode = Ti.Media.audioSessionMode;
+		currentSessionCategory = Ti.Media.audioSessionCategory;
 
 /**
  * The scoped constructor of the controller.
@@ -9,12 +9,12 @@ var log,
 (function constructor(args) {
 		log = require('log');
 		audioRecorder = Ti.Media.createAudioRecorder();
-		
-		if (OS_IOS) { 
+
+		if (OS_IOS) {
 			audioRecorder.compression = Ti.Media.AUDIO_FORMAT_ULAW;
 			audioRecorder.format = Ti.Media.AUDIO_FILEFORMAT_WAVE;
 
-			Ti.Media.audioSessionMode = Ti.Media.AUDIO_SESSION_MODE_PLAY_AND_RECORD;
+			Ti.Media.audioSessionCategory = Ti.Media.AUDIO_SESSION_CATEGORY_PLAY_AND_RECORD;
 		}
 })(arguments[0] || {});
 
@@ -34,7 +34,7 @@ function onOpen() {
 }
 
 function onClose() {
-	Ti.Media.audioSessionMode = currentSessionMode;
+	Ti.Media.audioSessionCategory = currentSessionCategory;
 }
 
 function startRecording() {
@@ -57,7 +57,7 @@ function pauseRecording() {
 
 function stopRecording() {
     record = audioRecorder.stop();
-		
+
 		$.startRecordingButton.setVisible(true);
 		$.playRecordingButton.setVisible(true);
 		$.pauseRecordingButton.setVisible(false);
