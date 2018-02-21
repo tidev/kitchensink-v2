@@ -8,11 +8,11 @@ var log = require('log');
 })();
 
 function sayDelete(e) {
-	alert('Hey you just deleted something!')
+	alert('Hey you just deleted something!');
 }
 
 function sayThanks(e) {
 	if (e.checked) {
-		alert('Thanks for liking!')
+		alert('Thanks for liking!');
 	}
 }
