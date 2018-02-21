@@ -16,10 +16,10 @@ exports.checkCameraPermission = function(clb) {
 			map[Ti.Media.CAMERA_AUTHORIZATION_RESTRICTED] = 'CAMERA_AUTHORIZATION_RESTRICTED';
 			map[Ti.Media.CAMERA_AUTHORIZATION_NOT_DETERMINED] = 'CAMERA_AUTHORIZATION_NOT_DETERMINED';
 
-			var cameraAuthorizationStatus = Ti.Media.cameraAuthorizationStatus;
-			if (cameraAuthorizationStatus === Ti.Media.CAMERA_AUTHORIZATION_RESTRICTED) {
+			var cameraAuthorization = Ti.Media.cameraAuthorization;
+			if (cameraAuthorization === Ti.Media.CAMERA_AUTHORIZATION_RESTRICTED) {
 				return;
-			} else if (cameraAuthorizationStatus === Ti.Media.CAMERA_AUTHORIZATION_DENIED) {
+			} else if (cameraAuthorization === Ti.Media.CAMERA_AUTHORIZATION_DENIED) {
 				return;
 			}
 		}
