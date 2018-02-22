@@ -4,9 +4,9 @@
             <Items>
                 <Button id="scrollTo" title="Scroll to View 2" onClick="scrollToView"  />
                 <FlexSpace/>
-                <Button id="add" title="Add new View" onClick="addNewView" />
+                <Button id="add" title="Add new" onClick="addNewView" />
                 <FlexSpace/>
-                <Button id="remove" title="Remove last View" onClick="removeLastView" />
+                <Button id="remove" title="Remove last" onClick="removeLastView" />
             </Items>
         </Toolbar>
         <ScrollableView id="scrollable" onScrollend="scrollableViewDidScroll">
