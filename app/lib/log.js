@@ -1,27 +1,33 @@
 /* global ENV_PROD */
 
-var moment = require('alloy/moment');
+class Log {
+	constructor() {
+		this.history = '';
+		this.logger = _.extend({}, Backbone.Events);		
+	}
 
-var Log = module.exports = _.extend({}, Backbone.Events);
+	log(...theArguments) {
+		// Stringify non-strings
+		let mappedArgs = theArguments.map((argument) => {
+			return (typeof argument === 'string') ? argument : JSON.stringify(argument, null, 2);
+		});
 
-Log.history = '';
+		const message = mappedArgs.join(' ');
+		const timestamp = new Date().toLocaleString('en-US', { hour12: false} );
 
-Log.args = function () {
-	var args = Array.prototype.slice.call(arguments);
+		// Use error-level for production or they will not show in Xcode console
+		Ti.API[ENV_PROD ? 'error' : 'info'](message);
 
-	// Stringify non-strings
-	args = args.map(function (arg) {
-		return (typeof arg === 'string') ? arg : JSON.stringify(arg, null, 2);
-	});
+		// Add the message to a global variable for controllers/console.js to use
+		this.history = `${this.history} [${timestamp}] ${message}\n\n`;
 
-	var message = args.join(' ');
+		// Trigger an event for controllers/console.js to listen to and display the log
+		this.logger.trigger('change');
+	}
+	
+	on(event, cb) {
+		this.logger.on(event, cb);
+	}
+}
 
-	// Use error-level for production or they will not show in Xcode console
-	console[ENV_PROD ? 'error' : 'info'](message);
-
-	// Add the message to a global variable for controllers/console.js to use
-	Log.history = (Log.history || '') + '[' + moment().format('HH:mm:ss.SS') + '] ' + message + '\n\n';
-
-	// Trigger an event for controllers/console.js to listen to and display the log
-	Log.trigger('change');
-};
+export let log = new Log();

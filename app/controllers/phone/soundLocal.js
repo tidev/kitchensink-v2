@@ -1,5 +1,5 @@
-var log = require('log'),
-    soundPlayer,
+import { log } from 'log';
+var soundPlayer,
     playbackInterval;
 
 /**
@@ -66,14 +66,14 @@ function onPlaybackComplete() {
 }
 
 function onPlaybackResume() {
-    log.args('Ti.Media.Sound', 'The sound player was resumed!');
+    log.log('Ti.Media.Sound', 'The sound player was resumed!');
 }
 
 function startInterval() {
     playbackInterval = setInterval(function() {
 		if (soundPlayer.isPlaying()) {
 			$.playbackProgress.setValue(soundPlayer.getTime() * 1000);
-            log.args('Ti.Media.Sound', 'Time: ' + soundPlayer.getTime());
+            log.log('Ti.Media.Sound', 'Time: ' + soundPlayer.getTime());
 		}
 	}, 500);
 }

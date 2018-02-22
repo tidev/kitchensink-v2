@@ -1,4 +1,4 @@
-var log = require('log');
+import { log } from 'log';
 
 /**
 * The scoped constructor of the controller.
@@ -27,7 +27,7 @@ function openComponent(e) {
             openFromGallery();
             break
         default:
-            log.args('Ti.Media', 'Unknown action selected: ' + action);
+            log.log('Ti.Media', 'Unknown action selected: ' + action);
             break;
     }
 
@@ -41,14 +41,14 @@ function showCamera(mediaTypes) {
         Ti.Media.showCamera({
             mediaTypes: mediaTypes,
             success: function(e) {
-                log.args('Ti.Media', 'Image taken successfully!');
+                log.log('Ti.Media', 'Image taken successfully!');
                 processImage(e.media)
             },
             error: function(e) {
-                log.args('Ti.Media', 'Error showing camera: ' + e.error);
+                log.log('Ti.Media', 'Error showing camera: ' + e.error);
             },
             cancel: function(e) {
-                log.args('Ti.Media', 'Camera was cancelled');
+                log.log('Ti.Media', 'Camera was cancelled');
             }
         });
     });
@@ -93,10 +93,10 @@ function saveToGallery() {
     // Convert the view to an image-blog and save it to your Gallery
     Ti.Media.saveToPhotoGallery(view.toImage(), {
         success: function(e) {
-            log.args('Ti.Media', 'Image saved to photo-gallery successfully!');
+            log.log('Ti.Media', 'Image saved to photo-gallery successfully!');
         },
         error: function(e) {
-            log.args('Ti.Media', 'Error saving image to photo-gallery: ' + e.error);
+            log.log('Ti.Media', 'Error saving image to photo-gallery: ' + e.error);
         }
     });
 }
@@ -105,14 +105,14 @@ function openFromGallery() {
     require("/permissions").checkCameraPermission(function() {
         Ti.Media.openPhotoGallery({
             success: function(e) {
-                log.args('Ti.Media', 'Image open successfully!');
+                log.log('Ti.Media', 'Image open successfully!');
             processImage(e.media)
             },
             error: function(e) {
-                log.args('Ti.Media', 'Error opening image: ' + e.error);
+                log.log('Ti.Media', 'Error opening image: ' + e.error);
             },
             cancel: function(e) {
-                log.args('Ti.Media', 'Opening photo-gallery was cancelled');
+                log.log('Ti.Media', 'Opening photo-gallery was cancelled');
             }
         });
     });

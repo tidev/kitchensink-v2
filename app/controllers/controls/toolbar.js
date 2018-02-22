@@ -1,4 +1,4 @@
-var log = require('log');
+import { log } from 'log';
 
 /**
  * The scoped constructor of the controller.
@@ -9,7 +9,7 @@ var log = require('log');
 
 function sayHello(e) {
   alert('Hello from ' + e.source.title);
-  log.args('Ti.UI.Toolbar selected button with title: ' + e.source.title);
+  log.log('Ti.UI.Toolbar selected button with title: ' + e.source.title);
 }
 
 function showWindowWithToolbar() {

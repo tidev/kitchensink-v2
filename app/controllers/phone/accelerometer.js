@@ -1,6 +1,6 @@
 // Arguments passed into this controller can be accessed via the `$.args` object directly or:
 var args = $.args;
-var log = require('log');
+import { log } from 'log';
 
 var accelerometerCallback = function(e) {
 	$.accel_x.text = 'x: ' + e.x.toFixed(3);
@@ -15,11 +15,11 @@ if (Ti.Platform.model === 'Simulator' || Ti.Platform.model.indexOf('sdk') !== -1
 	if (Ti.Platform.name === 'android') {
 		$.accelerometer.addEventListener('open', function(e) {
 			$.accelerometer.activity.addEventListener('pause', function() {
-				log.args('Ti.Accelerometer', 'removing accelerometer callback on pause');
+				log.log('Ti.Accelerometer', 'removing accelerometer callback on pause');
 				Ti.Accelerometer.removeEventListener('update', accelerometerCallback);
 			});
 			$.accelerometer.activity.addEventListener('resume', function() {
-				log.args('Ti.Accelerometer', 'adding accelerometer callback on resume');
+				log.log('Ti.Accelerometer', 'adding accelerometer callback on resume');
 				Ti.Accelerometer.addEventListener('update', accelerometerCallback);
 			});
 		});
