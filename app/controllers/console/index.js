@@ -5,7 +5,7 @@ var log = require('log');
  **/
 (function constructor() {
 	log.on('change', showLogs);
-})();
+}());
 
 function showLogs() {
 	$.log.setText(log.history);

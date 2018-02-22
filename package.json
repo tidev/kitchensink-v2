@@ -4,7 +4,7 @@
   "description": "A refactored Alloy-based version of the KitchenSink demo-app",
   "private": true,
   "scripts": {
-    "lint": "eslint app/"
+    "lint": "eslint app/ --fix"
   },
   "repository": {
     "type": "git",

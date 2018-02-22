@@ -5,7 +5,7 @@ var log = require('log');
  **/
 (function constructor() {
 
-})();
+}());
 
 function sayDelete(e) {
 	alert('Hey you just deleted something!');

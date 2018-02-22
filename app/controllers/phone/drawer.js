@@ -1,24 +1,22 @@
-var args = $.args;
-
-function onClickLeft(e) {
+function onClickLeft() {
 	$.drawerLayout.toggleLeft();
 }
 
-function onClickRight(e) {
+function onClickRight() {
 	$.drawerLayout.toggleRight();
 }
 
-function onClickClose(e) {
+function onClickClose() {
 	$.drawer.close();
 }
 
-$.drawer.addEventListener('open', function() {
+$.drawer.addEventListener('open', function () {
 	var activity = $.drawer.getActivity();
 	var actionbar = activity.getActionBar();
 
 	if (actionbar) {
 		actionbar.displayHomeAsUp = true;
-		actionbar.onHomeIconItemSelected = function() {
+		actionbar.onHomeIconItemSelected = function () {
 			$.drawerLayout.toggleLeft();
 		};
 	}

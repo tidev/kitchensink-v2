@@ -1,4 +1,4 @@
-exports.checkCameraPermission = function(clb) {
+exports.checkCameraPermission = function (clb) {
 	if (OS_WINDOWS) {
 		return clb();
 	} else {
@@ -24,7 +24,7 @@ exports.checkCameraPermission = function(clb) {
 			}
 		}
 
-		Ti.Media.requestCameraPermissions(function(e) {
+		Ti.Media.requestCameraPermissions(function (e) {
 			if (e.success) {
 				clb();
 				return;
@@ -35,4 +35,4 @@ exports.checkCameraPermission = function(clb) {
 			}
 		});
 	}
-}
+};

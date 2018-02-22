@@ -3,18 +3,19 @@ var log = require('log');
 /**
  * The scoped constructor of the controller.
  **/
-(function constructor(args) {
+(function constructor() {
 
-})(arguments[0] || {});
+}());
 
-function intitializeDatabase(e) {
-	console.log(Ti.Platform.osname)
+function intitializeDatabase() {
+	console.log(Ti.Platform.osname);
+	var db;
 	if (Ti.Platform.osname === 'windows') {
-		var db = Ti.Database.install(Ti.Filesystem.resourcesDirectory,'databases/kitchensink.db','kitchensink');
+		Ti.Database.install(Ti.Filesystem.resourcesDirectory, 'databases/kitchensink.db', 'kitchensink');
 	} else {
-		var db = Ti.Database.install('/databases/kitchensink.db','kitchensink');
+		Ti.Database.install('/databases/kitchensink.db', 'kitchensink');
 	}
-	var db = Ti.Database.open('kitchensink');
+	db = Ti.Database.open('kitchensink');
 	var updateName = 'I was updated';
 	var updateId = 4;
 

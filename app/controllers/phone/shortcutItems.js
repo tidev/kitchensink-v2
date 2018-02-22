@@ -4,13 +4,13 @@ var appShortcuts;
 /**
  * The scoped constructor of the controller.
  **/
-(function constructor(args) {
+(function constructor() {
 	// If supported, create an applicationShortcuts instance
 	if (Ti.UI.iOS.forceTouchSupported) {
 		appShortcuts = Ti.UI.iOS.createApplicationShortcuts();
 	}
 
-})(arguments[0] || {});
+}());
 
 /**
  * Event handler set in view to list all static shortcuts
@@ -107,29 +107,29 @@ function removeDynamicShortcut() {
  * Event handler set in view to create a new dynamic shortcuts
  */
 function createDynamicShortcut() {
-		if (!appShortcuts) {
-			return alert('This device does not support Force Touch');
+	if (!appShortcuts) {
+		return alert('This device does not support Force Touch');
+	}
+
+	appShortcuts.addDynamicShortcut({
+
+		// Must be unique to identify it in the shortcutitemclick-listener in index.js
+		itemtype: 'details',
+
+		title: 'Titanium rocks!',
+		subtitle: '(Dynamically created)',
+
+		// A grey-scale icon of 35x35dp
+		icon: 'images/icons/shortcutItemIcon.png',
+
+		// Or a system-provided icon
+		// icon: Ti.UI.iOS.SHORTCUT_ICON_TYPE_LOVE,
+
+		// A custom payload
+		userInfo: {
+			created_at: Date.now()
 		}
-		
-		appShortcuts.addDynamicShortcut({
-
-			// Must be unique to identify it in the shortcutitemclick-listener in index.js
-			itemtype: 'details',
-
-			title: 'Titanium rocks!',
-			subtitle: '(Dynamically created)',
-
-			// A grey-scale icon of 35x35dp
-			icon: 'images/icons/shortcutItemIcon.png',
-
-			// Or a system-provided icon
-			// icon: Ti.UI.iOS.SHORTCUT_ICON_TYPE_LOVE,
-
-			// A custom payload
-			userInfo: {
-				created_at: Date.now()
-			}
-		});
+	});
 }
 
 /**
