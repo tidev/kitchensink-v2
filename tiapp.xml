@@ -19,6 +19,7 @@
         <default-background-color>#c91326</default-background-color>
         <plist>
             <dict>
+                <!-- URL Schemes-->
                 <key>LSApplicationQueriesSchemes</key>
                 <array>
                     <string>fbapi</string>
@@ -39,23 +40,30 @@
                         </array>
                     </dict>
                 </array>
-                <!-- https://developers.facebook.com/ -->
-                <key>FacebookAppID</key>
-                <!-- Facebook App ID -->
-                <string>[YOUR FACEBOOK ID]</string>
-                <key>FacebookDisplayName</key>
-                <!-- Facebook App Name from developer.facebook.com -->
-                <string>KitchenSink</string>
-                <key>NSPhotoLibraryUsageDescription</key>
-                <string>We need permission to look at your photo library.</string>
-                <key>NSLocationAlwaysUsageDescription</key>
-                <string>We need your location so we can cross check where you are so we can find you!</string>
-                <key>NSMicrophoneUsageDescription</key>
-                <string>We need permission to access the microphone on your device for audio input or recording.</string>
-                <key>NSCameraUsageDescription</key>
-                <string>We need permission to access your device camera.</string>
+                <!-- Theming -->
                 <key>UIStatusBarStyle</key>
                 <string>UIStatusBarStyleLightContent</string>
+                <!-- Facebook -->
+                <key>FacebookAppID</key>
+                <string>[YOUR FACEBOOK ID]</string>
+                <key>FacebookDisplayName</key>
+                <string>KitchenSink</string>
+                <!-- Permissions: Photo Library -->
+                <key>NSPhotoLibraryUsageDescription</key>
+                <string>We need permission to look at your photo library.</string>
+                <!-- Permissions: Geolocation -->
+                <key>NSLocationWhenInUseUsageDescription</key>
+                <string>We need your location so we can cross check where you are so we can find you!</string>
+                <key>NSLocationAlwaysUsageDescription</key>
+                <string>We need your location so we can cross check where you are so we can find you!</string>
+                <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+                <string>We need your location so we can cross check where you are so we can find you!</string>
+                <!-- Permissions: Microphone -->
+                <key>NSMicrophoneUsageDescription</key>
+                <string>We need permission to access the microphone on your device for audio input or recording.</string>
+                <!-- Permissions: Camera -->
+                <key>NSCameraUsageDescription</key>
+                <string>We need permission to access your device camera.</string>
                 <!-- Define static shortcuts here -->
                 <key>UIApplicationShortcutItems</key>
                 <array>
@@ -85,7 +93,7 @@
         </plist>
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
-        <manifest android:versionCode="2" android:versionName="2.1.0">
+        <manifest android:versionCode="3" android:versionName="7.1.0">
             <uses-library android:name="com.google.android.maps" />
             <uses-sdk android:minSdkVersion="18" />
             <uses-permission android:name="android.permission.RECORD_AUDIO" />

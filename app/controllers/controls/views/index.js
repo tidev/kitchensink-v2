@@ -8,8 +8,8 @@ import { log } from 'log';
 })();
 
 function openComponent(e) {
-    var identifier = 'controls/views/' + e.section.getItemAt(e.itemIndex).properties.itemId;
-    var component = Alloy.createController(identifier).getView();
+    const identifier = 'controls/views/' + e.section.getItemAt(e.itemIndex).properties.itemId;
+    const component = Alloy.createController(identifier).getView();
     
     Alloy.Globals.setAndroidBackButton(component);
     Alloy.CFG.tabGroup.getActiveTab().open(component);

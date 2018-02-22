@@ -12,7 +12,7 @@ function scrollToView() {
 }
 
 function addNewView() {
-    var newView = Ti.UI.createView({
+    const newView = Ti.UI.createView({
         backgroundColor: 'rgba(' + _.random(0,255) + ',' + _.random(0,255) + ',' + _.random(0,255) + ', 1.0)' // Generate rgba-color
     });
         

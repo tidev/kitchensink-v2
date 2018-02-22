@@ -8,8 +8,8 @@ import { log } from 'log';
 })();
 
 function openSoundComponent(e) {
-    var identifier = 'phone/' + e.section.getItemAt(e.itemIndex).properties.itemId;
-    var component = Alloy.createController(identifier).getView();
+    const identifier = 'phone/' + e.section.getItemAt(e.itemIndex).properties.itemId;
+    const component = Alloy.createController(identifier).getView();
     
     Alloy.CFG.tabGroup.getActiveTab().open(component);
     log.log('Ti.UI.TabGroup.activeTab.open', identifier);

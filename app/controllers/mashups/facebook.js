@@ -1,5 +1,5 @@
-var fb = require('facebook');
 import { log } from 'log';
+import fb from 'facebook';
 
 /**
  * The scoped constructor of the controller.
@@ -14,7 +14,7 @@ import { log } from 'log';
     setButtonState();
 
     // Listen for Login event
-    fb.addEventListener('login', function(e) {
+    fb.addEventListener('login', (e) => {
         if (e.success) {
             log.log('Modules.Facebook', 'login');
         } else if (e.cancelled) {
@@ -27,12 +27,12 @@ import { log } from 'log';
     });
 
     // Listen for Logout event
-    fb.addEventListener('logout', function(e) {
+    fb.addEventListener('logout', (e) => {
         setButtonState();
     });
 
     // Listen for share complete event
-    fb.addEventListener('shareCompleted', function(e) {
+    fb.addEventListener('shareCompleted', (e) => {
         if (e.success) {
             log.log('Modules.Facebook', 'shareCompleted');
         } else {
@@ -61,9 +61,9 @@ import { log } from 'log';
     function getGraphPath() {
         fb.requestWithGraphPath('me', {
             fields: 'id,name,picture,friends,posts'
-        }, 'GET', function(e) {
+        }, 'GET', (e) => {
             if (e.success) {
-                var respObj = JSON.parse(e.result);
+                const respObj = JSON.parse(e.result);
                 log.log('Modules.Facebook.requestWithGraphPath', respObj);
 
                 $.fbUserImage.image = respObj.picture.data.url;

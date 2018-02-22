@@ -13,6 +13,6 @@ function sayHello(e) {
 }
 
 function showWindowWithToolbar() {
-  var component = Alloy.createController('controls/toolbarAsActionBar').getView();
+  const component = Alloy.createController('controls/toolbarAsActionBar').getView();
   Alloy.CFG.tabGroup.getActiveTab().open(component);
 }

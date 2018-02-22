@@ -1,6 +1,7 @@
 import { log } from 'log';
-var soundPlayer,
-    playbackInterval;
+
+let soundPlayer;
+let playbackInterval;
 
 /**
  * The scoped constructor of the controller.
@@ -10,7 +11,7 @@ var soundPlayer,
         Ti.Media.setAudioSessionCategory(Ti.Media.AUDIO_SESSION_CATEGORY_AMBIENT);
     }
 
-    soundPlayer = Titanium.Media.createSound({
+    soundPlayer = Ti.Media.createSound({
         url: 'sounds/cricket.wav'
     });
 
@@ -70,7 +71,7 @@ function onPlaybackResume() {
 }
 
 function startInterval() {
-    playbackInterval = setInterval(function() {
+    playbackInterval = setInterval(() => {
 		if (soundPlayer.isPlaying()) {
 			$.playbackProgress.setValue(soundPlayer.getTime() * 1000);
             log.log('Ti.Media.Sound', 'Time: ' + soundPlayer.getTime());

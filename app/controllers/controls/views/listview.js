@@ -9,7 +9,7 @@ import { log } from 'log';
 
 function fetchData() {
     // You would usually fetch your remote data here
-    setTimeout(function() {
+    setTimeout(() => {
         $.refresh.endRefreshing();
         log.log('Ti.UI.RefreshControl finished refreshing');
     }, 1000);

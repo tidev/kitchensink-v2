@@ -1,4 +1,4 @@
-var args = $.args;
+const args = $.args;
 
 function onClickLeft(e) {
 	$.drawerLayout.toggleLeft();
@@ -12,13 +12,13 @@ function onClickClose(e) {
 	$.drawer.close();
 }
 
-$.drawer.addEventListener('open', function() {
-	var activity = $.drawer.getActivity();
-	var actionbar = activity.getActionBar();
+$.drawer.addEventListener('open', () => {
+	const activity = $.drawer.getActivity();
+	const actionbar = activity.getActionBar();
 
 	if (actionbar) {
 		actionbar.displayHomeAsUp = true;
-		actionbar.onHomeIconItemSelected = function() {
+		actionbar.onHomeIconItemSelected = () => {
 			$.drawerLayout.toggleLeft();
 		};
 	}
