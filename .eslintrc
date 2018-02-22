@@ -1,0 +1,6 @@
+{
+    "extends": ["axway/env-titanium"],
+    "rules": {
+        "vars-on-top": "off"
+    }
+}

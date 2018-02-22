@@ -10,3 +10,4 @@ tmp
 Thumbs.db
 /platform
 /i18n
+node_modules/
