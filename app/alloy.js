@@ -2,7 +2,7 @@ import ActionBarHelper from 'actionbar';
 
 Alloy.CFG.tabGroup = {};
 
-Alloy.Globals.setAndroidBackButton = function(window) {
+Alloy.Globals.setAndroidBackButton = (window) => {
 	if (!OS_ANDROID) { return; }
 	
 	_window.addEventListener('open', () => {

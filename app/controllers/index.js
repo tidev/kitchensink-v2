@@ -3,14 +3,14 @@ import { log } from 'log';
 /**
  * The scoped constructor of the controller.
  **/
-function init() {
+(function constructor() {
     if (OS_IOS) {
         Ti.App.iOS.addEventListener('shortcutitemclick', handleShortcutItem);
     }
 
     Alloy.CFG.tabGroup = $.index;
     $.index.open();
-}
+})();
 
 function validateDocsInfo() {
     if (!Ti.App.Properties.getBool('noticeShown', false)) {
@@ -37,5 +37,3 @@ function validateDocsInfo() {
 function handleShortcutItem(e) {
     log.log('Ti.App.iOS.shortcutitemclick', e);
 }
-
-init();

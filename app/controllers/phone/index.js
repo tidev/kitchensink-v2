@@ -8,8 +8,8 @@ import { log } from 'log';
 })();
 
 function openComponent(e) {
-    var identifier = 'phone/' + e.section.getItemAt(e.itemIndex).properties.itemId;
-    var component = Alloy.createController(identifier).getView();
+    const identifier = 'phone/' + e.section.getItemAt(e.itemIndex).properties.itemId;
+    const component = Alloy.createController(identifier).getView();
     
     if (OS_ANDROID && identifier !== "phone/drawer") {
         Alloy.Globals.setAndroidBackButton(component);

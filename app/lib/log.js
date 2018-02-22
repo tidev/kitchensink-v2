@@ -18,7 +18,7 @@ class Log {
 		// Use error-level for production or they will not show in Xcode console
 		Ti.API[ENV_PROD ? 'error' : 'info'](message);
 
-		// Add the message to a global variable for controllers/console.js to use
+		// Add the message to a global constiable for controllers/console.js to use
 		this.history = `${this.history} [${timestamp}] ${message}\n\n`;
 
 		// Trigger an event for controllers/console.js to listen to and display the log
