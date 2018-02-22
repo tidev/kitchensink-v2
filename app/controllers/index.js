@@ -1,20 +1,20 @@
-var log = require('log');
+import { log } from 'log';
 
 /**
  * The scoped constructor of the controller.
  **/
-(function constructor() {
+function init() {
     if (OS_IOS) {
         Ti.App.iOS.addEventListener('shortcutitemclick', handleShortcutItem);
     }
 
     Alloy.CFG.tabGroup = $.index;
     $.index.open();
-})();
+}
 
 function validateDocsInfo() {
     if (!Ti.App.Properties.getBool('noticeShown', false)) {
-    	var alertNotice = Ti.UI.createAlertDialog({
+    	const alertNotice = Ti.UI.createAlertDialog({
     		title: 'Notice',
     		message: 'While this KitchenSink provides an extensive demonstration of the Titanium API, it does not include examples for every available component. Please refer to our documentation for more details.',
         buttonNames: ['Alright!', 'Visit docs', 'Don\'t show again'],
@@ -22,10 +22,10 @@ function validateDocsInfo() {
         destructive: 2
     	});
 
-    	alertNotice.addEventListener('click', function(e) {
-    		if (e.index === 1) {
+    	alertNotice.addEventListener('click', event => {
+    		if (event.index === 1) {
     			Ti.Platform.openURL('https://docs.appcelerator.com/platform/latest/');
-    		} else if (e.index === 2) {
+    		} else if (event.index === 2) {
     			Ti.App.Properties.setBool('noticeShown', true);
     		}
     	});
@@ -35,5 +35,7 @@ function validateDocsInfo() {
 }
 
 function handleShortcutItem(e) {
-    log.args('Ti.App.iOS.shortcutitemclick', e);
+    log.log('Ti.App.iOS.shortcutitemclick', e);
 }
+
+init();

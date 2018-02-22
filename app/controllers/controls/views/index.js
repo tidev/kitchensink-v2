@@ -1,4 +1,4 @@
-var log = require('log');
+import { log } from 'log';
 
 /**
  * The scoped constructor of the controller.
@@ -14,5 +14,5 @@ function openComponent(e) {
     Alloy.Globals.setAndroidBackButton(component);
     Alloy.CFG.tabGroup.getActiveTab().open(component);
 
-    log.args('Ti.UI.TabGroup.activeTab.open', identifier);
+    log.log('Ti.UI.TabGroup.activeTab.open', identifier);
 }

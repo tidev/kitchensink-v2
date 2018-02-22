@@ -1,5 +1,5 @@
 var fb = require('facebook');
-var log = require('log');
+import { log } from 'log';
 
 /**
  * The scoped constructor of the controller.
@@ -16,12 +16,12 @@ var log = require('log');
     // Listen for Login event
     fb.addEventListener('login', function(e) {
         if (e.success) {
-            log.args('Modules.Facebook', 'login');
+            log.log('Modules.Facebook', 'login');
         } else if (e.cancelled) {
             // user cancelled
-            log.args('Modules.Facebook', 'canceled');
+            log.log('Modules.Facebook', 'canceled');
         } else {
-            log.args('Modules.Facebook', e.error);
+            log.log('Modules.Facebook', e.error);
         }
         setButtonState();
     });
@@ -34,9 +34,9 @@ var log = require('log');
     // Listen for share complete event
     fb.addEventListener('shareCompleted', function(e) {
         if (e.success) {
-            log.args('Modules.Facebook', 'shareCompleted');
+            log.log('Modules.Facebook', 'shareCompleted');
         } else {
-            log.args('Modules.Facebook', 'shareCompleted failed');
+            log.log('Modules.Facebook', 'shareCompleted failed');
         }
     });
 
@@ -48,12 +48,12 @@ var log = require('log');
 
         if (fb.loggedIn) {
             getGraphPath();
-            log.args('Login', 'Logged in');
+            log.log('Login', 'Logged in');
         } else {
             $.fbUserName.text = '';
             $.fbFriends.text = '';
             $.fbUserImage.image = null;
-            log.args('Logout', 'Logged out');
+            log.log('Logout', 'Logged out');
         }
     }
 
@@ -64,15 +64,15 @@ var log = require('log');
         }, 'GET', function(e) {
             if (e.success) {
                 var respObj = JSON.parse(e.result);
-                log.args('Modules.Facebook.requestWithGraphPath', respObj);
+                log.log('Modules.Facebook.requestWithGraphPath', respObj);
 
                 $.fbUserImage.image = respObj.picture.data.url;
                 $.fbUserName.text = 'Welcome ' + respObj.name;
                 $.fbFriends.text = 'Total Friends ' + respObj.friends.summary.total_count;
             } else if (e.error) {
-                log.args(e.error);
+                log.log(e.error);
             } else {
-                log.args('Unknown response');
+                log.log('Unknown response');
             }
         });
     }

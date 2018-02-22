@@ -1,4 +1,4 @@
-var log = require('log');
+import { log } from 'log';
 
 /**
  * The scoped constructor of the controller.
@@ -11,12 +11,12 @@ function fetchData() {
     // You would usually fetch your remote data here
     setTimeout(function() {
         $.refresh.endRefreshing();
-        log.args('Ti.UI.RefreshControl finished refreshing');
+        log.log('Ti.UI.RefreshControl finished refreshing');
     }, 1000);
 }
 
 function handleListViewClick(e) {
-    log.args('Ti.UI.ListView clicked cell at index', e.sectionIndex  + ' / ' + e.itemIndex);
+    log.log('Ti.UI.ListView clicked cell at index', e.sectionIndex  + ' / ' + e.itemIndex);
     if (OS_IOS) {
         this.deselectItem(e.sectionIndex, e.itemIndex);
     }

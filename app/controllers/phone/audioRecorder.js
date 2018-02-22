@@ -1,5 +1,6 @@
-var log,
-		audioRecorder,
+import { log } from 'log';
+
+var audioRecorder,
 		record,
 		currentSessionCategory = Ti.Media.audioSessionCategory;
 
@@ -7,7 +8,6 @@ var log,
  * The scoped constructor of the controller.
  **/
 (function constructor(args) {
-		log = require('log');
 		audioRecorder = Ti.Media.createAudioRecorder();
 
 		if (OS_IOS) {

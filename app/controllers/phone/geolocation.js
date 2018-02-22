@@ -1,4 +1,4 @@
-var log = require('log');
+import { log } from 'log';
 var Map = require('ti.map');
 
 /**
@@ -50,7 +50,7 @@ var Map = require('ti.map');
             $.geo_lat.text = 'Latitude: ' + latitude;
             $.geo_long.text = 'Longitude: ' + longitude;
 
-            log.args('Titanium.Geolocation', 'location: ' + geoPackage);
+            log.log('Titanium.Geolocation', 'location: ' + geoPackage);
         }
 
         Ti.Geolocation.getCurrentPosition(function(e) {
