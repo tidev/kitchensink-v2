@@ -1,19 +1,18 @@
-import { log } from 'log';
+import { logger } from 'logger';
 
 /**
  * The scoped constructor of the controller.
  **/
 (function constructor() {
-	Ti.API.info(log);
-	log.on('change', showLogs);
+	logger.on('change', showLogs);
 })();
 
 function showLogs() {
-	$.log.setText(log.history);
+	$.log.setText(logger.history);
 	$.scrollView.scrollToBottom();
 }
 
 function clearLogs() {
-	log.history = '';
+	logger.clearHistory();
 	showLogs();
 }

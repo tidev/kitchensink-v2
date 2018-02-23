@@ -1,4 +1,4 @@
-import { log } from 'log';
+import { logger } from 'logger';
 
 let audioRecorder;
 let record;

@@ -1,4 +1,4 @@
-import { log } from 'log';
+import { logger } from 'logger';
 
 let soundPlayer;
 let playbackInterval;
@@ -67,14 +67,14 @@ function onPlaybackComplete() {
 }
 
 function onPlaybackResume() {
-    log.log('Ti.Media.Sound', 'The sound player was resumed!');
+    logger.log('Ti.Media.Sound', 'The sound player was resumed!');
 }
 
 function startInterval() {
     playbackInterval = setInterval(() => {
 		if (soundPlayer.isPlaying()) {
 			$.playbackProgress.setValue(soundPlayer.getTime() * 1000);
-            log.log('Ti.Media.Sound', 'Time: ' + soundPlayer.getTime());
+            logger.log('Ti.Media.Sound', 'Time: ' + soundPlayer.getTime());
 		}
 	}, 500);
 }

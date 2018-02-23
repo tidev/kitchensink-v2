@@ -1,4 +1,4 @@
-import { log } from 'log';
+import { logger } from 'logger';
 
 /**
  * The scoped constructor of the controller.
@@ -35,5 +35,5 @@ function validateDocsInfo() {
 }
 
 function handleShortcutItem(e) {
-    log.log('Ti.App.iOS.shortcutitemclick', e);
+    logger.log('Ti.App.iOS.shortcutitemclick', e);
 }

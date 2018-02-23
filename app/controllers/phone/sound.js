@@ -1,4 +1,4 @@
-import { log } from 'log';
+import { logger } from 'logger';
 
 /**
  * The scoped constructor of the controller.
@@ -12,5 +12,5 @@ function openSoundComponent(e) {
     const component = Alloy.createController(identifier).getView();
     
     Alloy.CFG.tabGroup.getActiveTab().open(component);
-    log.log('Ti.UI.TabGroup.activeTab.open', identifier);
+    logger.log('Ti.UI.TabGroup.activeTab.open', identifier);
 }

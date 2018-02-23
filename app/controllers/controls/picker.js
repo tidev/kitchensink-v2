@@ -1,4 +1,4 @@
-import { log } from 'log';
+import { logger } from 'logger';
 
 /**
  * The scoped constructor of the controller.
@@ -9,5 +9,5 @@ import { log } from 'log';
 
 function pickerValueChanged(e) {
     $.state.setText('Picker value changed to ' + e.selectedValue);
-    log.log('Ti.UI.Picker changed value to: ' + e.selectedValue);
+    logger.log('Ti.UI.Picker changed value to: ' + e.selectedValue);
 }

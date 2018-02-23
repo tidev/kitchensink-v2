@@ -1,4 +1,4 @@
-import { log } from 'log';
+import { logger } from 'logger';
 let appShortcuts;
 
 /**
@@ -20,7 +20,7 @@ function listStaticShortcuts() {
 		return alert('This device does not support Force Touch');
 	}
 
-	log.log('Ti.UI.iOS.ApplicationShortcuts.listStaticShortcuts', appShortcuts.listStaticShortcuts());
+	logger.log('Ti.UI.iOS.ApplicationShortcuts.listStaticShortcuts', appShortcuts.listStaticShortcuts());
 }
 
 /**
@@ -33,7 +33,7 @@ function listDynamicShortcuts() {
 
 	const res = appShortcuts.listDynamicShortcuts();
 
-	log.log('Ti.UI.iOS.ApplicationShortcuts.listDynamicShortcuts', res);
+	logger.log('Ti.UI.iOS.ApplicationShortcuts.listDynamicShortcuts', res);
 
 	// If don't have any, explain how to create it
 	if (res.length === 0) {
@@ -54,7 +54,7 @@ function dynamicShortcutExists() {
 
 	const res = appShortcuts.dynamicShortcutExists('details');
 
-	log.log('Ti.UI.iOS.ApplicationShortcuts.dynamicShortcutExists', 'details', res);
+	logger.log('Ti.UI.iOS.ApplicationShortcuts.dynamicShortcutExists', 'details', res);
 
 	// If don't have it, explain how to create it
 	if (!res) {
@@ -75,7 +75,7 @@ function getDynamicShortcut() {
 
 	const res = appShortcuts.getDynamicShortcut('details');
 
-	log.log('Ti.UI.iOS.ApplicationShortcuts.getDynamicShortcut', 'details', res);
+	logger.log('Ti.UI.iOS.ApplicationShortcuts.getDynamicShortcut', 'details', res);
 
 	// If don't have it, explain how to create it
 	if (!res) {

@@ -1,6 +1,6 @@
 /* global ENV_PROD */
 
-class Log {
+class Logger {
 	constructor() {
 		this.history = '';
 		this.logger = _.extend({}, Backbone.Events);		
@@ -25,9 +25,13 @@ class Log {
 		this.logger.trigger('change');
 	}
 	
+	clearHistory() {
+		this.history = '';
+	}
+	
 	on(event, cb) {
 		this.logger.on(event, cb);
 	}
 }
 
-export let log = new Log();
+export let logger = new Logger();
