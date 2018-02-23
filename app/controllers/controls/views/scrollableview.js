@@ -1,4 +1,4 @@
-import { log } from 'log';
+import { logger } from 'logger';
 
 /**
  * The scoped constructor of the controller.
@@ -17,20 +17,20 @@ function addNewView() {
     });
         
     $.scrollable.addView(newView);
-    log.log('Ti.UI.ScrollableView added new view at index ' + ($.scrollable.views.length - 1));
+    logger.log('Ti.UI.ScrollableView added new view at index ' + ($.scrollable.views.length - 1));
 
     validateButtons();
 }
 
 function removeLastView() {
     $.scrollable.removeView($.scrollable.views[$.scrollable.views.length - 1]);
-    log.log('Ti.UI.ScrollableView deleted last view');
+    logger.log('Ti.UI.ScrollableView deleted last view');
     
     validateButtons();
 }
 
 function scrollableViewDidScroll(e) {
-    log.log('Ti.UI.ScrollableView did scroll to index ' + e.currentPage);
+    logger.log('Ti.UI.ScrollableView did scroll to index ' + e.currentPage);
 }
 
 function validateButtons() {

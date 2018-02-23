@@ -9,7 +9,7 @@
 				</Toolbar>
 				
 				<!-- The MenuItem's to be mapped to the toolbar -->
-				<Menu>
+				<Menu platform="android">
 						<MenuItem id="item1" title="Settings" showAsAction="Ti.Android.SHOW_AS_ACTION_NEVER" />
 						<MenuItem id="item2" title="Search" showAsAction="Ti.Android.SHOW_AS_ACTION_NEVER" />
 				</Menu> 

@@ -40,11 +40,11 @@ export default class ActionBarHelper {
     }
 
     if (action) {
-      that.actionBar.displayHomeAsUp = true;
-      that.actionBar.onHomeIconItemSelected = action;
+      this.actionBar.displayHomeAsUp = true;
+      this.actionBar.onHomeIconItemSelected = action;
     } else {
-      that.actionBar.displayHomeAsUp = false;
-      that.actionBar.onHomeIconItemSelected = null;
+      this.actionBar.displayHomeAsUp = false;
+      this.actionBar.onHomeIconItemSelected = null;
     }
   }
 
@@ -53,7 +53,7 @@ export default class ActionBarHelper {
       return;
     }
 
-    that.actionBar.backgroundImage = image;
+    this.actionBar.backgroundImage = image;
   }
 
   setIcon(icon) {
@@ -61,8 +61,8 @@ export default class ActionBarHelper {
       return;
     }
 
-    that.actionBar.icon = icon;
-    that.actionBar.logo = icon;
+    this.actionBar.icon = icon;
+    this.actionBar.logo = icon;
   }
 
   hide() {
@@ -70,7 +70,7 @@ export default class ActionBarHelper {
       return;
     }
 
-    that.actionBar.hide();
+    this.actionBar.hide();
   }
 
   show() {
@@ -78,7 +78,7 @@ export default class ActionBarHelper {
       return;
     }
 
-    that.actionBar.show();
+    this.actionBar.show();
   }
 
   reloadMenu() {
@@ -86,7 +86,7 @@ export default class ActionBarHelper {
       return;
     }
 
-    that.activity.invalidateOptionsMenu();
+    this.activity.invalidateOptionsMenu();
   }
   
   _isValidActivity() {
@@ -95,7 +95,7 @@ export default class ActionBarHelper {
       return false;
     }
 
-    if (that.actionBar) {
+    if (this.actionBar) {
       Ti.API.error('No ActionBar available');
       return false
     }

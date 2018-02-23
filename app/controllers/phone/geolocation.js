@@ -1,4 +1,4 @@
-import { log } from 'log';
+import { logger } from 'logger';
 import Map from 'ti.map';
 
 /**
@@ -65,7 +65,7 @@ function updatePosition(e) {
     $.geo_lat.text = 'Latitude: ' + latitude;
     $.geo_long.text = 'Longitude: ' + longitude;
 
-    log.log('Ti.Geolocation', 'location: ' + geoPackage);
+    logger.log('Ti.Geolocation', 'location: ' + geoPackage);
 }
 
 function getCurrentPosition() {

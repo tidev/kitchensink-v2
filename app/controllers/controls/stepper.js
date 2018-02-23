@@ -1,4 +1,4 @@
-import { log } from 'log';
+import { logger } from 'logger';
 
 /**
  * The scoped constructor of the controller.
@@ -9,5 +9,5 @@ import { log } from 'log';
 
 function stepperValueChanged(e) {
     $.state.setText('The stepper value changed to ' + e.value);
-    log.log('Ti.UI.Stepper value changed to ' + e.value);
+    logger.log('Ti.UI.Stepper value changed to ' + e.value);
 }

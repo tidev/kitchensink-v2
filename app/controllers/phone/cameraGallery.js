@@ -1,4 +1,4 @@
-import { log } from 'log';
+import { logger } from 'logger';
 
 /**
 * The scoped constructor of the controller.
@@ -27,7 +27,7 @@ function openComponent(e) {
             openFromGallery();
             break
         default:
-            log.log('Ti.Media', 'Unknown action selected: ' + action);
+            logger.log('Ti.Media', 'Unknown action selected: ' + action);
             break;
     }
 
@@ -37,7 +37,7 @@ function openComponent(e) {
 }
 
 function showCamera(mediaTypes) {
-    require("/permissions").checkCameraPermission(success => {
+    require('/permissions').checkCameraPermission(success => {
         if (!success) {
           alert('No permissions!');
           return;
@@ -45,14 +45,14 @@ function showCamera(mediaTypes) {
         Ti.Media.showCamera({
             mediaTypes: mediaTypes,
             success: (e) => {
-                log.log('Ti.Media', 'Image taken successfully!');
+                logger.log('Ti.Media', 'Image taken successfully!');
                 processImage(e.media)
             },
             error: (e) => {
-                log.log('Ti.Media', 'Error showing camera: ' + e.error);
+                logger.log('Ti.Media', 'Error showing camera: ' + e.error);
             },
             cancel: (e) => {
-                log.log('Ti.Media', 'Camera was cancelled');
+                logger.log('Ti.Media', 'Camera was cancelled');
             }
         });
     });
@@ -97,16 +97,16 @@ function saveToGallery() {
     // Convert the view to an image-blog and save it to your Gallery
     Ti.Media.saveToPhotoGallery(view.toImage(), {
         success: (e) => {
-            log.log('Ti.Media', 'Image saved to photo-gallery successfully!');
+            logger.log('Ti.Media', 'Image saved to photo-gallery successfully!');
         },
         error: (e) => {
-            log.log('Ti.Media', 'Error saving image to photo-gallery: ' + e.error);
+            logger.log('Ti.Media', 'Error saving image to photo-gallery: ' + e.error);
         }
     });
 }
 
 function openFromGallery() {
-    require("/permissions").checkCameraPermission(success => {
+    require('/permissions').checkCameraPermission(success => {
         if (!success) {
           alert('No permissions!');
           return;
@@ -114,14 +114,14 @@ function openFromGallery() {
 
         Ti.Media.openPhotoGallery({
             success: (e) => {
-                log.log('Ti.Media', 'Image open successfully!');
+                logger.log('Ti.Media', 'Image open successfully!');
             processImage(e.media)
             },
             error: (e) => {
-                log.log('Ti.Media', 'Error opening image: ' + e.error);
+                logger.log('Ti.Media', 'Error opening image: ' + e.error);
             },
             cancel: (e) => {
-                log.log('Ti.Media', 'Opening photo-gallery was cancelled');
+                logger.log('Ti.Media', 'Opening photo-gallery was cancelled');
             }
         });
     });

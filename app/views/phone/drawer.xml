@@ -1,6 +1,6 @@
 <Alloy>
 	<Window title="Drawer">
-		<DrawerLayout id="drawerLayout">
+		<DrawerLayout platform="android" id="drawerLayout">
 			<LeftView>
 				<View class="views">
 					<Label text="Left"/>
