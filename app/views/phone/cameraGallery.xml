@@ -1,0 +1,16 @@
+<Alloy>
+      <Window title="Camera + Gallery" id="window">
+          <ListView id="listView" onItemclick="openComponent">
+              <ListSection headerTitle="Camera">
+                  <ListItem title="Show Camera (Photo)" itemId="showCameraPhoto" />
+                  <ListItem title="Show Camera (Video)" itemId="showCameraVideo" />
+                  <ListItem title="Show Camera (Photo + Video)" itemId="showCameraPhotoVideo" />
+              </ListSection>
+              <ListSection headerTitle="Gallery">
+                  <!-- Disable on Windows, TIMOB-25282, TIMOB-25281-->
+                  <ListItem title="Save to Gallery" itemId="saveToGallery" platform="!windows"/>
+                  <ListItem title="Open from Gallery" itemId="openFromGallery" />
+              </ListSection>
+          </ListView>
+      </Window>
+</Alloy>

@@ -1,0 +1,11 @@
+<Alloy>
+	<Window title="Shortcut Items" layout="vertical">
+		<Button class="actionButton" onClick="listStaticShortcuts">listStaticShortcuts()</Button>
+		<Button class="actionButton" onClick="listDynamicShortcuts">listDynamicShortcuts()</Button>
+		<Button class="actionButton" onClick="dynamicShortcutExists">dynamicShortcutExists('details')</Button>
+		<Button class="actionButton" onClick="getDynamicShortcut">getDynamicShortcut('details')</Button>
+		<Button class="actionButton" onClick="createDynamicShortcut">createDynamicShortcut()</Button>
+		<Button class="actionButton" onClick="removeDynamicShortcut">removeDynamicShortcut('details')</Button>
+		<Button class="actionButton" onClick="removeAllDynamicShortcuts">removeAllDynamicShortcuts()</Button>
+	</Window>
+</Alloy>

@@ -1,8 +1,8 @@
-".myImage": {
-	image: "/images/titanium-logo.png",
+'.myImage': {
+	image: '/images/titanium-logo.png',
 	width: 200
 }
 
-".button": {
+'.button': {
 	top: 40
 }

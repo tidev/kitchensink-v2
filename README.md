@@ -1,26 +1,19 @@
 ## Kitchen Sink 2.0
 
-This project gives an overview of native components available 
-in Titanium. The components are grouped into multiple groups
-and can be logged in the "Logs" tab.
+This project gives an overview of native components available in Titanium. 
+The components are grouped into multiple groups and can be logged in the "Logs" tab. 
+It also includes full support for iOS, Android & Windows.
 
 <img width="976" src="https://abload.de/img/kitchensink-overview1duxu.png">
 
-### Fetaures
+### Features
 - [x] API Logging
 - [x] Controls (Switch, Slider, Tabbed Bar, Text Field, Alerts, Dialogs, ...)
 - [x] Views (Scroll View, List View, Image View, Blur View, Web View, ...)
-- [ ] TODO: Platform API's (HTTP-Requests, Contacts, Camera, Gallery, Geolocation, ...)
-- [ ] TODO: Services (Hyperloop, Unit-Testing, Facebook, Maps, OAuth, ...)
-
-### Roadmap
-
-|Release Date|Milestone|
-|---|---|
-|November 14, 2016|Initial Release (Basic support)|
-|December 01, 2016|Support for 3D-Touch API’s (Peek and Pop / Shortcut Items)|
-|January 01, 2017|Support for platform API examples|
-|Q1, 2017|Support for platform services examples|
+- [x] Services (Twitter, Facebook)
+- [x] Platform (Clipboard, URL-Schemes, Hyperloop, Databases, Geolocation, Camera, Gallery, ...)
+- [ ] TODO: More Platform APIs (HTTP-Requests, Contacts, ...)
+- [ ] TODO: More Services (Unit-Testing, Maps, OAuth, ...)
 
 ### Running the KitchenSink App
 

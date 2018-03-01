@@ -1,0 +1,9 @@
+<Alloy>
+	<Window title="Accelerometer">
+		<View id="view">
+			<Label id="accel_x" text="0"/>
+			<Label id="accel_y" text="0"/>
+			<Label id="accel_z" text="0"/>
+		</View>
+	</Window>
+</Alloy>

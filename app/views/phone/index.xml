@@ -3,10 +3,22 @@
         <Window title="Phone">
             <ListView id="listView" onItemclick="openComponent">
                 <ListSection>
+                    <ListItem title="3D-Touch: Shortcut Items" itemId="shortcutItems" platform="ios" />
+                    <ListItem title="3D-Touch: Peek and Pop" itemId="peekAndPop" platform="ios" />
+                    <ListItem title="Bundle Settings" itemId="bundleSettings" platform="ios" />
+                    <ListItem title="Drawer" itemId="drawer" platform="android" />
+                    <ListItem title="Clipboard" itemId="clipboard" />
+                    <ListItem title="Database" itemId="database" />
+                    <ListItem title="Geolocation" itemId="geolocation" />
+                    <ListItem title="Network" itemId="network" />
                     <ListItem title="Sound" itemId="sound" />
+                    <ListItem title="Audio Recorder" itemId="audioRecorder" />
+                    <ListItem title="Camera + Gallery" itemId="cameraGallery" />
+                    <ListItem title="Accelerometer" itemId="accelerometer" />
+                    <ListItem title="TODO: Video Player" itemId="videoPlayer" />
+                    <ListItem title="TODO: Audio Player" itemId="audioPlayer" />
                 </ListSection>
             </ListView>
-
         </Window>
     </Tab>
 </Alloy>

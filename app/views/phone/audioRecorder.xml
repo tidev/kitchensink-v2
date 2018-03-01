@@ -1,0 +1,10 @@
+<Alloy>
+    <Window title="Audio Recorder" onOpen="onOpen" onClose="onClose">
+      <View layout="vertical">
+          <Button class="actionButton" id="startRecordingButton" title="Start Recording" onClick="startRecording" />
+          <Button class="actionButton" id="pauseRecordingButton" title="Pause Recording" onClick="pauseRecording" />
+          <Button class="actionButton" id="stopRecordingButton" title="Stop Recording" onClick="stopRecording" />
+          <Button class="actionButton" id="playRecordingButton" title="Play Recording" onClick="playRecording" />
+      </View>
+    </Window>
+</Alloy>

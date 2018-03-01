@@ -5,7 +5,8 @@
             <Options>
                 <Option>Confirm</Option>
                 <Option>Delete</Option>
-                <Option>Cancel</Option>
+                <!--More than two buttons on an dialog causes an error on Windows Mobile-->
+                <Option platform="!windows">Cancel</Option>
             </Options>
         </OptionDialog>
     </Window>

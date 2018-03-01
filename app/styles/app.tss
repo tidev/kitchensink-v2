@@ -1,69 +1,89 @@
-"Window": {
-	backgroundColor: "white"
+'Window': {
+	backgroundColor: 'white'
 }
 
-"Window[platform=ios]": {
+// Workaround before https://jira.appcelerator.org/browse/ALOY-1582 is merged/published
+'Window[platform=windows formFactor=handheld]': {
+	backgroundColor: 'black'
+}
+
+'Window[platform=ios]': {
 	barColor: Alloy.CFG.styles.tintColor,
-	navTintColor: "white",
+	navTintColor: 'white',
 	translucent: false,
-	backButtonTitle: "",
+	backButtonTitle: '',
 	titleAttributes: {
-		color: "white"
+		color: 'white'
 	}
 }
 
-"Window[platform=android]": {
+'Window[platform=android]': {
 	softKeyboardOnFocus: Ti.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
 }
 
-"TabGroup[platform=ios]": {
+'TabGroup[platform=ios]': {
 	activeTabIconTint: Alloy.CFG.styles.tintColor,
 	translucent: false,
-	backgroundColor: "white"
+	backgroundColor: 'white'
 }
 
-"Tab": {
-	icon: "images/icons/tab.png"
+'Tab[platform=ios]': {
+	icon: 'images/icons/tab.png'
 }
 
-"ListItem": {
+'ListItem': {
 	accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE,
-	subtitleColor: "#777" // Titanium 6.1.0 and later
+	subtitleColor: '#777' // Titanium 6.1.0 and later
 }
 
-".actionButton": {
+'.actionButton': {
 	width: 300,
 	height: 40,
-	tintColor: "white",
+	tintColor: 'white',
 	borderRadius: 4,
-	backgroundColor: Alloy.CFG.styles.tintColor
+	backgroundColor: Alloy.CFG.styles.tintColor,
+	color: 'white'
 }
 
-".stateLabel": {
+'.stateLabel': {
 	top: 100,
 	left: 20,
 	right: 20,
 	width: Ti.UI.FILL,
-	textAlign: "center",
+	textAlign: 'center',
 	font: {
 		fontSize: 15
 	}
 }
 
-"ListItem[platform=android]": {
-	color:"#000",
+'.placeholderLabel': {
+	width: 250,
+	height: 125,
+	color: '#333',
+	backgroundColor: '#eee',
+	borderRadius: 4,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+
+'ListItem[platform=android]': {
+	color:'#000',
 	height: 43,
 	left: 15
 }
 
-"Label[platform=android]": {
-	color:"#000"
+'Label[platform=android]': {
+	color:'#000'
 }
 
-"TextField[platform=android]": {
-	color:"#000"
+'TextField[platform=android]': {
+	color:'#000'
 }
 
-"TextArea[platform=android]": {
-	color:"#000"
+// Workaround before https://jira.appcelerator.org/browse/ALOY-1582 is merged/published
+'ListItem[platform=windows formFactor=tablet]': {
+	color: '#000'
+}
+
+'TextArea[platform=android]': {
+	color:'#000'
 }

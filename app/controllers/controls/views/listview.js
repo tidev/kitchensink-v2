@@ -1,4 +1,4 @@
-var log = require("log");
+var log = require('log');
 
 /**
  * The scoped constructor of the controller.
@@ -17,7 +17,7 @@ function fetchData() {
 
 function handleListViewClick(e) {
     log.args('Ti.UI.ListView clicked cell at index', e.sectionIndex  + ' / ' + e.itemIndex);
-    if (OS_IOS){
+    if (OS_IOS) {
         this.deselectItem(e.sectionIndex, e.itemIndex);
     }
 }

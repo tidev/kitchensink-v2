@@ -3,8 +3,37 @@
 	<style name="kitchensink" parent="@style/Theme.AppCompat.Light">
 		<item name="colorPrimary">#c91326</item>
 		<item name="colorAccent">#000000</item>
-		<item name="android:textColorPrimary">#FFFFFF</item>
+		<item name="android:textColorPrimary">#000000</item>
 		<item name="android:statusBarColor">#c91326</item>
 		<item name="android:navigationBarColor">#c91326</item>
+
+		<item name="actionBarStyle">@style/CustomTheme.ActionBarStyle</item>
+		<item name="actionBarTheme">@style/Theme.ActionBarTheme</item>
+		<item name="actionBarTabTextStyle">@style/TabStyle</item>
+		<item name="android:actionBarTabTextStyle">@style/TabStyle</item>
+	</style>
+
+	<style name="TabStyle" parent="style/Widget.AppCompat.Light.ActionBar.TabText">
+		<item name="android:textColor">#ffffff</item>
+		<!-- <item name="android:textAllCaps">false</item> -->
+		<!-- <item name="android:ellipsize">none</item> -->
+		<!-- <item name="android:maxLines">1</item> -->
+	</style>
+
+	<style name="Theme.ActionBarTheme" parent="style/Widget.AppCompat.Light.ActionBar">
+		<!-- actionbar arrow -->
+		<item name="colorControlNormal">#ffffff</item>
+	</style>
+
+	<style name="CustomTheme.ActionBarStyle" parent="style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+		<!-- actionbar -->
+		<item name="android:actionMenuTextColor">#FFFFFF</item>
+		<item name="android:titleTextStyle">@style/CustomTheme.ActionBar.TitleTextStyle</item>
+		<item name="titleTextStyle">@style/CustomTheme.ActionBar.TitleTextStyle</item>
+	</style>
+
+	<style name="CustomTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+		<!-- actionbar font -->
+		<item name="android:textColor">#FFFFFF</item>
 	</style>
 </resources>

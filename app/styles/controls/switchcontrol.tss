@@ -1,4 +1,4 @@
 
-".switchControl": {
-	onTintColor: "blue"
+'.switchControl': {
+	onTintColor: 'blue'
 }
