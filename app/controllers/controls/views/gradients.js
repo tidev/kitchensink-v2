@@ -21,7 +21,7 @@ var selectedGradient;
 
 function updateGradient() {
 	var size = $.gradientView.rect;
-	var minDimension = (size.width < size.height) ? size.width : size.height;
+	var minDimension = Math.min(size.width, size.height);
 	var centerPoint = {
 		x: size.width * normalizedCenterX,
 		y: size.height * normalizedCenterY,
