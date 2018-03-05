@@ -1,0 +1,53 @@
+'Window': {
+	layout: 'vertical'
+}
+
+'#gradientView': {
+	backgroundColor: 'gray',
+	height: '50%',
+	width: Ti.UI.FILL
+}
+
+'.horizontalLayout': {
+	layout: 'horizontal'
+}
+
+'.radiusLabel': {
+	top: 20,
+	left: 10,
+}
+
+'.radiusSlider': {
+	min: 0,
+	max: 100,
+	value: 0,
+	top: 20,
+	left: 20,
+	right: 20,
+	width: Ti.UI.FILL
+}
+
+'.backfillLabel': {
+	top: 20,
+	left: 10
+}
+
+'.backfillSwitch': {
+	top: 20,
+	left: 10,
+	value: false
+}
+
+".colorPickerButton": {
+	top: 20,
+	left: 10,
+	width: Ti.UI.FILL,
+	textAlign: 'left'
+}
+
+'.gradientTypesBar': {
+	index: 0,
+	width: 200,
+	top: 20,
+	left: 10
+}
