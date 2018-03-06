@@ -20,9 +20,9 @@ function handleMapClick(e){
     }
 }
 
-/* right now alloy doesn't add circles to map properly when they're created in alloy
+/* right now alloy doesn't add circles/polylines/polygons to map properly when they're created in alloy
  * See https://jira.appcelerator.org/browse/ALOY-1608 for more info
- * For now, either create circles in the controller or add them manually
+ * For now, either create them in the controller or add them manually
  */
 $.mapview.addCircle($.mapCircle);
 $.mapview.addPolylines([$.mapLineOne, $.mapLineTwo, $.mapLineThree]);
