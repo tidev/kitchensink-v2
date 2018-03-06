@@ -17,3 +17,5 @@ Alloy.Globals.setAndroidBackButton = function(_window) {
 		});
 	});
 };
+
+Alloy.Globals.Map = require("ti.map");
