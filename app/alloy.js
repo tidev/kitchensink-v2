@@ -1,5 +1,5 @@
-
 Alloy.CFG.tabGroup = {};
+Alloy.Globals.Map = require('ti.map');
 
 Alloy.Globals.setAndroidBackButton = function(_window) {
 	if (!OS_ANDROID) { return; }

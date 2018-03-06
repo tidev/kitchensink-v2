@@ -1,5 +1,3 @@
-// Arguments passed into this controller can be accessed via the `$.args` object directly or:
-var args = $.args;
 var log = require('log');
 
 var accelerometerCallback = function(e) {

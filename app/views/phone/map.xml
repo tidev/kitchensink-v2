@@ -1,0 +1,17 @@
+<Alloy>
+    <Window title="Map">
+        <Module method="createView" module="ti.map" id="mapview" onClick="handleMapClick">
+
+            <Annotation id="amsterdam"></Annotation>
+            <Annotation id="appcHQ"></Annotation>
+            
+            <Circle module="ti.map" id="mapCircle" />
+            
+            <Polyline module="ti.map" id="mapLineOne" />
+            <Polyline module="ti.map" id="mapLineTwo" />
+            <Polyline module="ti.map" id="mapLineThree" />
+            
+            <Polygon module="ti.map" id="mapPolygon" />
+        </Module>
+    </Window>
+</Alloy>
