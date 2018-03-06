@@ -10,16 +10,16 @@
 '#amsterdam': {
     latitude: 52.39,
     longitude: 4.89,
-    title: "Amsterdam",
-    subtitle: "You found me :)",
+    title: 'Amsterdam',
+    subtitle: 'You found me :)',
     pincolor: Alloy.Globals.Map.ANNOTATION_RED
 }
 
 '#appcHQ': {
     latitude: 37.368122,
     longitude: -121.913653,
-    title: "Appcelerator Headquarters",
-    subtitle: "San Jose, CA",
+    title: 'Appcelerator Headquarters',
+    subtitle: 'San Jose, CA',
     pincolor: Alloy.Globals.Map.ANNOTATION_RED
 }
 
@@ -29,8 +29,8 @@
         longitude: -122.213653,
     },
     radius: 5000,
-    fillColor: "#ff0000",
-    strokeColor: "#000000",
+    fillColor: '#ff0000',
+    strokeColor: '#000000',
     strokeWidth: 2,
     opacity: 0.5
 }
@@ -50,7 +50,7 @@
             longitude: -121.713653,
         }
     ],
-    strokeColor: "red",
+    strokeColor: 'red',
     strokeWidth: 3
 }
 
@@ -69,7 +69,7 @@
             longitude: -121.713653,
         }
     ],
-    strokeColor: "red",
+    strokeColor: 'red',
     strokeWidth: 3,
     pattern: {
         type: Alloy.Globals.Map.POLYLINE_PATTERN_DASHED,
@@ -93,7 +93,7 @@
             longitude: -122.113653,
         }
     ],
-    strokeColor: "red",
+    strokeColor: 'red',
     strokeWidth: 3,
     pattern: {
         type: Alloy.Globals.Map.POLYLINE_PATTERN_DASHED,
@@ -103,7 +103,7 @@
 }
 
 '#mapPolygon': {
-    fillColor: "red",
+    fillColor: 'red',
     points: [
         {
             latitude: 37.368122,
