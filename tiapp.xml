@@ -120,5 +120,5 @@
         <module platform="android">facebook</module>
         <module platform="iphone">facebook</module>
     </modules>
-    <sdk-version>7.0.2.GA</sdk-version>
+    <sdk-version>7.1.0.GA</sdk-version>
 </ti:app>
