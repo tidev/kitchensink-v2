@@ -1,4 +1,4 @@
-"#mapview": {
+'#mapview': {
     region: {
         latitude: 37.359996,
         longitude: -121.950208,
@@ -7,7 +7,7 @@
     }
 }
 
-"#amsterdam": {
+'#amsterdam': {
     latitude: 52.39,
     longitude: 4.89,
     title: "Amsterdam",
@@ -15,7 +15,7 @@
     pincolor: Alloy.Globals.Map.ANNOTATION_RED
 }
 
-"#appcHQ": {
+'#appcHQ': {
     latitude: 37.368122,
     longitude: -121.913653,
     title: "Appcelerator Headquarters",
@@ -23,7 +23,7 @@
     pincolor: Alloy.Globals.Map.ANNOTATION_RED
 }
 
-"#mapCircle": {
+'#mapCircle': {
     center: {
         latitude: 37.368122,
         longitude: -122.213653,
@@ -35,7 +35,7 @@
     opacity: 0.5
 }
 
-"#mapLineOne": {
+'#mapLineOne': {
     points: [
         {
             latitude: 37.368122,
@@ -54,7 +54,7 @@
     strokeWidth: 3
 }
 
-"#mapLineTwo": {
+'#mapLineTwo': {
     points: [
         {
             latitude: 37.368122,
@@ -78,7 +78,7 @@
     }
     
 }
-"#mapLineThree": {
+'#mapLineThree': {
     points: [
         {
             latitude: 37.368122,
@@ -102,7 +102,7 @@
     }   
 }
 
-"#mapPolygon": {
+'#mapPolygon': {
     fillColor: "red",
     points: [
         {
@@ -127,24 +127,24 @@
         }
     ],
     opacity: 0.7,
-    holes: [[
-        {
-            latitude: 37.328122,
-            longitude: -121.943653,
-        },
-        {
-            latitude: 37.328122,
-            longitude: -121.963653,
-        },
-        {
-            latitude: 37.318122,
-            longitude: -121.963653,
-        },
-        {
-            latitude: 37.318122,
-            longitude: -121.943653,
-        }
-    
-    ]
+    holes: [
+        [
+            {
+                latitude: 37.328122,
+                longitude: -121.943653,
+            },
+            {
+                latitude: 37.328122,
+                longitude: -121.963653,
+            },
+            {
+                latitude: 37.318122,
+                longitude: -121.963653,
+            },
+            {
+                latitude: 37.318122,
+                longitude: -121.943653,
+            }
+        ]
     ]
 }
