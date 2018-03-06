@@ -10,3 +10,4 @@ tmp
 Thumbs.db
 /platform
 /i18n
+plugins/ti.alloy/hooks/alloy.js
