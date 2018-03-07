@@ -7,14 +7,23 @@ var log = require('log');
     
 })();
 
+var focussedTextfield;
 function textFieldValueChanged(e) {
-    log.args('Ti.UI.TextField changed value to ' + e.value);
+    log.args(e.source.id + ' changed value to ' + e.value);
 }
 
 function textFieldFocussed(e) {
-    log.args('Ti.UI.TextField focussed!');
+    focussedTextfield = e.source.id;
+    log.args(e.source.id + ' focussed!');
 }
 
 function textFieldBlurred(e) {
-    log.args('Ti.UI.TextField blurred!');
+    focussedTextfield = null;
+    log.args(e.source.id + ' blurred!');
+}
+
+function blurTextfield(){
+    if (focussedTextfield) {
+        $[focussedTextfield].blur();
+    }
 }
