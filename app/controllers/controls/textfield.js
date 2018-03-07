@@ -22,7 +22,7 @@ function textFieldBlurred(e) {
     log.args(e.source.id + ' blurred!');
 }
 
-function blurTextfield(){
+function blurTextfield() {
     if (focussedTextfield) {
         $[focussedTextfield].blur();
     }
