@@ -1,6 +1,8 @@
+
 import ActionBarHelper from 'actionbar';
 
 Alloy.CFG.tabGroup = {};
+Alloy.Globals.Map = require('ti.map');
 
 Alloy.Globals.setAndroidBackButton = (window) => {
 	if (!OS_ANDROID) { return; }

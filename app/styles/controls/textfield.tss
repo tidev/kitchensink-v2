@@ -1,7 +1,70 @@
+'#textfieldsContainer': {
+    layout: 'vertical'
+}
+
+'#textfieldsContainer[platform=ios]': {
+    keyboardDismissMode: Ti.UI.iOS.KEYBOARD_DISMISS_MODE_INTERACTIVE
+}
 
 '.textfield': {
 	width: 300,
 	height: 40,
 	backgroundColor: '#f0f0f0',
-	borderRadius: 4
+	borderRadius: 4,
+	top: 50,
+	bubbleParent: false,
+	padding: {
+	    left: 20,
+	    right: 20,
+	    top: 5,
+	    bottom: 5
+	}
+}
+
+".textfield[platform=android]": {
+    height: 60
+}
+
+'.textLabel': {
+    font: {
+        fontSize: 14,
+        fontWeight: 'bold'
+    },
+    width: Ti.UI.SIZE,
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+    top: 20,
+    width: 300
+}
+
+/* 
+ * Different textfields based on different keyboard types. There are more
+ * that can be found in the docs http://docs.appcelerator.com/platform/latest/#!/api/Titanium.UI.TextField
+ */
+'#regularTextfield': {
+    keyboardType: Ti.UI.KEYBOARD_TYPE_DEFAULT, // this is also default value so doesn't have to be set
+    hintText: 'Regular textfield'
+}
+
+'#phoneTextfield': {
+    keyboardType: Ti.UI.KEYBOARD_TYPE_PHONE_PAD,
+    hintText: 'Phone textfield'
+}
+
+'#emailTextfield': {
+    keyboardType: Ti.UI.KEYBOARD_TYPE_EMAIL,
+    hintText: 'Email textfield',
+    autocorrect: false,
+    autocapitalization: false,
+    autofillType: Titanium.UI.AUTOFILL_TYPE_EMAIL
+}
+
+'#passwordTextfield': {
+    passwordMask: true,
+    hintText: 'Type your password',
+    autofillType: Ti.UI.AUTOFILL_TYPE_PASSWORD
+}
+
+// On Android add some extra bottom padding to make UI look better as the passwordTextfield is the last element
+'#passwordTextfield[platform=android]': {
+    bottom: 30
 }
