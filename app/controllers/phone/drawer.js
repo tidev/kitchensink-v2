@@ -1,5 +1,3 @@
-const args = $.args;
-
 function onClickLeft(e) {
 	$.drawerLayout.toggleLeft();
 }
