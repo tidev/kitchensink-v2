@@ -55,6 +55,8 @@
                 <!-- Permissions: Photo Library -->
                 <key>NSPhotoLibraryUsageDescription</key>
                 <string>We need permission to look at your photo library.</string>
+                <key>NSPhotoLibraryAddUsageDescription</key>
+                <string>We need permission to save images in your photo library.</string>
                 <!-- Permissions: Geolocation -->
                 <key>NSLocationWhenInUseUsageDescription</key>
                 <string>We need your location so we can cross check where you are so we can find you!</string>
