@@ -1,5 +1,6 @@
 <Alloy>
     <Window title="Video Player">
-      <Label class="placeholderLabel" text="To be added ⚒" />
+        <Button top="50" onClick="changeVideoSource">Change to Remote Source</Button>
+        <VideoPlayer id="myPlayer" />
     </Window>
 </Alloy>
