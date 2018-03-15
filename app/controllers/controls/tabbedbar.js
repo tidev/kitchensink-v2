@@ -1,4 +1,4 @@
-var log = require('log');
+import { logger } from 'logger';
 
 /**
  * The scoped constructor of the controller.
@@ -8,5 +8,8 @@ var log = require('log');
 })();
 
 function tabbedBarSelectedIndex(e) {
-	log.args('Ti.UI.iOS.TabbedBar changed to index: ', e.index);
+  const message = `Ti.UI.iOS.TabbedBar changed to index: ${e.index}`;
+  
+  alert(message);
+	logger.log(message);
 }

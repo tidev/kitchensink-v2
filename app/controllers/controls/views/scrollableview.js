@@ -1,4 +1,4 @@
-var log = require('log');
+import { logger } from 'logger';
 
 /**
  * The scoped constructor of the controller.
@@ -12,25 +12,25 @@ function scrollToView() {
 }
 
 function addNewView() {
-    var newView = Ti.UI.createView({
+    const newView = Ti.UI.createView({
         backgroundColor: 'rgba(' + _.random(0,255) + ',' + _.random(0,255) + ',' + _.random(0,255) + ', 1.0)' // Generate rgba-color
     });
         
     $.scrollable.addView(newView);
-    log.args('Ti.UI.ScrollableView added new view at index ' + ($.scrollable.views.length - 1));
+    logger.log('Ti.UI.ScrollableView added new view at index ' + ($.scrollable.views.length - 1));
 
     validateButtons();
 }
 
 function removeLastView() {
     $.scrollable.removeView($.scrollable.views[$.scrollable.views.length - 1]);
-    log.args('Ti.UI.ScrollableView deleted last view');
+    logger.log('Ti.UI.ScrollableView deleted last view');
     
     validateButtons();
 }
 
 function scrollableViewDidScroll(e) {
-    log.args('Ti.UI.ScrollableView did scroll to index ' + e.currentPage);
+    logger.log('Ti.UI.ScrollableView did scroll to index ' + e.currentPage);
 }
 
 function validateButtons() {

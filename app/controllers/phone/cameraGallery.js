@@ -1,4 +1,4 @@
-var log = require('log');
+import { logger } from 'logger';
 
 /**
 * The scoped constructor of the controller.
@@ -8,7 +8,7 @@ var log = require('log');
 })();
 
 function openComponent(e) {
-    var action = e.itemId
+    const action = e.itemId
 
     switch (action) {
         case 'showCameraPhoto':
@@ -27,7 +27,7 @@ function openComponent(e) {
             openFromGallery();
             break
         default:
-            log.args('Ti.Media', 'Unknown action selected: ' + action);
+            logger.log('Ti.Media', 'Unknown action selected: ' + action);
             break;
     }
 
@@ -37,37 +37,41 @@ function openComponent(e) {
 }
 
 function showCamera(mediaTypes) {
-    require("/permissions").checkCameraPermission(function() {
+    require('/permissions').checkCameraPermission(success => {
+        if (!success) {
+          alert('No permissions!');
+          return;
+        }
         Ti.Media.showCamera({
             mediaTypes: mediaTypes,
-            success: function(e) {
-                log.args('Ti.Media', 'Image taken successfully!');
+            success: (e) => {
+                logger.log('Ti.Media', 'Image taken successfully!');
                 processImage(e.media)
             },
-            error: function(e) {
-                log.args('Ti.Media', 'Error showing camera: ' + e.error);
+            error: (e) => {
+                logger.log('Ti.Media', 'Error showing camera: ' + e.error);
             },
-            cancel: function(e) {
-                log.args('Ti.Media', 'Camera was cancelled');
+            cancel: (e) => {
+                logger.log('Ti.Media', 'Camera was cancelled');
             }
         });
     });
 }
 
 function processImage(image) {
-    var imageView = Ti.UI.createImageView({
+    const imageView = Ti.UI.createImageView({
         image: image,
         opacity: 0
     });
 
-    var label = Ti.UI.createLabel({
+    const label = Ti.UI.createLabel({
         text: 'Tap to close'
     });
 
-    imageView.addEventListener('click', function(e) {
+    imageView.addEventListener('click', (e) => {
         imageView.animate({
             opacity: 0
-        }, function() {
+        }, () => {
             $.window.remove(imageView);
         });
     });
@@ -83,7 +87,7 @@ function processImage(image) {
 }
 
 function saveToGallery() {
-    var view = Ti.UI.createView({
+    const view = Ti.UI.createView({
         backgroundColor: 'red',
         width: 400,
         height: 400,
@@ -92,27 +96,32 @@ function saveToGallery() {
 
     // Convert the view to an image-blog and save it to your Gallery
     Ti.Media.saveToPhotoGallery(view.toImage(), {
-        success: function(e) {
-            log.args('Ti.Media', 'Image saved to photo-gallery successfully!');
+        success: (e) => {
+            logger.log('Ti.Media', 'Image saved to photo-gallery successfully!');
         },
-        error: function(e) {
-            log.args('Ti.Media', 'Error saving image to photo-gallery: ' + e.error);
+        error: (e) => {
+            logger.log('Ti.Media', 'Error saving image to photo-gallery: ' + e.error);
         }
     });
 }
 
 function openFromGallery() {
-    require("/permissions").checkCameraPermission(function() {
+    require('/permissions').checkCameraPermission(success => {
+        if (!success) {
+          alert('No permissions!');
+          return;
+        }
+
         Ti.Media.openPhotoGallery({
-            success: function(e) {
-                log.args('Ti.Media', 'Image open successfully!');
+            success: (e) => {
+                logger.log('Ti.Media', 'Image open successfully!');
             processImage(e.media)
             },
-            error: function(e) {
-                log.args('Ti.Media', 'Error opening image: ' + e.error);
+            error: (e) => {
+                logger.log('Ti.Media', 'Error opening image: ' + e.error);
             },
-            cancel: function(e) {
-                log.args('Ti.Media', 'Opening photo-gallery was cancelled');
+            cancel: (e) => {
+                logger.log('Ti.Media', 'Opening photo-gallery was cancelled');
             }
         });
     });

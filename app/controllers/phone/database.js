@@ -1,4 +1,4 @@
-var log = require('log');
+import { logger } from 'logger';
 
 /**
  * The scoped constructor of the controller.
@@ -10,13 +10,13 @@ var log = require('log');
 function intitializeDatabase(e) {
 	console.log(Ti.Platform.osname)
 	if (Ti.Platform.osname === 'windows') {
-		var db = Ti.Database.install(Ti.Filesystem.resourcesDirectory,'databases/kitchensink.db','kitchensink');
+		const db = Ti.Database.install(Ti.Filesystem.resourcesDirectory,'databases/kitchensink.db','kitchensink');
 	} else {
-		var db = Ti.Database.install('/databases/kitchensink.db','kitchensink');
+		const db = Ti.Database.install('/databases/kitchensink.db','kitchensink');
 	}
-	var db = Ti.Database.open('kitchensink');
-	var updateName = 'I was updated';
-	var updateId = 4;
+	const db = Ti.Database.open('kitchensink');
+	const updateName = 'I was updated';
+	const updateId = 4;
 
 	/**
 	 *	Create new table and flush contents for a fresh start.
@@ -33,8 +33,8 @@ function intitializeDatabase(e) {
 	db.execute('INSERT INTO DATABASETEST (ID, NAME ) VALUES(?,?)', 4, 'Name 4');
 	db.execute('INSERT INTO DATABASETEST (ID, NAME ) VALUES(?,?)', 5, '\u2070 \u00B9 \u00B2 \u00B3 \u2074 \u2075 \u2076 \u2077 \u2078 \u2079');
 
-	log.args('Ti.Database', 'JUST INSERTED, rowsAffected = ' + db.rowsAffected);
-	log.args('Ti.Database', 'JUST INSERTED, lastInsertRowId = ' + db.lastInsertRowId);
+	logger.log('Ti.Database', 'JUST INSERTED, rowsAffected = ' + db.rowsAffected);
+	logger.log('Ti.Database', 'JUST INSERTED, lastInsertRowId = ' + db.lastInsertRowId);
 
 	/**
 	 *	Update the previously inserted data.
@@ -42,28 +42,28 @@ function intitializeDatabase(e) {
 	db.execute('UPDATE DATABASETEST SET NAME = ? WHERE ID = ?', updateName, updateId);
 	db.execute('UPDATE DATABASETEST SET NAME = "I was updated, too!" WHERE ID = 2');
 
-	log.args('Ti.Database', 'UPDATED NAME TO "I was updated, too!"');
+	logger.log('Ti.Database', 'UPDATED NAME TO "I was updated, too!"');
 
 	/**
 	 *	Delete data from the database.
 	 **/
 	db.execute('DELETE FROM DATABASETEST WHERE ID = ?', 1);
 
-	log.args('Ti.Database', 'DELETED FROM DATABASE (WHERE ID = 1)');
+	logger.log('Ti.Database', 'DELETED FROM DATABASE (WHERE ID = 1)');
 
 	/**
 	 *	Select (query) data from the database.
 	 **/
-	var rows = db.execute('SELECT * FROM DATABASETEST');
-	log.args('Ti.Database', 'ROW COUNT = ' + rows.rowCount);
+	const rows = db.execute('SELECT * FROM DATABASETEST');
+	logger.log('Ti.Database', 'ROW COUNT = ' + rows.rowCount);
 
 	while (rows.isValidRow()) {
-		log.args('Ti.Database', ' - ID: ' + rows.field(0) + ' NAME: ' + rows.fieldByName('name') + ' COLUMN NAME ' + rows.fieldName(0));
+		logger.log('Ti.Database', ' - ID: ' + rows.field(0) + ' NAME: ' + rows.fieldByName('name') + ' COLUMN NAME ' + rows.fieldName(0));
 		rows.next();
 	}
 
 	rows.close();
 	db.close(); // close db when you're done to save resources
 
-	log.args('Ti.Database', 'CLOSED DATABASE!');
+	logger.log('Ti.Database', 'CLOSED DATABASE!');
 }

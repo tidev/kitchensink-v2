@@ -1,13 +1,13 @@
-var log,
-		audioRecorder,
-		record,
-		currentSessionCategory = Ti.Media.audioSessionCategory;
+import { logger } from 'logger';
+
+let audioRecorder;
+let record;
+let currentSessionCategory = Ti.Media.audioSessionCategory;
 
 /**
  * The scoped constructor of the controller.
  **/
 (function constructor(args) {
-		log = require('log');
 		audioRecorder = Ti.Media.createAudioRecorder();
 
 		if (OS_IOS) {
@@ -20,7 +20,7 @@ var log,
 
 function onOpen() {
     if (!Ti.Media.hasAudioRecorderPermissions()) {
-        Ti.Media.requestAudioRecorderPermissions(function(e) {
+        Ti.Media.requestAudioRecorderPermissions((e) => {
             if (e.success) {
 							$.startRecordingButton.setVisible(true);
             } else {
@@ -65,7 +65,7 @@ function stopRecording() {
 }
 
 function playRecording() {
-    var audioPlayer = Ti.Media.createAudioPlayer({
+    const audioPlayer = Ti.Media.createAudioPlayer({
 			url: record.getNativePath()
 		});
     audioPlayer.start();

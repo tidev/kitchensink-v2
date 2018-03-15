@@ -1,4 +1,4 @@
-var log = require('log');
+import { logger } from 'logger';
 
 /**
  * The scoped constructor of the controller.
@@ -12,6 +12,6 @@ function showOptionDialog(e) {
 }
 
 function optionDialogClicked(e) {
-    alert('Selected option at index: ' + e.index);
-    log.args('Ti.UI.OptionDialog selected option at index: ' + e.index);
+    alert(`Selected option at index: ${e.index}`);
+    logger.log(`Ti.UI.OptionDialog selected option at index: ${e.index}`);
 }

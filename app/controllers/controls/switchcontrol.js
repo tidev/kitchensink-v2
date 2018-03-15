@@ -1,4 +1,4 @@
-var log = require('log');
+import { logger } from 'logger';
 
 /**
  * The scoped constructor of the controller.
@@ -9,5 +9,5 @@ var log = require('log');
 
 function switchChanged(e) {
     $.state.setText('The switch value changed to ' + e.value);
-    log.args('Ti.UI.Switch value changed to ' + e.value);
+    logger.log('Ti.UI.Switch value changed to ' + e.value);
 }

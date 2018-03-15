@@ -7,13 +7,13 @@ It also includes full support for iOS, Android & Windows.
 <img width="976" src="https://abload.de/img/kitchensink-overview1duxu.png">
 
 ### Features
+- [x] Full ES6+ support
 - [x] API Logging
 - [x] Controls (Switch, Slider, Tabbed Bar, Text Field, Alerts, Dialogs, ...)
 - [x] Views (Scroll View, List View, Image View, Blur View, Web View, ...)
 - [x] Services (Twitter, Facebook)
 - [x] Platform (Clipboard, URL-Schemes, Hyperloop, Databases, Geolocation, Camera, Gallery, ...)
 - [ ] TODO: More Platform APIs (HTTP-Requests, Contacts, ...)
-- [ ] TODO: More Services (Unit-Testing, Maps, OAuth, ...)
 
 ### Running the KitchenSink App
 

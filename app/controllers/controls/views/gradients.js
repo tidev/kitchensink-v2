@@ -1,4 +1,4 @@
-var log = require('log');
+import { logger } from 'logger';
 
 var normalizedCenterX;
 var normalizedCenterY;
@@ -45,7 +45,7 @@ function updateGradient() {
     gradient.startPoint = startPoint;
     gradient.endPoint = endPoint;
 
-    log.args('Linear gradient updated: ' + JSON.stringify(centerPoint) + ', start-point: ' + JSON.stringify(startPoint) + ', end-point: ' + JSON.stringify(endPoint));
+    logger.log('Linear gradient updated: ' + JSON.stringify(centerPoint) + ', start-point: ' + JSON.stringify(startPoint) + ', end-point: ' + JSON.stringify(endPoint));
   } else {
     gradient.startPoint = centerPoint;
     gradient.endPoint = centerPoint;
@@ -55,7 +55,7 @@ function updateGradient() {
     gradient.backfillEnd = $.endFillSwitch.value;
     gradient.colors = colors;
 
-    log.args('Radial gradient updated: ' + JSON.stringify(centerPoint) + ', start-radius: ' + startRadius + ', end-radius: ' + endRadius);
+    logger.log('Radial gradient updated: ' + JSON.stringify(centerPoint) + ', start-radius: ' + startRadius + ', end-radius: ' + endRadius);
   }
   
   $.gradientView.backgroundGradient = gradient;  
