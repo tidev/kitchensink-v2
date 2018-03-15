@@ -9,17 +9,17 @@ import { logger } from 'logger';
 
 var focussedTextfield;
 function textFieldValueChanged(e) {
-    logger.args(`${e.source.id} changed value to ${e.value}`);
+    logger.log(`${e.source.id} changed value to ${e.value}`);
 }
 
 function textFieldFocussed(e) {
     focussedTextfield = e.source.id;
-    logger.args(`${e.source.id} focussed!`);
+    logger.log(`${e.source.id} focussed!`);
 }
 
 function textFieldBlurred(e) {
     focussedTextfield = null;
-    logger.args(`${e.source.id} blurred!`);
+    logger.log(`${e.source.id} blurred!`);
 }
 
 function blurTextfield() {
