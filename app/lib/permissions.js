@@ -1,38 +1,30 @@
-exports.checkCameraPermission = function(clb) {
+exports.checkCameraPermission = (cb) => {
 	if (OS_WINDOWS) {
-		return clb();
+		return cb(true);
 	} else {
-		var hasCameraPermissions = Ti.Media.hasCameraPermissions();
+		const hasCameraPermissions = Ti.Media.hasCameraPermissions();
 
 		if (hasCameraPermissions) {
-			clb();
+			cb(true);
 			return;
 		}
 
 		if (OS_IOS) {
-			var map = {};
+			let map = {};
 			map[Ti.Media.CAMERA_AUTHORIZATION_AUTHORIZED] = 'CAMERA_AUTHORIZATION_AUTHORIZED';
 			map[Ti.Media.CAMERA_AUTHORIZATION_DENIED] = 'CAMERA_AUTHORIZATION_DENIED';
 			map[Ti.Media.CAMERA_AUTHORIZATION_RESTRICTED] = 'CAMERA_AUTHORIZATION_RESTRICTED';
 			map[Ti.Media.CAMERA_AUTHORIZATION_NOT_DETERMINED] = 'CAMERA_AUTHORIZATION_NOT_DETERMINED';
 
-			var cameraAuthorization = Ti.Media.cameraAuthorization;
-			if (cameraAuthorization === Ti.Media.CAMERA_AUTHORIZATION_RESTRICTED) {
-				return;
-			} else if (cameraAuthorization === Ti.Media.CAMERA_AUTHORIZATION_DENIED) {
+			const cameraAuthorization = Ti.Media.cameraAuthorization;
+			if (cameraAuthorization === Ti.Media.CAMERA_AUTHORIZATION_RESTRICTED || cameraAuthorization === Ti.Media.CAMERA_AUTHORIZATION_DENIED) {
+				cb(false)
 				return;
 			}
 		}
 
-		Ti.Media.requestCameraPermissions(function(e) {
-			if (e.success) {
-				clb();
-				return;
-			} else if (OS_ANDROID) {
-				return;
-			} else {
-				return;
-			}
+		Ti.Media.requestCameraPermissions((e) => {
+			cb(e.success);
 		});
 	}
 }

@@ -1,0 +1,8 @@
+
+'#myPlayer': {
+	backgroundColor:'#111',
+	mediaControlStyle:Titanium.Media.VIDEO_CONTROL_DEFAULT,
+	height:300,
+	autoplay:false,
+	url: 'videos/example-video.mp4'
+}

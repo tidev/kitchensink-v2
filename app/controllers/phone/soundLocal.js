@@ -1,6 +1,7 @@
-var log = require('log'),
-    soundPlayer,
-    playbackInterval;
+import { logger } from 'logger';
+
+let soundPlayer;
+let playbackInterval;
 
 /**
  * The scoped constructor of the controller.
@@ -10,7 +11,7 @@ var log = require('log'),
         Ti.Media.setAudioSessionCategory(Ti.Media.AUDIO_SESSION_CATEGORY_AMBIENT);
     }
 
-    soundPlayer = Titanium.Media.createSound({
+    soundPlayer = Ti.Media.createSound({
         url: 'sounds/cricket.wav'
     });
 
@@ -66,14 +67,14 @@ function onPlaybackComplete() {
 }
 
 function onPlaybackResume() {
-    log.args('Ti.Media.Sound', 'The sound player was resumed!');
+    logger.log('Ti.Media.Sound', 'The sound player was resumed!');
 }
 
 function startInterval() {
-    playbackInterval = setInterval(function() {
+    playbackInterval = setInterval(() => {
 		if (soundPlayer.isPlaying()) {
 			$.playbackProgress.setValue(soundPlayer.getTime() * 1000);
-            log.args('Ti.Media.Sound', 'Time: ' + soundPlayer.getTime());
+            logger.log('Ti.Media.Sound', 'Time: ' + soundPlayer.getTime());
 		}
 	}, 500);
 }

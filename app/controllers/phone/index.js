@@ -1,4 +1,4 @@
-var log = require('log');
+import { logger } from 'logger';
 
 /**
  * The scoped constructor of the controller.
@@ -8,13 +8,13 @@ var log = require('log');
 })();
 
 function openComponent(e) {
-    var identifier = 'phone/' + e.section.getItemAt(e.itemIndex).properties.itemId;
-    var component = Alloy.createController(identifier).getView();
+    const identifier = 'phone/' + e.section.getItemAt(e.itemIndex).properties.itemId;
+    const component = Alloy.createController(identifier).getView();
     
-    if (OS_ANDROID && identifier !== "phone/drawer") {
+    if (OS_ANDROID && identifier !== 'phone/drawer') {
         Alloy.Globals.setAndroidBackButton(component);
     }
     Alloy.CFG.tabGroup.getActiveTab().open(component);
 
-    log.args('Ti.UI.TabGroup.activeTab.open', identifier);
+    logger.log('Ti.UI.TabGroup.activeTab.open', identifier);
 }

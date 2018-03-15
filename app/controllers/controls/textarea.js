@@ -1,4 +1,4 @@
-var log = require('log');
+import { logger } from 'logger';
 
 /**
  * The scoped constructor of the controller.
@@ -8,13 +8,13 @@ var log = require('log');
 })();
 
 function textAreaValueChanged(e) {
-    log.args('Ti.UI.TextArea changed value to ' + e.value);
+    logger.log('Ti.UI.TextArea changed value to ' + e.value);
 }
 
 function textAreaFocussed(e) {
-    log.args('Ti.UI.TextArea focussed!');
+    logger.log('Ti.UI.TextArea focussed!');
 }
 
 function textAreaBlurred(e) {
-    log.args('Ti.UI.TextArea blurred!');
+    logger.log('Ti.UI.TextArea blurred!');
 }

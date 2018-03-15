@@ -1,5 +1,5 @@
-var fb = require('facebook');
-var log = require('log');
+import { logger } from 'logger';
+import fb from 'facebook';
 
 /**
  * The scoped constructor of the controller.
@@ -14,29 +14,29 @@ var log = require('log');
     setButtonState();
 
     // Listen for Login event
-    fb.addEventListener('login', function(e) {
+    fb.addEventListener('login', (e) => {
         if (e.success) {
-            log.args('Modules.Facebook', 'login');
+            logger.log('Modules.Facebook', 'login');
         } else if (e.cancelled) {
             // user cancelled
-            log.args('Modules.Facebook', 'canceled');
+            logger.log('Modules.Facebook', 'canceled');
         } else {
-            log.args('Modules.Facebook', e.error);
+            logger.log('Modules.Facebook', e.error);
         }
         setButtonState();
     });
 
     // Listen for Logout event
-    fb.addEventListener('logout', function(e) {
+    fb.addEventListener('logout', (e) => {
         setButtonState();
     });
 
     // Listen for share complete event
-    fb.addEventListener('shareCompleted', function(e) {
+    fb.addEventListener('shareCompleted', (e) => {
         if (e.success) {
-            log.args('Modules.Facebook', 'shareCompleted');
+            logger.log('Modules.Facebook', 'shareCompleted');
         } else {
-            log.args('Modules.Facebook', 'shareCompleted failed');
+            logger.log('Modules.Facebook', 'shareCompleted failed');
         }
     });
 
@@ -48,12 +48,12 @@ var log = require('log');
 
         if (fb.loggedIn) {
             getGraphPath();
-            log.args('Login', 'Logged in');
+            logger.log('Login', 'Logged in');
         } else {
             $.fbUserName.text = '';
             $.fbFriends.text = '';
             $.fbUserImage.image = null;
-            log.args('Logout', 'Logged out');
+            logger.log('Logout', 'Logged out');
         }
     }
 
@@ -61,18 +61,18 @@ var log = require('log');
     function getGraphPath() {
         fb.requestWithGraphPath('me', {
             fields: 'id,name,picture,friends,posts'
-        }, 'GET', function(e) {
+        }, 'GET', (e) => {
             if (e.success) {
-                var respObj = JSON.parse(e.result);
-                log.args('Modules.Facebook.requestWithGraphPath', respObj);
+                const respObj = JSON.parse(e.result);
+                logger.log('Modules.Facebook.requestWithGraphPath', respObj);
 
                 $.fbUserImage.image = respObj.picture.data.url;
                 $.fbUserName.text = 'Welcome ' + respObj.name;
                 $.fbFriends.text = 'Total Friends ' + respObj.friends.summary.total_count;
             } else if (e.error) {
-                log.args(e.error);
+                logger.log(e.error);
             } else {
-                log.args('Unknown response');
+                logger.log('Unknown response');
             }
         });
     }
