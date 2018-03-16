@@ -22,12 +22,12 @@ export default class ActionBarHelper {
     }
 
     this.win = window;
-    this.activity = win.getActivity();
+    this.activity = this.win.getActivity();
     this.actionBar = this.activity.actionBar;
   }
 
   setTitle(title) {
-    if (!_isValidActivity()) {
+    if (!this._isValidActivity()) {
       return;
     }
 
@@ -35,7 +35,7 @@ export default class ActionBarHelper {
   }
 
   setUpAction(action) {
-    if (!_isValidActivity()) {
+    if (!this._isValidActivity()) {
       return;
     }
 
@@ -49,7 +49,7 @@ export default class ActionBarHelper {
   }
 
   setBackgroundImage(image) {
-    if (!_isValidActivity()) {
+    if (!this._isValidActivity()) {
       return;
     }
 
@@ -57,7 +57,7 @@ export default class ActionBarHelper {
   }
 
   setIcon(icon) {
-    if (!_isValidActivity()) {
+    if (!this._isValidActivity()) {
       return;
     }
 
@@ -66,7 +66,7 @@ export default class ActionBarHelper {
   }
 
   hide() {
-    if (!_isValidActivity()) {
+    if (!this._isValidActivity()) {
       return;
     }
 
@@ -74,7 +74,7 @@ export default class ActionBarHelper {
   }
 
   show() {
-    if (!_isValidActivity()) {
+    if (!this._isValidActivity()) {
       return;
     }
 
@@ -82,7 +82,7 @@ export default class ActionBarHelper {
   }
 
   reloadMenu() {
-    if (!_isValidActivity()) {
+    if (!this._isValidActivity()) {
       return;
     }
 
@@ -95,7 +95,7 @@ export default class ActionBarHelper {
       return false;
     }
 
-    if (this.actionBar) {
+    if (!this.actionBar) {
       Ti.API.error('No ActionBar available');
       return false
     }

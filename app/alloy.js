@@ -5,12 +5,14 @@ Alloy.CFG.tabGroup = {};
 Alloy.Globals.Map = require('ti.map');
 
 Alloy.Globals.setAndroidBackButton = (window) => {
-	if (!OS_ANDROID) { return; }
+	if (!OS_ANDROID) { 
+		return; 
+	}
 	
-	_window.addEventListener('open', () => {
+	window.addEventListener('open', () => {
 		const actionBarHelper = new ActionBarHelper(window);
 
-		if (window.title && _window.title.length > 0) {
+		if (window.title && window.title.length > 0) {
 			actionBarHelper.setTitle(window.title);
 		}
 
