@@ -29,8 +29,8 @@
                 </Labels>
             </TabbedBar>
 
-			<Switch id="gradientTypeSwitch" onClick="handleGradientType" platform="android" />
-			<Label id="gradientTypeLabel" platform="android">Radial</Label>
+            <Switch id="gradientTypeSwitch" onClick="handleGradientType" platform="android" />
+            <Label id="gradientTypeLabel" platform="android">Radial</Label>
 		</View>
     </Window>
 </Alloy>

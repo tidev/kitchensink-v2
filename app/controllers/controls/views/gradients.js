@@ -1,11 +1,11 @@
 import { logger } from 'logger';
 
-var normalizedCenterX;
-var normalizedCenterY;
-var colors;
-var Gradient;
-var gradientTypes;
-var selectedGradient;
+let normalizedCenterX;
+let normalizedCenterY;
+let colors;
+let Gradient;
+let gradientTypes;
+let selectedGradient;
 
 /**
  * The scoped constructor of the controller.
@@ -20,17 +20,17 @@ var selectedGradient;
 })();
 
 function updateGradient() {
-	var size = $.gradientView.rect;
-	var minDimension = Math.min(size.width, size.height);
-	var centerPoint = {
+	const size = $.gradientView.rect;
+	const minDimension = Math.min(size.width, size.height);
+	const centerPoint = {
 		x: size.width * normalizedCenterX,
 		y: size.height * normalizedCenterY,
 	};
 	
-  var startRadius = (minDimension / 2) * ($.startRadiusSlider.value / 100);
-  var endRadius = (minDimension / 2) * ($.endRadiusSlider.value / 100);
+  const startRadius = (minDimension / 2) * ($.startRadiusSlider.value / 100);
+  const endRadius = (minDimension / 2) * ($.endRadiusSlider.value / 100);
   
-  var gradient = {
+  const gradient = {
 		type: gradientTypes[selectedGradient]
 	};
   
@@ -38,8 +38,8 @@ function updateGradient() {
   // Radial gradients support raw colors, start-radius / end-radius and backfill-start / backfill-end
   // Read more: http://docs.appcelerator.com/platform/latest/#!/api/Titanium.UI.View-property-backgroundGradient
   if (selectedGradient == Gradient.LINEAR) {
-    var startPoint = { x: precisionRound($.startRadiusSlider.value , -1) + '%', y: '50%' };
-    var endPoint = { x: precisionRound($.endRadiusSlider.value, -1) + '%', y: '50%' };
+    const startPoint = { x: precisionRound($.startRadiusSlider.value , -1) + '%', y: '50%' };
+    const endPoint = { x: precisionRound($.endRadiusSlider.value, -1) + '%', y: '50%' };
 
     gradient.colors = [{ color: colors[0], offset: 0.0 }, { color: colors[1], offset: 1.0 }];
     gradient.startPoint = startPoint;
@@ -62,7 +62,7 @@ function updateGradient() {
 }
 
 function handleTouchMove(e) {
-  var size = $.gradientView.rect;
+  const size = $.gradientView.rect;
 
   if (OS_ANDROID && Ti.UI.defaultunit !== 'px') {
     e.x /= Ti.Platform.displayCaps.logicalDensityFactor;
@@ -82,8 +82,8 @@ function pickRandomColor() {
 
 // CREDITS: https://stackoverflow.com/a/1484514/5537752
 function generateRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
+  const letters = '0123456789ABCDEF';
+  let color = '#';
 
   for (var i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
@@ -93,9 +93,9 @@ function generateRandomColor() {
 }
 
 function handleGradientType(e) {
-  var isLinear;
+  let isLinear;
   if (OS_IOS) {
-    isLinear = e.index == Gradient.LINEAR;
+    isLinear = e.index === Gradient.LINEAR;
     selectedGradient = e.index;
   } else {
     if ($.gradientTypeSwitch.value) {
