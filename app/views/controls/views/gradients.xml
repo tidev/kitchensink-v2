@@ -1,33 +1,36 @@
 <Alloy>
     <Window title="Gradients" onPostlayout="updateGradient">
         <View id="gradientView" onTouchmove="handleTouchMove" />
-		<View class="horizontalLayout">
-			<!-- Start Radius -->
-			<Label class="radiusLabel" id="startRadiusLabel">Start Radius:</Label>
-			<Slider class="radiusSlider" id="startRadiusSlider" onChange="updateGradient" />
+        <View class="horizontalLayout">
+            <!-- Start Radius -->
+            <Label class="radiusLabel" id="startRadiusLabel">Start Radius:</Label>
+            <Slider class="radiusSlider" id="startRadiusSlider" onChange="updateGradient" />
 
-			<!-- End Radius -->
-			<Label class="radiusLabel" id="endRadiusLabel">End Radius:</Label>
-			<Slider class="radiusSlider" id="endRadiusSlider" onChange="updateGradient" />
-			
-			<!-- Backfill Start -->
-			<Label class="backfillLabel">Back Fill Start:</Label>
-			<Switch class="backfillSwitch" id="startFillSwitch" onChange="updateGradient" />
+            <!-- End Radius -->
+            <Label class="radiusLabel" id="endRadiusLabel">End Radius:</Label>
+            <Slider class="radiusSlider" id="endRadiusSlider" onChange="updateGradient" />
 
-			<!-- Backfill End -->
-			<Label class="backfillLabel">Back Fill End:</Label>
-			<Switch class="backfillSwitch" id="endFillSwitch" onChange="updateGradient" />
-            
+            <!-- Backfill Start -->
+            <Label class="backfillLabel">Back Fill Start:</Label>
+            <Switch class="backfillSwitch" id="startFillSwitch" onChange="updateGradient" />
+
+            <!-- Backfill End -->
+            <Label class="backfillLabel">Back Fill End:</Label>
+            <Switch class="backfillSwitch" id="endFillSwitch" onChange="updateGradient" />
+
             <!-- Random color -->
             <Button onClick="pickRandomColor" class="colorPickerButton" title="🔄 Pick Random Color" />
 
             <!-- Radial / linear -->
-            <TabbedBar class="gradientTypesBar" onClick="handleGradientType">
+            <TabbedBar class="gradientTypesBar" onClick="handleGradientType" platform="ios">
                 <Labels>
                     <Label>Radial</Label>
                     <Label>Linear</Label>
                 </Labels>
             </TabbedBar>
-		</View>
+
+            <Switch id="gradientTypeSwitch" onClick="handleGradientType" platform="android" />
+            <Label id="gradientTypeLabel" platform="android">Radial</Label>
+        </View>
     </Window>
 </Alloy>
