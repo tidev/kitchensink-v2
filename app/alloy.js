@@ -16,7 +16,7 @@ Alloy.Globals.setAndroidBackButton = (window) => {
 			actionBarHelper.setTitle(window.title);
 		}
 
-		actionBarHelper.setUpAction(() => {
+		actionBarHelper.setUpAction(() => {
 			window.close();
 		});
 	});

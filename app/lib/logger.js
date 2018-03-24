@@ -34,4 +34,4 @@ class Logger {
 	}
 }
 
-export let logger = new Logger();
+export const logger = new Logger();
