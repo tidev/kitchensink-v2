@@ -1,0 +1,24 @@
+{
+	"name": "kitchensink-v2",
+	"version": "7.1.0",
+	"description": "A refactored Alloy-based version of the KitchenSink demo-app",
+	"private": true,
+	"scripts": {
+		"lint": "grunt lint",
+		"format": "grunt format:js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/appcelerator/kitchensink-v2.git"
+	},
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/appcelerator/kitchensink-v2/issues"
+	},
+	"homepage": "https://github.com/appcelerator/kitchensink-v2#readme",
+	"devDependencies": {
+		"grunt": "^1.0.1",
+		"grunt-appc-js": "^2.1.0",
+		"grunt-cli": "^1.2.0"
+	}
+}
