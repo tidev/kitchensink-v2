@@ -4,7 +4,7 @@
  **/
 (function constructor(args) {
 
-})(arguments[0] || {});
+}(arguments[0] || {}));
 
 function copyText() {
 	if ($.copyField.getValue().length > 0) {

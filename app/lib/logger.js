@@ -3,7 +3,7 @@
 class Logger {
 	constructor() {
 		this.history = '';
-		this.logger = _.extend({}, Backbone.Events);		
+		this.logger = _.extend({}, Backbone.Events);
 	}
 
 	log(...theArguments) {
@@ -13,7 +13,7 @@ class Logger {
 		});
 
 		const message = mappedArgs.join(' ');
-		const timestamp = new Date().toLocaleString('en-US', { hour12: false} );
+		const timestamp = new Date().toLocaleString('en-US', { hour12: false });
 
 		// Use error-level for production or they will not show in Xcode console
 		Ti.API[ENV_PROD ? 'error' : 'info'](message);
@@ -24,11 +24,11 @@ class Logger {
 		// Trigger an event for controllers/console.js to listen to and display the log
 		this.logger.trigger('change');
 	}
-	
+
 	clearHistory() {
 		this.history = '';
 	}
-	
+
 	on(event, cb) {
 		this.logger.on(event, cb);
 	}

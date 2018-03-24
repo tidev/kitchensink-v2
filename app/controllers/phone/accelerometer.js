@@ -30,4 +30,4 @@ import { logger } from 'logger';
 		});
 	}
 
-})();
+}());

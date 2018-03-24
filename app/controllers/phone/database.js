@@ -5,14 +5,14 @@ import { logger } from 'logger';
  **/
 (function constructor(args) {
 
-})(arguments[0] || {});
+}(arguments[0] || {}));
 
 function intitializeDatabase(e) {
-	console.log(Ti.Platform.osname)
+	console.log(Ti.Platform.osname);
 	if (Ti.Platform.osname === 'windows') {
-		const db = Ti.Database.install(Ti.Filesystem.resourcesDirectory,'databases/kitchensink.db','kitchensink');
+		const db = Ti.Database.install(Ti.Filesystem.resourcesDirectory, 'databases/kitchensink.db', 'kitchensink');
 	} else {
-		const db = Ti.Database.install('/databases/kitchensink.db','kitchensink');
+		const db = Ti.Database.install('/databases/kitchensink.db', 'kitchensink');
 	}
 	const db = Ti.Database.open('kitchensink');
 	const updateName = 'I was updated';

@@ -5,7 +5,7 @@ import { logger } from 'logger';
  **/
 (function constructor() {
 
-})();
+}());
 
 function sayDelete(e) {
 	alert('Hey you just deleted something!');

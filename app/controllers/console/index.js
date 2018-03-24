@@ -5,7 +5,7 @@ import { logger } from 'logger';
  **/
 (function constructor() {
 	logger.on('change', showLogs);
-})();
+}());
 
 function showLogs() {
 	$.log.setText(logger.history);

@@ -4,8 +4,8 @@ import { logger } from 'logger';
  * The scoped constructor of the controller.
  **/
 (function constructor() {
-  // See the videoPlayer.xml and videoPlayer.tss for property details!
-})();
+	// See the videoPlayer.xml and videoPlayer.tss for property details!
+}());
 
 function changeVideoSource() {
 	// TODO: Find a more swaagy video!
