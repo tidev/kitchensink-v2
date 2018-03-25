@@ -14,26 +14,26 @@ import fb from 'facebook';
 	setButtonState();
 
 	// Listen for Login event
-	fb.addEventListener('login', (e) => {
-		if (e.success) {
+	fb.addEventListener('login', ({ success, cancelled, error }) => {
+		if (success) {
 			logger.log('Modules.Facebook', 'login');
-		} else if (e.cancelled) {
+		} else if (cancelled) {
 			// user cancelled
 			logger.log('Modules.Facebook', 'canceled');
 		} else {
-			logger.log('Modules.Facebook', e.error);
+			logger.log('Modules.Facebook', error);
 		}
 		setButtonState();
 	});
 
 	// Listen for Logout event
-	fb.addEventListener('logout', (e) => {
+	fb.addEventListener('logout', () => {
 		setButtonState();
 	});
 
 	// Listen for share complete event
-	fb.addEventListener('shareCompleted', (e) => {
-		if (e.success) {
+	fb.addEventListener('shareCompleted', ({ success }) => {
+		if (success) {
 			logger.log('Modules.Facebook', 'shareCompleted');
 		} else {
 			logger.log('Modules.Facebook', 'shareCompleted failed');
@@ -79,11 +79,13 @@ import fb from 'facebook';
 }());
 
 // Logs out the current user
+// eslint-disable-next-line no-unused-vars
 function logout() {
 	fb.logout();
 }
 
 // Logs out the current user
+// eslint-disable-next-line no-unused-vars
 function login() {
 	fb.permissions = [ 'user_photos', 'email', 'user_friends', 'public_profile', 'user_birthday', 'user_relationships', 'user_likes' ];
 	fb.initialize();
@@ -94,6 +96,7 @@ function login() {
 }
 
 // Shares a post
+// eslint-disable-next-line no-unused-vars
 function share() {
 
 	fb.presentShareDialog({
