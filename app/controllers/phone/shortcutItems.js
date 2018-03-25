@@ -4,20 +4,22 @@ let appShortcuts;
 /**
  * The scoped constructor of the controller.
  **/
-(function constructor(args) {
+(function constructor() {
 	// If supported, create an applicationShortcuts instance
 	if (Ti.UI.iOS.forceTouchSupported) {
 		appShortcuts = Ti.UI.iOS.createApplicationShortcuts();
 	}
 
-}(arguments[0] || {}));
+}());
 
 /**
  * Event handler set in view to list all static shortcuts
  */
+// eslint-disable-next-line no-unused-vars
 function listStaticShortcuts() {
 	if (!appShortcuts) {
-		return alert('This device does not support Force Touch');
+		alert('This device does not support Force Touch');
+		return;
 	}
 
 	logger.log('Ti.UI.iOS.ApplicationShortcuts.listStaticShortcuts', appShortcuts.listStaticShortcuts());
@@ -26,9 +28,11 @@ function listStaticShortcuts() {
 /**
  * Event handler set in view to list all dynamic shortcuts
  */
+// eslint-disable-next-line no-unused-vars
 function listDynamicShortcuts() {
 	if (!appShortcuts) {
-		return alert('This device does not support Force Touch');
+		alert('This device does not support Force Touch');
+		return;
 	}
 
 	const res = appShortcuts.listDynamicShortcuts();
@@ -47,9 +51,11 @@ function listDynamicShortcuts() {
 /**
  * Event handler set in view to check if our dynamic shortcut exists
  */
+// eslint-disable-next-line no-unused-vars
 function dynamicShortcutExists() {
 	if (!appShortcuts) {
-		return alert('This device does not support Force Touch');
+		alert('This device does not support Force Touch');
+		return;
 	}
 
 	const res = appShortcuts.dynamicShortcutExists('details');
@@ -68,9 +74,11 @@ function dynamicShortcutExists() {
 /**
  * Event handler set in view to get our dynamic shortcut
  */
+// eslint-disable-next-line no-unused-vars
 function getDynamicShortcut() {
 	if (!appShortcuts) {
-		return alert('This device does not support Force Touch');
+		alert('This device does not support Force Touch');
+		return;
 	}
 
 	const res = appShortcuts.getDynamicShortcut('details');
@@ -89,9 +97,11 @@ function getDynamicShortcut() {
 /**
  * Event handler set in view to remove our dynamic shortcut
  */
+// eslint-disable-next-line no-unused-vars
 function removeDynamicShortcut() {
 	if (!appShortcuts) {
-		return alert('This device does not support Force Touch');
+		alert('This device does not support Force Touch');
+		return;
 	}
 
 	appShortcuts.removeDynamicShortcut('details');
@@ -106,9 +116,11 @@ function removeDynamicShortcut() {
 /**
  * Event handler set in view to create a new dynamic shortcuts
  */
+// eslint-disable-next-line no-unused-vars
 function createDynamicShortcut() {
 	if (!appShortcuts) {
-		return alert('This device does not support Force Touch');
+		alert('This device does not support Force Touch');
+		return;
 	}
 
 	appShortcuts.addDynamicShortcut({
@@ -135,9 +147,11 @@ function createDynamicShortcut() {
 /**
  * Event handler set in view to remove all dynamic shortcuts
  */
+// eslint-disable-next-line no-unused-vars
 function removeAllDynamicShortcuts() {
 	if (!appShortcuts) {
-		return alert('This device does not support Force Touch');
+		alert('This device does not support Force Touch');
+		return;
 	}
 
 	appShortcuts.removeAllDynamicShortcuts();

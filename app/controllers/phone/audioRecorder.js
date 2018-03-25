@@ -1,5 +1,3 @@
-import { logger } from 'logger';
-
 let audioRecorder;
 let record;
 let currentSessionCategory = Ti.Media.audioSessionCategory;
@@ -7,7 +5,7 @@ let currentSessionCategory = Ti.Media.audioSessionCategory;
 /**
  * The scoped constructor of the controller.
  **/
-(function constructor(args) {
+(function constructor() {
 	audioRecorder = Ti.Media.createAudioRecorder();
 
 	if (OS_IOS) {
@@ -16,8 +14,9 @@ let currentSessionCategory = Ti.Media.audioSessionCategory;
 
 		Ti.Media.audioSessionCategory = Ti.Media.AUDIO_SESSION_CATEGORY_PLAY_AND_RECORD;
 	}
-}(arguments[0] || {}));
+}());
 
+// eslint-disable-next-line no-unused-vars
 function onOpen() {
 	if (!Ti.Media.hasAudioRecorderPermissions()) {
 		Ti.Media.requestAudioRecorderPermissions((e) => {
@@ -33,10 +32,12 @@ function onOpen() {
 	}
 }
 
+// eslint-disable-next-line no-unused-vars
 function onClose() {
 	Ti.Media.audioSessionCategory = currentSessionCategory;
 }
 
+// eslint-disable-next-line no-unused-vars
 function startRecording() {
 	audioRecorder.start();
 
@@ -45,6 +46,7 @@ function startRecording() {
 	$.stopRecordingButton.setVisible(true);
 }
 
+// eslint-disable-next-line no-unused-vars
 function pauseRecording() {
 	if (audioRecorder.getPaused()) {
 		$.pauseRecordingButton.setTitle('Pause');
@@ -55,6 +57,7 @@ function pauseRecording() {
 	}
 }
 
+// eslint-disable-next-line no-unused-vars
 function stopRecording() {
 	record = audioRecorder.stop();
 
@@ -64,6 +67,7 @@ function stopRecording() {
 	$.stopRecordingButton.setVisible(false);
 }
 
+// eslint-disable-next-line no-unused-vars
 function playRecording() {
 	const audioPlayer = Ti.Media.createAudioPlayer({
 		url: record.getNativePath()

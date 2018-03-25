@@ -1,5 +1,6 @@
 import { logger } from 'logger';
 
+// eslint-disable-next-line no-unused-vars
 function handleMapClick(e) {
 	let clickedAnnotation = null;
 
@@ -8,14 +9,14 @@ function handleMapClick(e) {
 
 		// check if the annotation was selected or deselected based on previous state
 		if (e.annotation.id === clickedAnnotation) {
-			log.log('annotation deselected', e.annotation);
+			logger.log('annotation deselected', e.annotation);
 			clickedAnnotation = null;
 		} else {
-			log.log('annotation selected', e.annotation);
+			logger.log('annotation selected', e.annotation);
 			clickedAnnotation = e.annotation.id;
 		}
 	} else if (e.clicksource === 'circle') {
-		log.log('circle clicked', e.latitude, e.longitude);
+		logger.log('circle clicked', e.latitude, e.longitude);
 	}
 }
 

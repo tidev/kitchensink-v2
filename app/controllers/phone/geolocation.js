@@ -71,8 +71,7 @@ function updatePosition(e) {
 function getCurrentPosition() {
 	Ti.Geolocation.getCurrentPosition((e) => {
 		if (Ti.Network.online) {
-			const geoPackage = JSON.stringify(e),
-				latitude = e.coords.latitude,
+			const latitude = e.coords.latitude,
 				longitude = e.coords.longitude;
 
 			const mapview = Map.createView({
@@ -85,9 +84,7 @@ function getCurrentPosition() {
 					latitudeDelta: 0.1,
 					longitudeDelta: 0.1
 				},
-				animate: true,
 				regionFit: true,
-				userLocation: true
 			});
 
 			$.map.add(mapview);

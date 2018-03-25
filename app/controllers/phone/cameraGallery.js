@@ -7,6 +7,7 @@ import { logger } from 'logger';
 
 }());
 
+// eslint-disable-next-line no-unused-vars
 function openComponent(e) {
 	const action = e.itemId;
 
@@ -48,10 +49,10 @@ function showCamera(mediaTypes) {
 				logger.log('Ti.Media', 'Image taken successfully!');
 				processImage(e.media);
 			},
-			error: (e) => {
-				logger.log('Ti.Media', 'Error showing camera: ' + e.error);
+			error: ({ error }) => {
+				logger.log('Ti.Media', 'Error showing camera: ' + error);
 			},
-			cancel: (e) => {
+			cancel: () => {
 				logger.log('Ti.Media', 'Camera was cancelled');
 			}
 		});
@@ -68,7 +69,7 @@ function processImage(image) {
 		text: 'Tap to close'
 	});
 
-	imageView.addEventListener('click', (e) => {
+	imageView.addEventListener('click', () => {
 		imageView.animate({
 			opacity: 0
 		}, () => {
@@ -96,11 +97,11 @@ function saveToGallery() {
 
 	// Convert the view to an image-blog and save it to your Gallery
 	Ti.Media.saveToPhotoGallery(view.toImage(), {
-		success: (e) => {
+		success: () => {
 			logger.log('Ti.Media', 'Image saved to photo-gallery successfully!');
 		},
-		error: (e) => {
-			logger.log('Ti.Media', 'Error saving image to photo-gallery: ' + e.error);
+		error: ({ error }) => {
+			logger.log('Ti.Media', 'Error saving image to photo-gallery: ' + error);
 		}
 	});
 }
@@ -117,10 +118,10 @@ function openFromGallery() {
 				logger.log('Ti.Media', 'Image open successfully!');
 				processImage(e.media);
 			},
-			error: (e) => {
-				logger.log('Ti.Media', 'Error opening image: ' + e.error);
+			error: ({ error }) => {
+				logger.log('Ti.Media', 'Error opening image: ' + error);
 			},
-			cancel: (e) => {
+			cancel: () => {
 				logger.log('Ti.Media', 'Opening photo-gallery was cancelled');
 			}
 		});

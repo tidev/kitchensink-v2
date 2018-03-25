@@ -2,10 +2,11 @@
 /**
  * The scoped constructor of the controller.
  **/
-(function constructor(args) {
+(function constructor() {
 
-}(arguments[0] || {}));
+}());
 
+// eslint-disable-next-line no-unused-vars
 function copyText() {
 	if ($.copyField.getValue().length > 0) {
 		Ti.UI.Clipboard.setText($.copyField.getValue());
@@ -15,6 +16,7 @@ function copyText() {
 	}
 }
 
+// eslint-disable-next-line no-unused-vars
 function pasteText() {
 	if (Ti.UI.Clipboard.hasText() === true) {
 		$.pasteField.setValue(Ti.UI.Clipboard.getText());

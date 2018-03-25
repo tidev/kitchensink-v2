@@ -19,25 +19,30 @@ let playbackInterval;
 	soundPlayer.addEventListener('resume', onPlaybackResume);
 }());
 
+// eslint-disable-next-line no-unused-vars
 function startPlayback() {
 	soundPlayer.play();
 	$.playbackProgress.setMax(soundPlayer.getDuration() * 1000);
 }
 
+// eslint-disable-next-line no-unused-vars
 function stopPlayback() {
 	soundPlayer.stop();
 	$.playbackProgress.setValue(0);
 }
 
+// eslint-disable-next-line no-unused-vars
 function pausePlayback() {
 	soundPlayer.pause();
 }
 
+// eslint-disable-next-line no-unused-vars
 function resetPlayback() {
 	soundPlayer.reset();
 	$.playbackProgress.setValue(0);
 }
 
+// eslint-disable-next-line no-unused-vars
 function setVolumeUp() {
 	if (soundPlayer.getVolume() < 1.0) {
 		soundPlayer.setVolume(soundPlayer.volume += 0.1);
@@ -47,6 +52,7 @@ function setVolumeUp() {
 	}
 }
 
+// eslint-disable-next-line no-unused-vars
 function setVolumeDown() {
 	if (soundPlayer.getVolume() > 0.0) {
 		// TODO: Too complicated for 1 line? :-)
@@ -57,6 +63,7 @@ function setVolumeDown() {
 	}
 }
 
+// eslint-disable-next-line no-unused-vars
 function toggleLooping() {
 	soundPlayer.setLooping(!soundPlayer.looping);
 	$.buttonLooping.setTitle('Looping (' + soundPlayer.isLooping() + ')');
@@ -70,6 +77,7 @@ function onPlaybackResume() {
 	logger.log('Ti.Media.Sound', 'The sound player was resumed!');
 }
 
+// eslint-disable-next-line no-unused-vars
 function startInterval() {
 	playbackInterval = setInterval(() => {
 		if (soundPlayer.isPlaying()) {
@@ -79,6 +87,7 @@ function startInterval() {
 	}, 500);
 }
 
+// eslint-disable-next-line no-unused-vars
 function stopInterval() {
 	clearInterval(playbackInterval);
 	soundPlayer.release();
