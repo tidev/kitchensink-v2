@@ -1,5 +1,3 @@
-import { logger } from 'logger';
-
 /**
  * The scoped constructor of the controller.
  **/
@@ -7,12 +5,14 @@ import { logger } from 'logger';
 
 }());
 
+// eslint-disable-next-line no-unused-vars
 function sayDelete(e) {
 	alert('Hey you just deleted something!');
 }
 
-function sayThanks(e) {
-	if (e.checked) {
+// eslint-disable-next-line no-unused-vars
+function sayThanks({ checked }) {
+	if (checked) {
 		alert('Thanks for liking!');
 	}
 }

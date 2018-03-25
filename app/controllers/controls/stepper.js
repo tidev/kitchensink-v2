@@ -7,7 +7,8 @@ import { logger } from 'logger';
 
 }());
 
-function stepperValueChanged(e) {
-	$.state.setText('The stepper value changed to ' + e.value);
-	logger.log('Ti.UI.Stepper value changed to ' + e.value);
+// eslint-disable-next-line no-unused-vars
+function stepperValueChanged({ value }) {
+	$.state.setText(`The stepper value changed to ${value}`);
+	logger.log(`Ti.UI.Stepper value changed to ${value}`);
 }

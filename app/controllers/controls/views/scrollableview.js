@@ -7,10 +7,12 @@ import { logger } from 'logger';
 
 }());
 
+// eslint-disable-next-line no-unused-vars
 function scrollToView() {
 	$.scrollable.scrollToView(1); // Index or view
 }
 
+// eslint-disable-next-line no-unused-vars
 function addNewView() {
 	const newView = Ti.UI.createView({
 		backgroundColor: 'rgba(' + _.random(0, 255) + ',' + _.random(0, 255) + ',' + _.random(0, 255) + ', 1.0)' // Generate rgba-color
@@ -22,6 +24,7 @@ function addNewView() {
 	validateButtons();
 }
 
+// eslint-disable-next-line no-unused-vars
 function removeLastView() {
 	$.scrollable.removeView($.scrollable.views[$.scrollable.views.length - 1]);
 	logger.log('Ti.UI.ScrollableView deleted last view');
@@ -29,6 +32,7 @@ function removeLastView() {
 	validateButtons();
 }
 
+// eslint-disable-next-line no-unused-vars
 function scrollableViewDidScroll(e) {
 	logger.log('Ti.UI.ScrollableView did scroll to index ' + e.currentPage);
 }

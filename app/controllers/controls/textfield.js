@@ -7,21 +7,26 @@ import { logger } from 'logger';
 
 }());
 
-var focussedTextfield;
-function textFieldValueChanged(e) {
-	logger.log(`${e.source.id} changed value to ${e.value}`);
+let focussedTextfield;
+
+// eslint-disable-next-line no-unused-vars
+function textFieldValueChanged({ source, value }) {
+	logger.log(`${source.id} changed value to ${value}`);
 }
 
-function textFieldFocussed(e) {
-	focussedTextfield = e.source.id;
-	logger.log(`${e.source.id} focussed!`);
+// eslint-disable-next-line no-unused-vars
+function textFieldFocussed({ source }) {
+	focussedTextfield = source.id;
+	logger.log(`${source.id} focussed!`);
 }
 
-function textFieldBlurred(e) {
+// eslint-disable-next-line no-unused-vars
+function textFieldBlurred({ source }) {
 	focussedTextfield = null;
-	logger.log(`${e.source.id} blurred!`);
+	logger.log(`${source.id} blurred!`);
 }
 
+// eslint-disable-next-line no-unused-vars
 function blurTextfield() {
 	if (focussedTextfield) {
 		$[focussedTextfield].blur();

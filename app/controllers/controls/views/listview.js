@@ -7,6 +7,7 @@ import { logger } from 'logger';
 
 }());
 
+// eslint-disable-next-line no-unused-vars
 function fetchData() {
 	// You would usually fetch your remote data here
 	setTimeout(() => {
@@ -15,6 +16,7 @@ function fetchData() {
 	}, 1000);
 }
 
+// eslint-disable-next-line no-unused-vars
 function handleListViewClick(e) {
 	logger.log('Ti.UI.ListView clicked cell at index', e.sectionIndex  + ' / ' + e.itemIndex);
 	if (OS_IOS) {

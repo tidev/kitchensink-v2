@@ -7,7 +7,8 @@ import { logger } from 'logger';
 
 }());
 
-function switchChanged(e) {
-	$.state.setText('The switch value changed to ' + e.value);
-	logger.log('Ti.UI.Switch value changed to ' + e.value);
+// eslint-disable-next-line no-unused-vars
+function switchChanged({ value }) {
+	$.state.setText(`The switch value changed to ${value}`);
+	logger.log(`Ti.UI.Switch value changed to ${value}`);
 }

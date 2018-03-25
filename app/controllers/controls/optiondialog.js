@@ -7,11 +7,13 @@ import { logger } from 'logger';
 
 }());
 
+// eslint-disable-next-line no-unused-vars
 function showOptionDialog(e) {
 	$.dialog.show();
 }
 
-function optionDialogClicked(e) {
-	alert(`Selected option at index: ${e.index}`);
-	logger.log(`Ti.UI.OptionDialog selected option at index: ${e.index}`);
+// eslint-disable-next-line no-unused-vars
+function optionDialogClicked({ index }) {
+	alert(`Selected option at index: ${index}`);
+	logger.log(`Ti.UI.OptionDialog selected option at index: ${index}`);
 }

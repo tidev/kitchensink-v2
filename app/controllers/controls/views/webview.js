@@ -7,6 +7,7 @@ import { logger } from 'logger';
 
 }());
 
+// eslint-disable-next-line no-unused-vars
 function onBeforeLoad(e) {
 	if (!OS_WINDOWS) {
 		logger.log('Ti.UI.WebView will start loading content', e);
@@ -15,6 +16,7 @@ function onBeforeLoad(e) {
 	}
 }
 
+// eslint-disable-next-line no-unused-vars
 function onLoad(e) {
 	if (!OS_WINDOWS) {
 		logger.log('Ti.UI.WebView completed loading content', e);

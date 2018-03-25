@@ -7,7 +7,8 @@ import { logger } from 'logger';
 
 }());
 
-function pickerValueChanged(e) {
-	$.state.setText('Picker value changed to ' + e.selectedValue);
-	logger.log('Ti.UI.Picker changed value to: ' + e.selectedValue);
+// eslint-disable-next-line no-unused-vars
+function pickerValueChanged({ selectedValue }) {
+	$.state.setText(`Picker value changed to ${selectedValue}`);
+	logger.log(`Ti.UI.Picker changed value to: ${selectedValue}`);
 }

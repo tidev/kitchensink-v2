@@ -37,7 +37,7 @@ function updateGradient() {
 	// Linear gradients support colors with offsets and start-point / end-point
 	// Radial gradients support raw colors, start-radius / end-radius and backfill-start / backfill-end
 	// Read more: http://docs.appcelerator.com/platform/latest/#!/api/Titanium.UI.View-property-backgroundGradient
-	if (selectedGradient == Gradient.LINEAR) {
+	if (selectedGradient === Gradient.LINEAR) {
 		const startPoint = { x: precisionRound($.startRadiusSlider.value, -1) + '%', y: '50%' };
 		const endPoint = { x: precisionRound($.endRadiusSlider.value, -1) + '%', y: '50%' };
 
@@ -61,6 +61,7 @@ function updateGradient() {
 	$.gradientView.backgroundGradient = gradient;
 }
 
+// eslint-disable-next-line no-unused-vars
 function handleTouchMove(e) {
 	const size = $.gradientView.rect;
 
@@ -75,12 +76,14 @@ function handleTouchMove(e) {
 	updateGradient();
 }
 
+// eslint-disable-next-line no-unused-vars
 function pickRandomColor() {
 	colors = [ generateRandomColor(), generateRandomColor() ];
 	updateGradient();
 }
 
 // CREDITS: https://stackoverflow.com/a/1484514/5537752
+// eslint-disable-next-line no-unused-vars
 function generateRandomColor() {
 	const letters = '0123456789ABCDEF';
 	let color = '#';
@@ -92,6 +95,7 @@ function generateRandomColor() {
 	return color;
 }
 
+// eslint-disable-next-line no-unused-vars
 function handleGradientType(e) {
 	let isLinear;
 	if (OS_IOS) {
