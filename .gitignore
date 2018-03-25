@@ -12,3 +12,4 @@ Thumbs.db
 /i18n
 plugins/ti.alloy
 node_modules/
+retirejs.output.json

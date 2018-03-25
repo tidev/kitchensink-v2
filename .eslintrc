@@ -1,6 +1,6 @@
 {
     "extends": ["axway/env-titanium"],
     "rules": {
-        
+        "import/no-absolute-path": "off"
     }
 }
