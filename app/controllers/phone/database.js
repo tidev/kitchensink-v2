@@ -3,18 +3,19 @@ import { logger } from 'logger';
 /**
  * The scoped constructor of the controller.
  **/
-(function constructor(args) {
+(function constructor() {
 
-})(arguments[0] || {});
+}());
 
+// eslint-disable-next-line no-unused-vars
 function intitializeDatabase(e) {
-	console.log(Ti.Platform.osname)
+	let db;
 	if (Ti.Platform.osname === 'windows') {
-		const db = Ti.Database.install(Ti.Filesystem.resourcesDirectory,'databases/kitchensink.db','kitchensink');
+		db = Ti.Database.install(Ti.Filesystem.resourcesDirectory, 'databases/kitchensink.db', 'kitchensink');
 	} else {
-		const db = Ti.Database.install('/databases/kitchensink.db','kitchensink');
+		db = Ti.Database.install('/databases/kitchensink.db', 'kitchensink');
 	}
-	const db = Ti.Database.open('kitchensink');
+	db = Ti.Database.open('kitchensink');
 	const updateName = 'I was updated';
 	const updateId = 4;
 

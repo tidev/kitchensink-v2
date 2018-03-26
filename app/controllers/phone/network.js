@@ -8,4 +8,4 @@
 	Ti.Network.addEventListener('change', (e) => {
 		$.eventLabel.setText(`Change fired! Network type: ${e.networkType}, online: ${e.online}, name: ${e.networkTypeName}`);
 	});
-})();
+}());

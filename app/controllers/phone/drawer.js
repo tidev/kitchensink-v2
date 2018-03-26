@@ -1,12 +1,16 @@
-function onClickLeft(e) {
+
+// eslint-disable-next-line no-unused-vars
+function onClickLeft() {
 	$.drawerLayout.toggleLeft();
 }
 
-function onClickRight(e) {
+// eslint-disable-next-line no-unused-vars
+function onClickRight() {
 	$.drawerLayout.toggleRight();
 }
 
-function onClickClose(e) {
+// eslint-disable-next-line no-unused-vars
+function onClickClose() {
 	$.drawer.close();
 }
 
