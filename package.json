@@ -17,6 +17,7 @@
 	},
 	"homepage": "https://github.com/appcelerator/kitchensink-v2#readme",
 	"devDependencies": {
+		"eslint-plugin-alloy": "^1.0.0",
 		"grunt": "^1.0.1",
 		"grunt-appc-js": "^2.1.0",
 		"grunt-cli": "^1.2.0"

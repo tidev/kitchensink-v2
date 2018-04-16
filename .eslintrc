@@ -1,5 +1,5 @@
 {
-    "extends": ["axway/env-titanium"],
+    "extends": [ "axway/env-alloy" ],
     "rules": {
         "import/no-absolute-path": "off"
     }
