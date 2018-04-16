@@ -61,7 +61,6 @@ function updateGradient() {
 	$.gradientView.backgroundGradient = gradient;
 }
 
-// eslint-disable-next-line no-unused-vars
 function handleTouchMove(e) {
 	const size = $.gradientView.rect;
 
@@ -76,14 +75,13 @@ function handleTouchMove(e) {
 	updateGradient();
 }
 
-// eslint-disable-next-line no-unused-vars
 function pickRandomColor() {
 	colors = [ generateRandomColor(), generateRandomColor() ];
 	updateGradient();
 }
 
 // CREDITS: https://stackoverflow.com/a/1484514/5537752
-// eslint-disable-next-line no-unused-vars
+
 function generateRandomColor() {
 	const letters = '0123456789ABCDEF';
 	let color = '#';
@@ -95,7 +93,6 @@ function generateRandomColor() {
 	return color;
 }
 
-// eslint-disable-next-line no-unused-vars
 function handleGradientType(e) {
 	let isLinear;
 	if (OS_IOS) {

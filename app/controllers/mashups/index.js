@@ -7,7 +7,6 @@ import { logger } from 'logger';
 
 }());
 
-// eslint-disable-next-line no-unused-vars
 function openComponent(e) {
 	const identifier = 'mashups/' + e.section.getItemAt(e.itemIndex).properties.itemId;
 	const component = Alloy.createController(identifier).getView();

@@ -7,8 +7,7 @@ import { logger } from 'logger';
 
 }());
 
-// eslint-disable-next-line no-unused-vars
-function intitializeDatabase(e) {
+function intitializeDatabase() {
 	let db;
 	if (Ti.Platform.osname === 'windows') {
 		db = Ti.Database.install(Ti.Filesystem.resourcesDirectory, 'databases/kitchensink.db', 'kitchensink');

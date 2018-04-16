@@ -6,7 +6,6 @@
 
 }());
 
-// eslint-disable-next-line no-unused-vars
 function showIndicator() {
 	$.indicatorLight.show();
 	$.indicatorDark.show();
@@ -15,8 +14,7 @@ function showIndicator() {
 	$.indicatorNavBar.show();
 }
 
-// eslint-disable-next-line no-unused-vars
-function changeTintColor(e) {
+function changeTintColor() {
 	const colors = [ 'red', 'green', 'blue', 'yellow', 'purple' ];
 
 	$.indicatorLight.setIndicatorColor(colors[_.random(0, colors.length - 1)]);

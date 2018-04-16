@@ -7,7 +7,6 @@ import { logger } from 'logger';
 
 }());
 
-// eslint-disable-next-line no-unused-vars
 function tabbedBarSelectedIndex({ index }) {
 	const message = `Ti.UI.iOS.TabbedBar changed to index: ${index}`;
 

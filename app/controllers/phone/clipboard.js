@@ -6,7 +6,6 @@
 
 }());
 
-// eslint-disable-next-line no-unused-vars
 function copyText() {
 	if ($.copyField.getValue().length > 0) {
 		Ti.UI.Clipboard.setText($.copyField.getValue());
@@ -16,7 +15,6 @@ function copyText() {
 	}
 }
 
-// eslint-disable-next-line no-unused-vars
 function pasteText() {
 	if (Ti.UI.Clipboard.hasText() === true) {
 		$.pasteField.setValue(Ti.UI.Clipboard.getText());

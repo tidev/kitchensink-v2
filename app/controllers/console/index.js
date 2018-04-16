@@ -12,7 +12,6 @@ function showLogs() {
 	$.scrollView.scrollToBottom();
 }
 
-// eslint-disable-next-line no-unused-vars
 function clearLogs() {
 	logger.clearHistory();
 	showLogs();

@@ -12,7 +12,6 @@ import { logger } from 'logger';
 	$.index.open();
 }());
 
-// eslint-disable-next-line no-unused-vars
 function validateDocsInfo() {
 	if (!Ti.App.Properties.getBool('noticeShown', false)) {
 		const alertNotice = Ti.UI.createAlertDialog({

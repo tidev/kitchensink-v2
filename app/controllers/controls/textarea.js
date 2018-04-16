@@ -7,17 +7,14 @@ import { logger } from 'logger';
 
 }());
 
-// eslint-disable-next-line no-unused-vars
 function textAreaValueChanged({ value }) {
 	logger.log(`Ti.UI.TextArea changed value to ${value}`);
 }
 
-// eslint-disable-next-line no-unused-vars
-function textAreaFocussed(e) {
+function textAreaFocussed() {
 	logger.log('Ti.UI.TextArea focussed!');
 }
 
-// eslint-disable-next-line no-unused-vars
-function textAreaBlurred(e) {
+function textAreaBlurred() {
 	logger.log('Ti.UI.TextArea blurred!');
 }
