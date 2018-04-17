@@ -79,13 +79,13 @@ import fb from 'facebook';
 }());
 
 // Logs out the current user
-// eslint-disable-next-line no-unused-vars
+
 function logout() {
 	fb.logout();
 }
 
 // Logs out the current user
-// eslint-disable-next-line no-unused-vars
+
 function login() {
 	fb.permissions = [ 'user_photos', 'email', 'user_friends', 'public_profile', 'user_birthday', 'user_relationships', 'user_likes' ];
 	fb.initialize();
@@ -96,7 +96,7 @@ function login() {
 }
 
 // Shares a post
-// eslint-disable-next-line no-unused-vars
+
 function share() {
 
 	fb.presentShareDialog({

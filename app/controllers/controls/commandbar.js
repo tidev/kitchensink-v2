@@ -5,12 +5,10 @@
 
 }());
 
-// eslint-disable-next-line no-unused-vars
-function sayDelete(e) {
+function sayDelete() {
 	alert('Hey you just deleted something!');
 }
 
-// eslint-disable-next-line no-unused-vars
 function sayThanks({ checked }) {
 	if (checked) {
 		alert('Thanks for liking!');

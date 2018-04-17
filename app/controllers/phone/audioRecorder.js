@@ -16,7 +16,6 @@ let currentSessionCategory = Ti.Media.audioSessionCategory;
 	}
 }());
 
-// eslint-disable-next-line no-unused-vars
 function onOpen() {
 	if (!Ti.Media.hasAudioRecorderPermissions()) {
 		Ti.Media.requestAudioRecorderPermissions((e) => {
@@ -32,12 +31,10 @@ function onOpen() {
 	}
 }
 
-// eslint-disable-next-line no-unused-vars
 function onClose() {
 	Ti.Media.audioSessionCategory = currentSessionCategory;
 }
 
-// eslint-disable-next-line no-unused-vars
 function startRecording() {
 	audioRecorder.start();
 
@@ -46,7 +43,6 @@ function startRecording() {
 	$.stopRecordingButton.setVisible(true);
 }
 
-// eslint-disable-next-line no-unused-vars
 function pauseRecording() {
 	if (audioRecorder.getPaused()) {
 		$.pauseRecordingButton.setTitle('Pause');
@@ -57,7 +53,6 @@ function pauseRecording() {
 	}
 }
 
-// eslint-disable-next-line no-unused-vars
 function stopRecording() {
 	record = audioRecorder.stop();
 
@@ -67,7 +62,6 @@ function stopRecording() {
 	$.stopRecordingButton.setVisible(false);
 }
 
-// eslint-disable-next-line no-unused-vars
 function playRecording() {
 	const audioPlayer = Ti.Media.createAudioPlayer({
 		url: record.getNativePath()

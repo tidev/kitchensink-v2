@@ -7,12 +7,10 @@ import { logger } from 'logger';
 
 }());
 
-// eslint-disable-next-line no-unused-vars
-function showAlertDialog(e) {
+function showAlertDialog() {
 	$.alert.show();
 }
 
-// eslint-disable-next-line no-unused-vars
 function alertDialogClicked({ index }) {
 	alert(`Selected button at index: ${index}`);
 	logger.log(`Ti.UI.AlertDialog selected button at index: ${index}`);

@@ -1,6 +1,5 @@
 import { logger } from 'logger';
 
-// eslint-disable-next-line no-unused-vars
 function handleMapClick(e) {
 	let clickedAnnotation = null;
 

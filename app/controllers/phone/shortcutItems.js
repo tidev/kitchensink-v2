@@ -15,7 +15,7 @@ let appShortcuts;
 /**
  * Event handler set in view to list all static shortcuts
  */
-// eslint-disable-next-line no-unused-vars
+
 function listStaticShortcuts() {
 	if (!appShortcuts) {
 		alert('This device does not support Force Touch');
@@ -28,7 +28,7 @@ function listStaticShortcuts() {
 /**
  * Event handler set in view to list all dynamic shortcuts
  */
-// eslint-disable-next-line no-unused-vars
+
 function listDynamicShortcuts() {
 	if (!appShortcuts) {
 		alert('This device does not support Force Touch');
@@ -51,7 +51,7 @@ function listDynamicShortcuts() {
 /**
  * Event handler set in view to check if our dynamic shortcut exists
  */
-// eslint-disable-next-line no-unused-vars
+
 function dynamicShortcutExists() {
 	if (!appShortcuts) {
 		alert('This device does not support Force Touch');
@@ -74,7 +74,7 @@ function dynamicShortcutExists() {
 /**
  * Event handler set in view to get our dynamic shortcut
  */
-// eslint-disable-next-line no-unused-vars
+
 function getDynamicShortcut() {
 	if (!appShortcuts) {
 		alert('This device does not support Force Touch');
@@ -97,7 +97,7 @@ function getDynamicShortcut() {
 /**
  * Event handler set in view to remove our dynamic shortcut
  */
-// eslint-disable-next-line no-unused-vars
+
 function removeDynamicShortcut() {
 	if (!appShortcuts) {
 		alert('This device does not support Force Touch');
@@ -116,7 +116,7 @@ function removeDynamicShortcut() {
 /**
  * Event handler set in view to create a new dynamic shortcuts
  */
-// eslint-disable-next-line no-unused-vars
+
 function createDynamicShortcut() {
 	if (!appShortcuts) {
 		alert('This device does not support Force Touch');
@@ -147,7 +147,7 @@ function createDynamicShortcut() {
 /**
  * Event handler set in view to remove all dynamic shortcuts
  */
-// eslint-disable-next-line no-unused-vars
+
 function removeAllDynamicShortcuts() {
 	if (!appShortcuts) {
 		alert('This device does not support Force Touch');

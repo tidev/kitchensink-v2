@@ -7,7 +7,6 @@ import { logger } from 'logger';
 
 }());
 
-// eslint-disable-next-line no-unused-vars
 function openComponent(e) {
 	const action = e.itemId;
 

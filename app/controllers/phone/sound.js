@@ -7,7 +7,6 @@ import { logger } from 'logger';
 
 }());
 
-// eslint-disable-next-line no-unused-vars
 function openSoundComponent(e) {
 	const identifier = 'phone/' + e.section.getItemAt(e.itemIndex).properties.itemId;
 	const component = Alloy.createController(identifier).getView();
