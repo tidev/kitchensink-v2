@@ -1,18 +1,16 @@
-import { logger } from 'logger';
-
 /**
  * The scoped constructor of the controller.
  **/
 (function constructor() {
 
-})();
+}());
 
-function sayDelete(e) {
+function sayDelete() {
 	alert('Hey you just deleted something!');
 }
 
-function sayThanks(e) {
-	if (e.checked) {
+function sayThanks({ checked }) {
+	if (checked) {
 		alert('Thanks for liking!');
 	}
 }

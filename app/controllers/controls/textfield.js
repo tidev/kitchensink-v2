@@ -4,26 +4,27 @@ import { logger } from 'logger';
  * The scoped constructor of the controller.
  **/
 (function constructor() {
-    
-})();
 
-var focussedTextfield;
-function textFieldValueChanged(e) {
-    logger.log(`${e.source.id} changed value to ${e.value}`);
+}());
+
+let focussedTextfield;
+
+function textFieldValueChanged({ source, value }) {
+	logger.log(`${source.id} changed value to ${value}`);
 }
 
-function textFieldFocussed(e) {
-    focussedTextfield = e.source.id;
-    logger.log(`${e.source.id} focussed!`);
+function textFieldFocussed({ source }) {
+	focussedTextfield = source.id;
+	logger.log(`${source.id} focussed!`);
 }
 
-function textFieldBlurred(e) {
-    focussedTextfield = null;
-    logger.log(`${e.source.id} blurred!`);
+function textFieldBlurred({ source }) {
+	focussedTextfield = null;
+	logger.log(`${source.id} blurred!`);
 }
 
 function blurTextfield() {
-    if (focussedTextfield) {
-        $[focussedTextfield].blur();
-    }
+	if (focussedTextfield) {
+		$[focussedTextfield].blur();
+	}
 }

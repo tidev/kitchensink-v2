@@ -4,10 +4,10 @@ import { logger } from 'logger';
  * The scoped constructor of the controller.
  **/
 (function constructor() {
-	const accelerometerCallback = (e) => {
-		$.accel_x.text = `x: ${e.x.toFixed(3)}`;
-		$.accel_y.text = `y: ${e.y.toFixed(3)}`;
-		$.accel_z.text = `z: ${e.z.toFixed(3)}`;
+	const accelerometerCallback = ({ x, y, z }) => {
+		$.accel_x.text = `x: ${x.toFixed(3)}`;
+		$.accel_y.text = `y: ${y.toFixed(3)}`;
+		$.accel_z.text = `z: ${z.toFixed(3)}`;
 	};
 
 	if (Ti.Platform.model === 'Simulator' || Ti.Platform.model.indexOf('sdk') !== -1) {
@@ -18,7 +18,7 @@ import { logger } from 'logger';
 	Ti.Accelerometer.addEventListener('update', accelerometerCallback);
 
 	if (OS_ANDROID) {
-		$.accelerometer.addEventListener('open', (e) => {
+		$.accelerometer.addEventListener('open', () => {
 			$.accelerometer.activity.addEventListener('pause', () => {
 				logger.log('Ti.Accelerometer', 'removing accelerometer callback on pause');
 				Ti.Accelerometer.removeEventListener('update', accelerometerCallback);
@@ -30,4 +30,4 @@ import { logger } from 'logger';
 		});
 	}
 
-})();
+}());

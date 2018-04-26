@@ -18,7 +18,7 @@ exports.checkCameraPermission = (cb) => {
 
 			const cameraAuthorization = Ti.Media.cameraAuthorization;
 			if (cameraAuthorization === Ti.Media.CAMERA_AUTHORIZATION_RESTRICTED || cameraAuthorization === Ti.Media.CAMERA_AUTHORIZATION_DENIED) {
-				cb(false)
+				cb(false);
 				return;
 			}
 		}
@@ -27,4 +27,4 @@ exports.checkCameraPermission = (cb) => {
 			cb(e.success);
 		});
 	}
-}
+};

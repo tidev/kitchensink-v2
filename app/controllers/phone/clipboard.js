@@ -2,9 +2,9 @@
 /**
  * The scoped constructor of the controller.
  **/
-(function constructor(args) {
+(function constructor() {
 
-})(arguments[0] || {});
+}());
 
 function copyText() {
 	if ($.copyField.getValue().length > 0) {

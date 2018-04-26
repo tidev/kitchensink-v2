@@ -1,12 +1,13 @@
-function onClickLeft(e) {
+
+function onClickLeft() {
 	$.drawerLayout.toggleLeft();
 }
 
-function onClickRight(e) {
+function onClickRight() {
 	$.drawerLayout.toggleRight();
 }
 
-function onClickClose(e) {
+function onClickClose() {
 	$.drawer.close();
 }
 
