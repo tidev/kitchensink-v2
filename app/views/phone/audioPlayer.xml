@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Audio Player">
-        <Label class="placeholderLabel" text="To be added ⚒" />
+    <Window title="Audio Player" onOpen="handleOpen" onClose="handleClose">
+        <AudioPlayer id="player" ns="Ti.Media" onProgress="audioProgression" />
     </Window>
 </Alloy>
