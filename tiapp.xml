@@ -5,13 +5,13 @@
     <version>7.1.0</version>
     <publisher>Appcelerator, Inc.</publisher>
     <url>https://appcelerator.com</url>
-    <description>not specified</description>
+    <description/>
     <copyright>Appcelerator, Inc.</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
-    <guid>271fc6a0-07ce-4b7a-9333-589b9a8785bf</guid>
+    <guid>11111111-1111-1111-1111-111111111111</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <property name="run-on-main-thread" type="bool">true</property>
     <!-- Enable ES6+ for SDK 7.1.0+ -->
@@ -131,5 +131,4 @@
         <module platform="iphone">facebook</module>
     </modules>
     <sdk-version>7.1.0.GA</sdk-version>
-    <property name="appc-app-id" type="string">5ae1a62f6d9244226ec9bed5</property>
 </ti:app>
