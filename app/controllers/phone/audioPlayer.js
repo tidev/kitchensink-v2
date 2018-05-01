@@ -23,7 +23,7 @@ function handleClose() {
 }
 
 function toggleBattle() {
-  // ignore button if already playing
+  // Ignore button if already playing
   if ($.battlePlayer.playing) {
     $.battlePlayer.stop();
     $.toggleBattle.title = 'Play battle sounds';
@@ -33,19 +33,19 @@ function toggleBattle() {
   }
 }
 
-function changeVolume(e){
-  // both slider & volume is ranged from 0-1
+function changeVolume(e) {
+  // Both slider & volume is ranged from 0-1
   $.player.volume = e.value;
 }
 
-// android only because STATE_STOPPED doesn't fire there
+// Android only because STATE_STOPPED doesn't fire there
 function handleMusicComplete() {
   if (!OS_ANDROID) return;
   changeMusic({state: $.player.STATE_STOPPED});
 }
 
 function changeMusic(e){
-  // restart player when play is stopped
+  // Restart player when play is stopped
   if (e.state === $.player.STATE_STOPPED && !closingWindow) {
     $.player.play();
   }
@@ -55,14 +55,14 @@ function audioProgression(e) {
   $.progress.text = timeFormat(e.progress) + '/' + timeFormat($.player.duration);
 }
 
-// android only because STATE_STOPPING/STATE_STOPPED doesn't fire there
-function handleBattleComplete(){
+// Android only because STATE_STOPPING/STATE_STOPPED doesn't fire there
+function handleBattleComplete() {
   if (!OS_ANDROID) return;
   completeBattle({state: $.battlePlayer.STATE_STOPPING});
   completeBattle({state: $.battlePlayer.STATE_STOPPED});
 }
 
-function completeBattle(e){
+function completeBattle(e) {
   if (e.state === $.battlePlayer.STATE_STOPPING) {
     $.applause.play();
   }

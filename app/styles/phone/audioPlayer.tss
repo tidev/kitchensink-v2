@@ -2,7 +2,7 @@
   url :'/sounds/epic.mp3'
 }
 
-'#progress' : {
+'#progress': {
   top: 30,
   color: '#000000',
   font: {
