@@ -5,19 +5,17 @@
     <version>7.1.0</version>
     <publisher>Appcelerator, Inc.</publisher>
     <url>https://appcelerator.com</url>
-    <description/>
+    <description>not specified</description>
     <copyright>Appcelerator, Inc.</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
-    <guid>11111111-1111-1111-1111-111111111111</guid>
+    <guid>271fc6a0-07ce-4b7a-9333-589b9a8785bf</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <property name="run-on-main-thread" type="bool">true</property>
-
     <!-- Enable ES6+ for SDK 7.1.0+ -->
     <transpile>true</transpile>
-
     <ios>
         <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
         <default-background-color>#c91326</default-background-color>
@@ -100,21 +98,19 @@
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
         <manifest android:versionCode="3" android:versionName="7.1.0">
-            <uses-library android:name="com.google.android.maps" />
-            <uses-sdk android:minSdkVersion="18" />
-            <uses-permission android:name="android.permission.RECORD_AUDIO" />
+            <uses-library android:name="com.google.android.maps"/>
+            <uses-sdk android:minSdkVersion="18"/>
+            <uses-permission android:name="android.permission.RECORD_AUDIO"/>
             <application android:debuggable="true"
-                         android:hardwareAccelerated="true"
-                         android:largeHeap="true"
-                         android:theme="@style/kitchensink">
-                <meta-data android:name="com.google.android.maps.v2.API_KEY"
-                           android:value="[YOUR API KEY HERE]" />
+                android:hardwareAccelerated="true"
+                android:largeHeap="true" android:theme="@style/kitchensink">
+                <meta-data
+                    android:name="com.google.android.maps.v2.API_KEY" android:value="[YOUR API KEY HERE]"/>
                 <!--http://docs.appcelerator.com/platform/latest/#!/guide/Google_Maps_v2_for_Android-->
-
-                <activity android:name="com.facebook.FacebookActivity"
-                          android:theme="@android:style/Theme.Translucent.NoTitleBar"
-                          android:label="KitchenSink"
-                          android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
+                <activity
+                    android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+                    android:label="KitchenSink"
+                    android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
                 <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
             </application>
         </manifest>
@@ -135,4 +131,5 @@
         <module platform="iphone">facebook</module>
     </modules>
     <sdk-version>7.1.0.GA</sdk-version>
+    <property name="appc-app-id" type="string">5ae1a62f6d9244226ec9bed5</property>
 </ti:app>
