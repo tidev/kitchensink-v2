@@ -1,7 +1,6 @@
 let closingWindow = false;
 
 if (OS_IOS) {
-  var currentSessionCategory = Ti.Media.audioSessionCategory;
   Ti.Media.audioSessionCategory = Ti.Media.AUDIO_SESSION_CATEGORY_PLAYBACK;
 }
 
@@ -18,7 +17,7 @@ function handleClose() {
     $.player.stop();
   }
   if (OS_IOS) {
-    Ti.Media.audioSessionCategory = currentSessionCategory;
+    Ti.Media.audioSessionCategory = Ti.Media.audioSessionCategory;
   }
 }
 
@@ -41,7 +40,7 @@ function changeVolume(e) {
 // Android only because STATE_STOPPED doesn't fire there
 function handleMusicComplete() {
   if (!OS_ANDROID) return;
-  changeMusic({state: $.player.STATE_STOPPED});
+  changeMusic({ state: $.player.STATE_STOPPED });
 }
 
 function changeMusic(e){
@@ -58,15 +57,14 @@ function audioProgression(e) {
 // Android only because STATE_STOPPING/STATE_STOPPED doesn't fire there
 function handleBattleComplete() {
   if (!OS_ANDROID) return;
-  completeBattle({state: $.battlePlayer.STATE_STOPPING});
-  completeBattle({state: $.battlePlayer.STATE_STOPPED});
+  completeBattle({ state: $.battlePlayer.STATE_STOPPING });
+  completeBattle({ state: $.battlePlayer.STATE_STOPPED });
 }
 
 function completeBattle(e) {
   if (e.state === $.battlePlayer.STATE_STOPPING) {
     $.applause.play();
-  }
-  if (e.state === $.battlePlayer.STATE_STOPPED) {
+  } else if (e.state === $.battlePlayer.STATE_STOPPED) {
     $.toggleBattle.title = 'Play battle sounds';
   }
 }
@@ -74,18 +72,19 @@ function completeBattle(e) {
 function timeFormat(time) {
   time = Math.round(time / 1000);
   // Hours, minutes and seconds
-  var hrs = ~~(time / 3600);
-  var mins = ~~((time % 3600) / 60);
-  var secs = time % 60;
+  const hrs = ~~(time / 3600);
+  const mins = ~~((time % 3600) / 60);
+  const secs = time % 60;
 
   // Output like "1:01" or "4:03:59" or "123:03:59"
-  var ret = "";
+  let result = '';
 
   if (hrs > 0) {
-    ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+    result += String(hrs) + ':' + (mins < 10 ? '0' : '');
   }
 
-  ret += "" + mins + ":" + (secs < 10 ? "0" : "");
-  ret += "" + secs;
-  return ret;
+  result += String(mins) + ':' + (secs < 10 ? '0' : '');
+  result += String(secs);
+
+  return result;
 }
