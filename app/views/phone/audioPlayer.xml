@@ -1,5 +1,15 @@
 <Alloy>
-    <Window title="Audio Player">
-        <Label class="placeholderLabel" text="To be added ⚒" />
+    <Window title="Audio Player" onOpen="handleOpen" onClose="handleClose">
+        
+        <Label id="progress" />
+        
+        <Button id="toggleBattle" onClick="toggleBattle"></Button>
+
+        <Slider id="volume" onChange="changeVolume" />
+
+        <AudioPlayer id="player" ns="Ti.Media" onProgress="audioProgression" onChange="changeMusic" onComplete="handleMusicComplete" />
+        <AudioPlayer id="battlePlayer" ns="Ti.Media" onChange="completeBattle" onComplete="handleBattleComplete" />
+        <AudioPlayer id="applause" ns="Ti.Media" />
+        <Label id="credits" />
     </Window>
 </Alloy>

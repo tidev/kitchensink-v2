@@ -1,0 +1,41 @@
+'#player': {
+  url :'/sounds/epic.mp3'
+}
+
+'#progress': {
+  top: 30,
+  color: '#000000',
+  font: {
+    fontSize: 14
+  }
+}
+
+'#toggleBattle': {
+  title: 'Play battle sounds',
+  top: 80,
+  width: 180,
+  height: Ti.UI.SIZE
+}
+
+'#credits': {
+  text: 'Soundtrack "Epic" by bensound.com',
+  bottom: 10,
+  font: {
+    fontSize: 10
+  }
+}
+
+'#battlePlayer': {
+  url :'/sounds/war_sounds.mp3'
+}
+
+'#applause': {
+  url :'/sounds/applause.mp3'
+}
+
+'#volume': {
+  value: 1,
+  bottom: 20,
+  left: 20,
+  right: 20
+}

@@ -17,7 +17,7 @@
                     <ListItem title="Accelerometer" itemId="accelerometer" />
                     <ListItem title="Maps" itemId="map" />
                     <ListItem title="Video Player" itemId="videoPlayer" />
-                    <ListItem title="TODO: Audio Player" itemId="audioPlayer" />
+                    <ListItem title="Audio Player" itemId="audioPlayer" />
                 </ListSection>
             </ListView>
         </Window>
