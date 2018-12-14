@@ -101,7 +101,6 @@
     <android xmlns:android="http://schemas.android.com/apk/res/android">
         <manifest android:versionCode="3" android:versionName="7.1.0">
             <uses-library android:name="com.google.android.maps" />
-            <uses-sdk android:minSdkVersion="18" />
             <uses-permission android:name="android.permission.RECORD_AUDIO" />
             <application android:debuggable="true"
                          android:hardwareAccelerated="true"
