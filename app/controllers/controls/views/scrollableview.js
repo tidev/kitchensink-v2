@@ -34,6 +34,6 @@ function scrollableViewDidScroll(e) {
 }
 
 function validateButtons() {
-	$.remove.setEnabled($.scrollable.views.length > 0);
-	$.scrollTo.setEnabled($.scrollable.views.length >= 2);
+	$.remove.enabled = $.scrollable.views.length > 0;
+	$.scrollTo.enabled = $.scrollable.views.length >= 2;
 }

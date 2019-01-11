@@ -8,6 +8,6 @@ import { logger } from 'logger';
 }());
 
 function sliderValueChanged({ source, value }) {
-	$.state.setText(`Current value: ${value.toFixed(2)} / ${source.max}`);
+	$.state.text `Current value: ${value.toFixed(2)} / ${source.max}`;
 	logger.log(`Ti.UI.Slider value changed to ${value}`);
 }

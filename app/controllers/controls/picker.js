@@ -8,6 +8,6 @@ import { logger } from 'logger';
 }());
 
 function pickerValueChanged({ selectedValue }) {
-	$.state.setText(`Picker value changed to ${selectedValue}`);
+	$.state.text = `Picker value changed to ${selectedValue}`;
 	logger.log(`Ti.UI.Picker changed value to: ${selectedValue}`);
 }
