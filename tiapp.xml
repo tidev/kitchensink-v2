@@ -15,9 +15,6 @@
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <property name="run-on-main-thread" type="bool">true</property>
 
-    <!-- Enable ES6+ for SDK 7.1.0+ -->
-    <transpile>true</transpile>
-
     <ios>
         <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
         <default-background-color>#c91326</default-background-color>
@@ -133,5 +130,5 @@
         <module platform="android">facebook</module>
         <module platform="iphone">facebook</module>
     </modules>
-    <sdk-version>7.4.1.GA</sdk-version>
+    <sdk-version>8.0.0.v20190110110255</sdk-version>
 </ti:app>
