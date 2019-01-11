@@ -8,6 +8,6 @@ import { logger } from 'logger';
 }());
 
 function stepperValueChanged({ value }) {
-	$.state.setText(`The stepper value changed to ${value}`);
+	$.state.text `The stepper value changed to ${value}`;
 	logger.log(`Ti.UI.Stepper value changed to ${value}`);
 }

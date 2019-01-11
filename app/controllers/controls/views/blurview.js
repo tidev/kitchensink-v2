@@ -7,5 +7,5 @@
 }());
 
 function applyBlur() {
-	$.blurView.setEffect(Ti.UI.iOS.BLUR_EFFECT_STYLE_LIGHT);
+	$.blurView.effect = Ti.UI.iOS.BLUR_EFFECT_STYLE_LIGHT;
 }

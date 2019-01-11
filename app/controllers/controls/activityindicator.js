@@ -17,9 +17,9 @@ function showIndicator() {
 function changeTintColor() {
 	const colors = [ 'red', 'green', 'blue', 'yellow', 'purple' ];
 
-	$.indicatorLight.setIndicatorColor(colors[_.random(0, colors.length - 1)]);
-	$.indicatorDark.setIndicatorColor(colors[_.random(0, colors.length - 1)]);
-	$.indicatorBig.setIndicatorColor(colors[_.random(0, colors.length - 1)]);
-	$.indicatorMessage.setIndicatorColor(colors[_.random(0, colors.length - 1)]);
-	$.indicatorNavBar.setIndicatorColor(colors[_.random(0, colors.length - 1)]);
+	$.indicatorLight.indicatorColor = colors[_.random(0, colors.length - 1)];
+	$.indicatorDark.indicatorColor = colors[_.random(0, colors.length - 1)];
+	$.indicatorBig.indicatorColor = colors[_.random(0, colors.length - 1)];
+	$.indicatorMessage.indicatorColor = colors[_.random(0, colors.length - 1)];
+	$.indicatorNavBar.indicatorColor = colors[_.random(0, colors.length - 1)];
 }

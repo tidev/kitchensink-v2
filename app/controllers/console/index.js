@@ -8,7 +8,7 @@ import { logger } from 'logger';
 }());
 
 function showLogs() {
-	$.log.setText(logger.history);
+	$.log.text = logger.history;
 	$.scrollView.scrollToBottom();
 }
 

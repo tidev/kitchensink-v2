@@ -14,7 +14,7 @@ function openComponent(e) {
 	if (OS_ANDROID && identifier !== 'phone/drawer') {
 		Alloy.Globals.setAndroidBackButton(component);
 	}
-	Alloy.CFG.tabGroup.getActiveTab().open(component);
+	Alloy.CFG.tabGroup.activeTab.open(component);
 
 	logger.log('Ti.UI.TabGroup.activeTab.open', identifier);
 }
