@@ -64,10 +64,8 @@ function updateGradient() {
 function handleTouchMove(e) {
 	const size = $.gradientView.rect;
 
-	if (OS_ANDROID && Ti.UI.defaultunit !== 'px') {
-		e.x /= Ti.Platform.displayCaps.logicalDensityFactor;
-		e.y /= Ti.Platform.displayCaps.logicalDensityFactor;
-	}
+	e.x /= Ti.Platform.displayCaps.logicalDensityFactor;
+	e.y /= Ti.Platform.displayCaps.logicalDensityFactor;
 
 	normalizedCenterX = (size.width > 0) ? (e.x / size.width) : 0.5;
 	normalizedCenterY = (size.height > 0) ? (e.y / size.height) : 0.5;
