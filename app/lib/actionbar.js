@@ -22,7 +22,7 @@ export default class ActionBarHelper {
 		}
 
 		this.win = window;
-		this.activity = this.win.getActivity();
+		this.activity = this.win.activity;
 		this.actionBar = this.activity.actionBar;
 	}
 
