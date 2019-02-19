@@ -8,6 +8,6 @@ import { logger } from 'logger';
 }());
 
 function switchChanged({ value }) {
-	$.state.setText(`The switch value changed to ${value}`);
+	$.state.text = `The switch value changed to ${value}`;
 	logger.log(`Ti.UI.Switch value changed to ${value}`);
 }
