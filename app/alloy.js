@@ -13,7 +13,7 @@ Alloy.Globals.setAndroidBackButton = (window) => {
 		const actionBarHelper = new ActionBarHelper(window);
 
 		if (window.title && window.title.length > 0) {
-			actionBarHelper.setTitle(window.title);
+			actionBarHelper.title = window.title;
 		}
 
 		actionBarHelper.setUpAction(() => {
