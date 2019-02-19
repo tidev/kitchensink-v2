@@ -7,8 +7,8 @@
 }());
 
 function copyText() {
-	if ($.copyField.getValue().length > 0) {
-		Ti.UI.Clipboard.setText($.copyField.getValue());
+	if ($.copyField.value.length > 0) {
+		Ti.UI.Clipboard.setText($.copyField.value);
 		alert('Copied!');
 	} else {
 		alert('Enter some text before :-)');
@@ -17,7 +17,7 @@ function copyText() {
 
 function pasteText() {
 	if (Ti.UI.Clipboard.hasText() === true) {
-		$.pasteField.setValue(Ti.UI.Clipboard.getText());
+		$.pasteField.value = Ti.UI.Clipboard.getText();
 	} else {
 		alert('No text on clipboard!');
 	}

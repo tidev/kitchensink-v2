@@ -20,14 +20,14 @@ function onOpen() {
 	if (!Ti.Media.hasAudioRecorderPermissions()) {
 		Ti.Media.requestAudioRecorderPermissions((e) => {
 			if (e.success) {
-				$.startRecordingButton.setVisible(true);
+				$.startRecordingButton.visible = true;
 			} else {
 				Ti.API.error('Error: Unable to request audio recorder permissions:');
 				Ti.API.error(e);
 			}
 		});
 	} else {
-		$.startRecordingButton.setVisible(true);
+		$.startRecordingButton.visible = true;
 	}
 }
 
@@ -38,17 +38,17 @@ function onClose() {
 function startRecording() {
 	audioRecorder.start();
 
-	$.startRecordingButton.setVisible(false);
-	$.pauseRecordingButton.setVisible(true);
-	$.stopRecordingButton.setVisible(true);
+	$.startRecordingButton.visible = false;
+	$.pauseRecordingButton.visible = true;
+	$.stopRecordingButton.visible = true;
 }
 
 function pauseRecording() {
-	if (audioRecorder.getPaused()) {
-		$.pauseRecordingButton.setTitle('Pause');
+	if (audioRecorder.paused) {
+		$.pauseRecordingButton.title = 'Pause';
 		audioRecorder.resume();
 	} else {
-		$.pauseRecordingButton.setTitle('Resume');
+		$.pauseRecordingButton.title = 'Resume';
 		audioRecorder.pause();
 	}
 }
@@ -56,15 +56,15 @@ function pauseRecording() {
 function stopRecording() {
 	record = audioRecorder.stop();
 
-	$.startRecordingButton.setVisible(true);
-	$.playRecordingButton.setVisible(true);
-	$.pauseRecordingButton.setVisible(false);
-	$.stopRecordingButton.setVisible(false);
+	$.startRecordingButton.visible = true;
+	$.playRecordingButton.visible = true;
+	$.pauseRecordingButton.visible = false;
+	$.stopRecordingButton.visible = false;
 }
 
 function playRecording() {
 	const audioPlayer = Ti.Media.createAudioPlayer({
-		url: record.getNativePath()
+		url: record.nativePath
 	});
 	audioPlayer.start();
 }

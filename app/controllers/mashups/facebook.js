@@ -42,9 +42,9 @@ import fb from 'facebook';
 
 	// Set the button state
 	function setButtonState() {
-		$.fbLogin.setVisible(!fb.loggedIn);
-		$.fbShare.setVisible(fb.loggedIn);
-		$.fbLogout.setVisible(fb.loggedIn);
+		$.fbLogin.visible = !fb.loggedIn;
+		$.fbShare.visible = fb.loggedIn;
+		$.fbLogout.visible = fb.loggedIn;
 
 		if (fb.loggedIn) {
 			getGraphPath();
