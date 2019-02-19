@@ -12,7 +12,7 @@ let playbackInterval;
 	}
 
 	soundPlayer = Ti.Media.createSound({
-		url: 'sounds/cricket.wav'
+		url: '/sounds/cricket.wav'
 	});
 
 	soundPlayer.addEventListener('complete', onPlaybackComplete);
