@@ -12,8 +12,8 @@ function onClickClose() {
 }
 
 $.drawer.addEventListener('open', () => {
-	const activity = $.drawer.getActivity();
-	const actionbar = activity.getActionBar();
+	const activity = $.drawer.activity;
+	const actionbar = activity.actionBar;
 
 	if (actionbar) {
 		actionbar.displayHomeAsUp = true;

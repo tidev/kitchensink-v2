@@ -7,5 +7,5 @@
 
 function changeVideoSource() {
 	// TODO: Find a more swaagy video!
-	$.myPlayer.setUrl('http://mirrors.standaloneinstaller.com/video-sample/DLP_PART_2_768k.mp4');
+	$.myPlayer.url = 'http://mirrors.standaloneinstaller.com/video-sample/DLP_PART_2_768k.mp4';
 }
