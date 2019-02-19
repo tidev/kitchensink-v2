@@ -36,6 +36,7 @@ import Map from 'ti.map';
 	// Checks for location service available
 	if (Ti.Geolocation.locationServicesEnabled) {
 		Ti.Geolocation.requestLocationPermissions(Ti.Geolocation.AUTHORIZATION_WHEN_IN_USE, (event) => {
+			console.log(event);
 			if (!event.success) {
 				alert(`Error granting location permissions: ${event.error}`);
 				return;
@@ -70,29 +71,33 @@ function updatePosition(e) {
 
 function getCurrentPosition() {
 	Ti.Geolocation.getCurrentPosition((e) => {
-		if (Ti.Network.online) {
-			const latitude = e.coords.latitude,
-				longitude = e.coords.longitude;
-
-			const mapview = Map.createView({
-				userLocation: true,
-				mapType: Map.NORMAL_TYPE,
-				animate: true,
-				region: {
-					latitude: latitude,
-					longitude: longitude,
-					latitudeDelta: 0.1,
-					longitudeDelta: 0.1
-				},
-				regionFit: true,
-			});
-
-			$.map.add(mapview);
-
-			// Handle click events on any annotations on this map.
-			mapview.addEventListener('click', (e) => {
-				Ti.API.info('Clicked ' + e.clicksource + ' on ' + e.latitude + ',' + e.longitude);
-			});
+		if (!e.success || e.error) {
+			Ti.API.debug(JSON.stringify(e));
+			Ti.API.debug(e);
+			alert('Error getting current position');
+			return;
 		}
+		const latitude = e.coords.latitude,
+			longitude = e.coords.longitude;
+
+		const mapview = Map.createView({
+			userLocation: true,
+			mapType: Map.NORMAL_TYPE,
+			animate: true,
+			region: {
+				latitude: latitude,
+				longitude: longitude,
+				latitudeDelta: 0.1,
+				longitudeDelta: 0.1
+			},
+			regionFit: true,
+		});
+
+		$.map.add(mapview);
+
+		// Handle click events on any annotations on this map.
+		mapview.addEventListener('click', (e) => {
+			Ti.API.info('Clicked ' + e.clicksource + ' on ' + e.latitude + ',' + e.longitude);
+		});
 	});
 }
