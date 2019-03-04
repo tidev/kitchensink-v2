@@ -5,12 +5,12 @@ import Map from 'ti.map';
  * The scoped constructor of the controller.
  **/
 (function constructor() {
-	Ti.Geolocation.preferredProvider = Ti.Geolocation.PROVIDER_GPS;
 	Ti.Geolocation.accuracy = Ti.Geolocation.ACCURACY_BEST;
 	Ti.Geolocation.distanceFilter = 10;
 
 	// Check for Google Play Services. In order to view maps, Google Play services needs to be installed on the device
 	if (OS_ANDROID) {
+		Ti.Geolocation.preferredProvider = Ti.Geolocation.Android.PROVIDER_GPS;
 		const rc = Map.isGooglePlayServicesAvailable();
 		switch (rc) {
 			case Map.SUCCESS:
