@@ -4,8 +4,8 @@
 	"description": "A refactored Alloy-based version of the KitchenSink demo-app",
 	"private": true,
 	"scripts": {
-		"lint": "grunt lint",
-		"format": "grunt format:js"
+		"lint": "eslint app/",
+		"format": "eslint app/ --fix"
 	},
 	"repository": {
 		"type": "git",
@@ -17,9 +17,8 @@
 	},
 	"homepage": "https://github.com/appcelerator/kitchensink-v2#readme",
 	"devDependencies": {
-		"eslint-plugin-alloy": "^1.0.0",
-		"grunt": "^1.0.1",
-		"grunt-appc-js": "^2.1.0",
-		"grunt-cli": "^1.2.0"
+		"eslint": "^5.15.0",
+		"eslint-config-axway": "^4.2.2",
+		"eslint-plugin-alloy": "^1.0.0"
 	}
 }
