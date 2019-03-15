@@ -21,7 +21,11 @@ let playbackInterval;
 
 function startPlayback() {
 	soundPlayer.play();
-	$.playbackProgress.max = soundPlayer.duration * 1000;
+	if (OS_ANDROID) {
+		$.playbackProgress.max = soundPlayer.duration;
+	} else {
+		$.playbackProgress.max = soundPlayer.duration * 1000;
+	}
 }
 
 function stopPlayback() {
@@ -73,7 +77,7 @@ function onPlaybackResume() {
 function startInterval() {
 	playbackInterval = setInterval(() => {
 		if (soundPlayer.isPlaying()) {
-			$.playbackProgress.value = soundPlayer.time * 1000;
+			$.playbackProgress.value = soundPlayer.time;
 			logger.log('Ti.Media.Sound', 'Time: ' + soundPlayer.time);
 		}
 	}, 500);
