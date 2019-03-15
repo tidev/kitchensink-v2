@@ -9,15 +9,6 @@
 
 		<item name="actionBarStyle">@style/CustomTheme.ActionBarStyle</item>
 		<item name="actionBarTheme">@style/Theme.ActionBarTheme</item>
-		<item name="actionBarTabTextStyle">@style/TabStyle</item>
-		<item name="android:actionBarTabTextStyle">@style/TabStyle</item>
-	</style>
-
-	<style name="TabStyle" parent="style/Widget.AppCompat.Light.ActionBar.TabText">
-		<item name="android:textColor">#ffffff</item>
-		<!-- <item name="android:textAllCaps">false</item> -->
-		<!-- <item name="android:ellipsize">none</item> -->
-		<!-- <item name="android:maxLines">1</item> -->
 	</style>
 
 	<style name="Theme.ActionBarTheme" parent="style/Widget.AppCompat.Light.ActionBar">
