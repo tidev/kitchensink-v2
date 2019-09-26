@@ -1,11 +1,8 @@
 import Identity from 'ti.identity';
 
-let authPhrase = 'Fingerprint';
-
 if (!Identity.isSupported()) {
-  alert('Authentication is not supported. Available biometrics: ' + authPhrase);
+  alert('Biometric authentication is not supported on this device!');
   $.authenticate.enabled = false;
-  return;
 }
 
 if (OS_IOS) {
@@ -16,6 +13,10 @@ if (OS_IOS) {
   } else {
     authPhrase = '(None available)';
   }
+}
+
+if (OS_ANDROID) {
+  authPhrase = 'Fingerprint';
 }
 
 Identity.AUTHENTICATION_POLICY_PASSCODE;
@@ -46,9 +47,13 @@ function validate(){
             default: Ti.API.info('Error code is unknown'); break;
           }
         } else {
-        setTimeout(function() {
-          alert('Successfully authenticated!');
-        }, 1000);
+          if (Identity.biometryType == Identity.BIOMETRY_TYPE_FACE_ID) {
+            setTimeout(function() {
+              alert('Successfully authenticated!');
+            }, 1000);
+          } else {
+            alert('Successfully authenticated!');
+          }
       }
     }
   }
