@@ -1,0 +1,44 @@
+"#detailWin": {
+    backgroundColor: "green"
+}
+"#previewView": {
+    backgroundColor: "green"
+}
+"#detailText": {
+    text: "Wash day tomorrow, nothing clean right?"
+}
+"#actionTitle": {
+    title: "Main action"
+}
+"#action": {
+    title: "Preview Action",
+    style: Ti.UI.iOS.PREVIEW_ACTION_STYLE_DEFAULT
+}
+"#subAction": {
+    title: "Preview Sub-action"
+}
+"#actionGroup": {
+    title: "More actions...",
+    style: Ti.UI.iOS.PREVIEW_ACTION_STYLE_DESTRUCTIVE
+}
+"#context": {
+    contentHeight: 300
+}
+"#button": {
+    title : "Go ahead, make my day",
+    backgroundColor: "#A6171C",
+    width: 250,
+    height: 100,
+    tintColor: "#fff",
+    font: {
+    	fontSize: 18
+    }
+}
+"#buttonBack": {
+    title : "Go back",
+    backgroundColor: "#A6171C",
+    top: 520,
+    width: 150,
+    height: 50,
+    tintColor: "#fff"
+}

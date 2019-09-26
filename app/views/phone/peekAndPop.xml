@@ -1,5 +1,22 @@
 <Alloy>
-    <Window title="Peek and Pop">
-        <Label class="placeholderLabel" text="To be added ⚒" />
+    <Window id="peekpop" title="Peek and Pop">
+        <Button id="button"/>
+    </Window>
+    <Window id="detailWin">
+        <PreviewContext id="context" onPop="pop">
+        <Preview>
+            <View id="previewView">
+                <Label id="detailText"/>
+            </View>
+        </Preview>
+        <Actions>
+            <PreviewAction id="actionTitle" onClick="actionTitle" ></PreviewAction>
+            <PreviewActionGroup id="actionGroup">
+                <PreviewAction id="action" onClick="action"></PreviewAction>
+                <PreviewAction id="subAction" onClick="subAction"></PreviewAction>
+            </PreviewActionGroup>
+        </Actions>
+        <Button id="buttonBack" onClick="goBack"/>
+        </PreviewContext>
     </Window>
 </Alloy>
