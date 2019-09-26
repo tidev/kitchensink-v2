@@ -1,0 +1,14 @@
+"#authenticate": {
+	width: 300,
+	height: 100,
+	font: {
+		fontSize: 18
+	}
+}
+"#authenticate[platform=android]": {
+	width: 310,
+	height: 70,
+	font: {
+		fontSize: 16
+	}
+}

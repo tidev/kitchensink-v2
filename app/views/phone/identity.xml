@@ -1,0 +1,5 @@
+<Alloy>
+    <Window id="identity" title="Identity">
+        <Button id="authenticate" onClick="validate"></Button>
+    </Window>
+</Alloy>
