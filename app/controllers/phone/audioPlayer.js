@@ -24,7 +24,7 @@ function toggleBattle() {
 		$.battlePlayer.stop();
 		$.toggleBattle.title = 'Play battle sounds';
 	} else {
-		$.battlePlayer.play();
+		$.battlePlayer.start();
 		$.toggleBattle.title = 'Stop battle sounds';
 	}
 }
@@ -39,13 +39,13 @@ function handleMusicComplete() {
 	if (!OS_ANDROID) {
 		return;
 	}
-	changeMusic({ state: $.player.STATE_STOPPED });
+	changeMusic({ state: Ti.Media.AUDIO_STATE_STOPPED });
 }
 
 function changeMusic(e) {
 	// Restart player when play is stopped
-	if (e.state === $.player.STATE_STOPPED && !closingWindow) {
-		$.player.play();
+	if (e.state === Ti.Media.AUDIO_STATE_STOPPED && !closingWindow) {
+		$.player.start();
 	}
 }
 
@@ -58,14 +58,14 @@ function handleBattleComplete() {
 	if (!OS_ANDROID) {
 		return;
 	}
-	completeBattle({ state: $.battlePlayer.STATE_STOPPING });
-	completeBattle({ state: $.battlePlayer.STATE_STOPPED });
+	completeBattle({ state: Ti.Media.AUDIO_STATE_STOPPING });
+	completeBattle({ state: Ti.Media.AUDIO_STATE_STOPPED });
 }
 
 function completeBattle(e) {
-	if (e.state === $.battlePlayer.STATE_STOPPING) {
-		$.applause.play();
-	} else if (e.state === $.battlePlayer.STATE_STOPPED) {
+	if (e.state === Ti.Media.AUDIO_STATE_STOPPING) {
+		$.applause.start();
+	} else if (e.state === Ti.Media.AUDIO_STATE_STOPPED) {
 		$.toggleBattle.title = 'Play battle sounds';
 	}
 }

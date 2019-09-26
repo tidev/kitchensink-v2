@@ -5,7 +5,7 @@ import Map from 'ti.map';
  * The scoped constructor of the controller.
  **/
 (function constructor() {
-	Ti.Geolocation.accuracy = Ti.Geolocation.ACCURACY_BEST;
+	Ti.Geolocation.accuracy = Ti.Geolocation.ACCURACY_HIGH;
 	Ti.Geolocation.distanceFilter = 10;
 
 	// Check for Google Play Services. In order to view maps, Google Play services needs to be installed on the device
