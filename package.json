@@ -1,6 +1,6 @@
 {
 	"name": "kitchensink-v2",
-	"version": "7.1.0",
+	"version": "7.1.1",
 	"description": "A refactored Alloy-based version of the KitchenSink demo-app",
 	"private": true,
 	"scripts": {
