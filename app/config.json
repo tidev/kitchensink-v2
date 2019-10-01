@@ -12,5 +12,7 @@
 	"os:ios": {},
 	"os:mobileweb": {},
 	"os:windows": {},
-	"dependencies": {}
+	"dependencies": {
+		"ti.androidfingerprintalertdialog": "1.0"
+   	}
 }

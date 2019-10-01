@@ -3,7 +3,7 @@
   xmlns:ti="http://ti.appcelerator.org">
   <id>com.appcelerator.kitchensink</id>
   <name>KitchenSink</name>
-  <version>7.1.1</version>
+  <version>7.1.2</version>
   <publisher>Appcelerator, Inc.</publisher>
   <url>https://appcelerator.com</url>
   <description>This sample app gives an overview of native components available in Titanium.</description>
@@ -104,6 +104,7 @@
     <manifest android:versionCode="3" android:versionName="7.1.0">
       <uses-library android:name="com.google.android.maps"/>
       <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+      <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
       <application android:debuggable="true" android:hardwareAccelerated="true" android:largeHeap="true" android:theme="@style/kitchensink">
         <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="[YOUR API KEY HERE]"/>
         <!--http://docs.appcelerator.com/platform/latest/#!/guide/Google_Maps_v2_for_Android-->

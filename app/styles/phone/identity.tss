@@ -8,6 +8,8 @@
 "#authenticate[platform=android]": {
 	width: 310,
 	height: 70,
+	color: 'white',
+	backgroundColor: '#FF0000',
 	font: {
 		fontSize: 16
 	}
