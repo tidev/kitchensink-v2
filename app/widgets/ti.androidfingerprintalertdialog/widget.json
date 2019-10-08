@@ -1,0 +1,13 @@
+{
+	"id": "ti.androidfingerprintalertdialog",
+	"name": "ti.androidfingerprintalertdialog",
+	"description" : "Displays a Ti.UI.AlertDialog formatted to follow Material Guidelines for a Fingerprint Request",
+	"author": "implicitli, LLC",
+	"version": "1.0",
+	"copyright":"Copyright (c) 2017",
+	"license":"Public Domain",
+	"min-alloy-version": "1.0",
+	"min-titanium-version":"2.1",
+	"tags":"android,fingerprint,alert,dialog,material",
+	"platforms":"android"
+}
