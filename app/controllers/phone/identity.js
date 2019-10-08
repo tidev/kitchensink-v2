@@ -24,40 +24,35 @@ if (OS_ANDROID) {
 }
 
 function validate() {
-if (OS_IOS) {
-  Identity.authenticate({
-    reason: 'Please authenticate to access content',
-    fallbackTitle: 'Use passcode instead',
-    cancelTitle: 'Cancel',
-    callback: function(e) {
-        Identity.invalidate();
-        if (!e.success) {
-          alert(e.error);
-        } else {
-          setTimeout(function() {
-          alert('Successfully authenticated!');
-        }, 1000);
-      }
-    }
-  });
-} else {
+if (OS_ANDROID) {
   let reason = "Confirm fingerprint to authenticate";
   let title = "Identity";
   $.androidFingerprint.setReason(reason);
   $.androidFingerprint.setTitle(title);
-  Identity.authenticate({
-    reason: reason,
-    fallbackTitle: "",
-    callback: function(e) {
+}
+Identity.authenticate({
+  reason: "Please authenticate to continue",
+  fallbackTitle: "",
+  callback: function(e) {
+    if (OS_IOS) {
+      Identity.invalidate();
+      if (!e.success) {
+        alert(e.error);
+      } else {
+        setTimeout(function() {
+        alert('Successfully authenticated!');
+        }, 1000);
+      }
+    } else if (OS_ANDROID) {
       if(e.success) {
         $.androidFingerprint.success();
       } else {
         $.androidFingerprint.failure(e.error);
       }
     }
-  });
-  $.androidFingerprint.show(function() {
-    Identity.invalidate();
-  });
+  }
+});
+if (OS_ANDROID) {
+  $.androidFingerprint.show(function() {Identity.invalidate();});
 }
 }
