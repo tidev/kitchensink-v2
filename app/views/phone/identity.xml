@@ -1,7 +1,6 @@
 <Alloy>
     <Window id="identity" title="Identity">
-        <Button id="authenticate" platform="ios" onClick="validate" />
-        <Button id="authenticate" platform="android" onClick="validateAndroid" />
+        <Button id="authenticate" onClick="validate" />
         <Widget id="androidFingerprint" src="ti.androidfingerprintalertdialog" />
     </Window>
 </Alloy>

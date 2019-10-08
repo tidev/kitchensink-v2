@@ -7,8 +7,6 @@ if (!Identity.isSupported()) {
   $.authenticate.enabled = false;
 }
 
-Identity.AUTHENTICATION_POLICY_PASSCODE;
-
 if (OS_IOS) {
   if (Identity.biometryType == Identity.BIOMETRY_TYPE_FACE_ID) {
     authPhrase = 'Face ID';
@@ -25,7 +23,24 @@ if (OS_ANDROID) {
   $.authenticate.title = "Tap here to authenticate";
 }
 
-function validateAndroid() {
+function validate() {
+if (OS_IOS) {
+  Identity.authenticate({
+    reason: 'Please authenticate to access content',
+    fallbackTitle: 'Use passcode instead',
+    cancelTitle: 'Cancel',
+    callback: function(e) {
+        Identity.invalidate();
+        if (!e.success) {
+          alert(e.error);
+        } else {
+          setTimeout(function() {
+          alert('Successfully authenticated!');
+        }, 1000);
+      }
+    }
+  });
+} else {
   let reason = "Confirm fingerprint to authenticate";
   let title = "Identity";
   $.androidFingerprint.setReason(reason);
@@ -45,21 +60,4 @@ function validateAndroid() {
     Identity.invalidate();
   });
 }
-
-function validate() {
-  Identity.authenticate({
-    reason: 'Please authenticate to access content',
-    fallbackTitle: 'Use passcode instead',
-    cancelTitle: 'Cancel',
-    callback: function(e) {
-        Identity.invalidate();
-        if (!e.success) {
-          alert(e.error);
-        } else {
-        setTimeout(function() {
-          alert('Successfully authenticated!');
-        }, 1000);
-      }
-    }
-  }
-)};
+}
