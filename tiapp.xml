@@ -102,10 +102,10 @@
   <android 
     xmlns:android="http://schemas.android.com/apk/res/android">
     <manifest android:versionCode="3" android:versionName="7.1.0">
-      <uses-library android:name="com.google.android.maps"/>
       <uses-permission android:name="android.permission.RECORD_AUDIO"/>
       <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
       <application android:debuggable="true" android:hardwareAccelerated="true" android:largeHeap="true" android:theme="@style/kitchensink">
+        <uses-library android:name="com.google.android.maps"/>
         <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="[YOUR API KEY HERE]"/>
         <!--http://docs.appcelerator.com/platform/latest/#!/guide/Google_Maps_v2_for_Android-->
         <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:label="KitchenSink" android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
