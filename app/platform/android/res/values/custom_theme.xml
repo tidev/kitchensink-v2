@@ -11,12 +11,12 @@
 		<item name="actionBarTheme">@style/Theme.ActionBarTheme</item>
 	</style>
 
-	<style name="Theme.ActionBarTheme" parent="style/Widget.AppCompat.Light.ActionBar">
+	<style name="Theme.ActionBarTheme" parent="@style/Widget.AppCompat.Light.ActionBar">
 		<!-- actionbar arrow -->
 		<item name="colorControlNormal">#ffffff</item>
 	</style>
 
-	<style name="CustomTheme.ActionBarStyle" parent="style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+	<style name="CustomTheme.ActionBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
 		<!-- actionbar -->
 		<item name="android:actionMenuTextColor">#FFFFFF</item>
 		<item name="android:titleTextStyle">@style/CustomTheme.ActionBar.TitleTextStyle</item>
