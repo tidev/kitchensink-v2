@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ti:app 
+<ti:app
   xmlns:ti="http://ti.appcelerator.org">
   <id>com.appcelerator.kitchensink</id>
   <name>KitchenSink</name>
@@ -99,7 +99,7 @@
             </dict>
         </plist>
     </ios>
-  <android 
+  <android
     xmlns:android="http://schemas.android.com/apk/res/android">
     <manifest android:versionCode="3" android:versionName="7.1.0">
       <uses-permission android:name="android.permission.RECORD_AUDIO"/>
@@ -131,5 +131,5 @@
     <module platform="iphone">facebook</module>
     <module platform="commonjs">ti.cloud</module>
   </modules>
-  <sdk-version>8.2.0.GA</sdk-version>
+  <sdk-version>8.2.1.GA</sdk-version>
 </ti:app>
