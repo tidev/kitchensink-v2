@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<style name="kitchensink" parent="@style/Theme.AppCompat.Light">
+	<style name="kitchensink" parent="@style/Theme.MaterialComponents.Light.Bridge">
 		<item name="colorPrimary">#c91326</item>
 		<item name="colorAccent">#000000</item>
 		<item name="android:textColorPrimary">#000000</item>
