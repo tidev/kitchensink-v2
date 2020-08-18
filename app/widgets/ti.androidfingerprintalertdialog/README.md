@@ -139,13 +139,13 @@ Example with a theme called `my_custom_theme` which you might have setup within 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="my_custom_theme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+    <style name="my_custom_theme" parent="@style/Theme.MaterialComponents.Light.DarkActionBar.Bridge">
         ...
         <item name="android:timePickerDialogTheme">@style/AlertDialogCustom</item>
         <item name="android:datePickerDialogTheme">@style/AlertDialogCustom</item>
         <item name="alertDialogTheme">@style/AlertDialogCustom</item>
     </style>
-    <style name="AlertDialogCustom" parent="Theme.AppCompat.Light.Dialog.Alert">
+    <style name="AlertDialogCustom" parent="Theme.MaterialComponents.Light.Dialog.Alert">
         <item name="colorAccent">#F26522</item>
         <item name="colorControlActivated">#F26522</item>
         <item name="android:textColor">#000000</item>
