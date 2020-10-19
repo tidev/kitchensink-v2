@@ -1,0 +1,4 @@
+<ti:app>
+  <name>alloy-compiler test</name>
+  <sdk-version>8.2.1.GA</sdk-version>
+</ti:app>

@@ -1,8 +1,8 @@
-## Kitchen Sink 2.0
+## KitchenSink 2
 
 This project gives an overview of native components available in Titanium. 
 The components are grouped into multiple groups and can be logged in the "Logs" tab. 
-It also includes full support for iOS, Android & Windows.
+It also includes full support for iOS and Android.
 
 ![screenshot](screenshot.png)
 
@@ -12,7 +12,7 @@ It also includes full support for iOS, Android & Windows.
 - [x] API Logging
 - [x] Controls (Switch, Slider, Tabbed Bar, Text Field, Alerts, Dialogs, ...)
 - [x] Views (Scroll View, List View, Image View, Blur View, Web View, ...)
-- [x] Services (Twitter, Facebook)
+- [x] Services (Facebook)
 - [x] Platform (Clipboard, URL-Schemes, Hyperloop, Databases, Geolocation, Camera, Gallery, ...)
 - [ ] TODO: More Platform APIs (HTTP-Requests, Contacts, ...)
 

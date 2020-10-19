@@ -1,0 +1,24 @@
+"View": {
+	height: Ti.UI.SIZE,
+	width: Ti.UI.FILL
+}
+
+".logout": {
+	title: 'logout'
+}
+
+"#themes[platform=ios]": {
+	style: Ti.UI.iPhone.TableViewStyle.GROUPED
+}
+
+"#email": {
+	hintText: 'email',
+	height: '40dp',
+	textAlign: 'left',
+	clearButtonMode: Ti.UI.INPUT_BUTTONMODE_ONFOCUS
+}
+
+"#email[platform=ios]": {
+	left: 10,
+	right: 10
+}

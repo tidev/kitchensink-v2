@@ -37,7 +37,7 @@ function openComponent(e) {
 }
 
 function showCamera(mediaTypes) {
-	require('/permissions').checkCameraPermission(success => {
+	require('@/permissions').checkCameraPermission(success => {
 		if (!success) {
 			alert('No permissions!');
 			return;
@@ -106,7 +106,7 @@ function saveToGallery() {
 }
 
 function openFromGallery() {
-	require('/permissions').checkCameraPermission(success => {
+	require('@/permissions').checkCameraPermission(success => {
 		if (!success) {
 			alert('No permissions!');
 			return;

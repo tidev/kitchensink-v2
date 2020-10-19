@@ -1,0 +1,20 @@
+"#row": {
+	height: '60dp'
+}
+
+"#direction": {
+	left: '10dp',
+	width: '36dp',
+	height: '36dp',
+	touchEnabled: false
+}
+
+"#name": {
+	color: '#fff',
+	right: '10dp',
+	font: {
+		fontSize: '16dp',
+		fontWeight: 'normal'
+	},
+	touchEnabled: false
+}

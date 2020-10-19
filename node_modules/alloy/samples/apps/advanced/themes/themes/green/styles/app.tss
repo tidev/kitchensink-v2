@@ -1,0 +1,7 @@
+"Label": {
+	color: '#000'
+}
+
+"Button": {
+	backgroundImage: '/button_green.png'
+}

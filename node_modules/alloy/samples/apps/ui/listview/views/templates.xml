@@ -1,0 +1,24 @@
+<Alloy>
+	<Tab title="templates">
+		<Window title="templates">
+			<ListView id="list" defaultItemTemplate="template1">
+				<Templates>
+					<ItemTemplate name="template1" height="100">
+						<ImageView bindId="image" id="image"/>
+						<Label bindId="label" id="label1"/>
+					</ItemTemplate>
+					<ItemTemplate name="template2" height="50">
+						<Label bindId="label" class="labels"/>
+					</ItemTemplate>
+					<Require src="itemTemplate"/>
+				</Templates>
+
+				<ListSection>
+					<ListItem image:image="/images/appc.png" label:text="this is some text"/>
+					<Require src="listItem"/>
+					<ListItem template="requiredTemplate" leftImage:image="/images/alien.png" rightImage:image="/images/up.png" title:text="Alien" subtitle:text="In space, no one can hear you scream"/>
+				</ListSection>
+			</ListView>
+		</Window>
+	</Tab>
+</Alloy>
