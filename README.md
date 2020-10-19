@@ -4,7 +4,7 @@ This project gives an overview of native components available in Titanium.
 The components are grouped into multiple groups and can be logged in the "Logs" tab. 
 It also includes full support for iOS and Android.
 
-![screenshot](screenshot.png)
+![screenshot](preview.png)
 
 
 ### Features
