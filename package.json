@@ -1,13 +1,13 @@
 {
-	"name": "kitchensink-v2",
-	"version": "7.1.1",
-	"description": "A refactored Alloy-based version of the KitchenSink demo-app",
-	"private": true,
-	"scripts": {
-		"lint": "eslint app/",
-		"format": "eslint app/ --fix"
-	},
-	"repository": {
+  "name": "kitchensink-v2",
+  "version": "8.0.0",
+  "description": "KitchenSink with webpack support",
+  "private": true,
+  "scripts": {
+    "lint": "eslint app/",
+    "format": "eslint app/ --fix"
+  },
+  "repository": {
 		"type": "git",
 		"url": "git://github.com/appcelerator/kitchensink-v2.git"
 	},
@@ -16,9 +16,16 @@
 		"url": "https://github.com/appcelerator/kitchensink-v2/issues"
 	},
 	"homepage": "https://github.com/appcelerator/kitchensink-v2#readme",
-	"devDependencies": {
-		"eslint": "^5.15.0",
-		"eslint-config-axway": "^4.2.2",
-		"eslint-plugin-alloy": "^1.0.0"
-	}
+  "devDependencies": {
+    "@titanium-sdk/webpack-plugin-babel": "^0.1.2",
+    "babel-eslint": "10.1.0",
+    "eslint": "^7.5.0",
+    "eslint-config-axway": "4.7.0",
+    "webpack": "4.44.0",
+    "@titanium-sdk/webpack-plugin-alloy": "^0.2.2",
+    "alloy": "^1.15.2",
+    "alloy-compiler": "^0.2.4",
+    "eslint-plugin-alloy": "^1.1.1"
+  },
+  "dependencies": {}
 }

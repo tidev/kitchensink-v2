@@ -1,0 +1,5 @@
+<Alloy>
+	<Window>
+		<Label>The DashboardView sample only runs on iOS</Label>
+	</Window>
+</Alloy>

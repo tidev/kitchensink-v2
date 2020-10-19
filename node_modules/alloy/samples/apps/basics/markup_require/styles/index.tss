@@ -1,0 +1,11 @@
+"#index": {
+	backgroundColor: "#fff",
+	layout: "vertical"
+}
+
+"#top": {
+	backgroundColor:"black",
+	borderRadius:2,
+	borderColor:"blue",
+	height:100
+}

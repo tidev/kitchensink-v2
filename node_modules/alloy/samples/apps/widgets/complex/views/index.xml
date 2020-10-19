@@ -1,0 +1,6 @@
+<Alloy>
+	<Window id="win">
+		<Widget src="com.testing.searchForBooks" id="sfb"/>
+		<TableView id="table"/>
+	</Window>
+</Alloy>

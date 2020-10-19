@@ -1,0 +1,8 @@
+"Label": {
+	color: '#fff'
+}
+
+"Button": {
+	backgroundImage: '/button_dark.png',
+	color: '#fff'
+}

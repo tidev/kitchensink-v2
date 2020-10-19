@@ -1,0 +1,6 @@
+<Alloy>
+	<Window>
+		<!-- Menu code is in views/android/index.xml -->
+		<Label>Menu only supported on Android</Label>
+	</Window>
+</Alloy>

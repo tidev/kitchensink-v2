@@ -1,0 +1,5 @@
+<Alloy>
+	<Window id="win">
+		<Label id="osLabel"/>
+	</Window>
+</Alloy>

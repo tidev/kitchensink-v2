@@ -1,0 +1,6 @@
+<Alloy>
+	<Window> 
+		<View id="top" />
+		<Require src="theRest"/>
+	</Window>
+</Alloy>

@@ -1,4 +1,3 @@
-
 import ActionBarHelper from 'actionbar';
 
 Alloy.CFG.tabGroup = {};

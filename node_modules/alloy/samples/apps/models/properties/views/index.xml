@@ -1,0 +1,6 @@
+<Alloy>
+	<TabGroup>
+		<Require src="modelTab"/>
+		<Require src="collection/collectionTab"/>
+	</TabGroup>
+</Alloy>
