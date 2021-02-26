@@ -1,5 +1,5 @@
 <Alloy>
-    <Window id="identity" title="Identity">
+    <Window id="identity" title="Identity" onOpen="handleOpen">
         <Button id="authenticate" onClick="validate" />
         <Widget id="androidFingerprint" src="ti.androidfingerprintalertdialog" />
     </Window>

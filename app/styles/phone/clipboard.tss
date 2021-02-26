@@ -1,21 +1,12 @@
-'.block': {
-	left: 20,
-	right: 20,
-	top: 20,
+'.field': {
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	top: 40,
+	width: '80%',
 	height: Ti.UI.SIZE,
-	backgroundColor: '#f0f0f0'
 }
 
-'.field': {
-	width: 200,
-	height: 40,
-	top: 20,
-	bottom: 20,
-	left: 20,
-	padding: {
-		left: 10
-	},
-	backgroundColor: '#ddd',
+'.field[platform=android]': {
+	hintType: Ti.UI.HINT_TYPE_ANIMATED
 }
 
 '#copyField': {
@@ -28,5 +19,6 @@
 }
 
 '.button': {
-	left: 240
+	top: 10,
+	right: "10%"
 }

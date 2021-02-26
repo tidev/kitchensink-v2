@@ -4,10 +4,13 @@
 
 '#progress': {
   top: 30,
-  color: '#000000',
   font: {
     fontSize: 14
   }
+}
+
+'#progress[platform=ios]': {
+  color: 'black',
 }
 
 '#toggleBattle': {

@@ -16,6 +16,6 @@
 	}
 }
 
-'Tab[platform=ios]': {
-	icon: 'images/icons/console.png'
+'Tab': {
+	icon: '/images/icons/console.png'
 }

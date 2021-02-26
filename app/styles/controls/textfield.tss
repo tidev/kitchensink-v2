@@ -7,22 +7,27 @@
 }
 
 '.textfield': {
-	width: 300,
-	height: 40,
-	backgroundColor: '#f0f0f0',
-	borderRadius: 4,
-	top: 50,
-	bubbleParent: false,
-	padding: {
-	    left: 20,
-	    right: 20,
-	    top: 5,
-	    bottom: 5
-	}
+    width: 300,
+    top: 50,
+    bubbleParent: false,
+}
+
+".textfield[platform=ios]": {
+    height: 40,
+    backgroundColor: '#f0f0f0',
+    borderRadius: 4,
+    padding: {
+        left: 20,
+        right: 20,
+        top: 5,
+        bottom: 5
+    }
 }
 
 ".textfield[platform=android]": {
-    height: 60
+    height: Ti.UI.SIZE,
+    hintType: Ti.UI.HINT_TYPE_ANIMATED,
+    borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED
 }
 
 '.textLabel': {
@@ -42,17 +47,17 @@
  */
 '#regularTextfield': {
     keyboardType: Ti.UI.KEYBOARD_TYPE_DEFAULT, // this is also default value so doesn't have to be set
-    hintText: 'Regular textfield'
+    hintText: 'Regular TextField'
 }
 
 '#phoneTextfield': {
     keyboardType: Ti.UI.KEYBOARD_TYPE_PHONE_PAD,
-    hintText: 'Phone textfield'
+    hintText: 'Phone TextField'
 }
 
 '#emailTextfield': {
     keyboardType: Ti.UI.KEYBOARD_TYPE_EMAIL,
-    hintText: 'Email textfield',
+    hintText: 'Email TextField',
     autocorrect: false,
     autocapitalization: false,
     autofillType: Titanium.UI.AUTOFILL_TYPE_EMAIL
@@ -62,9 +67,4 @@
     passwordMask: true,
     hintText: 'Type your password',
     autofillType: Ti.UI.AUTOFILL_TYPE_PASSWORD
-}
-
-// On Android add some extra bottom padding to make UI look better as the passwordTextfield is the last element
-'#passwordTextfield[platform=android]': {
-    bottom: 30
 }

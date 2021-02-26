@@ -41,8 +41,6 @@
 ".colorPickerButton": {
 	top: 20,
 	left: 10,
-	width: Ti.UI.FILL,
-	textAlign: 'left'
 }
 
 '.gradientTypesBar': {

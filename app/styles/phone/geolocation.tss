@@ -1,17 +1,19 @@
 '.geolocationTextArea': {
 	width: 380,
 	height: 110,
+}
+
+'.geolocationTextArea[platform=ios]': {
 	backgroundColor: '#f0f0f0',
 	color: '#000000'
 }
 
-'.mapElmSeparation' : {
-	top : 10
+'.mapElmSeparation': {
+	top: 10
 }
 
-'TextArea' :{
-	'font' :{
-		'fontSize' : 12
+'TextArea[platform=ios]': {
+	font: {
+		fontSize: 12
 	}
-	
 }

@@ -1,8 +1,11 @@
 
 '.slider': {
-	tintColor: 'green',
 	min: 0,
 	max: 1,
 	width: 200,
 	value: 0.75
+}
+
+'.slider[platform=ios]': {
+	tintColor: '#c91326',
 }

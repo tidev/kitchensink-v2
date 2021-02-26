@@ -3,12 +3,12 @@
         <View id="gradientView" onTouchmove="handleTouchMove" />
         <View class="horizontalLayout">
             <!-- Start Radius -->
-            <Label class="radiusLabel" id="startRadiusLabel">Start Radius:</Label>
-            <Slider class="radiusSlider" id="startRadiusSlider" onChange="updateGradient" />
+            <Label class="radiusLabel" id="startRadiusLabel" width="30%">Start Radius:</Label>
+            <Slider class="radiusSlider" id="startRadiusSlider" width="Ti.UI.FILL" onChange="updateGradient" />
 
             <!-- End Radius -->
-            <Label class="radiusLabel" id="endRadiusLabel">End Radius:</Label>
-            <Slider class="radiusSlider" id="endRadiusSlider" onChange="updateGradient" />
+            <Label class="radiusLabel" id="endRadiusLabel" width="30%">End Radius:</Label>
+            <Slider class="radiusSlider" id="endRadiusSlider" value="100" width="Ti.UI.FILL" onChange="updateGradient" />
 
             <!-- Backfill Start -->
             <Label class="backfillLabel">Back Fill Start:</Label>
@@ -17,6 +17,7 @@
             <!-- Backfill End -->
             <Label class="backfillLabel">Back Fill End:</Label>
             <Switch class="backfillSwitch" id="endFillSwitch" onChange="updateGradient" />
+            <View width="Ti.UI.FILL" height="0"/>
 
             <!-- Random color -->
             <Button onClick="pickRandomColor" class="colorPickerButton" title="🔄 Pick Random Color" />

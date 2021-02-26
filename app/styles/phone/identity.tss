@@ -1,16 +1,7 @@
-"#authenticate": {
+'#authenticate[platform=ios]': {
 	width: 300,
 	height: 100,
 	font: {
 		fontSize: 18
-	}
-}
-"#authenticate[platform=android]": {
-	width: 310,
-	height: 70,
-	color: 'white',
-	backgroundColor: '#FF0000',
-	font: {
-		fontSize: 16
 	}
 }

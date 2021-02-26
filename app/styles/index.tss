@@ -1,3 +1,4 @@
-'TabGroup': {
-
+'TabGroup[platform=android]': {
+	shiftMode: false,
+	style: Ti.UI.Android.TABS_STYLE_BOTTOM_NAVIGATION
 }
