@@ -1,0 +1,20 @@
+<Alloy>
+    <Window title="Button Bar" layout="vertical">
+        <Label top="15%">Text-Only Buttons</Label>
+        <ButtonBar top="10" onClick="onTextButtonBarClicked">
+            <Labels>
+                <Label>One</Label>
+                <Label>Two</Label>
+                <Label>Three</Label>
+            </Labels>
+        </ButtonBar>
+        <Label top="40">Image-Only Buttons</Label>
+        <ButtonBar top="10" onClick="onImageButtonBarClicked">
+            <Labels>
+                <Label image="/images/icons/controls.png"/>
+                <Label image="/images/icons/phone.png"/>
+                <Label image="/images/icons/mashups.png"/>
+            </Labels>
+        </ButtonBar>
+    </Window>
+</Alloy>
