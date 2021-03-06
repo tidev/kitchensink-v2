@@ -110,6 +110,7 @@
         <!--http://docs.appcelerator.com/platform/latest/#!/guide/Google_Maps_v2_for_Android-->
         <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:label="KitchenSink" android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="false"/>
       </application>
     </manifest>
   </android>
