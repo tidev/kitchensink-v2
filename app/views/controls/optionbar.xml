@@ -1,0 +1,31 @@
+<Alloy>
+    <Window title="Option Bar">
+        <ScrollView layout="vertical">
+            <Label top="40">Text-Only Buttons</Label>
+            <OptionBar top="10" onClick="onTextOptionBarClicked">
+                <Labels>
+                    <Label>One</Label>
+                    <Label>Two</Label>
+                    <Label>Three</Label>
+                </Labels>
+            </OptionBar>
+            <Label top="30">Image-Only Buttons</Label>
+            <OptionBar top="10" onClick="onImageOptionBarClicked">
+                <Labels>
+                    <Label image="/images/icons/controls.png"/>
+                    <Label image="/images/icons/phone.png"/>
+                    <Label image="/images/icons/mashups.png"/>
+                </Labels>
+            </OptionBar>
+            <!-- Only Android supports setting both images and text. -->
+            <Label top="30" platform="android">Image/Text Buttons</Label>
+            <OptionBar top="10" onClick="onImageTextOptionBarClicked" platform="android">
+                <Labels>
+                    <Label image="/images/icons/controls.png">One</Label>
+                    <Label image="/images/icons/phone.png">Two</Label>
+                    <Label image="/images/icons/mashups.png">Three</Label>
+                </Labels>
+            </OptionBar>
+        </ScrollView>
+    </Window>
+</Alloy>

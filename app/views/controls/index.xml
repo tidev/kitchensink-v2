@@ -6,6 +6,7 @@
                     <ListItem title="Views" itemId="views/index" />
                     <ListItem title="Label" itemId="label" />
                     <ListItem title="Button Bar" itemId="buttonbar" platform="android,ios" />
+                    <ListItem title="Option Bar" itemId="optionbar" platform="android,ios" />
                     <ListItem title="Tabbed Bar" itemId="tabbedbar" platform="android,ios" />
                     <ListItem title="Toolbar" itemId="toolbar" platform="android,ios"/>
                     <ListItem title="Command Bar" itemId="commandbar" platform="windows"/>
