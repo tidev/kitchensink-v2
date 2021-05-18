@@ -1,7 +1,15 @@
 
 '.textarea': {
-	width: 300,
-	height: 100,
-	backgroundColor: '#f0f0f0',
-	borderRadius: 4
+    width: 300,
+}
+
+".textarea[platform=ios]": {
+    height: 100,
+    backgroundColor: '#f0f0f0',
+    borderRadius: 4
+}
+
+".textarea[platform=android]": {
+    borderStyle: Ti.UI.INPUT_BORDERSTYLE_FILLED,
+    lines: 4
 }

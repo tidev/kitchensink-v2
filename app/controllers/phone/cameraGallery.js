@@ -60,6 +60,7 @@ function showCamera(mediaTypes) {
 
 function processImage(image) {
 	const imageView = Ti.UI.createImageView({
+		autorotate: true,
 		image: image,
 		opacity: 0
 	});

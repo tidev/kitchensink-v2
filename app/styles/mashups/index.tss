@@ -1,3 +1,3 @@
-'Tab[platform=ios]': {
-    icon: 'images/icons/mashups.png'
+'Tab': {
+    icon: '/images/icons/mashups.png'
 }

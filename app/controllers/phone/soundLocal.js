@@ -63,7 +63,7 @@ function setVolumeDown() {
 
 function toggleLooping() {
 	soundPlayer.setLooping(!soundPlayer.looping);
-	$.buttonLooping.title = 'Looping (' + soundPlayer.isLooping() + ')';
+	$.buttonLooping.title = 'Looping (' + soundPlayer.looping + ')';
 }
 
 function onPlaybackComplete() {
@@ -76,7 +76,7 @@ function onPlaybackResume() {
 
 function startInterval() {
 	playbackInterval = setInterval(() => {
-		if (soundPlayer.isPlaying()) {
+		if (soundPlayer.playing) {
 			$.playbackProgress.value = soundPlayer.time;
 			logger.log('Ti.Media.Sound', 'Time: ' + soundPlayer.time);
 		}

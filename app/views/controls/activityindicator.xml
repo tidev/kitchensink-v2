@@ -9,6 +9,6 @@
             <ActivityIndicator id="indicatorBig" />
             <ActivityIndicator id="indicatorMessage" />
         </View>
-        <Button class="changeTintColorButton actionButton" platform="ios" onClick="changeTintColor" title="Change spinner to random color" />
+        <Button class="changeTintColorButton actionButton" onClick="changeTintColor" title="Change spinner to random color" />
     </Window>
 </Alloy>

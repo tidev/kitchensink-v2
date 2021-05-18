@@ -1,58 +1,46 @@
 import Identity from 'ti.identity';
 
-var authPhrase = "";
+function handleOpen() {
+	// Use passcode/pin-number as a fallback in case device doesn't support TouchID/FaceID.
+	Identity.authenticationPolicy = Identity.AUTHENTICATION_POLICY_PASSCODE;
 
-if (!Identity.isSupported()) {
-  alert('Biometric authentication is not supported on this device \nor\nno identities are enrolled!');
-  $.authenticate.enabled = false;
-}
+	// Do not continue if device does not support authentication.
+	if (!Identity.isSupported()) {
+		return;
+	}
 
-if (OS_IOS) {
-  if (Identity.biometryType == Identity.BIOMETRY_TYPE_FACE_ID) {
-    authPhrase = 'Face ID';
-  } else if (Identity.biometryType == Identity.BIOMETRY_TYPE_TOUCH_ID) {
-    authPhrase = 'Touch ID';
-  } else {
-    authPhrase = '(None available)';
-  }
-  $.authenticate.title = "Authenticate with: " + authPhrase;
-}
-
-if (OS_ANDROID) {
-  authPhrase = 'Fingerprint';
-  $.authenticate.title = "Tap here to authenticate";
+	// On iOS, we know ahead of time which authentication policy is available to us. Show it on button.
+	if (OS_IOS) {
+		let authPhrase = '';
+		if (Identity.biometryType == Identity.BIOMETRY_TYPE_FACE_ID) {
+			authPhrase = 'Face ID';
+		} else if (Identity.biometryType == Identity.BIOMETRY_TYPE_TOUCH_ID) {
+			authPhrase = 'Touch ID';
+		} else {
+			authPhrase = 'Passcode';
+		}
+		$.authenticate.title = `Authenticate with: ${authPhrase}`;
+	}
 }
 
 function validate() {
-if (OS_ANDROID) {
-  let reason = "Confirm fingerprint to authenticate";
-  let title = "Identity";
-  $.androidFingerprint.setReason(reason);
-  $.androidFingerprint.setTitle(title);
-}
-Identity.authenticate({
-  reason: "Please authenticate to continue",
-  fallbackTitle: "",
-  callback: function(e) {
-    if (OS_IOS) {
-      Identity.invalidate();
-      if (!e.success) {
-        alert(e.error);
-      } else {
-        setTimeout(function() {
-        alert('Successfully authenticated!');
-        }, 1000);
-      }
-    } else if (OS_ANDROID) {
-      if(e.success) {
-        $.androidFingerprint.success();
-      } else {
-        $.androidFingerprint.failure(e.error);
-      }
-    }
-  }
-});
-if (OS_ANDROID) {
-  $.androidFingerprint.show(function() {Identity.invalidate();});
-}
+	if (!Identity.isSupported()) {
+		alert('Biometric authentication is not supported on this device or no identities are enrolled!');
+		return;
+	}
+
+	Identity.authenticate({
+		reason: "Please authenticate to continue",
+		fallbackTitle: "",
+		callback: (e) => {
+			Identity.invalidate();
+			if (!e.success) {
+				alert(e.error);
+			} else {
+				setTimeout(() => {
+					alert('Successfully authenticated!');
+				}, 1000);
+			}
+		}
+	});
 }

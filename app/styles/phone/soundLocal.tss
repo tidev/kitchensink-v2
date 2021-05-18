@@ -8,6 +8,7 @@
 }
 
 '#playbackProgress': {
+	animated: false,
 	bottom: 30,
 	width: 200,
 	min: 0,
