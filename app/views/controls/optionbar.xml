@@ -9,6 +9,7 @@
                     <Label>Three</Label>
                 </Labels>
             </OptionBar>
+
             <Label top="30">Image-Only Buttons</Label>
             <OptionBar top="10" onClick="onImageOptionBarClicked">
                 <Labels>
@@ -17,9 +18,20 @@
                     <Label image="/images/icons/mashups.png"/>
                 </Labels>
             </OptionBar>
+
             <!-- Only Android supports setting both images and text. -->
             <Label top="30" platform="android">Image/Text Buttons</Label>
             <OptionBar top="10" onClick="onImageTextOptionBarClicked" platform="android">
+                <Labels>
+                    <Label image="/images/icons/controls.png">One</Label>
+                    <Label image="/images/icons/phone.png">Two</Label>
+                    <Label image="/images/icons/mashups.png">Three</Label>
+                </Labels>
+            </OptionBar>
+
+            <!-- Only Android supports vertical layout for OptionBar. -->
+            <Label top="30" platform="android">Vertical Buttons</Label>
+            <OptionBar top="10" layout="vertical" onClick="onVerticalOptionBarClicked" platform="android">
                 <Labels>
                     <Label image="/images/icons/controls.png">One</Label>
                     <Label image="/images/icons/phone.png">Two</Label>
