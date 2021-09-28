@@ -14,6 +14,7 @@
                     <ListItem title="Stepper" itemId="stepper" platform="ios"/>
                     <ListItem title="Slider" itemId="slider" />
                     <ListItem title="Drawer Layout" itemId="drawer" platform="android"/>
+                    <ListItem title="Progress Bar" itemId="progressbar" />
                     <ListItem title="Activity Indicator" itemId="activityindicator" />
                     <ListItem title="Picker" itemId="picker" />
                     <ListItem title="Alert Dialog" itemId="alertdialog" />
