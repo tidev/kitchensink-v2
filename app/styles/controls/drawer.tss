@@ -1,0 +1,11 @@
+'#btn_left' : {
+	top: 100
+}
+
+'#btn_right' : {
+	bottom: 100
+}
+
+'.views': {
+	backgroundColor: '?attr/colorSurface'
+}
