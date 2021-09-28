@@ -8,6 +8,7 @@
                 <ListItem title="List View" itemId="listview" />
                 <ListItem title="Blur View" itemId="blurview" platform="ios"/>
                 <ListItem title="Image View" itemId="imageview" />
+                <ListItem title="Image View (Scaled)" itemId="imageviewScaled" />
                 <ListItem title="Web View" itemId="webview" />
                 <ListItem title="Gradients" itemId="gradients" />
             </ListSection>
