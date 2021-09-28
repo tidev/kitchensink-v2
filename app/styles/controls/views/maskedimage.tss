@@ -1,0 +1,6 @@
+
+'#myMaskedImage': {
+	image: '/images/cloud-wallpaper.jpg',
+	width: 286,
+	height: 160
+}

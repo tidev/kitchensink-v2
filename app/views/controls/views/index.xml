@@ -9,6 +9,8 @@
                 <ListItem title="Blur View" itemId="blurview" platform="ios"/>
                 <ListItem title="Image View" itemId="imageview" />
                 <ListItem title="Image View (Scaled)" itemId="imageviewScaled" />
+                <ListItem title="Masked Image" itemId="maskedimage" />
+                <ListItem title="Masked Image (Tint)" itemId="maskedimageTint" />
                 <ListItem title="Web View" itemId="webview" />
                 <ListItem title="Gradients" itemId="gradients" />
             </ListSection>

@@ -1,0 +1,13 @@
+<Alloy>
+    <Window title="Masked Image (Tint)" layout="vertical">
+        <MaskedImage id="myMaskedImage" top="30" width="160" height="160"/>
+        <OptionBar onClick="onColorOptionBarClicked" top="30">
+            <Labels>
+                <Label>Red</Label>
+                <Label>Green</Label>
+                <Label>Blue</Label>
+                <Label>Black</Label>
+            </Labels>
+        </OptionBar>
+    </Window>
+</Alloy>
