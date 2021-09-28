@@ -1,6 +1,18 @@
 <Alloy>
-    <Window title="Switch">
-        <Label id="state" class="stateLabel" />
-        <Switch class="switchControl" onChange="switchChanged" />
+    <Window title="Switch" layout="vertical">
+        <Label class="switchValueLabel" id="switchValueLabel1">value: false</Label>
+        <Switch class="switchControl" style="Ti.UI.SWITCH_STYLE_SLIDER" title="Slider Style" onChange="onSwitch1Changed"/>
+
+        <View class="separatorView" platform="android"/>
+        <Label class="switchValueLabel" id="switchValueLabel2" platform="android">value: false</Label>
+        <Switch class="switchControl" style="Ti.UI.SWITCH_STYLE_CHECKBOX" title="Checkbox Style" onChange="onSwitch2Changed" platform="android"/>
+
+        <View class="separatorView" platform="android"/>
+        <Label class="switchValueLabel" id="switchValueLabel3" platform="android">value: false</Label>
+        <Switch class="switchControl" style="Ti.UI.SWITCH_STYLE_CHIP" title="Chip Style" onChange="onSwitch3Changed" platform="android"/>
+
+        <View class="separatorView" platform="android"/>
+        <Label class="switchValueLabel" id="switchValueLabel4" platform="android">value: false</Label>
+        <Switch class="switchControl" style="Ti.UI.SWITCH_STYLE_TOGGLE_BUTTON" onChange="onSwitch4Changed" platform="android"/>
     </Window>
 </Alloy>
