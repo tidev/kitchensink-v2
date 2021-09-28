@@ -132,5 +132,5 @@
     <module platform="iphone">facebook</module>
     <module platform="commonjs">ti.cloud</module>
   </modules>
-  <sdk-version>10.0.0.GA</sdk-version>
+  <sdk-version>10.1.0.GA</sdk-version>
 </ti:app>
