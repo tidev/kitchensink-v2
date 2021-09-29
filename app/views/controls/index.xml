@@ -5,6 +5,7 @@
                 <ListSection>
                     <ListItem title="Views" itemId="views/index" />
                     <ListItem title="Label" itemId="label" />
+                    <ListItem title="Button" itemId="button" />
                     <ListItem title="Button Bar" itemId="buttonbar" platform="android,ios" />
                     <ListItem title="Option Bar" itemId="optionbar" platform="android,ios" />
                     <ListItem title="Tabbed Bar" itemId="tabbedbar" platform="android,ios" />
