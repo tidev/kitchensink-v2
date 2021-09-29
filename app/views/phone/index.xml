@@ -10,6 +10,7 @@
                     <ListItem itemId="clipboard" title="Clipboard"/>
                     <ListItem itemId="database" title="Database"/>
                     <ListItem itemId="geolocation" title="Geolocation"/>
+                    <ListItem itemId="gesture" title="Gesture"/>
                     <ListItem itemId="network" title="Network"/>
                     <ListItem itemId="sound" title="Sound"/>
                     <ListItem itemId="audioRecorder" title="Audio Recorder"/>
