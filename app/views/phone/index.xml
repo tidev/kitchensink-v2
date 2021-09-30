@@ -9,7 +9,7 @@
                     <ListItem itemId="bundleSettings" platform="ios" title="Bundle Settings"/>
                     <ListItem itemId="clipboard" title="Clipboard"/>
                     <ListItem itemId="database" title="Database"/>
-                    <ListItem itemId="documentViewer" platform="ios" title="Document Viewer"/>
+                    <ListItem itemId="documentViewer" title="Document Viewer"/>
                     <ListItem itemId="geolocation" title="Geolocation"/>
                     <ListItem itemId="gesture" title="Gesture"/>
                     <ListItem itemId="network" title="Network"/>

@@ -1,0 +1,8 @@
+
+android {
+	aaptOptions {
+		// Disable compression of the below file extensions bundled within the APK.
+		// Note: The "documentViewer.js" requires this to open bundled files via Ti.Platform.openURL().
+		noCompress 'pdf', 'rtf', 'txt'
+	}
+}

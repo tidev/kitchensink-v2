@@ -105,6 +105,21 @@
     <manifest android:versionCode="800" android:versionName="8.0.0">
       <uses-permission android:name="android.permission.RECORD_AUDIO"/>
       <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+      <!-- Ti.Platform.canOpenURL() method will return false unless mime-type is specified in below queries section. -->
+      <queries>
+        <intent>
+          <action android:name="android.intent.action.VIEW"/>
+          <data android:mimeType="application/pdf"/>
+        </intent>
+        <intent>
+          <action android:name="android.intent.action.VIEW"/>
+          <data android:mimeType="image/*"/>
+        </intent>
+        <intent>
+          <action android:name="android.intent.action.VIEW"/>
+          <data android:mimeType="text/*"/>
+        </intent>
+      </queries>
       <application android:theme="@style/kitchensink">
         <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="[YOUR API KEY HERE]"/>
         <!--http://docs.appcelerator.com/platform/latest/#!/guide/Google_Maps_v2_for_Android-->
