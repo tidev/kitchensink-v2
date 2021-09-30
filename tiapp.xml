@@ -145,7 +145,6 @@
     <module platform="iphone">ti.identity</module>
     <module platform="android">facebook</module>
     <module platform="iphone">facebook</module>
-    <module platform="commonjs">ti.cloud</module>
   </modules>
   <sdk-version>10.1.0.GA</sdk-version>
 </ti:app>
