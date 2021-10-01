@@ -9,7 +9,8 @@
                 <ListItem title="Date Picker (Compact)" itemId="datePickerCompact"/>
                 <ListItem title="Date Picker (Inline)" itemId="datePickerInline"/>
                 <ListItem title="Date Picker (Wheels)" itemId="datePickerWheels"/>
-                <ListItem title="Plain Picker" itemId="plainPicker"/>
+                <ListItem title="Plain Picker (Drop-Down)" itemId="plainPickerDropDown" platform="android"/>
+                <ListItem title="Plain Picker (Spinner)" itemId="plainPickerSpinner"/>
                 <ListItem title="Time Picker (Compact)" itemId="timePickerCompact"/>
                 <ListItem title="Time Picker (Inline)" itemId="timePickerInline"/>
                 <ListItem title="Time Picker (Wheels)" itemId="timePickerWheels"/>
