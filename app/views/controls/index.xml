@@ -4,6 +4,7 @@
             <ListView id="listView" onItemclick="openComponent">
                 <ListSection>
                     <ListItem title="Views" itemId="views/index" />
+                    <ListItem title="Pickers" itemId="pickers/index" />
                     <ListItem title="Label" itemId="label" />
                     <ListItem title="Button" itemId="button" />
                     <ListItem title="Button Bar" itemId="buttonbar" platform="android,ios" />
@@ -17,7 +18,6 @@
                     <ListItem title="Drawer Layout" itemId="drawer" platform="android"/>
                     <ListItem title="Progress Bar" itemId="progressbar" />
                     <ListItem title="Activity Indicator" itemId="activityindicator" />
-                    <ListItem title="Picker" itemId="picker" />
                     <ListItem title="Alert Dialog" itemId="alertdialog" />
                     <ListItem title="Option Dialog" itemId="optiondialog" />
                     <ListItem title="Text Field" itemId="textfield" />

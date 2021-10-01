@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Controls">
+    <Window title="Views">
         <ListView id="listView" onItemclick="openComponent">
             <ListSection>
                 <ListItem title="View" itemId="view" />

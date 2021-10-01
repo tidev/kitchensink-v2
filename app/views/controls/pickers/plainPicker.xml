@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Picker">
+    <Window title="Plain Picker">
         <Label id="state" class="stateLabel" />
         <Picker class="picker" selectionIndicator="true" useSpinner="true" onChange="pickerValueChanged">
             <PickerColumn>
@@ -8,7 +8,7 @@
                 <PickerRow title="Mangos"/>
                 <PickerRow title="Grapes"/>
             </PickerColumn>
-           
+
             <!-- Picker shorthand notation -->
             <Column id="column2">
                 <Row title="Red"/>
