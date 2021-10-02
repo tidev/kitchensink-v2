@@ -3,6 +3,7 @@
         <Window title="Controls">
             <ListView id="listView" onItemclick="openComponent">
                 <ListSection>
+                    <ListItem title="Dialogs" itemId="dialogs/index" />
                     <ListItem title="Views" itemId="views/index" />
                     <ListItem title="Pickers" itemId="pickers/index" />
                     <ListItem title="Label" itemId="label" />
@@ -18,8 +19,6 @@
                     <ListItem title="Drawer Layout" itemId="drawer" platform="android"/>
                     <ListItem title="Progress Bar" itemId="progressbar" />
                     <ListItem title="Activity Indicator" itemId="activityindicator" />
-                    <ListItem title="Alert Dialog" itemId="alertdialog" />
-                    <ListItem title="Option Dialog" itemId="optiondialog" />
                     <ListItem title="Text Field" itemId="textfield" />
                     <ListItem title="Text Area" itemId="textarea" />
                 </ListSection>

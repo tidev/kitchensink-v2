@@ -1,0 +1,13 @@
+<Alloy>
+    <Window title="Option Dialog">
+        <Label id="resultLabel" top="30"/>
+        <Button title="Show Option Dialog" onClick="onShowOptionDialog" />
+        <OptionDialog id="dialog" title="Available Options" onClick="onOptionDialogClicked">
+            <Options>
+                <Option>Confirm</Option>
+                <Option>Delete</Option>
+                <Option>Cancel</Option>
+            </Options>
+        </OptionDialog>
+    </Window>
+</Alloy>
