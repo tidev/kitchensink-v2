@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<style name="kitchensink" parent="@style/Theme.Titanium.Light">
+	<style name="Theme.KitchenSink" parent="@style/Theme.Titanium.Light">
 		<item name="colorPrimary">#c91326</item>
 		<item name="colorPrimaryDark">#900000</item>
 		<item name="colorAccent">#c91326</item>
 		<item name="android:textColorPrimary">#000000</item>
 		<item name="android:statusBarColor">#c91326</item>
 		<item name="android:navigationBarColor">#c91326</item>
+	</style>
+	<style name="Theme.KitchenSink.ToolbarTitleBar" parent="@style/Theme.AppDerived.NoTitleBar">
+		<item name="toolbarStyle">@style/Widget.KitchenSink.ToolbarTitleBar</item>
+	</style>
+	<style name="Widget.KitchenSink.ToolbarTitleBar" parent="Widget.MaterialComponents.Toolbar.PrimarySurface">
+		<item name="titleTextAppearance">@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse</item>
+		<item name="materialThemeOverlay">@style/ThemeOverlay.KitchenSink.ToolbarTitleBar.Popup</item>
+	</style>
+	<style name="ThemeOverlay.KitchenSink.ToolbarTitleBar.Popup" parent="">
+		<item name="colorControlNormal">?attr/colorOnPrimarySurface</item>
 	</style>
 </resources>

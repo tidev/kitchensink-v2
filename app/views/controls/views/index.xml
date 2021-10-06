@@ -6,6 +6,7 @@
                 <ListItem title="Scroll View" itemId="scrollview" />
                 <ListItem title="Scrollable View" itemId="scrollableview" />
                 <ListItem title="List View" itemId="listview" />
+                <ListItem title="List View (Multi-Select)" itemId="listviewMultiSelect" />
                 <ListItem title="Blur View" itemId="blurview" platform="ios"/>
                 <ListItem title="Card View" itemId="cardview" platform="android"/>
                 <ListItem title="Image View" itemId="imageview" />

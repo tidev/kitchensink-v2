@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<style name="kitchensink" parent="@style/Theme.Titanium.Dark">
+	<style name="Theme.KitchenSink" parent="@style/Theme.Titanium.Dark">
 		<item name="colorPrimary">#d5544b</item>
 		<item name="colorAccent">#d5544b</item>
+	</style>
+	<style name="Widget.KitchenSink.ToolbarTitleBar" parent="Widget.MaterialComponents.Toolbar.PrimarySurface">
+		<item name="titleTextAppearance">@style/TextAppearance.AppCompat.Widget.ActionBar.Title</item>
 	</style>
 </resources>
