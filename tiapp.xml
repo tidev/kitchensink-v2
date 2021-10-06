@@ -23,6 +23,20 @@
         <!-- Only support the "light" theme on iOS 13 and higher. -->
         <key>UIUserInterfaceStyle</key>
         <string>Light</string>
+        <!-- Define all orientations supported by this app. -->
+        <key>UISupportedInterfaceOrientations~iphone</key>
+        <array>
+          <string>UIInterfaceOrientationPortrait</string>
+          <string>UIInterfaceOrientationLandscapeLeft</string>
+          <string>UIInterfaceOrientationLandscapeRight</string>
+        </array>
+        <key>UISupportedInterfaceOrientations~ipad</key>
+        <array>
+          <string>UIInterfaceOrientationPortrait</string>
+          <string>UIInterfaceOrientationPortraitUpsideDown</string>
+          <string>UIInterfaceOrientationLandscapeLeft</string>
+          <string>UIInterfaceOrientationLandscapeRight</string>
+        </array>
         <!-- URL Schemes-->
         <key>LSApplicationQueriesSchemes</key>
         <array>
