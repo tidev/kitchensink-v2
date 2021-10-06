@@ -7,7 +7,14 @@
 function createListSection(sectionTitle, rowCount) {
 	const items = [];
 	for (let index = 1; index <= rowCount; index++) {
-		items.push({ properties: { title: `Row ${index}`, canEdit: true } });
+		items.push({
+			properties: {
+				title: `Row ${index}`,
+				// This property normally enables swipe-to-delete,
+				// but on iOS this shows a checkbox if ListView property "showSelectionCheck" is true.
+				canEdit: OS_IOS ? true : false,
+			}
+		});
 	}
 	const section = Ti.UI.createListSection({
 		headerTitle: sectionTitle,
