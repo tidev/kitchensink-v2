@@ -8,17 +8,29 @@ function onClickRight() {
 }
 
 function onClickClose() {
-	$.drawer.close();
+	$.win.close();
 }
 
-$.drawer.addEventListener('open', () => {
-	const activity = $.drawer.activity;
-	const actionbar = activity.actionBar;
-
-	if (actionbar) {
-		actionbar.displayHomeAsUp = true;
-		actionbar.onHomeIconItemSelected = () => {
-			$.drawerLayout.toggleLeft();
+function onWindowOpen() {
+	const actionBar = $.win.activity.actionBar;
+	if (actionBar) {
+		actionBar.displayHomeAsUp = true;
+		actionBar.onHomeIconItemSelected = () => {
+			if ($.drawerLayout.isRightOpen) {
+				$.drawerLayout.toggleRight();
+			} else {
+				$.drawerLayout.toggleLeft();
+			}
 		};
 	}
-});
+}
+
+function onAndroidBack() {
+	if ($.drawerLayout.isLeftOpen) {
+		$.drawerLayout.closeLeft();
+	} else if ($.drawerLayout.isRightOpen) {
+		$.drawerLayout.closeRight();
+	} else {
+		$.win.close();
+	}
+}

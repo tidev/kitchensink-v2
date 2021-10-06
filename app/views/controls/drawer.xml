@@ -1,5 +1,5 @@
 <Alloy>
-	<Window title="Drawer">
+	<Window id="win" title="Drawer" onAndroidback="onAndroidBack" onOpen="onWindowOpen">
 		<DrawerLayout platform="android" id="drawerLayout">
 			<LeftView>
 				<View class="views">
