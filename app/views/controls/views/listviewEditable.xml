@@ -1,0 +1,14 @@
+<Alloy>
+    <Window id="win" title="List View (Editable)">
+        <RightNavButton platform="ios">
+            <Button systemButton="Ti.UI.iOS.SystemButton.ADD" onClick="onAddItem"/>
+        </RightNavButton>
+        <ListView
+            id="listView"
+            allowsSelectionDuringEditing="false"
+            allowsMultipleSelectionDuringEditing="false"
+            editing="true"
+            onDelete="onDeletedItem"
+            onMove="onMovedItem"/>
+    </Window>
+</Alloy>
