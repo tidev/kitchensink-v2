@@ -13,6 +13,7 @@
                 <ListItem title="Card View" itemId="cardview" platform="android"/>
                 <ListItem title="Image View" itemId="imageview" />
                 <ListItem title="Image View (Scaled)" itemId="imageviewScaled" />
+                <ListItem title="Image View (Zoom)" itemId="imageviewZoom" />
                 <ListItem title="Masked Image" itemId="maskedimage" />
                 <ListItem title="Masked Image (Tint)" itemId="maskedimageTint" />
                 <ListItem title="Web View" itemId="webview" />
