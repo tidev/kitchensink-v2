@@ -17,3 +17,9 @@ function onImageTextOptionBarClicked(e) {
 	alert(message);
 	logger.log(message);
 }
+
+function onVerticalOptionBarClicked(e) {
+	const message = `Clicked on vertical button: ${e.source.labels[e.index].title}`;
+	alert(message);
+	logger.log(message);
+}

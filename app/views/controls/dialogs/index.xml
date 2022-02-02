@@ -1,0 +1,13 @@
+<Alloy>
+    <Window title="Dialogs">
+        <ListView id="listView" onItemclick="openComponent">
+            <ListSection>
+                <ListItem title="Alert Dialog" itemId="alertDialog"/>
+                <ListItem title="E-Mail Dialog" itemId="emailDialog"/>
+                <ListItem title="Progress Dialog (Determinant)" itemId="progressDialogDeterminant" platform="android"/>
+                <ListItem title="Progress Dialog (Indeterminant)" itemId="progressDialogIndeterminant" platform="android"/>
+                <ListItem title="Option Dialog" itemId="optionDialog"/>
+            </ListSection>
+        </ListView>
+    </Window>
+</Alloy>

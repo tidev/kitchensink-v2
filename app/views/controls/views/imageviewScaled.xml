@@ -1,0 +1,13 @@
+<Alloy>
+    <Window title="Image View (Scaled)" layout="vertical">
+        <OptionBar class="scaleOptionBar" onClick="onScaleOptionBarClicked" top="10" bottom="10" height="Ti.UI.SIZE">
+            <Labels>
+                <Label>Stretch</Label>
+                <Label>Crop</Label>
+                <Label>Letterbox</Label>
+            </Labels>
+        </OptionBar>
+        <View id="separatorBar" backgroundColor="lightgray" width="Ti.UI.FILL" height="1"/>
+        <ImageView id="myImage" scalingMode="Ti.Media.IMAGE_SCALING_FILL" width="Ti.UI.FILL" height="Ti.UI.FILL"/>
+    </Window>
+</Alloy>

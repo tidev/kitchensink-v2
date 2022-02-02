@@ -1,0 +1,11 @@
+<Alloy>
+    <Window title="Date/TIME Picker (Inline)">
+        <Label id="valueLabel" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER" top="30"/>
+        <Picker
+            id="datePicker"
+            type="Ti.UI.PICKER_TYPE_DATE_AND_TIME"
+            datePickerStyle="Ti.UI.DATE_PICKER_STYLE_INLINE"
+            onChange="onPickerValueChanged"/>
+        <Label id="footnoteLabel" platform="ios" bottom="20">The "inline" style is only supported on iOS 14.0+.</Label>
+    </Window>
+</Alloy>

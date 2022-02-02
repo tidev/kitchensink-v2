@@ -23,6 +23,20 @@
         <!-- Only support the "light" theme on iOS 13 and higher. -->
         <key>UIUserInterfaceStyle</key>
         <string>Light</string>
+        <!-- Define all orientations supported by this app. -->
+        <key>UISupportedInterfaceOrientations~iphone</key>
+        <array>
+          <string>UIInterfaceOrientationPortrait</string>
+          <string>UIInterfaceOrientationLandscapeLeft</string>
+          <string>UIInterfaceOrientationLandscapeRight</string>
+        </array>
+        <key>UISupportedInterfaceOrientations~ipad</key>
+        <array>
+          <string>UIInterfaceOrientationPortrait</string>
+          <string>UIInterfaceOrientationPortraitUpsideDown</string>
+          <string>UIInterfaceOrientationLandscapeLeft</string>
+          <string>UIInterfaceOrientationLandscapeRight</string>
+        </array>
         <!-- URL Schemes-->
         <key>LSApplicationQueriesSchemes</key>
         <array>
@@ -105,7 +119,22 @@
     <manifest android:versionCode="800" android:versionName="8.0.0">
       <uses-permission android:name="android.permission.RECORD_AUDIO"/>
       <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
-      <application android:theme="@style/kitchensink">
+      <!-- Ti.Platform.canOpenURL() method will return false unless mime-type is specified in below queries section. -->
+      <queries>
+        <intent>
+          <action android:name="android.intent.action.VIEW"/>
+          <data android:mimeType="application/pdf"/>
+        </intent>
+        <intent>
+          <action android:name="android.intent.action.VIEW"/>
+          <data android:mimeType="image/*"/>
+        </intent>
+        <intent>
+          <action android:name="android.intent.action.VIEW"/>
+          <data android:mimeType="text/*"/>
+        </intent>
+      </queries>
+      <application android:theme="@style/Theme.KitchenSink">
         <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="[YOUR API KEY HERE]"/>
         <!--http://docs.appcelerator.com/platform/latest/#!/guide/Google_Maps_v2_for_Android-->
         <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:label="KitchenSink" android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
@@ -130,7 +159,6 @@
     <module platform="iphone">ti.identity</module>
     <module platform="android">facebook</module>
     <module platform="iphone">facebook</module>
-    <module platform="commonjs">ti.cloud</module>
   </modules>
-  <sdk-version>10.0.0.GA</sdk-version>
+  <sdk-version>10.1.0.GA</sdk-version>
 </ti:app>

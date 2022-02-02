@@ -1,0 +1,11 @@
+<Alloy>
+    <Window id="win" title="List View (Marker)">
+        <View layout="vertical" width="Ti.UI.FILL" height="Ti.UI.FILL">
+            <Label top="5" bottom="5" height="Ti.UI.SIZE">Scroll to the bottom.</Label>
+            <ListView id="listView" allowsSelection="false" onMarker="onMarker"/>
+        </View>
+        <View id="activityOverlay" backgroundColor="black" opacity="0.5" visible="false" width="Ti.UI.FILL" height="Ti.UI.FILL">
+            <ActivityIndicator id="activityIndicator" style="Ti.UI.ActivityIndicatorStyle.BIG"/>
+        </View>
+    </Window>
+</Alloy>

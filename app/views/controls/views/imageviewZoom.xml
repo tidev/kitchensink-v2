@@ -1,0 +1,19 @@
+<Alloy>
+    <Window id="win" title="Image View (Zoom)">
+        <!-- On iOS, pinch-zooming an image is implemented via a ScrollView container. -->
+        <ScrollView
+            id="scrollView"
+            maxZoomScale="5"
+            disableBounce="true"
+            onSingletap="onSingleTap"
+            onDoubletap="onDoubleTap"
+            onScale="onScale"
+            onScroll="onScroll"
+            platform="ios">
+            <ImageView id="imageView"/>
+        </ScrollView>
+
+        <!-- On Android, the ImageView itself supports a zoom feature. -->
+        <ImageView id="imageView" enableZoomControls="true" platform="android"/>
+    </Window>
+</Alloy>

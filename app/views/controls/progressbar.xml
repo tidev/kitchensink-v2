@@ -1,0 +1,5 @@
+<Alloy>
+    <Window title="Progress Bar" onOpen="onOpen" onClose="onClose">
+        <ProgressBar id="progressBar" animated="true" min="0" max="100" value="0" width="80%"/>
+    </Window>
+</Alloy>

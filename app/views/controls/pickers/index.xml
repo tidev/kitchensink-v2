@@ -1,0 +1,20 @@
+<Alloy>
+    <Window title="Pickers">
+        <ListView id="listView" onItemclick="openComponent">
+            <ListSection>
+                <ListItem title="Count Down Picker" itemId="countDownPicker" platform="ios"/>
+                <ListItem title="Date/Time Picker (Compact)" itemId="dateTimePickerCompact" platform="ios"/>
+                <ListItem title="Date/Time Picker (Inline)" itemId="dateTimePickerInline" platform="ios"/>
+                <ListItem title="Date/Time Picker (Wheels)" itemId="dateTimePickerWheels" platform="ios"/>
+                <ListItem title="Date Picker (Compact)" itemId="datePickerCompact"/>
+                <ListItem title="Date Picker (Inline)" itemId="datePickerInline"/>
+                <ListItem title="Date Picker (Wheels)" itemId="datePickerWheels"/>
+                <ListItem title="Plain Picker (Drop-Down)" itemId="plainPickerDropDown" platform="android"/>
+                <ListItem title="Plain Picker (Spinner)" itemId="plainPickerSpinner"/>
+                <ListItem title="Time Picker (Compact)" itemId="timePickerCompact"/>
+                <ListItem title="Time Picker (Inline)" itemId="timePickerInline"/>
+                <ListItem title="Time Picker (Wheels)" itemId="timePickerWheels"/>
+            </ListSection>
+        </ListView>
+    </Window>
+</Alloy>

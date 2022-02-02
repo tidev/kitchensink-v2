@@ -1,0 +1,13 @@
+
+'.cardView': {
+	top: 20,
+	left: 20,
+	right: 20,
+	height: Ti.UI.SIZE,
+	padding: 24,
+}
+
+'.cardLabel': {
+	touchEnabled: false,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}

@@ -1,14 +1,14 @@
 <Alloy>
-    <Window title="Picker">
+    <Window title="Plain Picker (Spinner)">
         <Label id="state" class="stateLabel" />
-        <Picker class="picker" selectionIndicator="true" useSpinner="true" onChange="pickerValueChanged">
+        <Picker class="picker" selectionIndicator="true" useSpinner="true" onChange="onPickerValueChanged">
             <PickerColumn>
                 <PickerRow title="Bananas"/>
                 <PickerRow title="Strawberries"/>
                 <PickerRow title="Mangos"/>
                 <PickerRow title="Grapes"/>
             </PickerColumn>
-           
+
             <!-- Picker shorthand notation -->
             <Column id="column2">
                 <Row title="Red"/>

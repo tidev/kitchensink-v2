@@ -1,0 +1,8 @@
+
+'#shakeLabel': {
+	color: '#c91326',
+	font: {
+		fontSize: 24,
+		fontWeight: 'bold'
+	}
+}

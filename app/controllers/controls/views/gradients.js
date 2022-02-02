@@ -89,19 +89,8 @@ function generateRandomColor() {
 }
 
 function handleGradientType(e) {
-	let isLinear;
-	if (OS_IOS) {
-		isLinear = e.index === Gradient.LINEAR;
-		selectedGradient = e.index;
-	} else if ($.gradientTypeSwitch.value) {
-		isLinear = true;
-		selectedGradient = Gradient.LINEAR;
-		$.gradientTypeLabel.text = 'Linear';
-	} else {
-		isLinear = false;
-		selectedGradient = Gradient.RADIAL;
-		$.gradientTypeLabel.text = 'Radial';
-	}
+	let isLinear = (e.index === Gradient.LINEAR);
+	selectedGradient = e.index;
 	$.startFillSwitch.enabled = !isLinear;
 	$.endFillSwitch.enabled = !isLinear;
 	$.startRadiusLabel.text = isLinear ? 'Start Point:' : 'Start Radius:';

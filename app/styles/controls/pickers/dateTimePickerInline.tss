@@ -1,0 +1,5 @@
+'#footnoteLabel[platform=ios]': {
+	font: {
+		textStyle: Ti.UI.TEXT_STYLE_FOOTNOTE
+	}
+}

@@ -1,15 +1,15 @@
 <Alloy>
-    <Window title="Scrollable View">
-        <Toolbar class="toolbar" platform="ios">
+    <Window title="Scrollable View" layout="vertical">
+        <Toolbar class="toolbar" width="Ti.UI.FILL">
             <Items>
-                <Button id="scrollTo" title="Scroll to View 2" onClick="scrollToView"  />
-                <FlexSpace/>
-                <Button id="add" title="Add new" onClick="addNewView" />
-                <FlexSpace/>
-                <Button id="remove" title="Remove last" onClick="removeLastView" />
+                <Button id="add" style="Ti.UI.BUTTON_STYLE_OPTION_POSITIVE" title="Add" onClick="addNewView"/>
+                <FlexSpace platform="ios"/>
+                <Button id="remove" style="Ti.UI.BUTTON_STYLE_OPTION_NEUTRAL" title="Remove Last" onClick="removeLastView"/>
+                <FlexSpace platform="ios"/>
+                <Button id="scrollTo" style="Ti.UI.BUTTON_STYLE_OPTION_NEUTRAL" title="Scroll to View 2" onClick="scrollToView"/>
             </Items>
         </Toolbar>
-        <ScrollableView id="scrollable" onScrollend="scrollableViewDidScroll">
+        <ScrollableView id="scrollable" width="Ti.UI.FILL" height="Ti.UI.FILL" onScrollend="scrollableViewDidScroll">
             <View id="view1" backgroundColor="#836">
                 <Label>View 1</Label>
             </View>

@@ -1,13 +1,16 @@
-import { logger } from 'logger';
 
-/**
- * The scoped constructor of the controller.
- **/
-(function constructor() {
+function onSwitch1Changed(e) {
+	$.switchValueLabel1.text = `value: ${e.value}`;
+}
 
-}());
+function onSwitch2Changed(e) {
+	$.switchValueLabel2.text = `value: ${e.value}`;
+}
 
-function switchChanged({ value }) {
-	$.state.text = `The switch value changed to ${value}`;
-	logger.log(`Ti.UI.Switch value changed to ${value}`);
+function onSwitch3Changed(e) {
+	$.switchValueLabel3.text = `value: ${e.value}`;
+}
+
+function onSwitch4Changed(e) {
+	$.switchValueLabel4.text = `value: ${e.value}`;
 }

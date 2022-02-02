@@ -1,0 +1,9 @@
+<Alloy>
+    <Window title="Count Down Picker">
+        <Label id="valueLabel" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER" top="30"/>
+        <Picker
+            id="picker"
+            type="Ti.UI.PICKER_TYPE_COUNT_DOWN_TIMER"
+            onChange="onPickerValueChanged"/>
+    </Window>
+</Alloy>

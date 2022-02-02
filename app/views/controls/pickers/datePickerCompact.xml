@@ -1,0 +1,13 @@
+<Alloy>
+    <Window title="Date Picker (Compact)">
+        <Label id="valueLabel" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER" top="30"/>
+        <Picker
+            id="datePicker"
+            type="Ti.UI.PICKER_TYPE_DATE"
+            datePickerStyle="Ti.UI.DATE_PICKER_STYLE_COMPACT"
+            borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED"
+            hintText="Date"
+            onChange="onPickerValueChanged"/>
+        <Label id="footnoteLabel" platform="ios" bottom="20">The "compact" style is only supported on iOS 13.4+.</Label>
+    </Window>
+</Alloy>

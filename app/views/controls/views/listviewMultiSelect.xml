@@ -1,0 +1,25 @@
+<Alloy>
+    <Window id="win" title="List View (Multi-Select)" layout="vertical" tabBarHidden="true" theme="Theme.KitchenSink.ToolbarTitleBar" onOpen="onWindowOpen" onPostlayout="onWindowPostLayout" onAndroidback="onAndroidBack">
+        <Toolbar id="mainToolbar" visible="true" hiddenBehavior="Ti.UI.HIDDEN_BEHAVIOR_GONE" platform="android"/>
+        <Toolbar id="editToolbar" visible="false" hiddenBehavior="Ti.UI.HIDDEN_BEHAVIOR_GONE" platform="android"/>
+        <ListView
+            id="listView"
+            showSelectionCheck="true"
+            allowsSelectionDuringEditing="true"
+            allowsMultipleSelectionDuringEditing="true"
+            onItemclick="onItemClicked"
+            onLongpress="onLongPressed"
+            onItemsselected="onItemsSelected"/>
+        <Toolbar id="mainToolbar" visible="true" height="Ti.UI.SIZE" platform="ios"/>
+        <Toolbar id="editToolbar" visible="false" height="0" platform="ios">
+            <Items>
+                <Button id="shareButton" systemButton="Ti.UI.iOS.SystemButton.ACTION" onClick="shareSelectedItems"/>
+                <Button systemButton="Ti.UI.iOS.SystemButton.FLEXIBLE_SPACE"/>
+                <Label id="itemsSelectedLabel" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER" width="200"/>
+                <Button systemButton="Ti.UI.iOS.SystemButton.FLEXIBLE_SPACE"/>
+                <Button id="deleteButton" systemButton="Ti.UI.iOS.SystemButton.TRASH" onClick="deleteSelectedItems"/>
+            </Items>
+        </Toolbar>
+        <View id="bottomPaddingView" backgroundColor="#f7f7f7" width="Ti.UI.FILL" bottom="0" platform="ios"/>
+    </Window>
+</Alloy>

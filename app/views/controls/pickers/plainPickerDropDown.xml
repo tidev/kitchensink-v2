@@ -1,0 +1,20 @@
+<Alloy>
+    <Window title="Plain Picker (Drop-Down)">
+        <Label id="valueLabel" top="30"/>
+        <Picker
+            id="picker"
+            useSpinner="false"
+            borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED"
+            hintText="Select Item"
+            width="80%"
+            onChange="onPickerValueChanged">
+            <PickerColumn>
+                <PickerRow title="Item 1"/>
+                <PickerRow title="Item 2"/>
+                <PickerRow title="Item 3"/>
+                <PickerRow title="Item 4"/>
+                <PickerRow title="Item 5"/>
+            </PickerColumn>
+        </Picker>
+    </Window>
+</Alloy>
