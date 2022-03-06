@@ -20,6 +20,7 @@ function handleMapClick(e) {
 }
 
 /* Right now Alloy doesn't add circles/polylines/polygons to map properly when they're created in Alloy
+ * See https://jira-archive.titaniumsdk.com/ALOY/ALOY-1608
  * For now, either create them in the controller or add them manually
  */
 $.mapview.addCircle($.mapCircle);
