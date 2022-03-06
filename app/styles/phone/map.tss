@@ -19,7 +19,7 @@
     latitude: 32.9458542,
     longitude: -87.1379729,
     title: 'TiDev Headquarters',
-    subtitle: 'San Jose, CA',
+    subtitle: 'Centreville, AL',
     pincolor: Alloy.Globals.Map.ANNOTATION_RED
 }
 
