@@ -87,7 +87,7 @@ function logout() {
 // Logs out the current user
 
 function login() {
-	fb.permissions = [ 'user_photos', 'email', 'user_friends', 'public_profile', 'user_birthday', 'user_likes' ];
+	fb.permissions = ['user_photos', 'email', 'user_friends', 'public_profile', 'user_birthday', 'user_likes'];
 	fb.initialize();
 
 	if (!fb.loggedIn) {
@@ -100,6 +100,6 @@ function login() {
 function share() {
 
 	fb.presentShareDialog({
-		link: 'https://appcelerator.com/'
+		link: 'https://tidev.io/'
 	});
 }
