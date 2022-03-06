@@ -18,28 +18,19 @@ It also includes full support for iOS, Android & Windows.
 
 ### Running the KitchenSink App
 
-#### Via Appcelerator Studio
-
-1.  Import it via _Dashboard_ if available.
-2.  Or import it via _File > Import... > Git > Git Repository as New Project_ with _URI_:
-
-        https://github.com/tidev/kitchensink-v2
-
-3.  Select a Simulator or Device to build to via _Run > Run As_.
-
 #### Via CLI
 
 1.  Clone the repository:
 
         git clone https://github.com/tidev/kitchensink-v2
 
-2.  To run it with `appc run` first import it to the platform:
+2.  To run it with `ti build` first import it to the platform:
 
-        appc new --import --no-services
+        ti create --import --no-services
 
 3.  Build to Simulator or Device:
 
-        [appc run | ti build] -p ios [-T device]
+        ti build -p ios [-T device]
 
 ### Contribution
 
