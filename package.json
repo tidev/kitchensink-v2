@@ -9,13 +9,13 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/appcelerator/kitchensink-v2.git"
+		"url": "git://github.com/tidev/kitchensink-v2.git"
 	},
 	"license": "Apache-2.0",
 	"bugs": {
-		"url": "https://github.com/appcelerator/kitchensink-v2/issues"
+		"url": "https://github.com/tidev/kitchensink-v2/issues"
 	},
-	"homepage": "https://github.com/appcelerator/kitchensink-v2#readme",
+	"homepage": "https://github.com/tidev/kitchensink-v2#readme",
 	"devDependencies": {
 		"eslint": "^5.15.0",
 		"eslint-config-axway": "^4.2.2",
