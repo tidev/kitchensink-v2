@@ -17,14 +17,14 @@ function validateDocsInfo() {
 		const alertNotice = Ti.UI.createAlertDialog({
 			title: 'Notice',
 			message: 'While this KitchenSink provides an extensive demonstration of the Titanium API, it does not include examples for every available component. Please refer to our documentation for more details.',
-			buttonNames: [ 'Alright!', 'Visit docs', 'Don\'t show again' ],
+			buttonNames: ['Alright!', 'Visit docs', 'Don\'t show again'],
 			cancel: 0,
 			destructive: 2
 		});
 
 		alertNotice.addEventListener('click', event => {
 			if (event.index === 1) {
-				Ti.Platform.openURL('https://docs.appcelerator.com/platform/latest/');
+				Ti.Platform.openURL('https://titaniumsdk.com');
 			} else if (event.index === 2) {
 				Ti.App.Properties.setBool('noticeShown', true);
 			}

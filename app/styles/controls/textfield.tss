@@ -43,7 +43,7 @@
 
 /* 
  * Different textfields based on different keyboard types. There are more
- * that can be found in the docs http://docs.appcelerator.com/platform/latest/#!/api/Titanium.UI.TextField
+ * that can be found in the docs https://titaniumsdk.com/api/titanium/ui/textfield.html
  */
 '#regularTextfield': {
     keyboardType: Ti.UI.KEYBOARD_TYPE_DEFAULT, // this is also default value so doesn't have to be set

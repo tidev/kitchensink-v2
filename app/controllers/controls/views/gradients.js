@@ -13,9 +13,9 @@ let selectedGradient;
 (function constructor() {
 	normalizedCenterX = 0.5;
 	normalizedCenterY = 0.5;
-	colors = [ 'red', 'blue' ];
+	colors = ['red', 'blue'];
 	Gradient = { RADIAL: 0, LINEAR: 1 };
-	gradientTypes = [ 'radial', 'linear' ];
+	gradientTypes = ['radial', 'linear'];
 	selectedGradient = Gradient.RADIAL;
 }());
 
@@ -36,12 +36,12 @@ function updateGradient() {
 
 	// Linear gradients support colors with offsets and start-point / end-point
 	// Radial gradients support raw colors, start-radius / end-radius and backfill-start / backfill-end
-	// Read more: http://docs.appcelerator.com/platform/latest/#!/api/Titanium.UI.View-property-backgroundGradient
+	// Read more: https://titaniumsdk.com/api/titanium/ui/view.html#backgroundgradient
 	if (selectedGradient === Gradient.LINEAR) {
 		const startPoint = { x: precisionRound($.startRadiusSlider.value, -1) + '%', y: '50%' };
 		const endPoint = { x: precisionRound($.endRadiusSlider.value, -1) + '%', y: '50%' };
 
-		gradient.colors = [ { color: colors[0], offset: 0.0 }, { color: colors[1], offset: 1.0 } ];
+		gradient.colors = [{ color: colors[0], offset: 0.0 }, { color: colors[1], offset: 1.0 }];
 		gradient.startPoint = startPoint;
 		gradient.endPoint = endPoint;
 
@@ -71,7 +71,7 @@ function handleTouchMove(e) {
 }
 
 function pickRandomColor() {
-	colors = [ generateRandomColor(), generateRandomColor() ];
+	colors = [generateRandomColor(), generateRandomColor()];
 	updateGradient();
 }
 

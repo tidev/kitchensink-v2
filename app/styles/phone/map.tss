@@ -16,9 +16,9 @@
 }
 
 '#appcHQ': {
-    latitude: 37.368122,
-    longitude: -121.913653,
-    title: 'Appcelerator Headquarters',
+    latitude: 32.9458542,
+    longitude: -87.1379729,
+    title: 'TiDev Headquarters',
     subtitle: 'San Jose, CA',
     pincolor: Alloy.Globals.Map.ANNOTATION_RED
 }
@@ -29,7 +29,7 @@
         longitude: -122.213653,
     },
     radius: 5000,
-    fillColor: '#ff0000',
+    fillColor: '#53B7E9',
     strokeColor: '#000000',
     strokeWidth: 2,
     opacity: 0.5
