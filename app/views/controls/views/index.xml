@@ -2,22 +2,24 @@
     <Window title="Views">
         <ListView id="listView" onItemclick="openComponent">
             <ListSection>
-                <ListItem title="View" itemId="view" />
-                <ListItem title="Scroll View" itemId="scrollview" />
-                <ListItem title="Scrollable View" itemId="scrollableview" />
+                <ListItem title="Blur View" itemId="blurview" platform="ios"/>
+                <ListItem title="Card View" itemId="cardview" platform="android"/>
+                <ListItem title="Gradients" itemId="gradients" />
+                <ListItem title="Image View" itemId="imageview" />
+                <ListItem title="Image View (Scaled)" itemId="imageviewScaled" />
+                <ListItem title="Image View (Zoom)" itemId="imageviewZoom" />
                 <ListItem title="List View" itemId="listview" />
                 <ListItem title="List View (Editable)" itemId="listviewEditable" />
                 <ListItem title="List View (Marker)" itemId="listviewMarker" />
                 <ListItem title="List View (Multi-Select)" itemId="listviewMultiSelect" />
-                <ListItem title="Blur View" itemId="blurview" platform="ios"/>
-                <ListItem title="Card View" itemId="cardview" platform="android"/>
-                <ListItem title="Image View" itemId="imageview" />
-                <ListItem title="Image View (Scaled)" itemId="imageviewScaled" />
-                <ListItem title="Image View (Zoom)" itemId="imageviewZoom" />
                 <ListItem title="Masked Image" itemId="maskedimage" />
                 <ListItem title="Masked Image (Tint)" itemId="maskedimageTint" />
+                <ListItem title="Scroll View" itemId="scrollview" />
+                <ListItem title="Scrollable View" itemId="scrollableview" />
+                <ListItem title="Table View" itemId="tableview" />
+                <ListItem title="View" itemId="view" />
+                <ListItem title="View (events)" itemId="view_events" />
                 <ListItem title="Web View" itemId="webview" />
-                <ListItem title="Gradients" itemId="gradients" />
             </ListSection>
         </ListView>
     </Window>

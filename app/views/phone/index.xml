@@ -3,23 +3,23 @@
         <Window title="Phone">
             <ListView id="listView" onItemclick="openComponent">
                 <ListSection>
-                    <ListItem itemId="identity" title="Identity (Biometric Authentication)"/>
-                    <ListItem itemId="shortcutItems" platform="ios" title="3D/Haptic Touch: Shortcut Items"/>
-                    <ListItem itemId="peekAndPop" platform="ios" title="3D/Haptic Touch: Peek and Pop"/>
+                    <ListItem itemId="accelerometer" title="Accelerometer"/>
+                    <ListItem itemId="audioPlayer" title="Audio Player"/>
+                    <ListItem itemId="audioRecorder" title="Audio Recorder"/>
                     <ListItem itemId="bundleSettings" platform="ios" title="Bundle Settings"/>
+                    <ListItem itemId="cameraGallery" title="Camera + Gallery"/>
                     <ListItem itemId="clipboard" title="Clipboard"/>
                     <ListItem itemId="database" title="Database"/>
                     <ListItem itemId="documentViewer" title="Document Viewer"/>
                     <ListItem itemId="geolocation" title="Geolocation"/>
                     <ListItem itemId="gesture" title="Gesture"/>
-                    <ListItem itemId="network" title="Network"/>
-                    <ListItem itemId="sound" title="Sound"/>
-                    <ListItem itemId="audioRecorder" title="Audio Recorder"/>
-                    <ListItem itemId="cameraGallery" title="Camera + Gallery"/>
-                    <ListItem itemId="accelerometer" title="Accelerometer"/>
+                    <ListItem itemId="identity" title="Identity (Biometric Authentication)"/>
                     <ListItem itemId="map" title="Maps"/>
+                    <ListItem itemId="network" title="Network"/>
+                    <ListItem itemId="peekAndPop" platform="ios" title="3D/Haptic Touch: Peek and Pop"/>
+                    <ListItem itemId="shortcutItems" platform="ios" title="3D/Haptic Touch: Shortcut Items"/>
+                    <ListItem itemId="sound" title="Sound"/>
                     <ListItem itemId="videoPlayer" title="Video Player"/>
-                    <ListItem itemId="audioPlayer" title="Audio Player"/>
                 </ListSection>
             </ListView>
         </Window>

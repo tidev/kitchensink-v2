@@ -1,0 +1,46 @@
+<Alloy>
+	<Window title="Table View">
+		<TableView id="table">
+			<TableViewSection headerTitle="Fruit">
+				<TableViewRow title="Avocado"/>
+				<TableViewRow title="Banana"/>
+				<TableViewRow title="Blackberries"/>
+				<TableViewRow title="Blackcurrant"/>
+				<TableViewRow title="Blueberries"/>
+				<TableViewRow title="Breadfruit"/>
+				<TableViewRow title="Cantaloupe"/>
+				<TableViewRow title="Carambola"/>
+				<TableViewRow title="Cherimoya"/>
+				<TableViewRow title="Cherries"/>
+				<TableViewRow title="Clementine"/>
+				<TableViewRow title="Coconut Meat"/>
+				<TableViewRow title="Cranberries"/>
+				<TableViewRow title="Custard-Apple"/>
+				<TableViewRow title="Date Fruit"/>
+			</TableViewSection>
+			<TableViewSection headerTitle="Fish">
+				<TableViewRow title="Anchovy"/>
+				<TableViewRow title="Barracuda"/>
+				<TableViewRow title="Betta"/>
+				<TableViewRow title="Blue tang"/>
+				<TableViewRow title="Bream"/>
+				<TableViewRow title="Bullhead"/>
+				<TableViewRow title="Butterflyfish"/>
+				<TableViewRow title="Carp"/>
+				<TableViewRow title="Clownfish"/>
+				<TableViewRow title="Eel"/>
+				<TableViewRow title="Flounder"/>
+				<TableViewRow title="Herring"/>
+				<TableViewRow title="Lionfish"/>
+				<TableViewRow title="Puffer"/>
+				<TableViewRow title="Shark"/>
+				<TableViewRow title="Crow"/>
+				<TableViewRow title="Sturgeon"/>
+				<TableViewRow title="Sunfish"/>
+				<TableViewRow title="Tarpon"/>
+				<TableViewRow title="Tuna"/>
+				<TableViewRow title="Whale"/>
+			</TableViewSection>
+		</TableView>
+	</Window>
+</Alloy>
