@@ -1,4 +1,3 @@
-
 /**
  * Creates a ListView section with the given number of row items.
  * @param sectionTitle The name to be shown in section's header title.
@@ -12,7 +11,7 @@ function createListSection(sectionTitle, rowCount) {
 				title: `Row ${index}`,
 				// This property normally enables swipe-to-delete,
 				// but on iOS this shows a checkbox if ListView property "showSelectionCheck" is true.
-				canEdit: OS_IOS ? true : false,
+				canEdit: !!OS_IOS,
 			}
 		});
 	}
@@ -103,15 +102,15 @@ function deleteSelectedItems() {
 		message: 'Are you sure you want to delete the selected items?',
 		buttonNames: [ 'Yes', 'No' ],
 	});
-	dialog.addEventListener("click", function(e) {
+	dialog.addEventListener('click', function (e) {
 		// Do not continue unless "Yes" was selected.
-		if (e.index != 0) {
+		if (e.index !== 0) {
 			return;
 		}
 
 		// Reverse sort the selected items.
 		selectedItems.sort((item1, item2) => {
-			if (item1.sectionIndex != item2.sectionIndex) {
+			if (item1.sectionIndex !== item2.sectionIndex) {
 				return item2.sectionIndex - item1.sectionIndex;
 			}
 			return item2.itemIndex - item1.itemIndex;
@@ -148,7 +147,7 @@ function shareSelectedItems() {
 	let message = 'Sharing selected items:';
 	for (const nextItem of selectedItems) {
 		const section = nextItem.section;
-		message += `\n- ${section.headerTitle}: ${section.getItemAt(nextItem.itemIndex).properties.title}`
+		message += `\n- ${section.headerTitle}: ${section.getItemAt(nextItem.itemIndex).properties.title}`;
 	}
 	alert(message);
 }

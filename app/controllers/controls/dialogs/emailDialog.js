@@ -1,4 +1,3 @@
-
 function onShowEMailDialog() {
 	const dialog = Ti.UI.createEmailDialog();
 	if (dialog.isSupported()) {

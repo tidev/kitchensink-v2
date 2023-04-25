@@ -12,9 +12,9 @@ function handleOpen() {
 	// On iOS, we know ahead of time which authentication policy is available to us. Show it on button.
 	if (OS_IOS) {
 		let authPhrase = '';
-		if (Identity.biometryType == Identity.BIOMETRY_TYPE_FACE_ID) {
+		if (Identity.biometryType === Identity.BIOMETRY_TYPE_FACE_ID) {
 			authPhrase = 'Face ID';
-		} else if (Identity.biometryType == Identity.BIOMETRY_TYPE_TOUCH_ID) {
+		} else if (Identity.biometryType === Identity.BIOMETRY_TYPE_TOUCH_ID) {
 			authPhrase = 'Touch ID';
 		} else {
 			authPhrase = 'Passcode';
@@ -30,8 +30,8 @@ function validate() {
 	}
 
 	Identity.authenticate({
-		reason: "Please authenticate to continue",
-		fallbackTitle: "",
+		reason: 'Please authenticate to continue',
+		fallbackTitle: '',
 		callback: (e) => {
 			Identity.invalidate();
 			if (!e.success) {

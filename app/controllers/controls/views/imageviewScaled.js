@@ -1,4 +1,3 @@
-
 function onScaleOptionBarClicked(e) {
 	switch (e.index) {
 		case 0: // Stretch scale

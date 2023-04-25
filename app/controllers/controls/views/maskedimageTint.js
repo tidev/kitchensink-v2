@@ -1,4 +1,3 @@
-
 function onColorOptionBarClicked(e) {
 	switch (e.index) {
 		case 0:
