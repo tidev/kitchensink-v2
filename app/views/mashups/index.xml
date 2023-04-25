@@ -4,7 +4,6 @@
             <ListView id="listView" onItemclick="openComponent">
                 <ListSection>
                     <ListItem title="Facebook" itemId="facebook" platform="android,ios"/>
-                    <ListItem title="Twitter" itemId="twitter" />
                 </ListSection>
             </ListView>
         </Window>

@@ -2,12 +2,16 @@
     <Window title="Text Field">
         <ScrollView id="textfieldsContainer" onClick="blurTextfield">
             <Label class="textLabel">Demonstration of multiple keyboard types</Label>
-            
+
             <TextField class="textfield" id="regularTextfield" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred" />
             <TextField class="textfield" id="phoneTextfield" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred" />
             <TextField class="textfield" id="emailTextfield" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred" />
             <TextField class="textfield" id="passwordTextfield" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred" />
-            
+            <TextField class="textfield" id="urlTextfield" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred" />
+            <TextField class="textfield" id="numberTextfield" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred" />
+            <TextField class="textfield" id="numberPunctuationTextfield" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred" />
+            <TextField class="textfield" id="decimalTextfield" onChange="textFieldValueChanged" onFocus="textFieldFocussed" onBlur="textFieldBlurred" />
+
             <Label class="textLabel" platform="ios">
                 You can drag down the keyboard when its visible and the view is scrollable. This is thanks to the keyboardDismissMode property on the wrapping ScrollView
             </Label>

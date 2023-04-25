@@ -8,7 +8,7 @@
 
 '.textfield': {
     width: 300,
-    top: 50,
+    top: 10,
     bubbleParent: false,
 }
 
@@ -41,7 +41,7 @@
     width: 300
 }
 
-/* 
+/*
  * Different textfields based on different keyboard types. There are more
  * that can be found in the docs https://titaniumsdk.com/api/titanium/ui/textfield.html
  */
@@ -67,4 +67,24 @@
     passwordMask: true,
     hintText: 'Type your password',
     autofillType: Ti.UI.AUTOFILL_TYPE_PASSWORD
+}
+
+'#urlTextfield': {
+  keyboardType: Ti.UI.KEYBOARD_TYPE_URL,
+  hintText: 'URL TextField'
+}
+
+'#numberTextfield': {
+  keyboardType: Ti.UI.KEYBOARD_TYPE_NUMBER_PAD,
+  hintText: 'Number TextField'
+}
+
+'#numberPunctuationTextfield': {
+  keyboardType: Ti.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION,
+  hintText: 'Number punctuation TextField'
+}
+
+'#decimalTextfield': {
+  keyboardType: Ti.UI.KEYBOARD_TYPE_DECIMAL_PAD,
+  hintText: 'Decimal TextField'
 }
