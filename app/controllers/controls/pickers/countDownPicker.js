@@ -1,4 +1,3 @@
-
 function onPickerValueChanged(e) {
 	const formatter = new Intl.NumberFormat(Ti.Locale.currentLocale, {
 		useGrouping: true,

@@ -1,4 +1,3 @@
-
 function openFile(filePath) {
 	if (OS_IOS) {
 		// Display given file in-app.

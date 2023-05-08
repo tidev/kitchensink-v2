@@ -1,0 +1,12 @@
+<Alloy>
+	<Window title="View Events" onDblclick="onDblclick" onClick="onClick" onSingletap="onSingleTap" onDoubletap="onDbltap" onSwipe="onSwipe" onTouchstart="onTouchstart" onTouchend="onTouchend" onTouchmove="onTouchmove">
+		<Label text="Touch and swipe the screen" top="10"/>
+		<View layout="vertical" height="Ti.UI.SIZE">
+			<Label id="lbl_click_event" text="Click: -"/>
+			<Label id="lbl_tap_event" text="Tap: -"/>
+			<Label id="lbl_swipe_event" text="Swipe: -"/>
+			<Label id="lbl_touch_event" text="Touch start: -"/>
+			<Label id="lbl_touch_move_event" text="Touch move: -"/>
+		</View>
+	</Window>
+</Alloy>

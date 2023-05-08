@@ -1,4 +1,3 @@
-
 function onSwitch1Changed(e) {
 	$.switchValueLabel1.text = `value: ${e.value}`;
 }

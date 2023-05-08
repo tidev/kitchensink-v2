@@ -1,4 +1,3 @@
-
 /**
  * The scoped constructor of the controller.
  **/

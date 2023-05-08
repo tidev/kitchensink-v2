@@ -1,8 +1,7 @@
-
 function onMaskButtonClicked() {
 	const dialog = Ti.UI.createOptionDialog({
-		title: "Select Mask",
-		options: ['Circular', 'Circular Gradient', 'Linear Gradient' , 'None'],
+		title: 'Select Mask',
+		options: [ 'Circular', 'Circular Gradient', 'Linear Gradient', 'None' ],
 	});
 	dialog.addEventListener('click', (e) => {
 		switch (e.index) {

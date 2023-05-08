@@ -24,5 +24,5 @@ function handleMapClick(e) {
  * For now, either create them in the controller or add them manually
  */
 $.mapview.addCircle($.mapCircle);
-$.mapview.addPolylines([$.mapLineOne, $.mapLineTwo, $.mapLineThree]);
+$.mapview.addPolylines([ $.mapLineOne, $.mapLineTwo, $.mapLineThree ]);
 $.mapview.addPolygon($.mapPolygon);

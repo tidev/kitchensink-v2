@@ -1,4 +1,3 @@
-
 function getNameFromOrientationId(orientationId) {
 	switch (orientationId) {
 		case Ti.UI.PORTRAIT:

@@ -1,4 +1,3 @@
-
 let timerId = null;
 
 function onShowProgressDialog() {

@@ -1,4 +1,3 @@
-
 function onClickLeft() {
 	$.drawerLayout.toggleLeft();
 }

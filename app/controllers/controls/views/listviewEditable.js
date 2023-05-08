@@ -1,4 +1,3 @@
-
 // Create global items array this view will add, delete, and move items from via ListView events.
 if (!Alloy.Globals.listViewEditData) {
 	const itemArray = [ 'Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6' ];

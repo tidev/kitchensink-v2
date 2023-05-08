@@ -1,6 +1,9 @@
 {
     "extends": [ "axway/env-alloy" ],
     "rules": {
-        "import/no-absolute-path": "off"
+        "import/no-absolute-path": "off",
+        "no-lonely-if": 1,
+        "no-undef": 1,
+        "no-prototype-builtins": 1
     }
 }
