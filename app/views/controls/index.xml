@@ -1,6 +1,6 @@
 <Alloy>
     <Tab title="Controls">
-        <Window title="Controls">
+        <Window id="window" title="Controls" onFocus="onFocus">
             <ListView id="listView" onItemclick="openComponent">
                 <ListSection>
                     <ListItem title="Activity Indicator" itemId="activityindicator" />
