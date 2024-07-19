@@ -8,8 +8,9 @@
               </ListSection>
               <ListSection headerTitle="Gallery">
                   <!-- Disable on Windows, TIMOB-25282, TIMOB-25281-->
-                  <ListItem title="Save to Gallery" itemId="saveToGallery" platform="!windows"/>
+                  <ListItem title="Save to Gallery" itemId="saveToGallery"/>
                   <ListItem title="Open from Gallery" itemId="openFromGallery" />
+                  <ListItem title="Open from Gallery (multi images)" itemId="openFromGalleryMulti" />
               </ListSection>
           </ListView>
       </Window>

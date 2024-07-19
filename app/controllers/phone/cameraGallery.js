@@ -24,7 +24,10 @@ function openComponent(e) {
 			saveToGallery();
 			break;
 		case 'openFromGallery':
-			openFromGallery();
+			openFromGallery(false);
+			break;
+		case 'openFromGalleryMulti':
+			openFromGallery(true);
 			break;
 		default:
 			logger.log('Ti.Media', 'Unknown action selected: ' + action);
@@ -106,7 +109,7 @@ function saveToGallery() {
 	});
 }
 
-function openFromGallery() {
+function openFromGallery(allowMultiple) {
 	require('/permissions').checkCameraPermission(success => {
 		if (!success) {
 			alert('No permissions!');
@@ -114,9 +117,14 @@ function openFromGallery() {
 		}
 
 		Ti.Media.openPhotoGallery({
+			allowMultiple: allowMultiple,
 			success: (e) => {
 				logger.log('Ti.Media', 'Image open successfully!');
-				processImage(e.media);
+				if (e.images) {
+					processImage(e.images[0].media);
+				} else {
+					processImage(e.media);
+				}
 			},
 			error: ({ error }) => {
 				logger.log('Ti.Media', 'Error opening image: ' + error);
