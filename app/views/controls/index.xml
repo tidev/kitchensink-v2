@@ -20,7 +20,6 @@
                     <ListItem title="Text Area" itemId="textarea" />
                     <ListItem title="Text Field" itemId="textfield" />
                     <ListItem title="Toolbar" itemId="toolbar" platform="android,ios"/>
-                    <ListItem title="Views" itemId="views/index" />
                 </ListSection>
             </ListView>
         </Window>
