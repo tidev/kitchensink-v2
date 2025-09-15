@@ -162,5 +162,5 @@
     <module platform="android">ti.identity</module>
     <module platform="iphone">ti.identity</module>
   </modules>
-  <sdk-version>13.0.0.RC</sdk-version>
+  <sdk-version>12.1.1.GA</sdk-version>
 </ti:app>
