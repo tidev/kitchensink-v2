@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Blur View">
+    <Window title="Blur View" class="paddedSafeArea">
         <BlurView id="blurView" ns="Ti.UI.iOS">
             <ImageView class="myImage" />
         </BlurView>

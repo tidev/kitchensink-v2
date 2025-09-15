@@ -1,6 +1,6 @@
 <Alloy>
-    <Window title="Scrollable View" layout="vertical">
-        <Toolbar class="toolbar" width="Ti.UI.FILL">
+    <Window title="Scrollable View" layout="vertical" onPostlayout="onPostLayout">
+        <Toolbar id="toolbar" width="Ti.UI.FILL">
             <Items>
                 <Button id="add" style="Ti.UI.BUTTON_STYLE_OPTION_POSITIVE" title="Add" onClick="addNewView"/>
                 <FlexSpace platform="ios"/>

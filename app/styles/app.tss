@@ -1,12 +1,7 @@
 'Window[platform=ios]': {
 	backgroundColor: 'white',
-	barColor: Alloy.CFG.styles.tintColor,
-	navTintColor: 'white',
-	translucent: false,
-	backButtonTitle: '',
-	titleAttributes: {
-		color: 'white',
-	}
+	extendEdges: [Ti.UI.EXTEND_EDGE_ALL],
+	autoAdjustScrollViewInsets: true
 }
 
 'Window[platform=android]': {
@@ -55,4 +50,8 @@
 	backgroundColor: '#eee',
 	borderRadius: 4,
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+
+'.paddedSafeArea[platform=ios]': {
+	extendSafeArea: false
 }

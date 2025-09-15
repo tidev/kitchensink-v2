@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Switch" layout="vertical">
+    <Window title="Switch" layout="vertical" class="paddedSafeArea">
         <Label class="switchValueLabel" id="switchValueLabel1">value: false</Label>
         <Switch class="switchControl" style="Ti.UI.SWITCH_STYLE_SLIDER" title="Slider Style" onChange="onSwitch1Changed"/>
 

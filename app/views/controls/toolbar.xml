@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Toolbar">
+    <Window title="Toolbar" class="paddedSafeArea">
         <Toolbar class="toolbar">
             <Items>
                 <Button onClick="sayHello" style="Ti.UI.BUTTON_STYLE_OPTION_POSITIVE">Action 1</Button>
