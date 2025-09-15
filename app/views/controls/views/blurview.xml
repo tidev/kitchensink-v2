@@ -1,8 +1,19 @@
 <Alloy>
-    <Window title="Blur View" class="paddedSafeArea">
-        <BlurView id="blurView" ns="Ti.UI.iOS">
-            <ImageView class="myImage" />
-        </BlurView>
-        <Button class="button actionButton" title="Blur Image" onClick="applyBlur" />
+    <Window title="Blur View" class="paddedSafeArea" onOpen="onOpen">
+        <ImageView class="myImage" />
+        <BlurView id="blurView" width="200" height="200" borderRadius="100" effect="Ti.UI.iOS.BLUR_EFFECT_STYLE_LIGHT" ns="Ti.UI.iOS" />
+        <TabbedBar top="20" id="blurTabs" onClick="changeBlurEffect">
+            <Labels>
+                <Label>Light</Label>
+                <Label>Extra Light</Label>
+                <Label>Dark</Label>
+            </Labels>
+        </TabbedBar>
+        <TabbedBar top="70" id="glassTabs" onClick="changeGlassEffect" index="-1">
+            <Labels>
+                <Label>Glass Regular (iOS 26+)</Label>
+                <Label>Glass Clear (iOS 26+)</Label>
+            </Labels>
+        </TabbedBar>
     </Window>
 </Alloy>
