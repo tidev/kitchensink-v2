@@ -45,30 +45,12 @@
           <string>fbauth2</string>
           <string>fbshareextension</string>
         </array>
-        <key>CFBundleURLTypes</key>
-        <array>
-          <dict>
-            <key>CFBundleURLName</key>
-            <!-- Application ID same as the id value in the tiapp.xml file -->
-            <string>[YOUR FACEBOOK ID]</string>
-            <key>CFBundleURLSchemes</key>
-            <array>
-              <!-- Prefix the Facebook App ID with 'fb' -->
-              <string>fb[YOUR FACEBOOK ID]</string>
-            </array>
-          </dict>
-        </array>
         <!-- FaceID -->
         <key>NSFaceIDUsageDescription</key>
         <string>Required for this test to function</string>
         <!-- Theming -->
         <key>UIStatusBarStyle</key>
         <string>UIStatusBarStyleLightContent</string>
-        <!-- Facebook -->
-        <key>FacebookAppID</key>
-        <string>[YOUR FACEBOOK ID]</string>
-        <key>FacebookDisplayName</key>
-        <string>KitchenSink</string>
         <!-- Permissions: Photo Library -->
         <key>NSPhotoLibraryUsageDescription</key>
         <string>We need permission to look at your photo library.</string>
@@ -141,10 +123,6 @@
       </queries>
       <application android:theme="@style/Theme.KitchenSink">
         <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="[YOUR API KEY HERE]"/>
-        <!--https://titaniumsdk.com/guide/Titanium_SDK/Titanium_SDK_How-tos/Location_Services/Google_Maps_v2_for_Android.html-->
-        <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:label="KitchenSink" android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
-        <meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="false"/>
       </application>
     </manifest>
   </android>

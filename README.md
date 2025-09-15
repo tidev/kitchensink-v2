@@ -12,7 +12,6 @@ It also includes full support for iOS, Android & Windows.
 - [x] API Logging
 - [x] Controls (Switch, Slider, Tabbed Bar, Text Field, Alerts, Dialogs, ...)
 - [x] Views (Scroll View, List View, Image View, Blur View, Web View, ...)
-- [x] Services (Twitter, Facebook)
 - [x] Platform (Clipboard, URL-Schemes, Hyperloop, Databases, Geolocation, Camera, Gallery, ...)
 - [ ] TODO: More Platform APIs (HTTP-Requests, Contacts, ...)
 
