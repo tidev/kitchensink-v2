@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Option Bar">
+    <Window title="Option Bar" class="paddedSafeArea">
         <ScrollView layout="vertical">
             <Label top="40">Text-Only Buttons</Label>
             <OptionBar top="10" onClick="onTextOptionBarClicked">

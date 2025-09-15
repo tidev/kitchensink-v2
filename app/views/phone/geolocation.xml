@@ -1,9 +1,11 @@
 <Alloy>
-    <Window title="Geolocation" layout="vertical">
-        <Label id="geo_lat" class="mapElmSeparation" />
-        <Label id="geo_long" class="mapElmSeparation" />
-        <Label class="mapElmSeparation" text="Package" />
-        <TextArea editable="false" id="geoloc" class="mapElmSeparation geolocationTextArea" />
+    <Window title="Geolocation" layout="vertical" onPostlayout="onPostLayout">
+        <View id="content" height="Ti.UI.SIZE">
+            <Label id="geo_lat" class="mapElmSeparation" />
+            <Label id="geo_long" class="mapElmSeparation" />
+            <Label class="mapElmSeparation" text="Package" />
+            <TextArea editable="false" id="geoloc" class="mapElmSeparation geolocationTextArea" />
+        </View>
         <View id="map" class="mapElmSeparation" />
     </Window>
 </Alloy>

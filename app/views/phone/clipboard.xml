@@ -1,5 +1,5 @@
 <Alloy>
-	<Window title="Clipboard" layout="vertical">
+	<Window title="Clipboard" layout="vertical" class="paddedSafeArea">
 		<TextField id="copyField" class="field" />
 		<Button onClick="copyText" class="button">Copy Text</Button>
 		<TextField id="pasteField" class="field" />

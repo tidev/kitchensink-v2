@@ -1,6 +1,6 @@
 <Alloy>
     <Tab title="Phone">
-        <Window title="Phone">
+        <Window title="Phone" class="largeTitles">
             <ListView id="listView" onItemclick="openComponent">
                 <ListSection>
                     <ListItem itemId="accelerometer" title="Accelerometer"/>

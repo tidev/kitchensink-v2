@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Button Bar" layout="vertical">
+    <Window title="Button Bar" layout="vertical" class="paddedSafeArea">
         <Label top="15%">Text-Only Buttons</Label>
         <ButtonBar top="10" onClick="onTextButtonBarClicked">
             <Labels>

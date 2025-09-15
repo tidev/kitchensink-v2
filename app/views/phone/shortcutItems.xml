@@ -1,5 +1,5 @@
 <Alloy>
-	<Window title="Shortcut Items" layout="vertical">
+	<Window title="Shortcut Items" layout="vertical" class="paddedSafeArea">
 		<Button class="actionButton" onClick="listStaticShortcuts">listStaticShortcuts()</Button>
 		<Button class="actionButton" onClick="listDynamicShortcuts">listDynamicShortcuts()</Button>
 		<Button class="actionButton" onClick="dynamicShortcutExists">dynamicShortcutExists('details')</Button>

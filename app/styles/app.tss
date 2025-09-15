@@ -55,3 +55,12 @@
 '.paddedSafeArea[platform=ios]': {
 	extendSafeArea: false
 }
+
+'.largeTitles': {
+  largeTitleEnabled: true,
+  largeTitleDisplayMode: Ti.UI.iOS.LARGE_TITLE_DISPLAY_MODE_ALWAYS
+}
+
+'.noLargeTitles': {
+  largeTitleDisplayMode: Ti.UI.iOS.LARGE_TITLE_DISPLAY_MODE_NEVER
+}
