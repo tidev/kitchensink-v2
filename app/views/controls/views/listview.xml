@@ -21,8 +21,8 @@
             </ListSection>
 
             <ListSection headerTitle="Custom Item Templates">
-                <ListItem template="MyCustomTemplate" title:text="Nectarine" detail:text="3" />
-                <ListItem template="MyCustomTemplate" title:text="Pear" detail:text="7" detail:color="blue" />
+                <ListItem template="MyCustomTemplate" height="43" title:text="Nectarine" detail:text="3" />
+                <ListItem template="MyCustomTemplate" height="43" title:text="Pear" detail:text="7" detail:color="blue" />
             </ListSection>
 
             <ListSection headerTitle="Accessory Types">
