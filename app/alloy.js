@@ -1,5 +1,5 @@
 import ActionBarHelper from 'actionbar';
-import { isiOSVersionOrGreater } from './lib/app-utils';
+import { isiOSVersionOrGreater } from 'app-utils';
 
 Alloy.CFG.tabGroup = {};
 Alloy.Globals.Map = require('ti.map');
