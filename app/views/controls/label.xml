@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Label">
+    <Window title="Label" class="paddedSafeArea">
         <Label id="myLabel">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
         </Label>

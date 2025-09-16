@@ -1,7 +1,7 @@
 <Alloy>
-    <Window title="Activity Indicator" onOpen="showIndicator">
+    <Window title="Activity Indicator" onOpen="showIndicator" class="paddedSafeArea">
         <RightNavButton>
-            <ActivityIndicator id="indicatorNavBar" />
+            <ActivityIndicator id="indicatorNavBar" style="Ti.UI.ActivityIndicatorStyle.DARK" />
         </RightNavButton>
         <View class="container">
             <ActivityIndicator id="indicatorLight" />

@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Video Player">
+    <Window title="Video Player" class="paddedSafeArea">
         <Button top="50" onClick="changeVideoSource">Change to Remote Source</Button>
         <VideoPlayer id="myPlayer" />
     </Window>

@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Plain Picker (Spinner)">
+    <Window title="Plain Picker (Spinner)" class="paddedSafeArea">
         <Label id="state" class="stateLabel" />
         <Picker class="picker" selectionIndicator="true" useSpinner="true" onChange="onPickerValueChanged">
             <PickerColumn>

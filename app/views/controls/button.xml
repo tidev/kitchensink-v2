@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Button" layout="vertical">
+    <Window title="Button" layout="vertical" class="paddedSafeArea">
         <Button top="20" title="Text-Only Button" style="Ti.UI.BUTTON_STYLE_TEXT" onClick="onButtonClicked"/>
         <Button top="20" title="Outline Button" style="Ti.UI.BUTTON_STYLE_OUTLINED" onClick="onButtonClicked" platform="android"/>
         <Button top="20" title="Filled Button" style="Ti.UI.BUTTON_STYLE_FILLED" onClick="onButtonClicked" platform="android"/>

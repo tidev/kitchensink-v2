@@ -1,5 +1,5 @@
 <Alloy>
-	<Window title="View Events" onDblclick="onDblclick" onClick="onClick" onSingletap="onSingleTap" onDoubletap="onDbltap" onSwipe="onSwipe" onTouchstart="onTouchstart" onTouchend="onTouchend" onTouchmove="onTouchmove">
+	<Window title="View Events" class="paddedSafeArea" onDblclick="onDblclick" onClick="onClick" onSingletap="onSingleTap" onDoubletap="onDbltap" onSwipe="onSwipe" onTouchstart="onTouchstart" onTouchend="onTouchend" onTouchmove="onTouchmove">
 		<Label text="Touch and swipe the screen" top="10"/>
 		<View layout="vertical" height="Ti.UI.SIZE">
 			<Label id="lbl_click_event" text="Click: -"/>

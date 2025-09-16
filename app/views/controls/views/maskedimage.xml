@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Masked Image" layout="vertical">
+    <Window title="Masked Image" layout="vertical" class="paddedSafeArea">
         <Label id="maskLabel" top="30">Mask: None</Label>
         <MaskedImage id="myMaskedImage" top="30"/>
         <Button top="30" onClick="onMaskButtonClicked">Select Mask</Button>

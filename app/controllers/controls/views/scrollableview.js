@@ -7,6 +7,11 @@ import { logger } from 'logger';
 
 }());
 
+function onPostLayout() {
+	$.toolbar.top = $.getView().safeAreaPadding.top + 10;
+	$.scrollable.bottom = $.getView().safeAreaPadding.bottom + 10;
+}
+
 function scrollToView() {
 	$.scrollable.scrollToView(1); // Index or view
 }

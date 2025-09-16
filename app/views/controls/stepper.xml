@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Stepper">
+    <Window title="Stepper" class="paddedSafeArea">
         <Label id="state" class="stateLabel" />
        <Stepper ns="Ti.UI.iOS" class="stepper" onChange="stepperValueChanged" />
     </Window>

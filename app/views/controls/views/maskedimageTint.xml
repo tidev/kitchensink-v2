@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Masked Image (Tint)" layout="vertical">
+    <Window title="Masked Image (Tint)" layout="vertical" class="paddedSafeArea">
         <MaskedImage id="myMaskedImage" top="30" width="160" height="160"/>
         <OptionBar onClick="onColorOptionBarClicked" top="30">
             <Labels>

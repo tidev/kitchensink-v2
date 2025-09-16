@@ -1,5 +1,5 @@
 <Alloy>
-	<Window title="Gesture" onOpen="onWindowOpen" onClose="onWindowClose">
+	<Window title="Gesture" onOpen="onWindowOpen" onClose="onWindowClose" class="paddedSafeArea">
 		<Label id="orientationLabel" top="100" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
 		<Label id="shakeLabel" bottom="100" opacity="0">Shake Detected!</Label>
 		<Label bottom="20">(Shake device to receive "shake" events.)</Label>

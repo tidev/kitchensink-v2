@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="View">
+    <Window title="View" class="paddedSafeArea">
         <View id="view1"></View>
         <View id="view2"></View>
         <View id="view3"></View>

@@ -51,6 +51,10 @@ import Map from 'ti.map';
 	}
 }());
 
+function onPostLayout() {
+	$.content.top = $.getView().safeAreaPadding.top;
+}
+
 function updatePosition(e) {
 	if (!e.success || e.error) {
 		Ti.API.debug(JSON.stringify(e));

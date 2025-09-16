@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Slider">
+    <Window title="Slider" class="paddedSafeArea">
         <Label id="state" class="stateLabel" />
         <Slider class="slider" onChange="sliderValueChanged" />
     </Window>

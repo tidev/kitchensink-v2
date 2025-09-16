@@ -1,6 +1,6 @@
 <Alloy>
     <Tab title="Controls">
-        <Window id="window" title="Controls" onFocus="onFocus">
+        <Window id="window" title="KitchenSink Demo" onFocus="onFocus" class="largeTitles">
             <ListView id="listView" onItemclick="openComponent">
                 <ListSection>
                     <ListItem title="Activity Indicator" itemId="activityindicator" />
@@ -20,7 +20,6 @@
                     <ListItem title="Text Area" itemId="textarea" />
                     <ListItem title="Text Field" itemId="textfield" />
                     <ListItem title="Toolbar" itemId="toolbar" platform="android,ios"/>
-                    <ListItem title="Views" itemId="views/index" />
                 </ListSection>
             </ListView>
         </Window>

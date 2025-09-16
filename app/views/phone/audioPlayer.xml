@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Audio Player" onOpen="handleOpen" onClose="handleClose">
+    <Window title="Audio Player" onOpen="handleOpen" onClose="handleClose" class="paddedSafeArea">
         
         <Label id="progress" />
         

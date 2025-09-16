@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Image View (Scaled)" layout="vertical">
+    <Window title="Image View (Scaled)" layout="vertical" class="paddedSafeArea">
         <OptionBar class="scaleOptionBar" onClick="onScaleOptionBarClicked" top="10" bottom="10" height="Ti.UI.SIZE">
             <Labels>
                 <Label>Stretch</Label>

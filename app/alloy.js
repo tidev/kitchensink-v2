@@ -1,7 +1,9 @@
 import ActionBarHelper from 'actionbar';
+import { isiOSVersionOrGreater } from 'app-utils';
 
 Alloy.CFG.tabGroup = {};
 Alloy.Globals.Map = require('ti.map');
+Alloy.Globals.isiOS26OrGreater = isiOSVersionOrGreater(26);
 
 Alloy.Globals.setAndroidBackButton = (window) => {
 	if (!OS_ANDROID) {

@@ -1,5 +1,5 @@
 <Alloy>
-	<Window id="win" title="Document Viewer" layout="vertical">
+	<Window id="win" title="Document Viewer" layout="vertical" class="paddedSafeArea">
 		<Button top="20" onClick="onOpenTxtFile">Open TXT File</Button>
 		<Button top="20" onClick="onOpenRtfFile">Open RTF File</Button>
 		<Button top="20" onClick="onOpenPdfFile">Open PDF File</Button>

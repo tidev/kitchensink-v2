@@ -1,10 +1,10 @@
 <Alloy>
-    <Window title="Toolbar">
+    <Window title="Toolbar" class="paddedSafeArea">
         <Toolbar class="toolbar">
             <Items>
-                <Button onClick="sayHello" style="Ti.UI.BUTTON_STYLE_OPTION_POSITIVE">Action 1</Button>
-                <Button onClick="sayHello" style="Ti.UI.BUTTON_STYLE_OPTION_NEUTRAL">Action 2</Button>
-                <Button onClick="sayHello" style="Ti.UI.BUTTON_STYLE_OPTION_NEUTRAL">Action 3</Button>
+                <Button onClick="sayHello" style="Ti.UI.BUTTON_STYLE_OPTION_POSITIVE">Action (positive)</Button>
+                <Button onClick="sayHello" style="Ti.UI.BUTTON_STYLE_OPTION_NEUTRAL">Action (neutral)</Button>
+                <Button platform="android" onClick="sayHello" style="Ti.UI.BUTTON_STYLE_OPTION_NEGATIVE">Action 2 (negative)</Button>
             </Items>
         </Toolbar>
     </Window>

@@ -1,3 +1,7 @@
+'Tab': {
+    icon: '/images/icons/views.png'
+}
+
 '#listView[platform=ios]': {
 	defaultItemTemplate: Ti.UI.LIST_ITEM_TEMPLATE_SUBTITLE
 }
