@@ -11,6 +11,7 @@ It also includes full support for iOS, Android & Windows.
 - [x] Full ES6+ support
 - [x] API Logging
 - [x] Controls (Switch, Slider, Tabbed Bar, Text Field, Alerts, Dialogs, ...)
+- [x] Modern APIs (e.g. iOS 26+ Glass Effects)
 - [x] Views (Scroll View, List View, Image View, Blur View, Web View, ...)
 - [x] Platform (Clipboard, URL-Schemes, Hyperloop, Databases, Geolocation, Camera, Gallery, ...)
 - [ ] TODO: More Platform APIs (HTTP-Requests, Contacts, ...)
