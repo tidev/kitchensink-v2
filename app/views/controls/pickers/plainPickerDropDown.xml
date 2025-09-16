@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Plain Picker (Drop-Down)">
+    <Window title="Plain Picker (Drop-Down)" class="paddedSafeArea">
         <Label id="valueLabel" top="30"/>
         <Picker
             id="picker"

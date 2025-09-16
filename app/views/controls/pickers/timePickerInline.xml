@@ -1,5 +1,5 @@
 <Alloy>
-    <Window title="Time Picker (Inline)">
+    <Window title="Time Picker (Inline)" class="paddedSafeArea">
         <Label id="valueLabel" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER" top="30"/>
         <Picker
             id="timePicker"
