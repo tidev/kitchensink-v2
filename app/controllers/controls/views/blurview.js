@@ -1,9 +1,8 @@
-
 function onOpen() {
-	 // Create circular animation to live-test the blur effect
+	// Create circular animation to live-test the blur effect
 	const density = Ti.Platform.osname === 'android' ? Ti.Platform.displayCaps.logicalDensityFactor : 1;
 	const centerX = Ti.Platform.displayCaps.platformWidth / density / 2;
-	const centerY = Ti.Platform.displayCaps.platformHeight / density / 3
+	const centerY = Ti.Platform.displayCaps.platformHeight / density / 3;
 
 	const radius = 100;
 	let angle = 0;
@@ -39,8 +38,7 @@ function changeGlassEffect({ index }) {
 		Ti.UI.iOS.GLASS_EFFECT_STYLE_REGULAR,
 		Ti.UI.iOS.GLASS_EFFECT_STYLE_CLEAR
 	];
-	
-	$.blurTabs.index = -1;
-	$.blurView.glassEffect = { style: effects[index], interactive: true }
-}
 
+	$.blurTabs.index = -1;
+	$.blurView.glassEffect = { style: effects[index], interactive: true };
+}

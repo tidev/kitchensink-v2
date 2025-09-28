@@ -18,7 +18,7 @@
 	"homepage": "https://github.com/tidev/kitchensink-v2#readme",
 	"devDependencies": {
 		"eslint": "8.39.0",
-		"eslint-config-axway": "8.0.0",
+		"eslint-config-axway": "9.0.0",
 		"eslint-plugin-alloy": "1.2.1"
 	}
 }
