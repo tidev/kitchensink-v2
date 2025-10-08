@@ -56,11 +56,11 @@
 	extendSafeArea: false
 }
 
-'.largeTitles': {
+'.largeTitles[platform=ios]': {
   largeTitleEnabled: true,
   largeTitleDisplayMode: Ti.UI.iOS.LARGE_TITLE_DISPLAY_MODE_ALWAYS
 }
 
-'.noLargeTitles': {
+'.noLargeTitles[platform=ios]': {
   largeTitleDisplayMode: Ti.UI.iOS.LARGE_TITLE_DISPLAY_MODE_NEVER
 }
