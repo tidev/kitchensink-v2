@@ -12,7 +12,6 @@ function onFocus() {
 	validateDocsInfo();
 }
 
-
 function validateDocsInfo() {
 	if (!Ti.App.Properties.getBool('noticeShown', false)) {
 		const alertNotice = Ti.UI.createAlertDialog({
@@ -34,7 +33,6 @@ function validateDocsInfo() {
 		alertNotice.show();
 	}
 }
-
 
 function openComponent(e) {
 	const identifier = `controls/${e.section.getItemAt(e.itemIndex).properties.itemId}`;
