@@ -6,6 +6,5 @@
 }());
 
 function changeVideoSource() {
-	// TODO: Find a more swaagy video!
-	$.myPlayer.url = 'http://mirrors.standaloneinstaller.com/video-sample/DLP_PART_2_768k.mp4';
+	$.myPlayer.url = 'https://raw.githubusercontent.com/tidev/titanium-sdk/main/tests/remote/mov_bbb.mp4';
 }
