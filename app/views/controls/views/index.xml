@@ -17,6 +17,7 @@
                     <ListItem title="Masked Image (Tint)" itemId="maskedimageTint" />
                     <ListItem title="Scroll View" itemId="scrollview" />
                     <ListItem title="Scrollable View" itemId="scrollableview" />
+                    <ListItem title="Scrollable View (vertical)" itemId="scrollableviewVertical" platform="android"/>
                     <ListItem title="Table View" itemId="tableview" />
                     <ListItem title="View" itemId="view" />
                     <ListItem title="View (events)" itemId="view_events" />
