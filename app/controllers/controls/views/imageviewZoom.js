@@ -31,3 +31,7 @@ function onScale(e) {
 function onScroll() {
 	hideNavBar();
 }
+
+function close() {
+	$.win.close();
+}

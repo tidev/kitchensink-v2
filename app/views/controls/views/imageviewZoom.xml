@@ -15,5 +15,9 @@
 
         <!-- On Android, the ImageView itself supports a zoom feature. -->
         <ImageView id="imageView" enableZoomControls="true" platform="android"/>
+
+        <View bottom="40" backgroundColor="white" borderRadius="25" width="200" height="50" onClick="close">
+            <Label text="Close" color="black" />
+        </View>
     </Window>
 </Alloy>
